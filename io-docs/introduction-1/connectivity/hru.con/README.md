@@ -17,7 +17,7 @@ description: This file defines the connectivity of spatial objects.
 | [wst](wst.md)          | Pointer to the weather station file                     |  string |     n/a     |   n/a   |      n/a     |
 | [cst](cst.md)          | Currently not used                                      | integer |     n/a     |   n/a   |      n/a     |
 | [ovfl](ovfl.md)        | Currently not used                                      | integer |     n/a     |   n/a   |      n/a     |
-| [rule](rule.md)        | Currently not used                                      | integer |     n/a     |   n/a   |      n/a     |
+| [rule](rule.md)        | Name of the flow-control decision table in flo\_con.dtl that controls this object's outflow (null if none) |  string |     n/a     |   n/a   |      n/a     |
 | [out\_tot](out_tot.md) | Total number of outgoing hydrographs                    | integer |     n/a     |   n/a   |     1-12     |
 | [obj\_typ](obj_typ.md) | Type of the receiving object                            |  string |     n/a     |   n/a   |      n/a     |
 | [obj\_id](obj_id.md)   | ID of the receiving object                              | integer |     n/a     |   n/a   |      n/a     |

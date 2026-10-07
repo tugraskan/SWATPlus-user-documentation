@@ -9,7 +9,7 @@ description: This file contains control codes for the simulation of basin-level 
 | pet\_file                 | Currently not used                               | string  |
 | wq\_file                  | Currently not used                               | string  |
 | [pet](pet.md)             | Potential Evapotranspiration (PET) method        | integer |
-| event                     | Currently not used                               | integer |
+| event                     | Extra input columns: 0 = off; any other value = the last column of plants.plt is read as the plant class, and soil\_plant.ini is read with a cs column | integer |
 | [crack](crack.md)         | Crack flow                                       | integer |
 | [swift\_out](rtu_wq.md)   | Writing of input file for SWIFT                  | integer |
 | sed\_det                  | Currently not used                               | integer |
@@ -31,3 +31,4 @@ description: This file contains control codes for the simulation of basin-level 
 | stor\_max                 | Currently not used                               | integer |
 | qual2e                    | Instream nutrient routing method                 | integer |
 | [gwflow](headwater.md)    | Flood routing                                    | integer |
+| idc\_till                 | Tillage method used when carbon = 2: 1 = DSSAT, 2 = EPIC, 3 = Kemanian (default), 4 = DNDC | integer |

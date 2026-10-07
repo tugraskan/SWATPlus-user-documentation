@@ -7,6 +7,7 @@ description: This file controls the channel hydrology and sediment properties.
 | Field                      | Description                                                   |  Type  |   Unit   |        Default       | Range |
 | -------------------------- | ------------------------------------------------------------- | :----: | :------: | :------------------: | :---: |
 | [name](name.md)            | Name of the channel hydrology and sediment record             | string |    n/a   |          n/a         |  n/a  |
+| order                      | Channel (stream) order; used by the channel sediment routine and by decision tables | integer |    n/a   |                      |       |
 | [wd](wd.md)                | Channel width                                                 |  real  |     m    | calculated by QSWAT+ |       |
 | [dp](dp.md)                | Channel depth                                                 |  real  |     m    | calculated by QSWAT+ |       |
 | [slp](slp.md)              | Channel slope                                                 |  real  |    m/m   | calculated by QSWAT+ |       |
@@ -22,7 +23,7 @@ description: This file controls the channel hydrology and sediment properties.
 | [carbon](carbon.md)        | Carbon content of channel bank and bed                        |  real  |     %    |           0          | 0-100 |
 | [dry\_bd](dry_bd.md)       | Dry bulk density of the channel                               |  real  |   t/m3   |           0          |       |
 | [side\_slp](side_slp.md)   | Channel side slope                                            |  real  |     m    |         0.50         |       |
-| [bed\_load](bed_load.md)   | Percent of sediment entering the channel that is bed material |  real  |     m    |         0.50         |       |
+| bankfull\_flo              | Bank full flow rate                                           |  real  |          |                      |       |
 | [fps](fps.md)              | Floodplain slope                                              |  real  |    m/m   |         10.0         |       |
 | [fpn](fpn.md)              | Floodplain Manning's n                                        |  real  |   none   |                      |       |
 | [n\_conc](hc_erod.md)      | Nitrogen concentration in channel bank                        |  real  |   mg/kg  |         0.10         |       |

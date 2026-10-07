@@ -13,8 +13,9 @@ description: >-
 | [nutrients](nutrients.md)      | Pointer to the nutrient initialization file            | string |
 | [pest](pest.md)                | Pointer to the pesticide initialization file           | string |
 | path                           | Currently not used                                     | string |
-| hmet                           | Currently not used                                     | string |
 | [salt](salt.md)                | Pointer to the salt initialization file                | string |
+| hmet                           | Currently not used                                     | string |
+| cs                             | Pointer to the constituent initialization data; this column is read only when event in codes.bsn is not 0 | string |
 
 {% hint style="warning" %}
 There are no plans to work on the pathogen and heavy metal routines in the foreseeable future unless there is a demand for it in the user community.

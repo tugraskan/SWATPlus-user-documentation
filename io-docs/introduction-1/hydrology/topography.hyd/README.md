@@ -13,5 +13,5 @@ description: >-
 | [slp\_len](slp_len.md) | Average slope length                             |   real  |   m  |   50.0  |       |
 | [lat\_len](lat_len.md) | Average slope length for lateral subsurface flow |   real  |   m  |   50.0  |       |
 | dist\_cha              | Currently not used                               |   real  |      |         |       |
-| [depos](depos.md)      | Deposition coefficient                           | integer |      |    1    |       |
+| [depos](depos.md)      | Deposition coefficient                           |   real  |      |    1    |       |
 

@@ -2,5 +2,5 @@
 description: Channel organic P concentration
 ---
 
-# plt\_p
+# ptl\_p
 

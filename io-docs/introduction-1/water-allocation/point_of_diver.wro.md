@@ -22,8 +22,6 @@ These tables give the exact read order and code identifiers in SWAT+ main `6f515
 | 10 | `typ_num` | `pod(ipod)%pou(ipou)%typ_num` | `pod_place_of_use` | POD type number |
 | 11 | `right` | `pod(ipod)%pou(ipou)%right` | `pod_place_of_use` | water right |
 
-[Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L220).
-
 Positions 1–5 occur once per POD. Positions 6–11 repeat `pod(ipod)%pous` times, with the POU loop index `ipou`. The preliminary read stores that count in the local variable `ipous`; the complete read stores it in `pod(ipod)%pous`.
 
 See also [place_of_use.wro](place_of_use.wro.md). These pages describe the current reader; they do not establish that every water-allocation option has been validated in a model run.

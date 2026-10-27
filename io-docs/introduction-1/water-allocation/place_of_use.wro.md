@@ -21,8 +21,6 @@ These tables give the exact read order and code identifiers in SWAT+ main `6f515
 | 9 | `dtbl_pod_fr` | `pou(ipou)%dtbl_pod_fr` | `place_of_use` | decision table name to set fractions from each POD - if null use constant fraction |
 | 10 | `dtbl_por_fr` | `pou(ipou)%dtbl_por_fr` | `place_of_use` | decision table name to set fractions to each POR - if null use constant fraction |
 
-[Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L67).
-
 ## Point-of-diversion record within a POU
 
 | Position | Field | Code reference | Declared type | Description |
@@ -41,8 +39,6 @@ These tables give the exact read order and code identifiers in SWAT+ main `6f515
 | 12 | `frac` | `pou(ipou)%pod(ipod)%frac` | `pou_points_of_diversion` | fraction of daily right from the POD (m3/s) |
 | 13 | `comp` | `pou(ipou)%pod(ipod)%comp` | `pou_points_of_diversion` | compensate if unmet (y/n) |
 
-[Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L93).
-
 The reader writes positions 2 and 5 into the same `pou(ipou)%pod(ipod)%num` component. The later value replaces the earlier one. Both positions are shown because this is what the reviewed code reads; the separately declared `typ_num` component is not read at position 5.
 
 ## Point-of-return record within a POU
@@ -60,8 +56,6 @@ The reader writes positions 2 and 5 into the same `pou(ipou)%pod(ipod)%num` comp
 | 9 | `const_max` | `pou(ipou)%por(ipor)%const_max` | `pou_points_of_return` | fixed max daily level - if dtble is not used |
 | 10 | `ann_max` | `pou(ipou)%por(ipor)%ann_max` | `pou_points_of_return` | annual maximim inflow (m3/s) |
 | 11 | `frac` | `pou(ipou)%por(ipor)%frac` | `pou_points_of_return` | fraction of POU outflow to each POR (m3/s) |
-
-[Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L102).
 
 As in the POD record, positions 2 and 5 both write `pou(ipou)%por(ipor)%num`; the later value replaces the earlier one. In a POR record, `pp` is again a local record tag. The reader does not check its value here.
 

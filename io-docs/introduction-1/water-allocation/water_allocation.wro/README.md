@@ -8,7 +8,7 @@ description: This file contains water allocation tables.
 This page preserves the historical `water_allocation.wro` layout. It is not the input layout used by the reviewed SWAT+ main `6f515368` reader. For the current formats, use [place_of_use.wro](../place_of_use.wro.md) and [point_of_diver.wro](../point_of_diver.wro.md). The historical field descriptions below must not be used as instructions for those files.
 {% endhint %}
 
-The current defaults are declared in [input_file_module.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/input_file_module.f90#L144), and the files are read by [water_allocation_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L40).
+The current defaults are declared in [input_file_module.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/input_file_module.f90#L144).
 
 ## Historical format
 

@@ -30,4 +30,4 @@ The counting and loading passes use different record patterns. The counting pass
 
 Pesticide-specific units, recommended defaults, and ranges are not established here from the generic constituent-type comments.
 
-[Counting pass](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_cha_res_read.f90#L34), [loading pass](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_cha_res_read.f90#L62), and [array declarations](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constituent_mass_module.f90#L331).
+[Array declarations](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constituent_mass_module.f90#L331).

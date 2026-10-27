@@ -11,4 +11,6 @@ Qual2E defines four light averaging options:
 3. FL is obtained by averaging the hourly daylight values of FL computed from the hourly daylight values of solar radiation calculated in the steady state temperature heat balance.
 4. FL is obtained by averaging the hourly daylight values of FL computed from the hourly daylight values of solar radiation calculated from a single value of total daily, photosynthetically active, solar radiation and an assumed cosine function.
 
-The only option currently active in SWAT+ is 2.
+The options above describe the intended light-averaging methods.
+
+SWAT+ main (6f515368) stores this field as a real value and replaces a nonpositive value with 2, but does not use the selected light-averaging option in a later calculation.

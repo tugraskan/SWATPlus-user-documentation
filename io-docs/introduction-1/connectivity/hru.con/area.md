@@ -19,5 +19,5 @@ Even though some objects don't have an area, a value has to be specified in the 
 | Reservoir          | Drainage area of the reservoir | n/a                      |
 | Outlet             | Object does not have an area   | n/a                      |
 | Recall             | Object does not have an area   | n/a                      |
-| Export Coefficient | Object does not have an area   | n/a                      |
+| Export Coefficient | Reference area of the export-coefficient object | Scales per-area values by the routed element area divided by this area |
 | Delivery Ratio     | Object does not have an area   | n/a                      |

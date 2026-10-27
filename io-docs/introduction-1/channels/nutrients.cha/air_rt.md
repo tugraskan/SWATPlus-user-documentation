@@ -4,4 +4,4 @@ description: Reaeration rate in accordance with Fickian diffusion in the channel
 
 # air\_rt
 
-If routing is performed on an hourly time step, the units of **air\_rt** are converted to 1/hr by the model.
+Enter this field in 1/day. After reading it, SWAT+ divides the value by the number of routing time steps per day to obtain the value used for each routing step.

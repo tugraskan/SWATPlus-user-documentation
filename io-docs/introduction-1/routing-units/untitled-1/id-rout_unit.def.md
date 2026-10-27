@@ -4,4 +4,4 @@ description: Unique ID of the Routing Unit
 
 # id (rout\_unit.def)
 
-The ID of the Routing Unit is a primary key referenced by [define](../untitled/define.md) in [**rout\_unit.rtu**](../untitled/). All IDs in the **rout\_unit.def** file must be unique.
+SWAT+ main (6f515368) reads this ID but does not use it to select or store the definition. Definitions are associated with routing units by row position, so keep the rows in the same order as the routing units.

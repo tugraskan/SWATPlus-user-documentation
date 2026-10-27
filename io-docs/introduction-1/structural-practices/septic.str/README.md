@@ -9,22 +9,22 @@ Data contained in the septic.str data file are: type of septic system, geometry 
 | Field                          | Description                                                                                                 | Type    | Unit         | Default | Range    |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------- | ------- | ------------ | ------- | -------- |
 | [name](name_sepdb.md)          | Name of septic system record                                                                                | string  | n/a          | n/a     | n/a      |
-| [typ](typ.md)                  | Septic system type                                                                                          | integer | n/a          | 0       |          |
+| [typ](typ.md) | 1-based septic water-quality record number in septic.sep | integer | n/a | 0 |  |
 | [yr](yr.md)                    | ​Year the septic system became operational                                                                  | integer | n/a          | 0       |          |
 | [operation](operation.md)      | ​Septic system operation flag                                                                               | integer | n/a          | 0       | 0-2      |
-| [residents](residents.md)      | ​Number of permanent residents in the house                                                                 | real    | n/a          | 1       | 1.0-12.0 |
-| [area](area.md)                | ​Average area of drainfield of individual septic systems                                                    | real    | m^2          | 1       |          |
+| [residents](residents.md) | Number of permanent residents in the house (read but not used by the model) | real | n/a | 1 | 1.0-12.0 |
+| [area](area.md) | Average drainfield area per septic system (read but not used by the model) | real | m^2 | 1 |  |
 | [t\_fail](t_fail.md)           | Time until failing systems gets fixed                                                                       | integer | days         | 0       | 0-150    |
 | [dp\_bioz](dp_bioz.md)         | Depth to the top of the biozone layer from the ground surface                                               | real    | mm           | 1       |          |
 | [thk\_bioz](thk_bioz.md)       | Thickness of biozone layer                                                                                  | real    | mm           | 1       |          |
-| [cha\_dist](cha_dist.md)       | Distance from septic system to the stream                                                                   | real    | km           | 2       |          |
-| [sep\_dens](sep_dens.md)       | Number of septic systems per square kilometer                                                               | real    | n/a          | 2       |          |
+| [cha\_dist](cha_dist.md) | Distance from septic system to the stream (read but not used by the model) | real | km | 2 |  |
+| [sep\_dens](sep_dens.md) | Number of septic systems per square kilometer (read but not used by the model) | real | n/a | 2 |  |
 | [bm\_dens](bm_dens.md)         | Density of biomass                                                                                          | real    | kg/m^3       | 1       |          |
 | [bod\_decay](bod_decay.md)     | BOD decay rate coefficient                                                                                  | real    | m^3/day      | 2       |          |
 | [bod\_conv](bod_conv.md)       | Conversion factor representing the proportion of mass bacterial growth and mass BOD degraded in the septic  | real    | n/a          | 2       |          |
 | [fc\_lin](fc_lin.md)           | Linear coefficient for calculation of field capacity in the biozone                                         | real    | n/a          | 1       |          |
 | [fc\_exp](fc_exp.md)           | Exponential coefficient for calculation of field capacity in the biozone                                    | real    | n/a          | 2       |          |
-| [fecal\_delay](fecal_decay.md) | Fecal coliform bacteria decay rate coefficient                                                              | real    | m^3/day      | 2       |          |
+| [fecal\_decay](fecal_decay.md) | Fecal coliform bacteria decay rate coefficient | real | m^3/day | 2 |  |
 | [tds\_conv](tds_conv.md)       | Conversion factor for plaque from TDS                                                                       | real    | n/a          | 2       |          |
 | [mort](mort.md)                | Mortality rate coefficient                                                                                  | real    | n/a          | 2       |          |
 | [resp](resp.md)                | Respiration rate coefficient                                                                                | real    | n/a          | 3       |          |

@@ -1,5 +1,5 @@
 ---
-description: Surface runoff lag coefficient
+description: Surface runoff lag time
 ---
 
 # surq\_lag

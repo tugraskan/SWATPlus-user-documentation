@@ -15,3 +15,4 @@ description: >-
 | [rel](rel.md)    | Pointer to the reservoir and wetland release decision table file | string  |
 | [sed](sed.md)    | Pointer to the reservoir and wetland sediment file               | string  |
 | [nut](nut.md)    | Pointer to the reservoir and wetland nutrient file               | string  |
+| [WEIR](weir.md) | Extra example-file token; not read by SWAT+ main (6f515368) | string |

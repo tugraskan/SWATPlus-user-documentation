@@ -4,6 +4,4 @@ description: Tropical flag
 
 # trop\_flag
 
-0 = non-tropical
-
-1 = tropical
+The intended text values are non_trop and trop. SWAT+ main (6f515368) reads this field but uses it only in calibration output; it does not affect simulation calculations.

@@ -15,3 +15,5 @@ There are several advantages to incorporating the heat unit program into SWAT+ i
 3. allows the model to calculate heat units for native perennials and annuals that are location dependent,&#x20;
 4. a database (plants.plt) can be maintained and supported that includes different crop varieties, and&#x20;
 5. by inputting the maximum growing season for a crop, the model will calculate appropriate heat units for that crop anywhere in the northern or southern hemisphere.
+
+Enter days_mat as an integer with no decimal point. SWAT+ main (6f515368) reads this field directly into an integer variable.

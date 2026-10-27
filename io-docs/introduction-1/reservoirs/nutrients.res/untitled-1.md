@@ -1,7 +1,7 @@
 ---
-description: Chlorophyll-a production coefficient for the reservoir
+description: Annual loss-rate coefficient for soluble inorganic nitrogen
 ---
 
-# chla\_co
+# chla_co
 
-The chlorophyll _a_ concentration in the reservoir is calculated from the total phosphorus concentration. The equation assumes the system is phosphorus-limited. The chlorophyll _a_ coefficient was added to the equation to allow the user to adjust results to account for other factors not included in the basic equation, e.g. nitrogen limitations.
+Despite the legacy input label, this field is the annual loss-rate coefficient for soluble inorganic nitrogen (NO3, NH3, and NO2), not a chlorophyll-a production coefficient. SWAT+ divides the input by 365 and applies the daily coefficient in reservoir and wetland nutrient loss.

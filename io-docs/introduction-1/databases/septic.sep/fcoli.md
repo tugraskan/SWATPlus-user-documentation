@@ -1,5 +1,5 @@
 ---
-description: Number of fecal coliform in the septic tank effluent
+description: Fecal coliform concentration in the septic tank effluent
 ---
 
 # fcoli

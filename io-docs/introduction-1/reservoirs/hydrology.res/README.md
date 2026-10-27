@@ -15,5 +15,5 @@ description: This file contains the reservoir hydrology parameters.
 | [vol\_es](vol_es-1.md) | Volume of water needed to fill the reservoir to emergency spillway    |   real  |  ha-m |   55.0  |  10.0-100.0 |
 | [k](k.md)              | Hydraulic conductivity of the reservoir bottom                        |   real  | mm/hr |   0.0   |   0.0-1.0   |
 | [evap\_co](evap_co.md) | Reservoir evaporation coefficient                                     |   real  |  n/a  |   0.60  |   0.0-1.0   |
-| [shp\_co1](shp_co1.md) | Shape coefficient 1 for reservoirs                                    |   real  |  n/a  |   0.0   |             |
-| [shp\_co2](sho_co2.md) | Shape coefficient 2 for reservoirs                                    |   real  |  n/a  |   0.0   |             |
+| [shp\_co1](shp_co1.md) | Lag parameter for smoothing reservoir outflow when outflow is increasing | real | n/a | 0.0 |  |
+| [shp\_co2](sho_co2.md) | Lag parameter for smoothing reservoir outflow when outflow is decreasing or unchanged | real | n/a | 0.0 |  |

@@ -4,7 +4,7 @@ description: Name of the septic record
 
 # name (septic.sep)
 
-The name of the septic record is a primary key referenced by [typ](../../structural-practices/septic.str/typ.md) in [**septic.str**](../../structural-practices/septic.str/). All names in the **septic.sep** database must be unique.
+SWAT+ main (6f515368) reads the septic-record name but does not use it to select a record. The integer `typ` value in `septic.str` selects a `septic.sep` record by row number, starting with 1.
 
 | Name | Description                                                               |
 | ---- | ------------------------------------------------------------------------- |

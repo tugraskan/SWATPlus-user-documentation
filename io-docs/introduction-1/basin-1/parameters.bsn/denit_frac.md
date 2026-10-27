@@ -1,5 +1,5 @@
 ---
-description: Denitrification threshold water content
+description: Denitrification threshold as a fraction of field capacity
 ---
 
 # denit\_frac

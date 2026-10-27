@@ -18,4 +18,4 @@ description: >-
 | [conc\_totn](conc_totn.md)      | Concentration of total N in suspended solid load from impervious areas             |  real  |    mg/kg   |   0.0   | 0.0-1000.0 |
 | [conc\_totp](conc_totp.md)      | Concentration of total P in suspended solid load from impervious areas             |  real  |    mg/kg   |   0.0   | 0.0-1000.0 |
 | [conc\_no3n](conc_no3.md)       | Concentration of NO3-N in suspended solid load from impervious areas               |  real  |    mg/kg   |   0.0   |  0.0-50.0  |
-| [urb\_cn](urb_cn.md)            | Moisture condition II curve number for impervious areas                            |  real  |    none    |   0.0   | 30.0-100.0 |
+| [urb\_cn](urb_cn.md) | Not used. Daily curve-number runoff uses a fixed impervious-area curve number of 98. | real | none | 0.0 | 30.0-100.0 |

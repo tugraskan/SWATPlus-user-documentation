@@ -9,7 +9,7 @@ The removal efficiency of street sweeping is a function of the type of sweeper, 
 Because SWAT+ assumes a set concentration of nutrient constituents in the solids, the same removal efficiency is in effect used for all constituents.&#x20;
 
 {% hint style="info" %}
-A value of 0.0 indicates that none of the built-up sediments are removed while a value of 1.0 indicates that all of the built-up sediments are removed.
+A value of 0.0 removes none of the built-up sediment. A value of 1.0 removes all sediment associated with the sweepable curb length. The overall removed fraction is `frac_curb * swp_eff`, so complete removal requires both values to be 1.0.
 {% endhint %}
 
 #### References

@@ -9,12 +9,12 @@ description: >-
 | Field                          | Description                                            | Type   |
 | ------------------------------ | ------------------------------------------------------ | ------ |
 | [name](name-soil_plant.ini.md) | Name of the soil and plant initialization              | string |
-| [sw\_frac](sw_frac.md)         | Soil water fraction at the beginning of the simulation | real   |
+| [sw\_frac](sw_frac.md) | Not used. Initial soil water is controlled by sw_init in parameters.bsn. | real |
 | [nutrients](nutrients.md)      | Pointer to the nutrient initialization file            | string |
 | [pest](pest.md)                | Pointer to the pesticide initialization file           | string |
-| path                           | Currently not used                                     | string |
+| path | Name of a record in path_hru.ini that initializes pathogen concentrations in soil and plants. | string |
 | [salt](salt.md)                | Pointer to the salt initialization file                | string |
-| hmet                           | Currently not used                                     | string |
+| hmet | Name of a record in hmet_hru.ini that initializes heavy-metal concentrations in soil and plants. | string |
 | [cs](cs.md)                    | Pointer to the constituent soil initialization in cs\_hru.ini; this column is read only when event in codes.bsn is not 0 | string |
 
 {% hint style="warning" %}

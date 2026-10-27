@@ -1,9 +1,9 @@
 ---
-description: Sediment concentration in lateral and groundwater flow
+description: Sediment concentration in lateral and tile flow
 ---
 
 # lat\_sed
 
 {% hint style="info" %}
-Sediment concentration in lateral and groundwater flow is usually very low and does not contribute significantly to total sediment yields unless return flow is very high.
+Sediment concentration in lateral and tile flow is usually low and does not contribute substantially to total sediment yield unless lateral or tile flow is high.
 {% endhint %}

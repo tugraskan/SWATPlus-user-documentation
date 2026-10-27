@@ -1,7 +1,7 @@
 ---
-description: Name of the aquifer initialization record
+description: Currently not used in SWAT+ main (6f515368)
 ---
 
 # name (initial.aqu)
 
-The name of the aquifer initialization record is a primary key referenced by [init](../aquifer.aqu/aqu_ini.md) in [**aquifer.aqu**](../aquifer.aqu/).
+SWAT+ main (6f515368) reads the name field from initial.aqu but does not use it afterward. Active aquifer initialization-name matching is performed with records read from initial.aqu_cs.

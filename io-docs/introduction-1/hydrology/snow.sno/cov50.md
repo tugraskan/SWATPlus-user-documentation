@@ -1,7 +1,7 @@
 ---
-description: Fraction of snow volume corresponding to 50% snow cover
+description: Fraction of snow_h2o at which snow cover is 50%
 ---
 
 # cov50
 
-SWAT+ assumes a non-linear relationship between snow water and snow cover. This parameter defines the fraction of the snow volume represented by [snow\_h2o](snow_h2o.md) that corresponds to 50% snow cover.
+SWAT+ assumes a non-linear relationship between snow water and snow cover. This parameter is the fraction of [snow\_h2o](snow_h2o.md) at which the HRU is 50% snow covered.

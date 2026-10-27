@@ -1,6 +1,7 @@
 ---
-description: Concentration of total salt in irrigation water
+description: Currently not used in SWAT+ main (6f515368)
 ---
 
-# irr\_salt
+# salt\_ppm
 
+SWAT+ main (6f515368) copies this irrigation-water salt concentration to internal irrigation state, but no calculation reads the copied value.

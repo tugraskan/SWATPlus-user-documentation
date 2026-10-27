@@ -1,5 +1,5 @@
 ---
-description: Lake evaporation coefficient
+description: Reservoir evaporation coefficient
 ---
 
 # evap\_co

@@ -4,7 +4,7 @@ description: Septic system type
 
 # typ
 
-The septic system type is a foreign key referencing [name](../../databases/septic.sep/name_sepdb.md) in [**septic.sep**](../../databases/septic.sep/).
+Enter the 1-based row number of the septic water-quality record in `septic.sep`. For example, `1` selects the first data record. SWAT+ main (6f515368) uses this integer directly as an array index; it does not match the value to the record's `name` field. The names below describe the standard database records, whose row order determines their integer numbers.
 
 | Name | Description                                                               |
 | ---- | ------------------------------------------------------------------------- |

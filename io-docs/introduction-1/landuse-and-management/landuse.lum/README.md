@@ -11,8 +11,8 @@ description: >-
 | Field                         | Description                                   |  Type  |
 | ----------------------------- | --------------------------------------------- | :----: |
 | [name](name.md)               | Name of the land use and management record    | string |
-| [cal\_grp](cal_grp.md)        | Calibration group                             | string |
-| [plnt\_com](plnt_com.md)&#xD; | Pointer to the plant community file           | string |
+| [cal\_group](cal_grp.md) | Calibration group | string |
+| [plnt\_com](plnt_com.md) | Pointer to the plant community file | string |
 | [mgt](mgt.md)                 | Pointer to the management schedule file       | string |
 | [cn2](cn2.md)                 | Pointer to the Curve Number database          | string |
 | [cons\_prac](cons_prac.md)    | Pointer to the conservation practice database | string |

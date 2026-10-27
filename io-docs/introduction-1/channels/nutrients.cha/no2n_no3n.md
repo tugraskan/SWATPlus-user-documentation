@@ -6,4 +6,4 @@ description: >-
 
 # no2n\_no3n
 
-If routing is performed on an hourly time step, the units of **no2n\_no3n** are converted to 1/hr by the model.
+Enter this field in 1/day. After reading it, SWAT+ divides the value by the number of routing time steps per day to obtain the value used for each routing step.

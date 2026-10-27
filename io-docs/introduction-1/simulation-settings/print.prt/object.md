@@ -18,7 +18,7 @@ The user is advised to print only those outputs that are needed for model evalua
 | basin\_pw       | Basin plant and weather                                        |
 | basin\_aqu      | Basin aquifer                                                  |
 | basin\_res      | Basin reservoir                                                |
-| basin\_cha      | Currently not used                                             |
+| basin\_cha | Basin channel output |
 | basin\_sd\_cha  | Basin SWAT-DEG channel                                         |
 | basin\_psc      | Basin point sources                                            |
 | region\_wb      | Currently not used                                             |
@@ -42,7 +42,7 @@ The user is advised to print only those outputs that are needed for model evalua
 | hru-lte\_nb     | Not used (no nutrient processes simulated for HRU-lte objects) |
 | hru-lte\_ls     | HRU-lte losses                                                 |
 | hru-lte\_pw     | HRU-lte plant and weather                                      |
-| channel         | Currently not used                                             |
+| channel | Channel output |
 | channel\_sd     | SWAT-DEG channel output                                        |
 | aquifer         | Aquifer output                                                 |
 | reservoir       | Reservoir output                                               |
@@ -64,3 +64,30 @@ The user is advised to print only those outputs that are needed for model evalua
 | channel\_cs     |                                                                |
 | res\_cs         |                                                                |
 | wetland\_cs     |                                                                |
+| lsu\_cb\_gl | LSU-area-weighted carbon gain/loss |
+| lsu\_cb\_trf | LSU-area-weighted carbon transformations |
+| lsu\_cb\_plt | LSU-area-weighted plant carbon state |
+| hru\_cb | Legacy carbon output switch retained for compatibility; no current writer uses it |
+| hru\_cb\_vars | Legacy carbon-variable switch retained for compatibility; no current writer uses it |
+| hru\_cb\_gl | HRU carbon gain/loss |
+| hru\_cb\_trf | HRU carbon transformations |
+| hru\_cb\_lyr | HRU per-layer soil organic carbon totals and sequestration |
+| hru\_cb\_cpool | HRU per-layer carbon pools |
+| hru\_cb\_npool | HRU per-layer nitrogen and phosphorus pools |
+| hru\_cb\_plt | HRU plant carbon state |
+| hru\_cb\_flux | HRU per-layer carbon-flux diagnostics |
+| hru\_cb\_drv | HRU per-layer carbon-driver diagnostics |
+| hru\_cb\_dyn | HRU per-layer carbon-dynamics diagnostics |
+| hru\_cb\_snap | HRU soil-property snapshot |
+| gwflow\_wb | GWFlow cell and basin water-balance output |
+| gwflow\_flux | GWFlow canal, pond, tile, groundwater-surface-water, and channel-observation flux output |
+| gwflow\_heat | GWFlow basin heat-balance output |
+| gwflow\_solute | GWFlow basin solute-balance output |
+| gwflow\_obs | GWFlow observation-well output |
+| gwflow\_pump | GWFlow HRU pumping output |
+
+GWFlow output rows require label-based object parsing: set use_obj_lbls to a value other than n. When gwflow_wb is listed, its daily, monthly, yearly, and average annual switches replace the corresponding gwflow.input water-balance settings. The daily water-balance switch also controls channel hydrograph-separation output.
+
+gwflow_obs and gwflow_solute select their four output periods independently. gwflow_heat supports daily, yearly, and average annual output; its monthly column does not enable a monthly heat-balance output. If the heat or solute row is omitted, its periods follow the water-balance settings. If the observation row is omitted, its four period flags retain their default enabled values.
+
+gwflow_pump is a group switch: any y among its four columns enables pumping output at all implemented periods; four n values disable the group. gwflow_flux is also a group switch: a y in its daily or yearly column enables its diagnostics; its monthly and average annual columns do not enable the group. These two rows do not independently select output periods.

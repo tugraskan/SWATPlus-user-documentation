@@ -4,11 +4,11 @@ description: Time step of the simulation
 
 # step
 
-SWAT+ is able to run at the following time steps:
+`step` is the number of simulation time steps per day. SWAT+ converts a value of 0 or any negative value to 1, so both 0 and 1 produce a daily time step.
 
 | Code | Time Step  |
 | ---- | ---------- |
-| 0    | day        |
+| 0 or 1 | day |
 | 2    | 12 hours   |
 | 24   | hour       |
 | 96   | 15 minutes |

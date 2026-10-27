@@ -1,9 +1,7 @@
 ---
-description: >-
-  Fraction of biomass accumulated each year that is converted to residue during
-  dormancy
+description: Coefficient to estimate maximum LAI during tree growth
 ---
 
 # bm\_tree\_acc
 
-This variable pertains to trees only. It is not used for other types of plants. It governs the amount of biomass that falls off the tree and is converted to residue when the plant goes dormant in the winter.
+This dimensionless coefficient pertains to perennials. SWAT+ multiplies it by the base-10 logarithm of current years to maturity divided by total years to maturity to estimate the LAI exponent during tree growth. It is not a fraction of biomass converted to residue.

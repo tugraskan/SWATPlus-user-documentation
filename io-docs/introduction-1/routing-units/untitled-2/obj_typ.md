@@ -6,9 +6,12 @@ description: Object type of the element
 
 The following object types can be elements in a Routing Unit:
 
-* another rtu
-* hru
-* res
-* aqu
-* sdc
-* rec
+* `hru` — HRU
+* `hlt` — HRU-LTE
+* `ru` — routing unit
+* `cha` — channel
+* `res` — reservoir
+* `exc` — export coefficient
+* `dr` — delivery-ratio object
+* `out` — outlet
+* `sdc` — SWAT-degenerate channel

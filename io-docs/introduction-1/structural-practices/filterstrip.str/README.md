@@ -9,10 +9,10 @@ A filter strip is a strip of dense vegetation located to intercept runoff from u
 | Field                  | Description                                                              | Type    | Unit     | Range     |
 | ---------------------- | ------------------------------------------------------------------------ | ------- | -------- | --------- |
 | [name](name_fsdb.md)   | Name of filter strip record                                              | ​string | ​n/a     | n/a       |
-| <p>flag_fs</p><p></p>  | Currently not used                                                       | integer |          |           |
+| flag | On/off flag for vegetative filter strip (0 = off; positive = on) | integer | n/a | 0-1 |
 | [fld\_vfs](fld_vfs.md) | ​Ratio of field area to filter strip area                                | real    | ratio    | 0.0-300.0 |
 | [con\_vfs](con_vfs.md) | ​Fraction of flow entering the most concentrated 10% of the filter strip | real    | fraction | 0.25-0.75 |
-| [cha\_q](cha_q.md)     | ​Fraction of fully channelized flow                                      | real    | %        | 0.0-100.0 |
+| [cha\_q](cha_q.md) | Fraction of flow in the most concentrated 10% of the filter strip that is fully channelized | real | fraction | 0.0-0.95 |
 
 #### References:
 

@@ -1,7 +1,7 @@
 ---
-description: Pointer to the pesticide initialization file
+description: Currently not used in initial.aqu in SWAT+ main (6f515368)
 ---
 
 # pest
 
-The pointer to the pesticide initialization file is a foreign key referencing name in [**pest\_water.ini**](../../initialization/pest_water.ini.md).
+SWAT+ main (6f515368) reads the pest field from initial.aqu but does not use it afterward. The active aquifer pesticide initialization pointer is read from initial.aqu_cs.

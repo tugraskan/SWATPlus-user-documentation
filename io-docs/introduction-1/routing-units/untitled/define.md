@@ -1,7 +1,7 @@
 ---
-description: Pointer to the routing unit definition file
+description: Routing Unit definition name (read but not used by the model)
 ---
 
 # define
 
-The pointer to the routing unit definition file is a foreign key referencing [id](../untitled-1/id-rout_unit.def.md) in [**rout\_unit.def**](../untitled-1/).
+SWAT+ main (6f515368) reads the `define` value but does not use it to select a Routing Unit definition. The model reads `rout_unit.def` independently and associates its records with Routing Units by row position.

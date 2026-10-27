@@ -4,4 +4,4 @@ description: Object type of the element
 
 # obj\_typ
 
-HRUs are the only spatial objects that can be elements of a Landscape Unit.&#x20;
+Object type of the element. SWAT+ main (6f515368) supports hru for a Hydrologic Response Unit and hlt for an HRU-LTE.

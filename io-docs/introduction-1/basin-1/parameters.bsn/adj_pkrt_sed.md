@@ -1,7 +1,7 @@
 ---
-description: Peak rate factor
+description: Peak rate factor for the NRCS dimensionless-hydrograph peak-runoff equation
 ---
 
-# prf
+# adj\_pkrt\_sed
 
-Sediment routing is a function of peak flow rate and mean daily flow. Because SWAT originally could not directly calculate the sub-daily hydrograph, this variable was incorporated to allow adjustment for the effect of the peak flow rate on sediment routing. This variable impacts channel degradation.
+When the NRCS dimensionless-hydrograph method is selected, SWAT+ uses adj_pkrt_sed to calculate HRU peak runoff rate from runoff depth, HRU area, and time of concentration. It is not a main-channel sediment-routing factor in SWAT+ main (6f515368).

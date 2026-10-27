@@ -10,7 +10,7 @@ description: >-
 | ------------------- | ------------------------------------------- | ------- |
 | id                  | ID of the Routing Unit                      | integer |
 | name                | Name of the Routing Unit                    | string  |
-| [define](define.md) | Pointer to the Routing Unit definition file | string  |
-| dlr                 | Delivery ratio                              |         |
+| [define](define.md) | Routing Unit definition name (read but not used by the model) | string |
+| dlr | Delivery ratio name (read but not used by the model) | string |
 | [topo](topo.md)     | Pointer to the topography file              | string  |
 | [field](field.md)   | Pointer to the field file                   | string  |

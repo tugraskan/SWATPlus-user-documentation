@@ -14,3 +14,16 @@ description: This file contains pre-defined irrigation operations.
 | [salt_ppm](irr_salt.md)       | Currently not used in SWAT+ main (6f515368)                     | real   | mg/kg    | 0.0     |         |
 | [no3_ppm](irr_no3n.md)        | Concentration of nitrate in irrigation water            | real   | mg/kg    | 0.0     |         |
 | [po4_ppm](irr_po4.md)         | Currently not used in SWAT+ main (6f515368)                     | real   | mg/kg    | 0.0     |         |
+
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `eff_frac` | `eff` |
+| `sumq_frac` | `surq` |
+| `dep_sub` | `dep_mm` |
+| `salt_ppm` | `salt` |
+| `no3_ppm` | `no3` |
+| `po4_ppm` | `po4` |

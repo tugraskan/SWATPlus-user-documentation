@@ -14,3 +14,14 @@ description: >-
 | [cha\_hyd](cha_hyd.md) | Pointer to the channel hydrology and sediment file | string |
 | cha\_sed | Currently not used | string |
 | [cha\_nut](cha_nut.md) | Pointer to the channel nutrient file | string |
+
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `cha_ini` | `initc` |
+| `cha_hyd` | `hydc` |
+| `cha_sed` | `sedc` |
+| `cha_nut` | `nutc` |

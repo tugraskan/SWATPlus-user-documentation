@@ -37,3 +37,12 @@
 | [usle\_c](usle_c.md)          | USLE cover factor C                                                                           |   real  |    n/a   |     0.20     |            |
 | [usle\_p](usle_p.md)          | USLE support practice factor P                                                                |   real  |    n/a   |     0.80     |            |
 | [usle\_ls](usle_ls.md)        | USLE slope length and slope factor LS                                                         |   real  |    n/a   |     0.53     |            |
+
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `perc_co` | `perco` |
+| `snow_h2o` | `snow` |

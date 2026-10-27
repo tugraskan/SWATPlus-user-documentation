@@ -16,3 +16,11 @@ There are many conservation practices that are not implemented in SWAT+, but for
 | [ptln\_eff](ptln_eff.md) | Particulate N removal by BMP | real | fraction | 0.0-1.0 |
 | [soln\_eff](soln_eff.md) | Soluble N removal by BMP | real | fraction | 0.0-1.0 |
 | [bact\_eff](bact_eff.md) | Bacteria removal by BMP (not applied in SWAT+ main (6f515368)) | real | percent | 0.0-100.0 |
+
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `flag` | `bmp_flag` |

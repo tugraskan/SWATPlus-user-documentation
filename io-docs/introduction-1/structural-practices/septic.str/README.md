@@ -40,3 +40,11 @@ Data contained in the septic.str data file are: type of septic system, geometry 
 #### References
 
 > Siegrist, R.L., J. McCray, L. Weintraub, C. Chen, J. Bagdol, P. Lemonds, S. Van Cuyk, K. Lowe, R. Goldstein, and J. Rada (2005): Quantifying Site-Scale Processes and Watershed-Scale Cumulative Effects of Decentralized Wastewater Systems. Project No. WU-HT-00-27. Prepared for the National Decentralized Water Resources Capacity Development Project, Washington University, St. Louis, MO, by the Colorado School of Mines.
+
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `fecal_decay` | `fecal` |

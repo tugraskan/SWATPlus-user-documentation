@@ -17,3 +17,10 @@ Grassed waterways are vegetated channels that transport runoff from a field. Veg
 | [len](len.md)                | Length of grassed waterway          | real    | km   | 0.0-10000.0 |
 | [slp](slp.md)                | Slope of grassed waterway           | real    | m/m  | 0.0-1.0     |
 
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `flag` | `grwat_i` |

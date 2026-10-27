@@ -31,4 +31,10 @@ The **print.prt** file is formatted differently than most other SWAT+ input file
 | yearly                        | Code for printing yearly output (y=yes, n=no)                          | string  |
 | avann                         | Code for printing average annual output (y=yes, n=no)                  | string  |
 
-
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `use_obj_lbls` | `use_obj_labels` |

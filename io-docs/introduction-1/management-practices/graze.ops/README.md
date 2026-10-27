@@ -19,3 +19,10 @@ The parameter values of the pre-defined grazing operations are very rough estima
 | [man\_amt](manure.md)      | Dry weight of manure deposited daily                          |  real  | (kg/ha)/day |   0.0   |  0.0-500.0 |
 | [grz\_bm\_min](bio_min.md) | Minimum plant biomass for grazing to occur                    |  real  |    kg/ha    |   0.0   | 0.0-5000.0 |
 
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `fert` | `fertnm` |

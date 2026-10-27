@@ -17,3 +17,11 @@ A filter strip is a strip of dense vegetation located to intercept runoff from u
 #### References:
 
 > White, Michael J. and Arnold, Jeff G. (2009): Development of a simplistic vegetative filter strip model for sediment and nutrient retention at the field scale. Hydrological Processes 23, 1602– 1616. DOI: 10.1002/hyp.7291
+
+## Names used in the code
+
+These input-file fields have different internal names in the Fortran code:
+
+| Input-file name | Fortran name |
+| --- | --- |
+| `flag` | `vfsi` |

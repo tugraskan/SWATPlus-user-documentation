@@ -4,6 +4,10 @@ description: Days to maturity
 
 # days\_mat
 
+**Code reference:** `pldb(ic)%days_mat`
+
+**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L42)).
+
 The PHU program was incorporated directly into SWAT+. The heat units to maturity were changed to days to maturity (_days\_mat_). The concept of heat units to maturity was developed for annual crops and we use heat units for the entire growing season for native perennials and native annuals. By inputting days to maturity, we can include different crop varieties as defined by length of growing season (e.g., 120-, 110-, 100- and 90-day varieties for corn). The heat units to maturity calculation in the model first computes base zero heat units for the entire year and assumes a planting date when heat units exceed 0.15 \* base zero. Then, the model calculates heat units from planting date through the days to maturity using the crop's base temperature as specified by [tmp\_base](tmp_base.md). If the maximum days for a crop are input, e.g., 120 days for corn, and the growing season is less than 120 days, the model essentially sums heat units for the entire growing season which represents (and estimates) the maximum days to maturity.&#x20;
 
 The algorithm currently uses monthly weather generator parameters but could be modified to alternatively use daily temperature inputs. The model provides heat unit estimates in both the northern and southern hemispheres.&#x20;

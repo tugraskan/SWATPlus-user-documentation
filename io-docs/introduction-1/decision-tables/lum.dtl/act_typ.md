@@ -1,5 +1,9 @@
 # act\_typ
 
+**Code reference:** `dtbl_lum(i)%act(iac)%typ`
+
+**Declared type:** `actions_var` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_lum_read.f90#L96), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L17)).
+
 The actions that can be triggered using the lum.dtl file are defined in the SWAT+ code. For each action, the type and ID of the object it is applied to, and a user-defined name have to be specified. Certain actions require additional information, which has to be specified in the fields option, const, const2, and fp. The use of these four fields depends on the action. The table below lists the actions implemented in the SWAT+ code, a short description, and the additional fields needed.  &#x20;
 
 | Action           | Description                                 | Additional fields needed                                                 |
@@ -43,4 +47,3 @@ The actions that can be triggered using the lum.dtl file are defined in the SWAT
 | burn             | Burning                                     |                                                                          |
 | cn\_update       | Update Curve Number                         | [option](option.md), [const](const.md), [const2](const2.md)              |
 | pheno\_reset     |                                             |                                                                          |
-

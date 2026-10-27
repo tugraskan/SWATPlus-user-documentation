@@ -4,6 +4,10 @@ description: Soil adsorption coefficient normalized for soil organic carbon cont
 
 # soil\_ads
 
+**Code reference:** `pestdb(ip)%koc`
+
+**Declared type:** `pesticide_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_parm_read.f90#L48), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pesticide_data_module.f90#L7)).
+
 Pesticides in the soil environment can be transported in solution or attached to sediment. The partitioning of a pesticide between the solution and soil phases is defined by the soil adsorption coefficient for the pesticide. The soil adsorption coefficient is the ratio of the pesticide concentration in the soil or solid phase to the pesticide concentration in the solution or liquid phase:
 
 $$K_p=\frac{C_{solidphase}}{C_{solution}}$$

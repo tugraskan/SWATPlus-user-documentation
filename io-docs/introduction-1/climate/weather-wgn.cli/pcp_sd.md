@@ -4,6 +4,10 @@ description: Standard deviation for daily precipitation in month
 
 # pcp\_sd
 
+**Code reference:** `wgn(iwgn)%pcpstd(mo)`
+
+**Declared type:** `weather_generator_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_wgnread.f90#L96), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_module.f90#L34)).
+
 This parameter quantifies the variability in precipitation for each month. The standard deviation is calculated as
 
 $$

@@ -8,12 +8,14 @@ This file lists recall database records used in a simulation. Each row contains 
 
 | Field | Description | Type |
 | --- | --- | --- |
-| [id](id-recall_db.rec.md) | ID of the recall database record | integer |
+| [id](id-recall_db.rec.md)\* | ID of the recall database record | integer |
 | [name](name.md) | Name of the recall database record; may be referenced by a reservoir decision-table file pointer | string |
-| [om\_name](om_name.md) | Organic/mineral constituent name used to match an outside-source water-quality recall definition | string |
-| [pest\_name](pest_name.md) | Pesticide constituent name; read but not used in SWAT+ main (6f515368) | string |
-| [path\_name](path_name.md) | Pathogen constituent name; read but not used in SWAT+ main (6f515368) | string |
-| [hmet\_name](hmet_name.md) | Heavy-metal constituent name; read but not used in SWAT+ main (6f515368) | string |
-| [salt\_name](salt_name.md) | Salt constituent name; read but not used in SWAT+ main (6f515368) | string |
-| [cst\_name](cst_name.md) | General constituent name; read but not used in SWAT+ main (6f515368) | string |
+| [om\_name](om_name.md)\* | Organic/mineral constituent name used to match an outside-source water-quality recall definition | string |
+| [pest\_name](pest_name.md)\* | Pesticide constituent name; read but not used in SWAT+ main (6f515368) | string |
+| [path\_name](path_name.md)\* | Pathogen constituent name; read but not used in SWAT+ main (6f515368) | string |
+| [hmet\_name](hmet_name.md)\* | Heavy-metal constituent name; read but not used in SWAT+ main (6f515368) | string |
+| [salt\_name](salt_name.md)\* | Salt constituent name; read but not used in SWAT+ main (6f515368) | string |
+| [cst\_name](cst_name.md)\* | General constituent name; read but not used in SWAT+ main (6f515368) | string |
 | [descrip](descrip.md) | Description of the recall database record; read but not used in SWAT+ main (6f515368) | string |
+
+\* Input-file labels marked with an asterisk have different Fortran names: `id` → `k`; `om_name` → `recall_db(i)%org_min`; `pest_name` → `recall_db(i)%pest`; `path_name` → `recall_db(i)%path`; `hmet_name` → `recall_db(i)%hmet`; `salt_name` → `recall_db(i)%salt`; `cst_name` → `recall_db(i)%constit`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recalldb_read.f90#L49).

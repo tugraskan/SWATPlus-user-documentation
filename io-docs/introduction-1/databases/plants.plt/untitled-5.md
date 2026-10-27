@@ -6,4 +6,8 @@ description: >-
 
 # frac\_sw\_gro
 
+**Code reference:** `pldb(ic)%frsw_gro`
+
+**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L99)).
+
 SWAT+ main (6f515368) reads this column but does not use it. The source comment describes the intended value as a 30-day sum of precipitation minus potential evapotranspiration for initiating tropical-plant growth during monsoon season; however, the declaration labels it as a fraction, so the intended input unit is unresolved in this release.

@@ -4,6 +4,10 @@ description: Name of the plant/landcover
 
 # name (plants.plt)
 
+**Code reference:** `pldb(ic)%plantnm`
+
+**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L31)).
+
 The name of the plant/landcover is a primary key referenced by [plt\_name](../../landuse-and-management/plant.ini/plnt_name.md) in [**plant.ini**](../../landuse-and-management/plant.ini/). All names in the **plants.plt** database must be unique.
 
 The names in the plant database are also used by QSWAT+ to link the grid codes in land use/land cover maps to SWAT+ land use types.&#x20;

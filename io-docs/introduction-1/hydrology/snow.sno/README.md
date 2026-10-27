@@ -7,11 +7,13 @@ description: This file controls the simulation of snowfall and snowmelt processe
 | Field                      | Description                                       |  Type  |      Unit     | Default |   Range   |
 | -------------------------- | ------------------------------------------------- | :----: | :-----------: | :-----: | :-------: |
 | [name](name.md)            | Name of the snow record                           | string |      n/a      |   n/a   |    n/a    |
-| [fall\_tmp](fall_tmp.md)   | Snowfall temperature                              |  real  |       ºC      |    1    |   -5 - 5  |
-| [melt\_tmp](melt_tmp.md)   | Snow melt base temperature                        |  real  |       ºC      |   0.5   |   -5 - 5  |
-| [melt\_max](melt_max.md)   | Melt factor for snow on June 21                   |  real  | mm H2O/day-ºC |   0.0   |  0.0-10.0 |
-| [melt\_min](melt_min.md)   | Melt factor for snow on December 21               |  real  | mm H2O/day-ºC |   0.0   |  0.0-10.0 |
-| [tmp\_lag](tmp_lag.md)     | Snowpack temperature lag factor                   |  real  |      none     |    1    |   0.01-1  |
-| [snow\_h2o](snow_h2o.md) | Snow water content at full ground cover (100% snow cover) | real | mm | 0.0 | 0.0-500.0 |
+| [fall\_tmp](fall_tmp.md)\* | Snowfall temperature                              |  real  |       ºC      |    1    |   -5 - 5  |
+| [melt\_tmp](melt_tmp.md)\* | Snow melt base temperature                        |  real  |       ºC      |   0.5   |   -5 - 5  |
+| [melt\_max](melt_max.md)\* | Melt factor for snow on June 21                   |  real  | mm H2O/day-ºC |   0.0   |  0.0-10.0 |
+| [melt\_min](melt_min.md)\* | Melt factor for snow on December 21               |  real  | mm H2O/day-ºC |   0.0   |  0.0-10.0 |
+| [tmp\_lag](tmp_lag.md)\* | Snowpack temperature lag factor                   |  real  |      none     |    1    |   0.01-1  |
+| [snow\_h2o](snow_h2o.md)\* | Snow water content at full ground cover (100% snow cover) | real | mm | 0.0 | 0.0-500.0 |
 | [cov50](cov50.md) | Fraction of snow_h2o at which snow cover is 50% | real | fraction | 0.50 | 0.0-1.0 |
-| [snow\_init](snow_init.md) | Initial snow water content at start of simulation |  real  |       mm      |   0.0   |  0.0-0.50 |
+| [snow\_init](snow_init.md)\* | Initial snow water content at start of simulation |  real  |       mm      |   0.0   |  0.0-0.50 |
+
+\* Input-file labels marked with an asterisk have different Fortran names: `fall_tmp` → `snodb(isno)%falltmp`; `melt_tmp` → `snodb(isno)%melttmp`; `melt_max` → `snodb(isno)%meltmx`; `melt_min` → `snodb(isno)%meltmn`; `tmp_lag` → `snodb(isno)%timp`; `snow_h2o` → `snodb(isno)%covmx`; `snow_init` → `snodb(isno)%init_mm`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/snowdb_read.f90#L48).

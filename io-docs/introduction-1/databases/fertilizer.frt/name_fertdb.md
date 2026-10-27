@@ -4,6 +4,10 @@ description: Name of the fertilizer or manure record
 
 # name (fertilizer.frt)
 
+**Code reference:** `fertdb(it)%fertnm`
+
+**Declared type:** `fertilizer_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/fert_parm_read.f90#L47), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/fertilizer_data_module.f90#L6)).
+
 The name of the fertilizer or manure record is a primary key referenced when fertilizer or manure applications are scheduled in [**management.sch**](../../landuse-and-management/management.sch/) or [**lum.dtl**](../../decision-tables/lum.dtl/). All names in the **fertilizer.frt** database must be unique.
 
 | elem\_n    | Elemental Nitrogen    |

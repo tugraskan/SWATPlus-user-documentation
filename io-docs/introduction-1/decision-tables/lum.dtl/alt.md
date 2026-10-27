@@ -4,6 +4,10 @@ description: Alternative
 
 # alt
 
+**Code reference:** `dtbl_lum(i)%alt(ic,ial)`
+
+**Declared type:** `decision_table` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_lum_read.f90#L70), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L34)).
+
 The alternative is the final piece to construct the “if” statement needed to implement the associated rule. One of the alternative operators listed in the table below must be specified for each condition defined in the Decision Table. The user can define as many alternatives as needed by adding the required number of alt columns and numbering them sequentially (alt1, alt2,...).&#x20;
 
 The model checks if the condition is met by:&#x20;

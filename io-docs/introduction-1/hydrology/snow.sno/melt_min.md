@@ -4,6 +4,10 @@ description: Melt factor for snow on December 21
 
 # melt\_min
 
+**Code reference:** `snodb(isno)%meltmn`
+
+**Declared type:** `snow_parameters` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/snowdb_read.f90#L48), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_module.f90#L77)).
+
 The variables [melt\_max](melt_max.md) and _melt\_min_ allow the rate of snow melt to vary through the year and account for the impact of snowpack density on snow melt.&#x20;
 
 In the Northern Hemisphere, `melt_min` is the minimum seasonal melt factor. In the Southern Hemisphere, it is the maximum seasonal melt factor.

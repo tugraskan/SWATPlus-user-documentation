@@ -4,6 +4,10 @@ description: Pointer to the object data file
 
 # 'obj'
 
+**Code reference:** `ob(i)%props`
+
+**Declared type:** `object_connectivity` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hyd_read_connect.f90#L298), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L343)).
+
 The pointer to the object data file identifies the corresponding record used by the object. For most connect files it references the unique ID in the listed object data file. The header of this column differs between connect files. Export coefficients have the known limitation below.
 
 | Connect file   | Column header | Object data file                                                  |

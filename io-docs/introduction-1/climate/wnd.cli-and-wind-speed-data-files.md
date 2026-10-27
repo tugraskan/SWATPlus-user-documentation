@@ -8,11 +8,17 @@ description: >-
 
 The **wind speed data files** contain the observed precipitation input data. They are named by the user and must have the file ending \*.wnd. There must be one file per station used in the simulation. As in all SWAT+ input files, the first line in the wind speed data files is reserved for user comments. The second line contains the column headers for the third line, which lists basic information about the station.&#x20;
 
-<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>nbyr</td><td>Length of the wind speed time series</td><td>integer</td><td>years</td></tr><tr><td>tstep</td><td>Time step of the wind speed data</td><td>integer</td><td>n/a</td></tr><tr><td>lat</td><td>Latitude of the wind speed station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>lon</td><td>Longitude of the wind speed station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>elev</td><td>Elevation of the wind speed station</td><td>real</td><td>m</td></tr></tbody></table>
+<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>nbyr</td><td>Length of the wind speed time series</td><td>integer</td><td>years</td></tr><tr><td>tstep</td><td>Time step of the wind speed data</td><td>integer</td><td>n/a</td></tr><tr><td>lat</td><td>Latitude of the wind speed station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>lon<sup>*</sup></td><td>Longitude of the wind speed station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>elev</td><td>Elevation of the wind speed station</td><td>real</td><td>m</td></tr></tbody></table>
+
+\* Input-file labels marked with an asterisk have different Fortran names: `lon` → `wnd(i)%long`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_wmeas.f90#L77).
+
 
 Starting in the fourth line, the year, Julian day, and wind speed are listed. There are no headers for these columns.
 
-<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>year</td><td>Year of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>jday</td><td>Julian day of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>wnd</td><td>Observed wind speed</td><td>real</td><td>m/s</td></tr></tbody></table>
+<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>year<sup>*</sup></td><td>Year of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>jday<sup>*</sup></td><td>Julian day of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>wnd<sup>*</sup></td><td>Observed wind speed</td><td>real</td><td>m/s</td></tr></tbody></table>
+
+\* Input-file labels marked with an asterisk have different Fortran names: `year` → `iyr`; `jday` → `istep`; `wnd` → `wnd(i)%ts(istep,iyrs)`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_wmeas.f90#L112).
+
 
 {% hint style="info" %}
 A negative 99.0 (-99.0) should be inserted for missing data. This value tells SWAT+ to generate a wind speed value for that day.

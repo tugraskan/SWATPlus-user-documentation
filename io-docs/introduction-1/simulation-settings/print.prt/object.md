@@ -4,6 +4,10 @@ description: Objects that output can be printed for at different time steps
 
 # object
 
+**Code reference:** `name`
+
+**Declared type:** `character (len=16)` (variable in `basin_print_codes_read`) ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_print_codes_read.f90#L58), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_print_codes_read.f90#L11)).
+
 The table below lists the objects that are listed in the first column of this section of the **print.prt** file. For each of these objects, output can be printed at daily, monthly, yearly, and average annual time steps by entering y (=yes) or n (=no) in the following four columns.
 
 {% hint style="info" %}

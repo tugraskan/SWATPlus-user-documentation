@@ -4,6 +4,10 @@ description: Curve Number class name
 
 # name (cntable.lum)
 
+**Code reference:** `cn(icno)%name`
+
+**Declared type:** `curvenumber_table` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cntbl_read.f90#L45), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_data_module.f90#L39)).
+
 The name of the Curve Number class is a primary key referenced by [cn2](../landuse.lum/cn2.md) in [**landuse.lum**](../landuse.lum/). All names in the **cntable.lum** file must be unique.
 
 The name describes the land use type, treatment, and cover condition the Curve Number Values are valid for.&#x20;

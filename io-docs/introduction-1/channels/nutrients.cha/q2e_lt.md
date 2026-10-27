@@ -4,6 +4,10 @@ description: Qual2E light averaging option
 
 # q2e\_lt
 
+**Code reference:** `ch_nut(ich)%lao`
+
+**Declared type:** `channel_nut_data` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_nut.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_data_module.f90#L132)).
+
 Qual2E defines four light averaging options:
 
 1. Depth-averaged algal growth attenuation factor for light (FL) is computed from one daylight average solar radiation value calculated in the steady state temperature heat balance.

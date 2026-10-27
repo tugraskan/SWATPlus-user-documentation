@@ -6,6 +6,10 @@ description: >-
 
 # ru\_vpd
 
+**Code reference:** `pldb(ic)%wavp`
+
+**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L74)).
+
 Stockle and Kiniry (1990) first noticed a relationship between RUE and vapor pressure deficit and were able to explain a large portion of within-species variability in RUE values for sorghum and corn by plotting RUE values as a function of average daily vapor pressure deficit values. Since this first article, a number of other studies have been conducted that support the dependence of RUE on vapor pressure deficit. However, there is still some debate in the scientific community on the validity of this relationship. If the user does not wish to simulate a change in RUE with vapor pressure deficit, the variable _ru\_vpd_ can be set to 0.0 for the plant.
 
 To define the impact of vapor pressure deficit on RUE, vapor pressure deficit values must be recorded during the growing seasons that RUE determinations are being made. It is important that the plants are exposed to no other stress than vapor pressure deficit, i.e. plant growth should not be limited by lack of soil water and nutrients.

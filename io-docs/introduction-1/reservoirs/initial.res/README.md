@@ -8,12 +8,14 @@ description: >-
 
 | Field                       | Description                                             | Type   |
 | --------------------------- | ------------------------------------------------------- | ------ |
-| [name](name.md)​            | Name of the reservoir and wetland initialization record | string |
+| [name](name.md)​\* | Name of the reservoir and wetland initialization record | string |
 | [org\_min](res_org_min.md)​ | Pointer to the organic-mineral initialization file      | string |
 | [pest](res_pest.md)​        | Pointer to the pesticide initialization file            | string |
 | path​ | Pointer to the pathogen initialization file for reservoirs | string |
 | hmet​                       | Currently not used                                      | string |
 | [salt](res_salt.md)​ | Currently not used in initial.res in SWAT+ main (6f515368) | string |
+
+\* Input-file labels marked with an asterisk have different Fortran names: `name` → `res_init_dat_c(ires)%init`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_init.f90#L51).
 
 {% hint style="warning" %}
 In SWAT+ main (6f515368), the path field initializes pathogens for reservoirs. The code resolves a path value for wetlands but does not apply the resulting wetland initialization index. The hmet field is not used.

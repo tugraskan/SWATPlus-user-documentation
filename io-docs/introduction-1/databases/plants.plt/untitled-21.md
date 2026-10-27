@@ -4,6 +4,10 @@ description: Plant/landcover type
 
 # plnt\_typ
 
+**Code reference:** `pldb(ic)%typ`
+
+**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L32)).
+
 | Option       | Description         |
 | ------------ | ------------------- |
 | perennial    | Perennial plants    |

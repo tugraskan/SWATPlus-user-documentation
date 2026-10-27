@@ -4,9 +4,7 @@ description: Time step of the simulation
 
 # step
 
-**Code reference:** `time%step`
-
-**Declared type:** `time_current` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/time_read.f90#L28), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/time_module.f90#L34)).
+**Code reference:** `time%step` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/time_module.f90#L34)).
 
 `step` is the number of simulation time steps per day. SWAT+ converts a value of 0 or any negative value to 1, so both 0 and 1 produce a daily time step.
 

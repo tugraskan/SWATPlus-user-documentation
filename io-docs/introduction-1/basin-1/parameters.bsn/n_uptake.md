@@ -4,9 +4,7 @@ description: Nitrogen uptake distribution parameter
 
 # n\_uptake
 
-**Code reference:** `bsn_prm%n_updis`
-
-**Declared type:** `basin_parms` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L24), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L88)).
+**Code reference:** `bsn_prm%n_updis` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L88)).
 
 Root density is greatest near the surface, and plant nitrogen uptake in the upper portion of the soil will be greater than in the lower portion. The depth distribution of nitrogen uptake is controlled by _n\_uptake_, the nitrogen uptake distribution parameter.
 

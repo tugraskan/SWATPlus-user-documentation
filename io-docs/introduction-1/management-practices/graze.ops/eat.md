@@ -4,6 +4,4 @@ description: Dry weight of biomass removed by grazing daily
 
 # bm\_eat
 
-**Code reference:** `grazeop_db(igrazop)%eat`
-
-**Declared type:** `grazing_operation` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_read_grazeops.f90#L49), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L126)).
+**Code reference:** `grazeop_db(igrazop)%eat` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L126)).

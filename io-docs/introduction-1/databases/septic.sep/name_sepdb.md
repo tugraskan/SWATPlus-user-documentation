@@ -4,9 +4,7 @@ description: Name of the septic record
 
 # name (septic.sep)
 
-**Code reference:** `sepdb(is)%sepnm`
-
-**Declared type:** `septic_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_parm_read.f90#L48), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_data_module.f90#L6)).
+**Code reference:** `sepdb(is)%sepnm` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_data_module.f90#L6)).
 
 SWAT+ main (6f515368) reads the septic-record name but does not use it to select a record. The integer `typ` value in `septic.str` selects a `septic.sep` record by row number, starting with 1.
 

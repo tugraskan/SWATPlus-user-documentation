@@ -4,9 +4,7 @@ description: Type of hydrograph that is sent to the receiving object
 
 # hyd\_typ
 
-**Code reference:** `ob(i)%htyp_out(isp)`
-
-**Declared type:** `object_connectivity` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hyd_read_connect.f90#L298), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L369)).
+**Code reference:** `ob(i)%htyp_out(isp)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L369)).
 
 The types of hydrographs that can be sent depend on the sending object. The code tot is used for several spatial objects, but its meaning differs between objects. The table below lists the available codes and their definition depending on the type of object.
 

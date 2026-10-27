@@ -4,9 +4,7 @@ description: Type of management operation
 
 # op\_typ
 
-**Code reference:** `sched(isched)%mgt_ops(iop)%op`
-
-**Declared type:** `management_ops` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/read_mgtops.f90#L27), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L145)).
+**Code reference:** `sched(isched)%mgt_ops(iop)%op` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L145)).
 
 | Code | Operation                            | Description                                                                                                                                                                  |
 | ---- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

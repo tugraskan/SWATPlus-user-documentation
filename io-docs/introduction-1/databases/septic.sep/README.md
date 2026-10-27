@@ -10,19 +10,17 @@ Information of water quality or effluent characteristics required to simulate di
 
 | Field                 | Description                                                 | Type   | Unit  | Default | Range     |
 | --------------------- | ----------------------------------------------------------- | ------ | ----- | ------- | --------- |
-| [name](name_sepdb.md)\* | Septic record name (read but not used by the model) | string | ​n/a | ​n/a | n/a |
-| [q\_rate](q_rate.md)\* | Per-capita septic tank effluent flow rate (read but not used by the model) | ​real | m^3/capita/d | 0.0 | 0.0-1.0 |
-| [bod](bod.md)\* | ​7-day Biological Oxygen Demand of the septic tank effluent | ​real  | mg/l  | ​0.0    | 0.0-300.0 |
-| [tss](tss.md)\* | Total suspended solids in the septic tank effluent          | ​real  | ​mg/l | ​0.0    | 0.0-300.0 |
-| [nh4\_n](nh4_n.md)\* | ​Ammonium nitrogen in the septic tank effluent              | ​real  | ​mg/l | ​0.0    | ​         |
-| [no3\_n](no3_n.md)\* | ​Nitrate nitrogen in the septic tank effluent               | ​real  | ​mg/l | 0.0     |           |
-| [no2\_n](no2_n.md)\* | Nitrite nitrogen in the septic tank effluent                | real   | mg/l  | 0.0     |           |
-| [org\_n](org_n.md)\* | Organic nitrogen in the septic tank effluent                | real   | mg/l  | 0.0     |           |
-| [min\_p](min_p.md)\* | Mineral phosphorus in the septic tank effluent              | real   | mg/l  | 0.0     |           |
-| [org\_p](org_p.md)\* | Organic phosphorus in the septic tank effluent              | real   | mg/l  | 0.0     |           |
-| [fcoli](fcoli.md)\* | Fecal coliform concentration in the septic tank effluent | real | cfu/100 mL | 0.0 |  |
-
-\* Input-file labels marked with an asterisk have different Fortran names: `name` → `sepdb(is)%sepnm`; `q_rate` → `sepdb(is)%qs`; `bod` → `sepdb(is)%bodconcs`; `tss` → `sepdb(is)%tssconcs`; `nh4_n` → `sepdb(is)%nh4concs`; `no3_n` → `sepdb(is)%no3concs`; `no2_n` → `sepdb(is)%no2concs`; `org_n` → `sepdb(is)%orgnconcs`; `min_p` → `sepdb(is)%minps`; `org_p` → `sepdb(is)%orgps`; `fcoli` → `sepdb(is)%fcolis`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_parm_read.f90#L48).
+| [name](name_sepdb.md) | Septic record name (read but not used by the model) | string | ​n/a | ​n/a | n/a |
+| [q\_rate](q_rate.md) | Per-capita septic tank effluent flow rate (read but not used by the model) | ​real | m^3/capita/d | 0.0 | 0.0-1.0 |
+| [bod](bod.md) | ​7-day Biological Oxygen Demand of the septic tank effluent | ​real  | mg/l  | ​0.0    | 0.0-300.0 |
+| [tss](tss.md) | Total suspended solids in the septic tank effluent          | ​real  | ​mg/l | ​0.0    | 0.0-300.0 |
+| [nh4\_n](nh4_n.md) | ​Ammonium nitrogen in the septic tank effluent              | ​real  | ​mg/l | ​0.0    | ​         |
+| [no3\_n](no3_n.md) | ​Nitrate nitrogen in the septic tank effluent               | ​real  | ​mg/l | 0.0     |           |
+| [no2\_n](no2_n.md) | Nitrite nitrogen in the septic tank effluent                | real   | mg/l  | 0.0     |           |
+| [org\_n](org_n.md) | Organic nitrogen in the septic tank effluent                | real   | mg/l  | 0.0     |           |
+| [min\_p](min_p.md) | Mineral phosphorus in the septic tank effluent              | real   | mg/l  | 0.0     |           |
+| [org\_p](org_p.md) | Organic phosphorus in the septic tank effluent              | real   | mg/l  | 0.0     |           |
+| [fcoli](fcoli.md) | Fecal coliform concentration in the septic tank effluent | real | cfu/100 mL | 0.0 |  |
 
 #### References
 

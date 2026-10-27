@@ -4,9 +4,7 @@ description: Phosphorus availability index
 
 # p\_avail
 
-**Code reference:** `bsn_prm%psp`
-
-**Declared type:** `basin_parms` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L24), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L97)).
+**Code reference:** `bsn_prm%psp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L97)).
 
 Many studies have shown that after an application of soluble P fertilizer, solution P concentration decreases rapidly with time due to reaction with the soil. This initial "fast" reaction is followed by a much slower decrease in solution P that may continue for several years (Barrow and Shaw, 1975; Munns and Fox, 1976; Rajan and Fox, 1972; Sharpley, 1982). In order to account for the initial rapid decrease in solution P, SWAT+ assumes a rapid equilibrium exists between solution P and an "active" mineral pool. The subsequent slow reaction is simulated by the slow equilibrium assumed to exist between the "active" and "stable" mineral pools. The algorithms governing movement of inorganic phosphorus between these three pools are taken from Jones et al. (1984).
 

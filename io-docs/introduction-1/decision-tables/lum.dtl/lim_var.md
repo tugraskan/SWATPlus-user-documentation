@@ -4,9 +4,7 @@ description: Limit variable
 
 # lim\_var
 
-**Code reference:** `dtbl_lum(i)%cond(ic)%lim_var`
-
-**Declared type:** `conditions_var` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_lum_read.f90#L70), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L11)).
+**Code reference:** `dtbl_lum(i)%cond(ic)%lim_var` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L11)).
 
 The condition variables, for which a limit variable must be specified, are listed in the table below. Some limit variables must be used in combination with a limit operator (see [lim\_op](lim_op.md)).&#x20;
 

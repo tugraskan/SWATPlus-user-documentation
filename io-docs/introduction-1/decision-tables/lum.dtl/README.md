@@ -17,23 +17,18 @@ Each decision table has three parts, which all have their own headers. First, th
 
 Next, the conditions and alternatives are defined. The number of lines used for this part of the decision table depends on the number of conditions.
 
-<table><thead><tr><th>Field</th><th width="274.3333333333333">Description</th><th>Type</th></tr></thead><tbody><tr><td><a href="var.md">var</a></td><td>Condition variable</td><td>string</td></tr><tr><td><a href="obj.md">obj</a><sup>*</sup></td><td>Object type</td><td>string</td></tr><tr><td><a href="obj_num.md">obj_num</a><sup>*</sup></td><td>Object ID</td><td>integer</td></tr><tr><td><a href="lim_var.md">lim_var</a></td><td>Limit variable</td><td>string</td></tr><tr><td><a href="lim_op.md">lim_op</a></td><td>Limit operator</td><td>string</td></tr><tr><td><a href="lim_const.md">lim_const</a></td><td>Limit constant</td><td>real</td></tr><tr><td><a href="alt.md">alt</a></td><td>Alternative</td><td>string</td></tr></tbody></table>
-
-\* Input-file labels marked with an asterisk have different Fortran names: `obj` → `dtbl_lum(i)%cond(ic)%ob`; `obj_num` → `dtbl_lum(i)%cond(ic)%ob_num`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_lum_read.f90#L70).
-
+<table><thead><tr><th>Field</th><th width="274.3333333333333">Description</th><th>Type</th></tr></thead><tbody><tr><td><a href="var.md">var</a></td><td>Condition variable</td><td>string</td></tr><tr><td><a href="obj.md">obj</a></td><td>Object type</td><td>string</td></tr><tr><td><a href="obj_num.md">obj_num</a></td><td>Object ID</td><td>integer</td></tr><tr><td><a href="lim_var.md">lim_var</a></td><td>Limit variable</td><td>string</td></tr><tr><td><a href="lim_op.md">lim_op</a></td><td>Limit operator</td><td>string</td></tr><tr><td><a href="lim_const.md">lim_const</a></td><td>Limit constant</td><td>real</td></tr><tr><td><a href="alt.md">alt</a></td><td>Alternative</td><td>string</td></tr></tbody></table>
 
 Finally, the outcomes and actions are defined. The number of lines used for this part of the decision table depends on the number of actions.
 
 | Field                    | Description                    | Type    |
 | ------------------------ | ------------------------------ | ------- |
-| [act\_typ](act_typ.md)\* | Type of action                 | string  |
-| [obj](obj-1.md)\* | Object type                    | string  |
-| [obj\_num](obj_num-1.md)\* | Object ID                      | integer |
+| [act\_typ](act_typ.md) | Type of action                 | string  |
+| [obj](obj-1.md) | Object type                    | string  |
+| [obj\_num](obj_num-1.md) | Object ID                      | integer |
 | [name](name.md)          | Name of the action             | string  |
 | [option](option.md)      | Action option                  | string  |
 | [const](const.md)        | Action constant                | real    |
 | [const2](const2.md)      | Action constant                | real    |
-| [fp](fp.md)\* | File pointer for action option | string  |
-| [outcome](outcome.md)\* | Outcome                        | string  |
-
-\* Input-file labels marked with an asterisk have different Fortran names: `act_typ` → `dtbl_lum(i)%act(iac)%typ`; `obj` → `dtbl_lum(i)%act(iac)%ob`; `obj_num` → `dtbl_lum(i)%act(iac)%ob_num`; `fp` → `dtbl_lum(i)%act(iac)%file_pointer`; `outcome` → `dtbl_lum(i)%act_outcomes(iac,ial)`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_lum_read.f90#L96).
+| [fp](fp.md) | File pointer for action option | string  |
+| [outcome](outcome.md) | Outcome                        | string  |

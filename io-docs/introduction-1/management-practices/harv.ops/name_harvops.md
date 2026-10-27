@@ -4,9 +4,7 @@ description: Harvest operation name
 
 # name (harv.ops)
 
-**Code reference:** `harvop_db(iharvop)%name`
-
-**Declared type:** `harvest_operation` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_read_harvops.f90#L44), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L111)).
+**Code reference:** `harvop_db(iharvop)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L111)).
 
 The name of the harvest operation is a primary key referenced when harvest operations are scheduled in [**management.sch**](../../landuse-and-management/management.sch/) or [**lum.dtl**](../../decision-tables/lum.dtl/). All names in the **harv.ops** file must be unique.
 

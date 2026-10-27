@@ -6,9 +6,7 @@ description: >-
 
 # msk\_x
 
-**Code reference:** `bsn_prm%msk_x`
-
-**Declared type:** `basin_parms` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L24), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L106)).
+**Code reference:** `bsn_prm%msk_x` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L106)).
 
 The weighting factor is a function of the wedge storage. This parameter is only important if channel routing is simulated using the Muskingum routing method.
 

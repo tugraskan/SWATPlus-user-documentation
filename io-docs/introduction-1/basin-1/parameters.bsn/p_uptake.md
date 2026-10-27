@@ -4,9 +4,7 @@ description: Phosphorus uptake distribution parameter
 
 # p\_uptake
 
-**Code reference:** `bsn_prm%p_updis`
-
-**Declared type:** `basin_parms` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L24), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L89)).
+**Code reference:** `bsn_prm%p_updis` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L89)).
 
 This parameter controls plant uptake of phosphorus from the different soil horizons in the same way that [_n\_uptake_](n_uptake.md) controls nitrogen uptake.&#x20;
 

@@ -4,9 +4,7 @@ description: Fate of the pesticide taken up by the plant
 
 # harvest\_sink
 
-**Code reference:** `pestdb(ip)%harvest_sink`
-
-**Declared type:** `pesticide_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_parm_read.f90#L48), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pesticide_data_module.f90#L21)).
+**Code reference:** `pestdb(ip)%harvest_sink` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pesticide_data_module.f90#L21)).
 
 | Value       | Meaning |
 | ----------- | ------- |

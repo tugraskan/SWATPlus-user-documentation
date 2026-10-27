@@ -4,9 +4,7 @@ description: Channel water routing method
 
 # rte\_cha
 
-**Code reference:** `bsn_cc%rte`
-
-**Declared type:** `basin_control_codes` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_cc.f90#L24), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L33)).
+**Code reference:** `bsn_cc%rte` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L33)).
 
 There are two channel water routing methods available in SWAT+:
 

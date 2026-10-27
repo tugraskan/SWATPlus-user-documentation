@@ -4,9 +4,7 @@ description: Volume depth coefficient for HRU impoundment
 
 # vol\_dp\_a
 
-**Code reference:** `wet_hyddb(ires)%bcoef`
-
-**Declared type:** `wetland_hyd_data` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wet_read_hyd.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L91)).
+**Code reference:** `wet_hyddb(ires)%bcoef` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L91)).
 
 The parameters [vol\_area\_co](vol_area_co.md), vol\_dp\_a and [vol\_dp\_b](vol_dp_b.md) are coefficients that control how strongly the wetland surface area changes as storage volume changes relative to principal storage. They are used for wetland initialization and to update wetland area for each simulation time step.&#x20;
 

@@ -4,9 +4,7 @@ description: Minimum snow water content that corresponds to 100% snow cover
 
 # snow\_h2o
 
-**Code reference:** `snodb(isno)%covmx`
-
-**Declared type:** `snow_parameters` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/snowdb_read.f90#L48), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_module.f90#L79)).
+**Code reference:** `snodb(isno)%covmx` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_module.f90#L79)).
 
 Due to factors such as drifting, shading, and topography, the snow pack in a HRU will rarely be uniformly distributed over the total area. A fraction of the HRU area will be bare of snow. This fraction must be quantified to accurately compute snow melt in the HRU.&#x20;
 

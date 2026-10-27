@@ -4,9 +4,7 @@ description: Melt factor for snow on June 21
 
 # melt\_max
 
-**Code reference:** `snodb(isno)%meltmx`
-
-**Declared type:** `snow_parameters` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/snowdb_read.f90#L48), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_module.f90#L76)).
+**Code reference:** `snodb(isno)%meltmx` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_module.f90#L76)).
 
 The variables _melt\_max_ and [melt\_min](melt_min.md) allow the rate of snow melt to vary through the year and account for the impact of snowpack density on snow melt.&#x20;
 

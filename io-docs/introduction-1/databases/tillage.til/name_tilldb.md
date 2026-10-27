@@ -4,9 +4,7 @@ description: Name of tillage record
 
 # name (tillage.til)
 
-**Code reference:** `tilldb(itl)%tillnm`
-
-**Declared type:** `tillage_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/till_parm_read.f90#L47), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/tillage_data_module.f90#L20)).
+**Code reference:** `tilldb(itl)%tillnm` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/tillage_data_module.f90#L20)).
 
 The name of the tillage record is a primary key referenced when tillage operations are scheduled  in [**management.sch**](../../landuse-and-management/management.sch/) or [**lum.dtl**](../../decision-tables/lum.dtl/). All names in the **tillage.til** database must be unique.
 

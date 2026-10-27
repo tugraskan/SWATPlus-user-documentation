@@ -4,9 +4,7 @@ description: Linear algal self-shading coefficient
 
 # alg\_shd\_l
 
-**Code reference:** `ch_nut(ich)%lambda1`
-
-**Declared type:** `channel_nut_data` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_nut.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_data_module.f90#L153)).
+**Code reference:** `ch_nut(ich)%lambda1` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_data_module.f90#L153)).
 
 The light extinction coefficient, $$k_l$$, is calculated as a function of the algal density using the nonlinear equation:
 
@@ -18,13 +16,9 @@ This equation allows a variety of algal, self-shading, light extinction relation
 
 The Riley equation (Bowie et al., 1985) defines $$k_{l,1} = 0.0088 m^{-1}(\mu g - chla/L)^{-1}$$ and $$k_{l,2} = 0.054 m^{-1}(\mu g - chla/L)^{-2/3})$$.
 
-
-
 #### Relevant chapter in the Theoretical Documentation:&#x20;
 
 [Local Specific Growth Rate of Algae](../../../theoretical-documentation/section-7-main-channel-processes/in-stream-nutrient-processes/algae/algal-growth/local-specific-growth-rate-of-algae.md)
-
-
 
 #### References
 

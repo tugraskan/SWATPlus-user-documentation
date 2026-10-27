@@ -4,9 +4,7 @@ description: Optimal temperature for plant growth
 
 # tmp\_opt
 
-**Code reference:** `pldb(ic)%t_opt`
-
-**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L58)).
+**Code reference:** `pldb(ic)%t_opt` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L58)).
 
 Both optimal and base temperatures are very stable for cultivars within a species.
 

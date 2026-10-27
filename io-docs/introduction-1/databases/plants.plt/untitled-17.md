@@ -4,9 +4,7 @@ description: Biomass-energy ratio
 
 # bm\_e
 
-**Code reference:** `pldb(ic)%bio_e`
-
-**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L43)).
+**Code reference:** `pldb(ic)%bio_e` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L43)).
 
 The biomass-energy ration or radiation-use efficiency (RUE) is the amount of dry biomass produced per unit intercepted solar radiation. It is assumed to be independent of the plant’s growth stage. The variable _bm\_e_ represents the potential or unstressed growth rate (including roots) per unit of intercepted photosynthetically active radiation.&#x20;
 

@@ -4,9 +4,7 @@ description: Maximum canopy storage
 
 # can\_max
 
-**Code reference:** `hyd_db(ithyd)%canmx`
-
-**Declared type:** `hydrology_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrol_read.f90#L47), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrology_data_module.f90#L10)).
+**Code reference:** `hyd_db(ithyd)%canmx` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrology_data_module.f90#L10)).
 
 The maximum amount of water that can be trapped in the canopy when the canopy is fully developed.
 

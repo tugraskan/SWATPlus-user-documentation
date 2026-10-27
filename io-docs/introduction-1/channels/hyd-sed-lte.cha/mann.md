@@ -4,9 +4,7 @@ description: Channel Manning's n value
 
 # mann
 
-**Code reference:** `sd_chd(idb)%chn`
-
-**Declared type:** `swatdeg_hydsed_data` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_hydsed_read.f90#L61), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_module.f90#L25)).
+**Code reference:** `sd_chd(idb)%chn` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_module.f90#L25)).
 
 The table below lists values of Manning’s roughness coefficient for channel flow (Chow, 1959).
 

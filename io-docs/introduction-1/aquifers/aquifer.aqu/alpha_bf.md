@@ -4,9 +4,7 @@ description: Alpha factor for groundwater recession curve
 
 # alpha\_bf
 
-**Code reference:** `aqudb(i)%alpha`
-
-**Declared type:** `aquifer_database` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read.f90#L55), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L16)).
+**Code reference:** `aqudb(i)%alpha` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L16)).
 
 The baseflow recession constant is a direct index of groundwater flow response to changes in recharge (Smedema and Rycroft, 1983). Values vary from 0.1-0.3 for land with a slow response to recharge to 0.9-1.0 for land with a rapid response. Although the baseflow recession constant may be calculated, the best estimates are obtained by analyzing measured streamflow during periods of no recharge in the watershed.
 

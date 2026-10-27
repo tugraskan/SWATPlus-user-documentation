@@ -4,9 +4,7 @@ description: Effective hydraulic conductivity of the channel alluvium
 
 # k
 
-**Code reference:** `sd_chd(idb)%chk`
-
-**Declared type:** `swatdeg_hydsed_data` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_hydsed_read.f90#L61), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_module.f90#L26)).
+**Code reference:** `sd_chd(idb)%chk` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_module.f90#L26)).
 
 The table below lists typical values for k for various alluvium materials (Lane, 1983). For perennial streams with continuous groundwater contribution, the effective conductivity will be zero.
 

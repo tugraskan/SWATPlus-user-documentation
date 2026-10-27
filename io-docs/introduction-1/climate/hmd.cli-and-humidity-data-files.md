@@ -8,17 +8,11 @@ description: >-
 
 The **relative humidity data files** contain the observed relative humidity input data. They are named by the user and must have the file ending \*.hmd. There must be one file per station used in the simulation. As in all SWAT+ input files, the first line in the relative humidity data files is reserved for user comments. The second line contains the column headers for the third line, which lists basic information about the station.&#x20;
 
-<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>nbyr</td><td>Length of the relative humidity time series</td><td>integer</td><td>years</td></tr><tr><td>tstep</td><td>Time step of the relative humidity data</td><td>integer</td><td>n/a</td></tr><tr><td>lat</td><td>Latitude of the relative humidity station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>lon<sup>*</sup></td><td>Longitude of the relative humidity station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>elev</td><td>Elevation of the relative humidity station</td><td>real</td><td>m</td></tr></tbody></table>
-
-\* Input-file labels marked with an asterisk have different Fortran names: `lon` → `hmd(i)%long`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_hmeas.f90#L77).
-
+<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>nbyr</td><td>Length of the relative humidity time series</td><td>integer</td><td>years</td></tr><tr><td>tstep</td><td>Time step of the relative humidity data</td><td>integer</td><td>n/a</td></tr><tr><td>lat</td><td>Latitude of the relative humidity station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>lon</td><td>Longitude of the relative humidity station</td><td>real</td><td>Decimal Degrees</td></tr><tr><td>elev</td><td>Elevation of the relative humidity station</td><td>real</td><td>m</td></tr></tbody></table>
 
 Starting in the fourth line, the year, Julian day, and the relative humidity are listed. There are no headers for these columns.
 
-<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>year<sup>*</sup></td><td>Year of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>jday<sup>*</sup></td><td>Julian day of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>hmd<sup>*</sup></td><td>Observed relative humidity</td><td>real</td><td>fraction</td></tr></tbody></table>
-
-\* Input-file labels marked with an asterisk have different Fortran names: `year` → `iyr`; `jday` → `istep`; `hmd` → `hmd(i)%ts(istep,iyrs)`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_hmeas.f90#L112).
-
+<table><thead><tr><th>Field</th><th width="292">Description</th><th width="150">Type</th><th>Unit</th></tr></thead><tbody><tr><td>year</td><td>Year of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>jday</td><td>Julian day of the observation</td><td>integer</td><td>n/a</td></tr><tr><td>hmd</td><td>Observed relative humidity</td><td>real</td><td>fraction</td></tr></tbody></table>
 
 {% hint style="info" %}
 A negative 99.0 (-99.0) should be inserted for missing data. This value tells SWAT+ to generate a relative humidity value for that day.

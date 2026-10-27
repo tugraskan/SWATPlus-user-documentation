@@ -4,9 +4,7 @@ description: Name of the conservation practice
 
 # name (cons\_practice.lum)
 
-**Code reference:** `cons_prac(icp)%name`
-
-**Declared type:** `conservation_practice_table` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cons_prac_read.f90#L45), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_data_module.f90#L51)).
+**Code reference:** `cons_prac(icp)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_data_module.f90#L51)).
 
 The name of the conservation practice is a primary key referenced by [cons\_prac](../landuse.lum/cons_prac.md) in [**landuse.lum**](../landuse.lum/). All names in the **cons\_practice.lum** file must be unique.
 

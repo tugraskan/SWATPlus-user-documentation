@@ -4,9 +4,7 @@ description: Area of the object
 
 # area
 
-**Code reference:** `ob(i)%area_ha`
-
-**Declared type:** `object_connectivity` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hyd_read_connect.f90#L298), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L340)).
+**Code reference:** `ob(i)%area_ha` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L340)).
 
 The table below gives an overview of what the area represents and what it is used for in the model.&#x20;
 

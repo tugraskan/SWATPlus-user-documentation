@@ -4,9 +4,7 @@ description: Organic nitrogen enrichment ratio for loading with sediment
 
 # orgn\_enrich
 
-**Code reference:** `hyd_db(ithyd)%erorgn`
-
-**Declared type:** `hydrology_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrol_read.f90#L47), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrology_data_module.f90#L13)).
+**Code reference:** `hyd_db(ithyd)%erorgn` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrology_data_module.f90#L13)).
 
 The organic nitrogen enrichment ratio is defined as the ratio of the concentration of organic nitrogen transported with the sediment to the concentration in the soil surface layer.
 

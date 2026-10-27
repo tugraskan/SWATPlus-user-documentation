@@ -4,9 +4,7 @@ description: Minimum value of the USLE C factor for water erosion
 
 # usle\_c\_min
 
-**Code reference:** `pldb(ic)%usle_c`
-
-**Declared type:** `plant_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L57), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L69)).
+**Code reference:** `pldb(ic)%usle_c` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L69)).
 
 The minimum C factor can be estimated from a known average annual C factor using the following equation (Arnold and Williams, 1995):
 

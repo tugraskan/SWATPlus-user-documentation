@@ -10,14 +10,12 @@ description: >-
 | ------------------------------ | ------------------------------------------------------ | ------ |
 | [name](name-soil_plant.ini.md) | Name of the soil and plant initialization              | string |
 | [sw\_frac](sw_frac.md) | Not used. Initial soil water is controlled by sw_init in parameters.bsn. | real |
-| [nutrients](nutrients.md)\* | Pointer to the nutrient initialization file            | string |
-| [pest](pest.md)\* | Pointer to the pesticide initialization file           | string |
-| path\* | Name of a record in path_hru.ini that initializes pathogen concentrations in soil and plants. | string |
-| [salt](salt.md)\* | Pointer to the salt initialization file                | string |
-| hmet\* | Name of a record in hmet_hru.ini that initializes heavy-metal concentrations in soil and plants. | string |
-| [cs](cs.md)\* | Pointer to the constituent soil initialization in cs\_hru.ini; this column is read only when event in codes.bsn is not 0 | string |
-
-\* Input-file labels marked with an asterisk have different Fortran names: `nutrients` → `sol_plt_ini(ii)%nutc`; `pest` → `sol_plt_ini(ii)%pestc`; `path` → `sol_plt_ini(ii)%pathc`; `salt` → `sol_plt_ini(ii)%saltc`; `hmet` → `sol_plt_ini(ii)%hmetc`; `cs` → `sol_plt_ini(ii)%csc`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_plant_init.f90#L50).
+| [nutrients](nutrients.md) | Pointer to the nutrient initialization file            | string |
+| [pest](pest.md) | Pointer to the pesticide initialization file           | string |
+| path | Name of a record in path_hru.ini that initializes pathogen concentrations in soil and plants. | string |
+| [salt](salt.md) | Pointer to the salt initialization file                | string |
+| hmet | Name of a record in hmet_hru.ini that initializes heavy-metal concentrations in soil and plants. | string |
+| [cs](cs.md) | Pointer to the constituent soil initialization in cs\_hru.ini; this column is read only when event in codes.bsn is not 0 | string |
 
 {% hint style="warning" %}
 There are no plans to work on the pathogen and heavy metal routines in the foreseeable future unless there is a demand for it in the user community.

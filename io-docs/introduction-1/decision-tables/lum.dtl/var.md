@@ -4,9 +4,7 @@ description: Condition variable
 
 # var
 
-**Code reference:** `dtbl_lum(i)%cond(ic)%var`
-
-**Declared type:** `conditions_var` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_lum_read.f90#L70), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L8)).
+**Code reference:** `dtbl_lum(i)%cond(ic)%var` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L8)).
 
 The following condition variables are currently coded in SWAT+. If a condition field is not listed in 'Additional fields used', you may leave it as null if field type is string or 0.0000 if field type is double/real.
 

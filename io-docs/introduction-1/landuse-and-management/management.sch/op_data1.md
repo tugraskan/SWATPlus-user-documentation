@@ -4,9 +4,7 @@ description: Operation data 1
 
 # op\_data1
 
-**Code reference:** `sched(isched)%mgt_ops(iop)%op_char`
-
-**Declared type:** `management_ops` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/read_mgtops.f90#L27), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L165)).
+**Code reference:** `sched(isched)%mgt_ops(iop)%op_char` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L165)).
 
 | Operation | Use of variable                                                                      |
 | --------- | ------------------------------------------------------------------------------------ |

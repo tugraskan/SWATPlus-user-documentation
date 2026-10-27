@@ -4,9 +4,7 @@ description: Overland flow Manning's n class name
 
 # name (ovn\_table.lum)
 
-**Code reference:** `overland_n(il)%name`
-
-**Declared type:** `overlandflow_n_table` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/overland_n_read.f90#L44), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_data_module.f90#L58)).
+**Code reference:** `overland_n(il)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_data_module.f90#L58)).
 
 The overland flow Manning's n class name is a primary key referenced by [ov\_mann](../landuse.lum/ov_mann.md) in [**landuse.lum**](../landuse.lum/). All names in the **ovn\_table.lum** file must be unique.
 

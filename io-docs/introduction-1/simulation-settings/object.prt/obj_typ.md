@@ -4,9 +4,7 @@ description: Type of object to print output for
 
 # obj\_typ
 
-**Code reference:** `ob_out(ii)%obtyp`
-
-**Declared type:** `object_output` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/object_read_output.f90#L52), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L258)).
+**Code reference:** `ob_out(ii)%obtyp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L258)).
 
 Output can be printed for the following types of objects:
 

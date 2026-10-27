@@ -9,10 +9,8 @@ description: >-
 | Field                  | Description                                      |   Type  | Unit | Default | Range |
 | ---------------------- | ------------------------------------------------ | :-----: | :--: | :-----: | :---: |
 | [name](name.md)        | Name of the topography record                    |  string |  n/a |   n/a   |  n/a  |
-| [slp](slp.md)\* | Average slope steepness                          |   real  |  m/m |   0.02  |       |
-| [slp\_len](slp_len.md)\* | Average slope length                             |   real  |   m  |   50.0  |       |
+| [slp](slp.md) | Average slope steepness                          |   real  |  m/m |   0.02  |       |
+| [slp\_len](slp_len.md) | Average slope length                             |   real  |   m  |   50.0  |       |
 | [lat\_len](lat_len.md) | Average slope length for lateral subsurface flow |   real  |   m  |   50.0  |       |
-| dist\_cha\* | Currently not used | real | m |  |  |
-| [depos](depos.md)\* | Deposition coefficient | real | none | 1 |  |
-
-\* Input-file labels marked with an asterisk have different Fortran names: `slp` → `topo_db(ith)%slope`; `slp_len` → `topo_db(ith)%slope_len`; `dist_cha` → `topo_db(ith)%dis_stream`; `depos` → `topo_db(ith)%dep_co`. [Reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/topo_read.f90#L51).
+| dist\_cha | Currently not used | real | m |  |  |
+| [depos](depos.md) | Deposition coefficient | real | none | 1 |  |

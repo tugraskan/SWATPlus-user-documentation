@@ -6,9 +6,7 @@ description: >-
 
 # dew\_ave
 
-**Code reference:** `wgn(iwgn)%dewpt(mo)`
-
-**Declared type:** `weather_generator_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_wgnread.f90#L96), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_module.f90#L41)).
+**Code reference:** `wgn(iwgn)%dewpt(mo)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_module.f90#L41)).
 
 If all twelve months are < 1.0, the model assumes the data provided is relative humidity. Relative humidity is defined as the amount of water vapor in the air as a fraction of saturation humidity. If any month has a value > 1.0, the model assumes the data provided is dewpoint temperature.
 

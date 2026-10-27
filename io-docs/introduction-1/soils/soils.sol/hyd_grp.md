@@ -4,9 +4,7 @@ description: Hydrologic soil group of the soil
 
 # hyd\_grp
 
-**Code reference:** `soildb(isol)%s%hydgrp`
-
-**Declared type:** `soil_profile_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_db_read.f90#L65), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_data_module.f90#L66)).
+**Code reference:** `soildb(isol)%s%hydgrp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_data_module.f90#L66)).
 
 The U.S. Natural Resource Conservation Service (NRCS) classifies soils into four hydrologic groups based on infiltration characteristics of the soils. NRCS Soil Survey Staff (1996) defines a hydrologic group as a group of soils having similar runoff potential under similar storm and cover conditions. Soil properties that influence runoff potential are those that impact the minimum rate of infiltration for a bare soil after prolonged wetting and when not frozen. These properties are depth to seasonally-high water table, saturated hydraulic conductivity, and depth to a very slowly permeable layer. The definitions for the different classes are:
 

@@ -4,9 +4,7 @@ description: Biological mixing efficiency
 
 # bio\_mix
 
-**Code reference:** `hyd_db(ithyd)%biomix`
-
-**Declared type:** `hydrology_db` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrol_read.f90#L47), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrology_data_module.f90#L18)).
+**Code reference:** `hyd_db(ithyd)%biomix` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrology_data_module.f90#L18)).
 
 Biological mixing is the redistribution of soil constituents as a result of the activity of biota in the soil (e.g. earthworms, etc.). Studies have shown that biological mixing can be significant in systems where the soil is only infrequently disturbed. In general, as a management system shifts from conventional tillage to conservation tillage to no-till there will be an increase in biological mixing.&#x20;
 

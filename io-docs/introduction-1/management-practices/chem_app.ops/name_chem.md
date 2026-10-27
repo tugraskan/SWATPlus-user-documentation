@@ -4,9 +4,7 @@ description: Chemical application name
 
 # name (chem\_app.ops)
 
-**Code reference:** `chemapp_db(ichemapp)%name`
-
-**Declared type:** `chemical_application_operation` ([reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_read_chemapp.f90#L45), [declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L98)).
+**Code reference:** `chemapp_db(ichemapp)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L98)).
 
 The name of the chemical application is a primary key referenced when the application of fertilizers, manure, or pesticides is scheduled in [**management.sch**](../../landuse-and-management/management.sch/) or [**lum.dtl**](../../decision-tables/lum.dtl/). All names in the **chem\_app.ops** file must be unique.
 

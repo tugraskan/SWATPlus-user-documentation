@@ -1,4 +1,14 @@
+---
+description: This file contains daily channel shading factors.
+---
+
 # shade_factor.shf
+
+{% hint style="info" %}
+This file is supported by the SWAT+ model, but no exporter was found in the inspected SWAT+ Editor version. It may need to be supplied separately. Editor checkout checked: `1efec55`.
+
+The table below is based on the SWAT+ Fortran source code. Its contents should not be assumed to match the labels, defaults, or options available in SWAT+ Editor. A dash means that no recommended default or range has been established here; it is not a Fortran initialization value.
+{% endhint %}
 
 Daily channel shading factors for the water-temperature calculation. Rows are used when the shade-factor switch in temperature.cha is enabled; reading the file itself is not conditional on that switch.
 

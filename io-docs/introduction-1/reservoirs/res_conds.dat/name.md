@@ -1,0 +1,9 @@
+---
+description: "Name identifying this release condition table"
+---
+
+# name
+
+**Code reference:** `ctbl(ictbl)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_conditions_module.f90#L29)).
+
+Name identifying this release condition table.

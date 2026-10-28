@@ -1,0 +1,15 @@
+---
+description: "Leading record identifier read before the group or region fields"
+---
+
+# k
+
+**Code reference:** `k` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read_elements.f90#L21)).
+
+Leading record identifier read before the group or region fields.
+
+Leading record identifier read before the group or region fields.
+
+Leading record identifier read before the group or region fields.
+
+This field occurs in more than one source read group; the overview identifies the corresponding contexts.

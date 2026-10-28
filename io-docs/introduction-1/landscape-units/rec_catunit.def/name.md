@@ -1,0 +1,9 @@
+---
+description: "Name of the region, limited to 16 characters"
+---
+
+# name
+
+**Code reference:** `pcu_out(i)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calibration_data_module.f90#L194)).
+
+Name of the region, limited to 16 characters.

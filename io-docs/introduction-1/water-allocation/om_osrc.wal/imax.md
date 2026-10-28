@@ -1,0 +1,9 @@
+---
+description: "Number of component-value records to allocate and read"
+---
+
+# imax
+
+**Code reference:** `imax` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/om_osrc_read.f90#L15)).
+
+Number of component-value records to allocate and read.

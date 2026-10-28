@@ -1,0 +1,11 @@
+---
+description: "Fraction of parent pesticide degradation in the aquatic compartment that forms this daughter metabolite"
+---
+
+# aq_fr
+
+**Code reference:** `pestcp(ip)%daughter(imeta)%aq_fr` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pesticide_data_module.f90#L32)).
+
+Fraction of parent pesticide degradation in the aquatic compartment that forms this daughter metabolite.
+
+Units or recommendations not established in the overview are left unspecified here.

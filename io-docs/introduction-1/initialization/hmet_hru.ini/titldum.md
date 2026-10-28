@@ -1,0 +1,11 @@
+---
+description: "Leading text label read before the compartment values"
+---
+
+# titldum
+
+**Code reference:** `titldum` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hmet_hru_aqu_read.f90#L9)).
+
+Leading text label read before the compartment values.
+
+This field occurs in more than one source read group; the overview identifies the corresponding contexts.

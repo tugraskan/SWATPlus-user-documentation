@@ -31,6 +31,30 @@ The current main version appends one additional field after the final `null` sep
 {% endtab %}
 
 {% tab title="Morphology" %}
-<table><thead><tr><th width="114.6666259765625">Field</th><th width="250.3333740234375">Description</th><th width="89.333251953125">Unit</th></tr></thead><tbody><tr><td>jday</td><td>Julian Day</td><td>n/a</td></tr><tr><td>mon</td><td>Month</td><td>n/a</td></tr><tr><td>day</td><td>Day of the month</td><td>n/a</td></tr><tr><td>yr</td><td>Year</td><td>n/a</td></tr><tr><td>unit</td><td>ID of the object</td><td>n/a</td></tr><tr><td>gis_id</td><td>Object ID in GIS</td><td>n/a</td></tr><tr><td>name</td><td>Name of the object or SWAT+ setup (basin outputs)</td><td>n/a</td></tr><tr><td>flo_in</td><td>Channel inflow</td><td>m3/s</td></tr><tr><td>geo_bf</td><td></td><td>m3/s</td></tr><tr><td>flo_out</td><td>Channel outflow</td><td>m3/s</td></tr><tr><td>peakr</td><td>Peak rate</td><td>m3/s</td></tr><tr><td>sed_in</td><td>Sediment inflow</td><td>tons</td></tr><tr><td>sed_out</td><td>Sediment outflow</td><td>tons</td></tr><tr><td>washld</td><td>Washload</td><td>tons</td></tr><tr><td>bedld</td><td>Bedload</td><td>tons</td></tr><tr><td>dep</td><td>Deposition</td><td>tons</td></tr><tr><td>deg_btm</td><td>Channel bottom degradation sediment</td><td>tons</td></tr><tr><td>deg_bank</td><td>Channel bank degradation sediment</td><td>tons</td></tr><tr><td>hc_sed</td><td>Headcut sediment</td><td>tons</td></tr><tr><td>width</td><td>Channel width</td><td>m</td></tr><tr><td>depth</td><td>Channel depth</td><td>m</td></tr><tr><td>slope</td><td>Channel slope</td><td>m/m</td></tr><tr><td>deg_btm</td><td> </td><td>m</td></tr><tr><td>deg_bank</td><td></td><td>m</td></tr><tr><td>hc_len</td><td>Headcut length</td><td>m</td></tr><tr><td>flo_in_mm</td><td>Channel inflow</td><td>mm</td></tr><tr><td>aqu_in_mm</td><td></td><td>mm</td></tr><tr><td>flo_out_mm</td><td>Channel outflow</td><td>mm</td></tr></tbody></table>
+<table><thead><tr><th width="114.6666259765625">Field</th><th width="250.3333740234375">Description</th><th width="89.333251953125">Unit</th></tr></thead><tbody><tr><td>jday</td><td>Julian Day</td><td>n/a</td></tr><tr><td>mon</td><td>Month</td><td>n/a</td></tr><tr><td>day</td><td>Day of the month</td><td>n/a</td></tr><tr><td>yr</td><td>Year</td><td>n/a</td></tr><tr><td>unit</td><td>ID of the object</td><td>n/a</td></tr><tr><td>gis_id</td><td>Object ID in GIS</td><td>n/a</td></tr><tr><td>name</td><td>Name of the object or SWAT+ setup (basin outputs)</td><td>n/a</td></tr><tr><td>flo_in</td><td>Channel inflow</td><td>m3/s</td></tr><tr><td>geo_bf</td><td>Groundwater baseflow entering the channel</td><td>m3/s</td></tr><tr><td>flo_out</td><td>Channel outflow</td><td>m3/s</td></tr><tr><td>peakr</td><td>Peak rate</td><td>m3/s</td></tr><tr><td>sed_in</td><td>Sediment inflow</td><td>tons</td></tr><tr><td>sed_out</td><td>Sediment outflow</td><td>tons</td></tr><tr><td>washld</td><td>Washload</td><td>tons</td></tr><tr><td>bedld</td><td>Bedload</td><td>tons</td></tr><tr><td>dep</td><td>Deposition</td><td>tons</td></tr><tr><td>deg_btm</td><td>Channel bottom degradation sediment</td><td>tons</td></tr><tr><td>deg_bank</td><td>Channel bank degradation sediment</td><td>tons</td></tr><tr><td>hc_sed</td><td>Headcut sediment</td><td>tons</td></tr><tr><td>width</td><td>Channel width</td><td>m</td></tr><tr><td>depth</td><td>Channel depth</td><td>m</td></tr><tr><td>slope</td><td>Channel slope</td><td>m/m</td></tr><tr><td>deg_btm</td><td>Bottom degradation depth</td><td>m</td></tr><tr><td>deg_bank</td><td>Bank degradation depth</td><td>m</td></tr><tr><td>hc_len</td><td>Headcut length</td><td>m</td></tr><tr><td>flo_in_mm</td><td>Channel inflow</td><td>mm</td></tr><tr><td>aqu_in_mm</td><td>Aquifer inflow</td><td>mm</td></tr><tr><td>flo_out_mm</td><td>Channel outflow</td><td>mm</td></tr><tr><td>sed_stor</td><td>Sediment stored in the channel</td><td>tons</td></tr><tr><td>n_tot</td><td>Total nitrogen</td><td>kg N</td></tr><tr><td>p_tot</td><td>Total phosphorus</td><td>kg P</td></tr><tr><td>dep_bf</td><td>Bankfull flow-depth diagnostic</td><td>m/s</td></tr><tr><td>velav_bf</td><td>Average bankfull velocity</td><td>m/s</td></tr></tbody></table>
+
+The source prints `dep_bf` with `m/s` in the units row. This page reproduces that output literally and does not reinterpret the unit from the field name.
 {% endtab %}
 {% endtabs %}
+
+## Alternate channel routing output
+
+The `channel_*` and `basin_cha_*` families are a separate 66-column routing and water-quality report; they do not use the `channel_sd_*` table above.
+
+| Field | Description | Unit |
+| --- | --- | --- |
+| jday, mon, day, yr, unit, gis_id, name | Reporting date and object identity | n/a |
+| flo_in, flo_out, evap, tloss | Incoming flow, outgoing flow, evaporation, and transmission loss | ha-m |
+| sed_in, sed_out | Incoming and outgoing sediment | tons |
+| sed_conc | Sediment concentration | mg/L |
+| orgn_in, orgn_out, no3_in, no3_out | Organic and nitrate nitrogen | kg N |
+| orgp_in, orgp_out, solp_in, solp_out | Organic and soluble phosphorus | kg P |
+| nh4_in, nh4_out, no2_in, no2_out, chla_in, chla_out, cbod_in, cbod_out, dis_in, dis_out | Water-quality inputs and outputs | kg |
+| solpst_in, solpst_out, sorbpst_in, sorbpst_out | Dissolved and sorbed pesticide inputs and outputs | mg |
+| react, volat, setlpst, resuspst, difus, reactb, bury, sedpest | Pesticide reaction and sediment-transfer terms | mg |
+| bacp, baclp | Persistent and less-persistent bacteria outputs | model count |
+| met1, met2, met3 | Metal outputs | constituent-dependent |
+| sand_in, sand_out, silt_in, silt_out, clay_in, clay_out, smag_in, smag_out, lag_in, lag_out, grvl_in, grvl_out | Particle-size inputs and outputs | tons |
+| bnk_ero, ch_deg, ch_dep, fp_dep, tot_ssed | Bank erosion, channel degradation and deposition, floodplain deposition, and suspended sediment | tons |
+
+`channel_sd_subday.txt` is a subdaily morphology report. It uses the morphology headings and adds the interval-specific rows selected by the subdaily channel option.

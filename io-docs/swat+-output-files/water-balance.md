@@ -4,7 +4,7 @@ Water-balance output is available for the basin, landscape units, HRUs, and HRU-
 
 The filename prefixes are `basin_wb`, `lsunit_wb`, `hru_wb`, and `hru-lte_wb`. Each prefix can have `_day`, `_mon`, `_yr`, or `_aa`, followed by `.txt`. Corresponding `.csv` files are produced when CSV output is enabled.
 
-All four spatial levels use the following core columns in this order:
+The model prints the same header at all four spatial levels. The first 49 printed columns are:
 
 | Field | Description | Unit |
 | --- | --- | --- |
@@ -58,11 +58,15 @@ All four spatial levels use the following core columns in this order:
 | wet_oflo | Wetland overflow | mm |
 | wet_stor | Water stored in wetlands at the end of the reporting period | mm |
 
-HRU files add two trailing fields that are not present in basin, landscape-unit, or HRU-LTE rows:
+The printed header then ends with these two labels:
 
 | Field | Description | Unit |
 | --- | --- | --- |
 | plant_cov | Plant-community identifier associated with the HRU | n/a |
 | mgt_ops | Management-schedule identifier associated with the HRU | n/a |
+
+{% hint style="warning" %}
+Only HRU data rows write values for `plant_cov` and `mgt_ops`. Basin, landscape-unit, and HRU-LTE rows stop after `wet_stor`, even though their printed header still includes these two trailing labels.
+{% endhint %}
 
 Water fluxes are accumulated over monthly and yearly reporting periods. State variables such as average soil water, curve number, and snowpack are averaged; start and end storage fields retain the reporting-period boundaries. Average-annual rows summarize the printed simulation years.

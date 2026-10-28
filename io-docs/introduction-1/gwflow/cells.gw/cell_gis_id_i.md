@@ -1,5 +1,5 @@
 ---
-description: "Integer GIS identifier linking the cell to its polygon in the gwflowcells shapefile"
+description: "GIS identifier linking the cell to its polygon in the gwflowcells shapefile"
 ---
 
 # cell_gis_id(i)

@@ -1,5 +1,5 @@
 ---
-description: "Channel identifier (gw_fp_chanid) associated with each floodplain groundwater cell, linking the cell to a specific channel object"
+description: "Channel identifier (gw_fp_chanid) associated with each floodplain groundwater cell"
 ---
 
 # gw_fp_chanid

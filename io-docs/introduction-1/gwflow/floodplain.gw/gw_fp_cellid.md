@@ -1,5 +1,5 @@
 ---
-description: "Grid cell identifier (gw_fp_cellid) for each floodplain groundwater interaction cell, used to index into the groundwater state array"
+description: "Grid cell identifier (gw_fp_cellid) for each floodplain groundwater interaction cell"
 ---
 
 # gw_fp_cellid

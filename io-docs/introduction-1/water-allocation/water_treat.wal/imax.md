@@ -1,9 +1,9 @@
 ---
-description: "number of water treatment plants defined in this file"
+description: "Number of records"
 ---
 
 # imax
 
 **Code reference:** `imax` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_treatment_read.f90#L17)).
 
-number of water treatment plants defined in this file.
+Number of records. Enter this count before the corresponding definitions.

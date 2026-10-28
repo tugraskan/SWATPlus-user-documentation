@@ -1,5 +1,5 @@
 ---
-description: "Number of water treatment plant objects included in the simulation, used to size related arrays"
+description: "Number of water treatment plant objects included in the simulation"
 ---
 
 # wtps

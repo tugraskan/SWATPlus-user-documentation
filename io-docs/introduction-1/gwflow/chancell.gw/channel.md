@@ -1,5 +1,5 @@
 ---
-description: "Identifier of the channel record, used to index channel connectivity and cell lists"
+description: "Identifier of the channel record"
 ---
 
 # channel

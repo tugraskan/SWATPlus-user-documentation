@@ -1,5 +1,5 @@
 ---
-description: "Integer index selecting the specific yield zone assigned to the cell"
+description: "Index selecting the specific yield zone assigned to the cell"
 ---
 
 # Sy_zone

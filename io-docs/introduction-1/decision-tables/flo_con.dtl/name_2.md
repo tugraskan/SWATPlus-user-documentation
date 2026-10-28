@@ -1,9 +1,9 @@
 ---
-description: "name of the action within the decision table"
+description: "Record name"
 ---
 
 # name
 
 **Code reference:** `dtbl_flo(i)%act(iac)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L20)).
 
-name of the action within the decision table.
+Record name.

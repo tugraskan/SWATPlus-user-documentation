@@ -1,5 +1,5 @@
 ---
-description: "Numeric identifier (num) of a land use group, used as an index into the group table"
+description: "Numeric identifier (num) of a land use group"
 ---
 
 # num

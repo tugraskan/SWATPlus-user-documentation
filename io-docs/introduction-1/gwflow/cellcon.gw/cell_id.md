@@ -1,5 +1,5 @@
 ---
-description: "Cell identifier; must equal the current row index so the reader can verify row ordering and stop when a row is out of sequence"
+description: "Cell identifier"
 ---
 
 # cell_id

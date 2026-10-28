@@ -1,5 +1,5 @@
 ---
-description: "boron constituent mass fraction"
+description: "Boron constituent mass fraction"
 ---
 
 # boron

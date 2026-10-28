@@ -1,9 +1,9 @@
 ---
-description: "pumpex is a flag indicating whether groundwater pumping is simulated"
+description: "A flag indicating whether groundwater pumping is simulated"
 ---
 
 # pumpex
 
 **Code reference:** `gw_pumpex_flag` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_module.f90#L260)).
 
-pumpex is a flag indicating whether groundwater pumping is simulated.
+A flag indicating whether groundwater pumping is simulated.

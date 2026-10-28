@@ -1,11 +1,9 @@
 ---
-description: "character identifier naming the water tower or pipe"
+description: "Record name"
 ---
 
 # name
 
 **Code reference:** `pipe(ipipe)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L177)).
 
-character identifier naming the water tower or pipe.
-
-This field occurs in more than one source read group; the overview identifies the corresponding contexts.
+Record name.

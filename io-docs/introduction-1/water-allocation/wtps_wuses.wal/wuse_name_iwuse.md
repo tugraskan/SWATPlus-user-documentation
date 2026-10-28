@@ -1,5 +1,5 @@
 ---
-description: "Name of a single water use object, matched against database records to associate the object with its definition"
+description: "Name of a single water use object"
 ---
 
 # wuse_name(iwuse)

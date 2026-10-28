@@ -1,5 +1,5 @@
 ---
-description: "Integer index selecting the hydraulic conductivity zone assigned to the cell"
+description: "Index selecting the hydraulic conductivity zone assigned to the cell"
 ---
 
 # K_zone

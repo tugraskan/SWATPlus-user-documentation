@@ -1,13 +1,9 @@
 ---
-description: "Identifier name of the canal"
+description: "Canal name"
 ---
 
 # name
 
 **Code reference:** `canal(ic)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L191)).
 
-Identifier name of the canal.
-
-Identifier name of the canal to which the aquifer loss fractions apply.
-
-This field occurs in more than one source read group; the overview identifies the corresponding contexts.
+A name identifying the canal.

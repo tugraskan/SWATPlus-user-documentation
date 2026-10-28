@@ -1,9 +1,9 @@
 ---
-description: "Leading identifier read on the element data row"
+description: "Record number"
 ---
 
 # k
 
 **Code reference:** `k` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_elements.f90#L21)).
 
-Leading identifier read on the element data row.
+The leading integer identifier on this data row.

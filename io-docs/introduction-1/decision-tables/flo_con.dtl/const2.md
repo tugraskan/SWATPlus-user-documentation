@@ -1,11 +1,9 @@
 ---
-description: "secondary constant for the action (e.g. additional rate or duration parameter)"
+description: "Secondary constant for the action (e.g. additional rate or duration parameter)"
 ---
 
 # const2
 
 **Code reference:** `dtbl_flo(i)%act(iac)%const2` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L24)).
 
-secondary constant for the action (e.g. additional rate or duration parameter).
-
-Units or recommendations not established in the overview are left unspecified here.
+Secondary constant for the action (e.g. additional rate or duration parameter).

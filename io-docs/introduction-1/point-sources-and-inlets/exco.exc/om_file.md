@@ -1,5 +1,5 @@
 ---
-description: "Name of the external Organic Matter (OM) input file linked to this connection record, matched against registered OM file names during data reading"
+description: "Name of the external Organic Matter (OM) input file linked to this connection record"
 ---
 
 # om_file

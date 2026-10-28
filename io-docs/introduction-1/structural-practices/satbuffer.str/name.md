@@ -1,5 +1,5 @@
 ---
-description: "Record label identifying this saturated buffer definition"
+description: "Record name"
 ---
 
 # name

@@ -7,5 +7,3 @@ description: "Streambed thickness for the indexed zone"
 **Code reference:** `zones_strbed(i)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L97)).
 
 Streambed thickness for the indexed zone.
-
-Units or recommendations not established in the overview are left unspecified here.

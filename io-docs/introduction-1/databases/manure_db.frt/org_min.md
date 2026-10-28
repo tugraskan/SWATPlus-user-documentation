@@ -1,5 +1,5 @@
 ---
-description: "Identifier matching this manure type against the organic/mineral constituent database entry that supplies sediment, carbon, and nutrient values"
+description: "Identifier matching this manure type against the organic/mineral constituent database entry that supplies sediment"
 ---
 
 # org_min

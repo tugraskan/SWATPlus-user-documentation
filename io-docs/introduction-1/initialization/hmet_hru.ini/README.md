@@ -1,47 +1,35 @@
 ---
-description: "Defines named sets of initial heavy-metal amounts in HRU soil and plant compartments."
+description: "This file supplies named sets of initial heavy-metal values in HRU soil and plants."
 ---
+
+{% hint style="info" %}
+An Editor export of this format has not been verified. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
+{% endhint %}
+
+This file supplies named sets of initial heavy-metal values in HRU soil and plants.
 
 # hmet_hru.ini
 
-{% hint style="info" %}
-Editor generation of this exact format has not been verified in the inspected checkout. The table below describes the Fortran source, not an Editor export contract. Editor checkout inspected: `1efec55`.
+The first two lines contain a title and column headings. For each initial-condition set, enter its name followed by separate soil and plant rows with values for the configured constituents.
 
-The table values below are based on the SWAT+ Fortran source code, not an assumed SWAT+ Editor export. Field names and types may differ from Editor labels. A dash means that a unit, recommended default, or range has not been established here; it is not a Fortran initialization value.
-{% endhint %}
-
-Defines named sets of initial heavy-metal amounts in HRU soil and plant compartments.
-
-The reader obtains the filename through `in_init%hmet_soil`.
-
-## Source read groups
-
-The tables follow distinct data-read groups in the source. Counts, conditional variants, and repeated values are shown separately. A backspace or reopening may read the same input record again, so these groups must not be treated as an unconditional sequence of extra file lines.
-
-Before the data groups, the loading pass consumes a title record, then a header record.
-
-### Record at line 57
-
-Source condition/loop: `if (i_exist .or. in_init%hmet_soil /= "null") then > do > do ihmeti = 1, imax`.
+## Parameter-set name
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
-| [name](name.md) | Name identifying this set of initial constituent values | string | n/a | — | — |
+| [name](name.md) | Record name | string | n/a | — | — |
 
-### Record at line 60
-
-Source condition/loop: `if (i_exist .or. in_init%hmet_soil /= "null") then > do > do ihmeti = 1, imax > do ipest = 1, cs_db%num_metals`.
+## Soil values
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
-| [titldum](titldum.md) | Leading text label read before the compartment values | string | n/a | — | — |
-| [soil(ihmet)](soil_ihmet.md) | amount of constituent in soil at start of simulation | real | — | — | — |
+| [titldum](titldum.md) | Record label | string | n/a | — | — |
+| [soil(ihmet)](soil_ihmet.md) | Amount of constituent in soil at start of simulation | real | — | — | — |
 
-### Record at line 62
-
-Source condition/loop: `if (i_exist .or. in_init%hmet_soil /= "null") then > do > do ihmeti = 1, imax > do ipest = 1, cs_db%num_metals`.
+## Plant values
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
-| [titldum](titldum.md) | Leading text label read before the compartment values | string | n/a | — | — |
-| [plt(ihmet)](plt_ihmet.md) | amount of constituent on plant at start of simulation | real | — | — | — |
+| [titldum](titldum.md) | Record label | string | n/a | — | — |
+| [plt(ihmet)](plt_ihmet.md) | Amount of constituent on plant at start of simulation | real | — | — | — |
+
+**Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

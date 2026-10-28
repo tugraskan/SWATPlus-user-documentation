@@ -1,5 +1,5 @@
 ---
-description: "Type of demand object receiving manure: hru for application, muni for treatment plant, or divert for interbasin diversion"
+description: "Type of demand object receiving manure: hru for application"
 ---
 
 # ob_typ

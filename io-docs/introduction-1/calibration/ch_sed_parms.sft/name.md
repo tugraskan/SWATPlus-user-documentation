@@ -1,9 +1,9 @@
 ---
-description: "Name of the channel sediment calibration parameter to adjust"
+description: "Record name"
 ---
 
 # name
 
 **Code reference:** `ch_prms(i)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calibration_data_module.f90#L71)).
 
-Name of the channel sediment calibration parameter to adjust.
+Record name.

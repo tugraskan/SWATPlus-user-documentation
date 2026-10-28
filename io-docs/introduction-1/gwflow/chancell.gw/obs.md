@@ -1,5 +1,5 @@
 ---
-description: "Optional observation selector for this channel-cell connection"
+description: "Observation selector for this channel-cell connection"
 ---
 
 # obs

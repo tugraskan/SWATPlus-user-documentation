@@ -1,5 +1,5 @@
 ---
-description: "Name of the external Pathogen (PATH) input file linked to this connection record, matched against registered pathogen file names during data reading"
+description: "Name of the external Pathogen (PATH) input file linked to this connection record"
 ---
 
 # path_file

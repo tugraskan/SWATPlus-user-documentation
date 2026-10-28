@@ -1,9 +1,9 @@
 ---
-description: "action-specific option whose meaning depends on the action type (e.g. rate input, drawdown days, weir equation pointer)"
+description: "Action-specific option whose meaning depends on the action type (e.g. rate input"
 ---
 
 # option
 
 **Code reference:** `dtbl_flo(i)%act(iac)%option` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L21)).
 
-action-specific option whose meaning depends on the action type (e.g. rate input, drawdown days, weir equation pointer).
+Action-specific option whose meaning depends on the action type (e.g. rate input, drawdown days, weir equation pointer).

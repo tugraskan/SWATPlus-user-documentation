@@ -1,5 +1,5 @@
 ---
-description: "Integer cell identifier that must equal the row index of the cell being read"
+description: "Cell identifier that must equal the row index of the cell being read"
 ---
 
 # cell_id_in

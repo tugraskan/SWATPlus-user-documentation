@@ -1,5 +1,5 @@
 ---
-description: "Real surface area of the cell, used in storage and flux calculations"
+description: "Surface area of the cell"
 ---
 
 # area
@@ -7,5 +7,3 @@ description: "Real surface area of the cell, used in storage and flux calculatio
 **Code reference:** `gw_state(i)%area` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_module.f90#L55)).
 
 Real surface area of the cell, used in storage and flux calculations.
-
-Units or recommendations not established in the overview are left unspecified here.

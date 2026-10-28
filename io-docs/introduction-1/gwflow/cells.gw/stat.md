@@ -1,5 +1,5 @@
 ---
-description: "Integer status flag indicating whether the cell is inactive (0), active (1), or a boundary (2)"
+description: "Status flag indicating whether the cell is inactive (0), active (1), or a boundary (2)"
 ---
 
 # stat

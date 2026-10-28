@@ -1,5 +1,5 @@
 ---
-description: "Fertilizer name"
+description: "Record name"
 ---
 
 # name

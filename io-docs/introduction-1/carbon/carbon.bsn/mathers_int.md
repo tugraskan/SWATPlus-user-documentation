@@ -1,5 +1,5 @@
 ---
-description: "Integer flag (0 or 1) selecting whether the Mathers method is used for initializing organic carbon fractions"
+description: "Flag (0 or 1) selecting whether the Mathers method is used for initializing organic carbon fractions"
 ---
 
 # mathers_int

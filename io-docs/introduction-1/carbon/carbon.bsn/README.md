@@ -1,28 +1,18 @@
 ---
-description: "Defines basin-level carbon cycling parameters used to initialize soil organic carbon pools, set CO2 production and decay rates for residue and living organic matter, and control carbon transport and decomposition coefficients. A companion per-layer file (carbon_lyr.bsn, derived from this filename) supplies layer-specific rates and CO2 production fractions; both are read when the carbon option is enabled."
+description: "This file contains basin-wide carbon cycling parameters and the associated soil-layer carbon settings."
 ---
+
+{% hint style="info" %}
+The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
+{% endhint %}
+
+This file contains basin-wide carbon cycling parameters and the associated soil-layer carbon settings.
 
 # carbon.bsn
 
-{% hint style="info" %}
-The inspected Editor has a dispatched exporter for this input format; generation depends on project settings. Editor checkout inspected: `1efec55`.
+Use the basin parameters in the first table. The per-layer values belong in a companion file: `carbon.bsn` uses `carbon_lyr.bsn`, while another configured name such as `foo.bsn` uses `foo_lyr.bsn`. The companion starts with a title and column headings, followed by one row per layer.
 
-The table values below are based on the SWAT+ Fortran source code, not an assumed SWAT+ Editor export. Field names and types may differ from Editor labels. A dash means that a unit, recommended default, or range has not been established here; it is not a Fortran initialization value.
-{% endhint %}
-
-Defines basin-level carbon cycling parameters used to initialize soil organic carbon pools, set CO2 production and decay rates for residue and living organic matter, and control carbon transport and decomposition coefficients. A companion per-layer file (carbon_lyr.bsn, derived from this filename) supplies layer-specific rates and CO2 production fractions; both are read when the carbon option is enabled.
-
-The reader obtains the filename through `in_basin%carbon_bsn`.
-
-## Source read groups
-
-The tables follow distinct data-read groups in the source. Counts, conditional variants, and repeated values are shown separately. A backspace or reopening may read the same input record again, so these groups must not be treated as an unconditional sequence of extra file lines.
-
-Before the data groups, the loading pass consumes a title record, then a header record.
-
-The per-layer companion is derived from the configured carbon filename: carbon.bsn gives carbon_lyr.bsn and foo.bsn gives foo_lyr.bsn. It is not separately selected in file.cio. The reader requires it when the carbon option is enabled; its title and header are followed by per-layer rows. The companion fields appear in their own group below.
-
-### Data record
+## Basin parameters
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
@@ -30,8 +20,8 @@ The per-layer companion is derived from the configured carbon filename: carbon.b
 | [frac_hum_microb](frac_hum_microb.md) | Fraction of carbon assigned to the microbial pool when initializing microbial organic carbon pools | real | — | — | — |
 | [frac_hum_slow](frac_hum_slow.md) | Fraction of carbon assigned to the humus slow pool when initializing humus slow organic carbon pools | real | — | — | — |
 | [frac_hum_passive](frac_hum_passive.md) | Fraction of carbon assigned to the humus passive pool when initializing humus passive organic carbon pools | real | — | — | — |
-| [prmt_21](prmt_21.md) | Koc partition coefficient for carbon loss to water and sediment, used to compute the distribution coefficient as KD = KOC * C | real | — | — | — |
-| [prmt_44](prmt_44.md) | Ratio of soluble carbon concentration in runoff to that in percolate, used to partition vertical and horizontal carbon transport | real | — | — | — |
+| [prmt_21](prmt_21.md) | Koc partition coefficient for carbon loss to water and sediment | real | — | — | — |
+| [prmt_44](prmt_44.md) | Ratio of soluble carbon concentration in runoff to that in percolate | real | — | — | — |
 | [till_eff_days](till_eff_days.md) | Number of days a tillage operation continues to affect carbon cycling processes | integer | n/a | — | — |
 | [rtof](rtof.md) | Weighting factor partitioning the organic N and P concentration of septic effluent between the fresh and stable organic pools | real | — | — | — |
 | [bio_consf](bio_consf.md) | Consumption factor applied during biomass mixing operations to reduce residue carbon | real | — | — | — |
@@ -48,16 +38,14 @@ The per-layer companion is derived from the configured carbon filename: carbon.b
 | [tillmix_b](tillmix_b.md) | Slope coefficient in the zz equation used by mgt_tillfactor for tillage mixing calculations | real | — | — | — |
 | [tillmix_c](tillmix_c.md) | Exponent multiplier in the zz equation used by mgt_tillfactor for tillage mixing calculations | real | — | — | — |
 | [photo_degrade_factor](photo_degrade_factor.md) | Fraction by which surface residue carbon is reduced each time step due to photodegradation | real | — | — | — |
-| [n_act_frac](n_act_frac.md) | Fraction of organic nitrogen in the active humus pool, used in active-to-stable nitrogen mineralization flow | real | — | — | — |
+| [n_act_frac](n_act_frac.md) | Fraction of organic nitrogen in the active humus pool | real | — | — | — |
 | [cnr_cap](cnr_cap.md) | Upper cap applied to the residue C:N ratio before computing the decomposition factor | real | — | — | — |
 | [cnr_ref](cnr_ref.md) | Reference C:N ratio at which the decomposition factor equals one | real | — | — | — |
 | [cpr_cap](cpr_cap.md) | Upper cap applied to the residue C:P ratio before computing the decomposition factor | real | — | — | — |
 | [cpr_ref](cpr_ref.md) | Reference C:P ratio at which the decomposition factor equals one | real | — | — | — |
-| [mathers_int](mathers_int.md) | Integer flag (0 or 1) selecting whether the Mathers method is used for initializing organic carbon fractions | integer | n/a | — | — |
+| [mathers_int](mathers_int.md) | Flag (0 or 1) selecting whether the Mathers method is used for initializing organic carbon fractions | integer | n/a | — | — |
 
-### Companion layer record
-
-These fields belong to the derived-name carbon-layer companion, not the main carbon record.
+## Soil-layer companion
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
@@ -73,3 +61,5 @@ These fields belong to the derived-name carbon-layer companion, not the main car
 | [r_asco2](r_asco2.md) | CO2 production fraction from the slow organic carbon pool on the identified layer | real | — | — | — |
 | [r_apco2](r_apco2.md) | CO2 production fraction from the passive organic carbon pool on the identified layer | real | — | — | — |
 | [r_abco2](r_abco2.md) | CO2 production fraction from the base organic carbon pool on the identified layer | real | — | — | — |
+
+**Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

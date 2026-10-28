@@ -1,5 +1,5 @@
 ---
-description: "Name identifying a heavy metals delivery definition (dr_hmet_name), matched against the hmet_file value to select the delivery record"
+description: "Name identifying a heavy metals delivery definition (dr_hmet_name)"
 ---
 
 # dr_hmet_name(ii)

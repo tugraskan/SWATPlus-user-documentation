@@ -1,5 +1,5 @@
 ---
-description: "Name of the external Salt loading input file linked to this connection record, matched against registered salt file names during data reading"
+description: "Name of the external Salt loading input file linked to this connection record"
 ---
 
 # salts_file

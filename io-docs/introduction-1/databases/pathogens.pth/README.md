@@ -1,26 +1,16 @@
 ---
-description: "Defines per-pathogen parameters governing die-off, growth, partitioning, and transport of persistent and less-persistent bacteria across soil solution, sorbed soil phase, foliage, streams, and reservoirs, including temperature adjustment, rainfall washoff, manure association, percolation, and a detection threshold."
+description: "This file contains parameters for pathogen growth, die-off, partitioning, and transport."
 ---
+
+{% hint style="info" %}
+The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
+{% endhint %}
+
+This file contains parameters for pathogen growth, die-off, partitioning, and transport.
 
 # pathogens.pth
 
-{% hint style="info" %}
-The inspected Editor has a dispatched exporter for this input format; generation depends on project settings. Editor checkout inspected: `1efec55`.
-
-The table values below are based on the SWAT+ Fortran source code, not an assumed SWAT+ Editor export. Field names and types may differ from Editor labels. A dash means that a unit, recommended default, or range has not been established here; it is not a Fortran initialization value.
-{% endhint %}
-
-Defines per-pathogen parameters governing die-off, growth, partitioning, and transport of persistent and less-persistent bacteria across soil solution, sorbed soil phase, foliage, streams, and reservoirs, including temperature adjustment, rainfall washoff, manure association, percolation, and a detection threshold.
-
-The reader obtains the filename through `in_parmdb%pathcom_db`.
-
-## Source read groups
-
-The tables follow distinct data-read groups in the source. Counts, conditional variants, and repeated values are shown separately. A backspace or reopening may read the same input record again, so these groups must not be treated as an unconditional sequence of extra file lines.
-
-Before the data groups, the loading pass consumes a title record, then a header record, then a title record.
-
-### Data record
+The first two lines contain a title and column headings. Each following row contains the fields below, in this order.
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
@@ -42,3 +32,5 @@ Before the data groups, the loading pass consumes a title record, then a header 
 | [do_res](do_res.md) | Die-off factor for less-persistent bacteria in reservoirs | real | — | — | — |
 | [gr_res](gr_res.md) | Growth factor for less-persistent bacteria in reservoirs | real | — | — | — |
 | [conc_min](conc_min.md) | Minimum pathogen concentration applied as a floor in foliage and soil solution calculations | real | — | — | — |
+
+**Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

@@ -1,5 +1,5 @@
 ---
-description: "Optional depth-zone index selecting the channel-depth series"
+description: "Depth-zone index selecting the channel-depth series"
 ---
 
 # dep_zone

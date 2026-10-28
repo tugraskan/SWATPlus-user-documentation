@@ -1,5 +1,5 @@
 ---
-description: "Integer encoding year and day for a groundwater head output time, where the year is the value divided by 1000 and the day is the remainder of that division"
+description: "Encoding year and day for a groundwater head output time"
 ---
 
 # value

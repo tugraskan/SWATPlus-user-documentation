@@ -1,34 +1,26 @@
 ---
-description: "Defines named organic/mineral component records referenced by water treatment definitions."
+description: "This file supplies named organic/mineral component values for water treatment."
 ---
+
+{% hint style="info" %}
+An Editor export of this format has not been verified. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
+{% endhint %}
+
+This file supplies named organic/mineral component values for water treatment.
+
+SWAT+ looks for `om_treat.wal` in the simulation working directory; it is not selected through `file.cio`. See the [om_treat_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/om_treat_read.f90#L31) reader.
 
 # om_treat.wal
 
-{% hint style="info" %}
-Editor generation of this exact format has not been verified in the inspected checkout. The table below describes the Fortran source, not an Editor export contract. Editor checkout inspected: `1efec55`.
+The file contains a title, the entry count, column headings, and the corresponding data rows shown below.
 
-The table values below are based on the SWAT+ Fortran source code, not an assumed SWAT+ Editor export. Field names and types may differ from Editor labels. A dash means that a unit, recommended default, or range has not been established here; it is not a Fortran initialization value.
-{% endhint %}
-
-Defines named organic/mineral component records referenced by water treatment definitions.
-
-SWAT+ uses the literal filename `om_treat.wal` in the simulation working directory rather than selecting this filename through `file.cio`. It is read by [om_treat_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/om_treat_read.f90#L31). File-presence requirements and feature conditions are determined by this reader; a missing file is not assumed to be harmless.
-
-## Source read groups
-
-The tables follow distinct data-read groups in the source. Counts, conditional variants, and repeated values are shown separately. A backspace or reopening may read the same input record again, so these groups must not be treated as an unconditional sequence of extra file lines.
-
-Before the data groups, the loading pass consumes a title record.
-
-### Additional read at line 34
-
-Source condition/loop: `if (.not. i_exist .or. 'om_treat.wal' == "null") then / else > do`.
+## Number of records
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
-| [imax](imax.md) | integer read from the first record; the source comment indicates it determines the maximum array size and total number of treatment records present in the file | integer | n/a | — | — |
+| [imax](imax.md) | Number of records | integer | n/a | — | — |
 
-### Data record
+## Input values
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
@@ -51,3 +43,5 @@ Source condition/loop: `if (.not. i_exist .or. 'om_treat.wal' == "null") then / 
 | [lag](lag.md) | Large-aggregate component value for this named record | real | — | — | — |
 | [grv](grv.md) | Gravel component value for this named record | real | — | — | — |
 | [temp](temp.md) | Water-temperature component value for this named record | real | — | — | — |
+
+**Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

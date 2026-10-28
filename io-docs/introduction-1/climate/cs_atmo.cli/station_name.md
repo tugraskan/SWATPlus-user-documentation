@@ -7,11 +7,3 @@ description: "Station identifier for the annual timestep record (station_name)"
 **Code reference:** `station_name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_read_atmodep_cs.f90#L20)).
 
 Station identifier for the annual timestep record (station_name).
-
-Station identifier for the monthly timestep record (station_name).
-
-Station identifier for the yearly timestep record (station_name).
-
-This field occurs in more than one source read group; the overview identifies the corresponding contexts.
-
-Units or recommendations not established in the overview are left unspecified here.

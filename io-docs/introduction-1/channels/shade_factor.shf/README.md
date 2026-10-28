@@ -1,18 +1,16 @@
 ---
-description: This file contains daily channel shading factors.
+description: "This file contains daily channel shading factors."
 ---
+
+{% hint style="info" %}
+An Editor export of this format has not been verified. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
+{% endhint %}
+
+This file contains daily channel shading factors.
 
 # shade_factor.shf
 
-{% hint style="info" %}
-This file is supported by the SWAT+ model, but no exporter was found in the inspected SWAT+ Editor version. It may need to be supplied separately. Editor checkout checked: `1efec55`.
-
-The table below is based on the SWAT+ Fortran source code. Its contents should not be assumed to match the labels, defaults, or options available in SWAT+ Editor. A dash means that no recommended default or range has been established here; it is not a Fortran initialization value.
-{% endhint %}
-
-Daily channel shading factors for the water-temperature calculation. Rows are used when the shade-factor switch in temperature.cha is enabled; reading the file itself is not conditional on that switch.
-
-The first line is a title and the second line is a header. Each subsequent record contains the fields below, in this order. There is no separate record-count line.
+The first two lines contain a title and column headings. Each following row contains the fields below, in this order.
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
@@ -20,6 +18,4 @@ The first line is a title and the second line is a header. Each subsequent recor
 | [cha](cha.md) | Channel (reach) identifier for the shading entry | integer | n/a | — | — |
 | [value](value.md) | Fraction of incoming shortwave radiation blocked by shading | real | fraction | — | — |
 
-Recommended defaults and ranges are not specified by this page. The dash does not imply a default of zero.
-
-The file lookup is used when `w_temp(0)%sf_on == 1`. When the switch is off, the temperature calculation uses `w_temp(0)%ssff`. Provide matching day/channel rows for the ordinary days you intend to simulate; the lookup does not supply a missing-row fallback.
+**Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

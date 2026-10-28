@@ -1,5 +1,5 @@
 ---
-description: "Texture class identifier for the soil entry, matched against the HRU LTE database during read operations"
+description: "Texture class identifier for the soil entry"
 ---
 
 # texture

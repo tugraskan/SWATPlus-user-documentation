@@ -1,5 +1,5 @@
 ---
-description: "First-order reaction rate for the solute, multiplied by cell concentration and groundwater volume to compute reaction mass changes"
+description: "First-order reaction rate for the solute"
 ---
 
 # gwsol_rctn
@@ -7,5 +7,3 @@ description: "First-order reaction rate for the solute, multiplied by cell conce
 **Code reference:** `gwsol_rctn(s)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_module.f90#L511)).
 
 First-order reaction rate for the solute, multiplied by cell concentration and groundwater volume to compute reaction mass changes.
-
-Units or recommendations not established in the overview are left unspecified here.

@@ -1,30 +1,20 @@
 ---
-description: "Defines named organic/mineral export-coefficient records with a value for each hydrograph component. Routing behavior depends on the objects that reference the record."
+description: "This file supplies named organic/mineral export-coefficient values for hydrograph components."
 ---
+
+{% hint style="info" %}
+The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
+{% endhint %}
+
+This file supplies named organic/mineral export-coefficient values for hydrograph components.
 
 # exco_om.exc
 
-{% hint style="info" %}
-The inspected Editor has a dispatched exporter for this input format; generation depends on project settings. Editor checkout inspected: `1efec55`.
-
-The table values below are based on the SWAT+ Fortran source code, not an assumed SWAT+ Editor export. Field names and types may differ from Editor labels. A dash means that a unit, recommended default, or range has not been established here; it is not a Fortran initialization value.
-{% endhint %}
-
-Defines named organic/mineral export-coefficient records with a value for each hydrograph component. Routing behavior depends on the objects that reference the record.
-
-The reader obtains the filename through `in_exco%om`.
+The first two lines contain a title and column headings. Each following row contains the fields below, in this order.
 
 {% hint style="warning" %}
-Source limitation: Initialization named-row crosswalk and RU direct-row routing differ; no universal coefficient/unit interpretation. These pages describe the inspected source and do not establish a working runtime configuration.
+The interpretation of these records differs between initialization and direct routing. Confirm the intended routing setup before assigning coefficient or load units.
 {% endhint %}
-
-## Source read groups
-
-The tables follow distinct data-read groups in the source. Counts, conditional variants, and repeated values are shown separately. A backspace or reopening may read the same input record again, so these groups must not be treated as an unconditional sequence of extra file lines.
-
-Before the data groups, the loading pass consumes a title record, then a header record, then a title record.
-
-### Data record
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
@@ -47,3 +37,5 @@ Before the data groups, the loading pass consumes a title record, then a header 
 | [lag](lag.md) | Large-aggregate component value for this named record | real | — | — | — |
 | [grv](grv.md) | Gravel component value for this named record | real | — | — | — |
 | [temp](temp.md) | Water-temperature component value for this named record | real | — | — | — |
+
+**Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

@@ -1,5 +1,5 @@
 ---
-description: "Selects the sediment transport equation applied to this channel: 0 = original SWAT, 1 = Bagnold, 2 = Kodatie, 3 = Molinas-WU, 4 = Yang"
+description: "Selects the sediment transport equation applied to this channel: 0 = original SWAT"
 ---
 
 # eqn

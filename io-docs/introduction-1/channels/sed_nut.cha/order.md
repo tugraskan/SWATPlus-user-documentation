@@ -1,5 +1,5 @@
 ---
-description: "Character order label stored with this channel parameter record"
+description: "Order label stored with this channel parameter record"
 ---
 
 # order

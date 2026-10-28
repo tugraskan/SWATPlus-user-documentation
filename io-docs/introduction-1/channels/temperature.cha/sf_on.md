@@ -1,5 +1,5 @@
 ---
-description: "Activation flag for the shade factor file; 1 indicates the file is used, 0 indicates the value is taken from the calibration file"
+description: "Activation flag for the shade factor file"
 ---
 
 # sf_on

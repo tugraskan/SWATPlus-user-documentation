@@ -1,5 +1,5 @@
 ---
-description: "Name of the external Pesticide input file linked to this connection record, matched against registered pesticide file names during data reading"
+description: "Name of the external Pesticide input file linked to this connection record"
 ---
 
 # pest_file

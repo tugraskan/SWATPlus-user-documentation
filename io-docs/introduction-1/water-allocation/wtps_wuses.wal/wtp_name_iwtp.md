@@ -1,5 +1,5 @@
 ---
-description: "Name of a single water treatment plant object, matched against database records to associate the object with its definition"
+description: "Name of a single water treatment plant object"
 ---
 
 # wtp_name(iwtp)

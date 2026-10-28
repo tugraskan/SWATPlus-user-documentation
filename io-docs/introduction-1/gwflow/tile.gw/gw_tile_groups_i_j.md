@@ -1,5 +1,5 @@
 ---
-description: "Cell identifier within a tile cell group; the value indexes into groundwater storage and solute arrays during grouped tile drainage summation"
+description: "Cell identifier within a tile cell group"
 ---
 
 # gw_tile_groups(i,j)

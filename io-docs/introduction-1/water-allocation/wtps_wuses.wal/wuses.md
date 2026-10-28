@@ -1,5 +1,5 @@
 ---
-description: "Number of water use objects included in the simulation, used to size related arrays and drive loops over water use entries"
+description: "Number of water use objects included in the simulation"
 ---
 
 # wuses

@@ -1,41 +1,25 @@
 ---
-description: "Defines aquifer cataloging-unit elements using named object references and area expansion fractions."
+description: "This file identifies the objects included in aquifer cataloging units and their area fractions."
 ---
+
+{% hint style="info" %}
+The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
+{% endhint %}
+
+This file identifies the objects included in aquifer cataloging units and their area fractions.
 
 # aqu_catunit.ele
 
-{% hint style="info" %}
-The inspected Editor has a dispatched exporter for this input format; generation depends on project settings. Editor checkout inspected: `1efec55`.
-
-The table values below are based on the SWAT+ Fortran source code, not an assumed SWAT+ Editor export. Field names and types may differ from Editor labels. A dash means that a unit, recommended default, or range has not been established here; it is not a Fortran initialization value.
-{% endhint %}
-
-Defines aquifer cataloging-unit elements using named object references and area expansion fractions.
-
-The reader obtains the filename through `in_regs%ele_aqu`.
-
-## Source read groups
-
-The tables follow distinct data-read groups in the source. Counts, conditional variants, and repeated values are shown separately. A backspace or reopening may read the same input record again, so these groups must not be treated as an unconditional sequence of extra file lines.
-
-Before the data groups, the loading pass consumes a title record, then a header record.
-
-### Additional read at line 171
-
-Source condition/loop: `if (i_exist .or. in_regs%ele_aqu /= "null") then > do > do isp = 1, imax`.
+The first two lines contain a title and column headings. Enter one row per element using the fields below.
 
 | Field | Description | Type | Unit | Default | Range |
 | --- | --- | --- | --- | --- | --- |
-| [i](i.md) | Leading integer read during the file counting pass | integer | n/a | — | — |
+| [k](k.md) | Record number | integer | n/a | — | — |
+| [name](name.md) | Record name | string | n/a | — | — |
+| [obtyp](obtyp.md) | Object type | string | n/a | — | — |
+| [obtypno](obtypno.md) | Object identifier | integer | n/a | — | — |
+| [bsn_frac](bsn_frac.md) | Basin expansion fraction | real | — | — | — |
+| [ru_frac](ru_frac.md) | Routing-unit expansion fraction | real | — | — | — |
+| [reg_frac](reg_frac.md) | Regional expansion fraction | real | — | — | — |
 
-### Data record
-
-| Field | Description | Type | Unit | Default | Range |
-| --- | --- | --- | --- | --- | --- |
-| [k](k.md) | Leading identifier read on the element data row | integer | n/a | — | — |
-| [name](name.md) | Name identifier for the aquifer element | string | n/a | — | — |
-| [obtyp](obtyp.md) | Object type label for this element | string | n/a | — | — |
-| [obtypno](obtypno.md) | Identifier of the object of the specified type | integer | n/a | — | — |
-| [bsn_frac](bsn_frac.md) | Fraction of the element area within the basin, used as an expansion factor | real | — | — | — |
-| [ru_frac](ru_frac.md) | Fraction of the element area within the response unit, used as an expansion factor | real | — | — | — |
-| [reg_frac](reg_frac.md) | Fraction of the element area within the calibration region, used as an expansion factor | real | — | — | — |
+**Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

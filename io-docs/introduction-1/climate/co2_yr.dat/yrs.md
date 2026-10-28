@@ -1,5 +1,5 @@
 ---
-description: "Total number of annual CO2 records (integer) that follow in this file, used to size the internal storage array"
+description: "Total number of annual CO2 records (integer) that follow in this file"
 ---
 
 # yrs

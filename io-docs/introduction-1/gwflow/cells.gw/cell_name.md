@@ -1,5 +1,5 @@
 ---
-description: "Character label identifying the cell, typically of the form cellNNNN"
+description: "Label identifying the cell, typically of the form cellNNNN"
 ---
 
 # cell_name

@@ -1852,6 +1852,8 @@
 * [Management](swat+-output-files/management.md)
 * [Flow Duration Curve](swat+-output-files/flow-duration-curve.md)
 * [Water Balance](swat+-output-files/water-balance.md)
+* [GWFlow Basin Water Balance](swat+-output-files/gwflow-basin-water-balance.md)
+* [HRU Salt](swat+-output-files/hru-salt.md)
 * [Nutrient Balance](swat+-output-files/nutrient-balance.md)
 * [Losses](swat+-output-files/losses.md)
 * [Plant and Weather](swat+-output-files/plant-and-weather.md)

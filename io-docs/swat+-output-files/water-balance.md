@@ -1,22 +1,68 @@
 # Water Balance
 
-Water balance output can be printed at basin, LSU, HRU, and HRU-lte level by entering "y" in the _basin\_wb_, _lsunit\_wb_, _hru\_wb_, and _hru-lte\_wb_ lines in [print.prt](../introduction-1/simulation-settings/print.prt/), respectively. Water balance output can be printed at daily, monthly, yearly, and average annual time steps. The names of the water balance output files are as follows:&#x20;
+Water-balance output is available for the basin, landscape units, HRUs, and HRU-LTEs. Enable `basin_wb`, `lsunit_wb`, `hru_wb`, or `hru-lte_wb` in [print.prt](../introduction-1/simulation-settings/print.prt/). Daily, monthly, yearly, and average-annual output can be selected independently.
 
-* basin\_wb\_day.txt
-* basin\_wb\_mon.txt
-* basin\_wb\_yr.txt
-* basin\_wb\_aa.txt
-* lsunit\_wb\_day.txt
-* lsunit\_wb\_mon.txt
-* lsunit\_wb\_yr.txt
-* lsunit\_wb\_aa.txt
-* hru\_wb\_day.txt
-* hru\_wb\_mon.txt
-* hru\_wb\_yr.txt
-* hru\_wb\_aa.txt
-* hru-lte\_wb\_day.txt
-* hru-lte\_wb\_mon.txt
-* hru-lte\_wb\_yr.txt
-* hru-lte\_wb\_aa.txt
+The filename prefixes are `basin_wb`, `lsunit_wb`, `hru_wb`, and `hru-lte_wb`. Each prefix can have `_day`, `_mon`, `_yr`, or `_aa`, followed by `.txt`. Corresponding `.csv` files are produced when CSV output is enabled.
 
-<table><thead><tr><th width="138">Field</th><th width="260.6666259765625">Description</th><th width="114.6666259765625">Unit</th></tr></thead><tbody><tr><td>jday</td><td>Julian day</td><td>n/a</td></tr><tr><td>mon</td><td>Month</td><td>n/a</td></tr><tr><td>day</td><td>Day of the month</td><td>n/a</td></tr><tr><td>yr</td><td>Year</td><td>n/a</td></tr><tr><td>unit</td><td>ID of the object</td><td>n/a</td></tr><tr><td>gis_id</td><td>Object ID in GIS</td><td>n/a</td></tr><tr><td>name</td><td>Name of the object or SWAT+ setup (basin outputs)</td><td>n/a</td></tr><tr><td>precip</td><td>Precipitation</td><td>mm</td></tr><tr><td>snofall</td><td>Snowfall</td><td>mm</td></tr><tr><td>snomlt</td><td>Snowmelt</td><td>mm</td></tr><tr><td>surq_gen</td><td>Generated surface runoff </td><td>mm</td></tr><tr><td>latq</td><td>Lateral flow</td><td>mm</td></tr><tr><td>wateryld</td><td>Water yield</td><td>mm</td></tr><tr><td>perc</td><td>Percolation</td><td>mm</td></tr><tr><td>et</td><td>Actual evapotranspiration</td><td>mm</td></tr><tr><td>ecanopy</td><td>Canopy evaporation</td><td>mm</td></tr><tr><td>eplant</td><td>Plant transpiration</td><td>mm</td></tr><tr><td>esoil</td><td>Soil evaporation</td><td>mm</td></tr><tr><td>surq_cont</td><td>Contributing surface runoff </td><td>mm</td></tr><tr><td>cn</td><td>Curve Number</td><td>n/a</td></tr><tr><td>sw_init</td><td>Initial soil water content</td><td>mm</td></tr><tr><td>sw_final</td><td>Final soil water content</td><td>mm</td></tr><tr><td>sw_ave</td><td>Average soil water content</td><td>mm</td></tr><tr><td>sw_300</td><td>Average soil water content in the top 300 mm of soil</td><td>mm</td></tr><tr><td>sno_init</td><td>Initial snow water content</td><td>mm</td></tr><tr><td>sno_final</td><td>Final snow water content</td><td>mm</td></tr><tr><td>snopac</td><td>Average snow water content</td><td>mm</td></tr><tr><td>pet</td><td>Potential Evapotranspiration</td><td>mm</td></tr><tr><td>qtile</td><td>Tile flow</td><td>mm</td></tr><tr><td>irr</td><td>Irrigation</td><td>mm</td></tr><tr><td>surq_runon</td><td>Surface runoff run-on</td><td>mm</td></tr><tr><td>latq_runon</td><td>Lateral flow run-on</td><td>mm</td></tr><tr><td>overbank</td><td>Overbank flow</td><td>mm</td></tr><tr><td>surq_cha</td><td>Surface runoff to channels</td><td>mm</td></tr><tr><td>surq_res</td><td>Surface runoff to reservoirs</td><td>mm</td></tr><tr><td>surq_ls</td><td>Surface runoff to Landscape Units</td><td>mm</td></tr><tr><td>latq_cha</td><td>Lateral flow to channels</td><td>mm</td></tr><tr><td>latq_res</td><td>Lateral flow to reservoirs</td><td>mm</td></tr><tr><td>latq_ls</td><td>Lateral flow to Landscape Units</td><td>mm</td></tr><tr><td>gwtranq</td><td>GWFlow module output</td><td>mm</td></tr><tr><td>satex</td><td>GWFlow module output</td><td>mm</td></tr><tr><td>satex_chan</td><td>GWFlow module output</td><td>mm</td></tr><tr><td>sw_change</td><td>Change in soil water content</td><td>mm</td></tr><tr><td>lagsurf</td><td>Surface runoff lag</td><td>mm</td></tr><tr><td>laglatq</td><td>Lateral flow runoff lag</td><td>mm</td></tr><tr><td>lagsatex</td><td>Surface runoff lag</td><td>mm</td></tr></tbody></table>
+All four spatial levels use the following core columns in this order:
+
+| Field | Description | Unit |
+| --- | --- | --- |
+| jday | Day of year | n/a |
+| mon | Month | n/a |
+| day | Day of month | n/a |
+| yr | Calendar year | n/a |
+| unit | Spatial-object identifier | n/a |
+| gis_id | GIS identifier | n/a |
+| name | Spatial-object name; basin name for basin output | n/a |
+| precip | Rain and snow precipitation | mm |
+| snofall | Precipitation falling as snow, sleet, or freezing rain | mm |
+| snomlt | Snowmelt | mm |
+| surq_gen | Surface runoff generated | mm |
+| latq | Lateral soil flow | mm |
+| wateryld | Water yield | mm |
+| perc | Water percolating below the soil profile | mm |
+| et | Actual evapotranspiration | mm |
+| ecanopy | Canopy evaporation | mm |
+| eplant | Plant transpiration | mm |
+| esoil | Soil evaporation | mm |
+| surq_cont | Surface runoff leaving the landscape | mm |
+| cn | Curve number for the reporting period | n/a |
+| sw_init | Soil water at the start of the reporting period | mm |
+| sw_final | Soil water at the end of the reporting period | mm |
+| sw_ave | Average soil water | mm |
+| sw_300 | Soil water in the upper 300 mm | mm |
+| sno_init | Snowpack water at the start of the reporting period | mm |
+| sno_final | Snowpack water at the end of the reporting period | mm |
+| snopack | Average snowpack water equivalent | mm |
+| pet | Potential evapotranspiration | mm |
+| qtile | Subsurface tile flow leaving the landscape | mm |
+| irr | Irrigation applied | mm |
+| surq_runon | Surface-runoff run-on from upland landscape | mm |
+| latq_runon | Lateral-flow run-on from upland landscape | mm |
+| overbank | Overbank flooding from channels | mm |
+| surq_cha | Surface runoff routed to channels | mm |
+| surq_res | Surface runoff routed to reservoirs | mm |
+| surq_ls | Surface runoff routed to landscape objects | mm |
+| latq_cha | Lateral flow routed to channels | mm |
+| latq_res | Lateral flow routed to reservoirs | mm |
+| latq_ls | Lateral flow routed to landscape objects | mm |
+| gwsoilq | Groundwater transferred into the soil profile | mm |
+| satex | Saturation-excess flow generated by a high water table | mm |
+| satex_chan | Saturation-excess flow reaching the main channel | mm |
+| sw_change | Change in soil-water storage | mm |
+| lagsurf | Surface runoff still in transit to a channel | mm |
+| laglatq | Lateral flow still in transit to a channel | mm |
+| lagsatex | Saturation-excess flow still in transit to a channel | mm |
+| wet_evap | Evaporation from wetland surfaces | mm |
+| wet_oflo | Wetland overflow | mm |
+| wet_stor | Water stored in wetlands at the end of the reporting period | mm |
+
+HRU files add two trailing fields that are not present in basin, landscape-unit, or HRU-LTE rows:
+
+| Field | Description | Unit |
+| --- | --- | --- |
+| plant_cov | Plant-community identifier associated with the HRU | n/a |
+| mgt_ops | Management-schedule identifier associated with the HRU | n/a |
+
+Water fluxes are accumulated over monthly and yearly reporting periods. State variables such as average soil water, curve number, and snowpack are averaged; start and end storage fields retain the reporting-period boundaries. Average-annual rows summarize the printed simulation years.

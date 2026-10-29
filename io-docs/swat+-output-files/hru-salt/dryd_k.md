@@ -12,4 +12,4 @@ In this output table, `dryd_k` is one of the fields described as: Salt added by 
 
 The same printed heading can appear in daily, monthly, yearly, and average-annual variants of this family. The reporting interval changes the row period; this page does not infer a total-versus-average rule beyond what the family output and source establish.
 
-[Back to the output table](../hru-salt.md).
+[Back to the output table](README.md).

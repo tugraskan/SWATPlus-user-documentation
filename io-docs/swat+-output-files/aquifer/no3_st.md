@@ -14,4 +14,4 @@ Daily output gives the daily value. Monthly output averages the daily values; ye
 
 Basin output weights aquifer values by aquifer area relative to the total basin area.
 
-[Back to the output table](../aquifer.md).
+[Back to the output table](README.md).

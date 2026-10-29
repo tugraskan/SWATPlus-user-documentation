@@ -10,4 +10,4 @@ The aquifer object name in individual output, or the basin name in basin-average
 
 This is an identifier, label, or date component; it has no physical unit.
 
-[Back to the output table](../aquifer.md).
+[Back to the output table](README.md).

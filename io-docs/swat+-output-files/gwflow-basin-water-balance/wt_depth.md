@@ -12,4 +12,4 @@ The arithmetic mean of ground-surface elevation minus groundwater head across ac
 
 This field appears in the daily file only; it is not a column in the monthly, yearly, or average-annual basin water-balance files.
 
-[Back to the output table](../gwflow-basin-water-balance.md).
+[Back to the output table](README.md).

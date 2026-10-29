@@ -12,4 +12,4 @@ Plant biomass.
 
 This field belongs to a fixed or event-style report rather than the standard daily/monthly/yearly/average-annual series.
 
-[Back to the output table](../management.md).
+[Back to the output table](README.md).

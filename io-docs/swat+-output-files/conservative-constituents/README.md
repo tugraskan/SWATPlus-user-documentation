@@ -14,27 +14,27 @@ The `hru_cs_*` files contain one three-constituent group for each process.
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [`sl_seo4`](conservative-constituents/sl_seo4.md), [`sl_seo3`](conservative-constituents/sl_seo3.md), [`sl_born`](conservative-constituents/sl_born.md) | Constituent stored in the soil profile | kg/ha |
-| [`surq_seo4`](conservative-constituents/surq_seo4.md), [`surq_seo3`](conservative-constituents/surq_seo3.md), [`surq_born`](conservative-constituents/surq_born.md) | Surface-runoff transport | kg/ha |
-| [`sedm_seo4`](conservative-constituents/sedm_seo4.md), [`sedm_seo3`](conservative-constituents/sedm_seo3.md), [`sedm_born`](conservative-constituents/sedm_born.md) | Sediment-associated transport | kg/ha |
-| [`latq_seo4`](conservative-constituents/latq_seo4.md), [`latq_seo3`](conservative-constituents/latq_seo3.md), [`latq_born`](conservative-constituents/latq_born.md) | Lateral-flow transport | kg/ha |
-| [`urbq_seo4`](conservative-constituents/urbq_seo4.md), [`urbq_seo3`](conservative-constituents/urbq_seo3.md), [`urbq_born`](conservative-constituents/urbq_born.md) | Urban-runoff transport | kg/ha |
-| [`wetq_seo4`](conservative-constituents/wetq_seo4.md), [`wetq_seo3`](conservative-constituents/wetq_seo3.md), [`wetq_born`](conservative-constituents/wetq_born.md) | Wetland-outflow transport | kg/ha |
-| [`tile_seo4`](conservative-constituents/tile_seo4.md), [`tile_seo3`](conservative-constituents/tile_seo3.md), [`tile_born`](conservative-constituents/tile_born.md) | Tile-flow transport | kg/ha |
-| [`perc_seo4`](conservative-constituents/perc_seo4.md), [`perc_seo3`](conservative-constituents/perc_seo3.md), [`perc_born`](conservative-constituents/perc_born.md) | Percolation | kg/ha |
-| [`gwup_seo4`](conservative-constituents/gwup_seo4.md), [`gwup_seo3`](conservative-constituents/gwup_seo3.md), [`gwup_born`](conservative-constituents/gwup_born.md) | Groundwater-to-soil transfer | kg/ha |
-| [`wtsp_seo4`](conservative-constituents/wtsp_seo4.md), [`wtsp_seo3`](conservative-constituents/wtsp_seo3.md), [`wtsp_born`](conservative-constituents/wtsp_born.md) | Wetland seepage | kg/ha |
-| [`irsw_seo4`](conservative-constituents/irsw_seo4.md), [`irsw_seo3`](conservative-constituents/irsw_seo3.md), [`irsw_born`](conservative-constituents/irsw_born.md) | Surface-water irrigation | kg/ha |
-| [`irgw_seo4`](conservative-constituents/irgw_seo4.md), [`irgw_seo3`](conservative-constituents/irgw_seo3.md), [`irgw_born`](conservative-constituents/irgw_born.md) | Groundwater irrigation | kg/ha |
-| [`irwo_seo4`](conservative-constituents/irwo_seo4.md), [`irwo_seo3`](conservative-constituents/irwo_seo3.md), [`irwo_born`](conservative-constituents/irwo_born.md) | Outside-watershed irrigation | kg/ha |
-| [`rain_seo4`](conservative-constituents/rain_seo4.md), [`rain_seo3`](conservative-constituents/rain_seo3.md), [`rain_born`](conservative-constituents/rain_born.md) | Wet deposition | kg/ha |
-| [`dryd_seo4`](conservative-constituents/dryd_seo4.md), [`dryd_seo3`](conservative-constituents/dryd_seo3.md), [`dryd_born`](conservative-constituents/dryd_born.md) | Dry deposition | kg/ha |
-| [`fert_seo4`](conservative-constituents/fert_seo4.md), [`fert_seo3`](conservative-constituents/fert_seo3.md), [`fert_born`](conservative-constituents/fert_born.md) | Fertilizer input | kg/ha |
-| [`uptk_seo4`](conservative-constituents/uptk_seo4.md), [`uptk_seo3`](conservative-constituents/uptk_seo3.md), [`uptk_born`](conservative-constituents/uptk_born.md) | Plant uptake | kg/ha |
-| [`rctn_seo4`](conservative-constituents/rctn_seo4.md), [`rctn_seo3`](conservative-constituents/rctn_seo3.md), [`rctn_born`](conservative-constituents/rctn_born.md) | Soil reaction | kg/ha |
-| [`sorb_seo4`](conservative-constituents/sorb_seo4.md), [`sorb_seo3`](conservative-constituents/sorb_seo3.md), [`sorb_born`](conservative-constituents/sorb_born.md) | Soil sorption | kg/ha |
-| [`conc_seo4`](conservative-constituents/conc_seo4.md), [`conc_seo3`](conservative-constituents/conc_seo3.md), [`conc_born`](conservative-constituents/conc_born.md) | Soil-water concentration | g/m3 |
-| [`seo4_srbd`](conservative-constituents/seo4_srbd.md), [`seo3_srbd`](conservative-constituents/seo3_srbd.md), [`born_srbd`](conservative-constituents/born_srbd.md) | Sorbed constituent mass | kg/ha |
+| [`sl_seo4`](sl_seo4.md), [`sl_seo3`](sl_seo3.md), [`sl_born`](sl_born.md) | Constituent stored in the soil profile | kg/ha |
+| [`surq_seo4`](surq_seo4.md), [`surq_seo3`](surq_seo3.md), [`surq_born`](surq_born.md) | Surface-runoff transport | kg/ha |
+| [`sedm_seo4`](sedm_seo4.md), [`sedm_seo3`](sedm_seo3.md), [`sedm_born`](sedm_born.md) | Sediment-associated transport | kg/ha |
+| [`latq_seo4`](latq_seo4.md), [`latq_seo3`](latq_seo3.md), [`latq_born`](latq_born.md) | Lateral-flow transport | kg/ha |
+| [`urbq_seo4`](urbq_seo4.md), [`urbq_seo3`](urbq_seo3.md), [`urbq_born`](urbq_born.md) | Urban-runoff transport | kg/ha |
+| [`wetq_seo4`](wetq_seo4.md), [`wetq_seo3`](wetq_seo3.md), [`wetq_born`](wetq_born.md) | Wetland-outflow transport | kg/ha |
+| [`tile_seo4`](tile_seo4.md), [`tile_seo3`](tile_seo3.md), [`tile_born`](tile_born.md) | Tile-flow transport | kg/ha |
+| [`perc_seo4`](perc_seo4.md), [`perc_seo3`](perc_seo3.md), [`perc_born`](perc_born.md) | Percolation | kg/ha |
+| [`gwup_seo4`](gwup_seo4.md), [`gwup_seo3`](gwup_seo3.md), [`gwup_born`](gwup_born.md) | Groundwater-to-soil transfer | kg/ha |
+| [`wtsp_seo4`](wtsp_seo4.md), [`wtsp_seo3`](wtsp_seo3.md), [`wtsp_born`](wtsp_born.md) | Wetland seepage | kg/ha |
+| [`irsw_seo4`](irsw_seo4.md), [`irsw_seo3`](irsw_seo3.md), [`irsw_born`](irsw_born.md) | Surface-water irrigation | kg/ha |
+| [`irgw_seo4`](irgw_seo4.md), [`irgw_seo3`](irgw_seo3.md), [`irgw_born`](irgw_born.md) | Groundwater irrigation | kg/ha |
+| [`irwo_seo4`](irwo_seo4.md), [`irwo_seo3`](irwo_seo3.md), [`irwo_born`](irwo_born.md) | Outside-watershed irrigation | kg/ha |
+| [`rain_seo4`](rain_seo4.md), [`rain_seo3`](rain_seo3.md), [`rain_born`](rain_born.md) | Wet deposition | kg/ha |
+| [`dryd_seo4`](dryd_seo4.md), [`dryd_seo3`](dryd_seo3.md), [`dryd_born`](dryd_born.md) | Dry deposition | kg/ha |
+| [`fert_seo4`](fert_seo4.md), [`fert_seo3`](fert_seo3.md), [`fert_born`](fert_born.md) | Fertilizer input | kg/ha |
+| [`uptk_seo4`](uptk_seo4.md), [`uptk_seo3`](uptk_seo3.md), [`uptk_born`](uptk_born.md) | Plant uptake | kg/ha |
+| [`rctn_seo4`](rctn_seo4.md), [`rctn_seo3`](rctn_seo3.md), [`rctn_born`](rctn_born.md) | Soil reaction | kg/ha |
+| [`sorb_seo4`](sorb_seo4.md), [`sorb_seo3`](sorb_seo3.md), [`sorb_born`](sorb_born.md) | Soil sorption | kg/ha |
+| [`conc_seo4`](conc_seo4.md), [`conc_seo3`](conc_seo3.md), [`conc_born`](conc_born.md) | Soil-water concentration | g/m3 |
+| [`seo4_srbd`](seo4_srbd.md), [`seo3_srbd`](seo3_srbd.md), [`born_srbd`](born_srbd.md) | Sorbed constituent mass | kg/ha |
 
 ## Routing unit
 

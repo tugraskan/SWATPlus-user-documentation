@@ -12,4 +12,4 @@ Calcium carbonate.
 
 This field belongs to a fixed or event-style report rather than the standard daily/monthly/yearly/average-annual series.
 
-[Back to the output table](../soil.md).
+[Back to the output table](README.md).

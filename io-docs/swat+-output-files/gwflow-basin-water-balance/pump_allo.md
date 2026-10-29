@@ -12,4 +12,4 @@ Groundwater removed to supply allocation demand, including irrigation demand.
 
 The daily exchange is normalized over total basin area. Monthly and yearly values accumulate the daily exchanges; average-annual output gives the mean annual value over the reporting years. Keep the reported sign when combining gains and losses.
 
-[Back to the output table](../gwflow-basin-water-balance.md).
+[Back to the output table](README.md).

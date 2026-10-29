@@ -12,4 +12,4 @@ For average-annual output, the printed date is the final reporting date; the val
 
 This is an identifier, label, or date component; it has no physical unit.
 
-[Back to the output table](../gwflow-basin-water-balance.md).
+[Back to the output table](README.md).

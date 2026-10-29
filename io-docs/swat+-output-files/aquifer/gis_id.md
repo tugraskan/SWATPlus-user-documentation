@@ -10,4 +10,4 @@ The GIS identifier associated with the individual aquifer. Basin output uses the
 
 This is an identifier, label, or date component; it has no physical unit.
 
-[Back to the output table](../aquifer.md).
+[Back to the output table](README.md).

@@ -12,4 +12,4 @@ The net change in groundwater storage during the reporting period. It is accumul
 
 Monthly and yearly values sum the daily storage changes. Average-annual output gives the mean annual storage change over the reporting years.
 
-[Back to the output table](../gwflow-basin-water-balance.md).
+[Back to the output table](README.md).

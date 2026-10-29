@@ -1,6 +1,6 @@
 # Routing Unit
 
-The printing of routing unit output is controlled by entering "y" or "n" in the _ru_ line in [print.prt](../introduction-1/simulation-settings/print.prt/). Routing unit output can be printed at daily, monthly, yearly, and average annual time steps. The names of the routing unit output files are as follows:&#x20;
+The printing of routing unit output is controlled by entering "y" or "n" in the _ru_ line in [print.prt](../../introduction-1/simulation-settings/print.prt). Routing unit output can be printed at daily, monthly, yearly, and average annual time steps. The names of the routing unit output files are as follows:&#x20;
 
 * ru\_day.txt
 * ru\_mon.txt

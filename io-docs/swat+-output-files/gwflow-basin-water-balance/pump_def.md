@@ -12,4 +12,4 @@ Groundwater pumping demand that could not be met. It is reported separately from
 
 Daily unmet demand is normalized over total basin area. Monthly and yearly output sum the unmet demand; average-annual output gives the mean annual unmet demand over the reporting years.
 
-[Back to the output table](../gwflow-basin-water-balance.md).
+[Back to the output table](README.md).

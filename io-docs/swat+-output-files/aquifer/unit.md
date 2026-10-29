@@ -10,4 +10,4 @@ Identifies the aquifer represented by an individual-aquifer row. Basin rows prin
 
 This is an identifier, label, or date component; it has no physical unit.
 
-[Back to the output table](../aquifer.md).
+[Back to the output table](README.md).

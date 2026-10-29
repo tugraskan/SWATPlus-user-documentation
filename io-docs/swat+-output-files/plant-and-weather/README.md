@@ -1,6 +1,6 @@
 # Plant and Weather
 
-Plant and weather output can be printed at basin, LSU, HRU, and HRU-lte level by entering "y" in the _basin\_wb_, _lsunit\_wb_, _hru\_wb_, and _hru-lte\_wb_ lines in [**print.prt**](../introduction-1/simulation-settings/print.prt/), respectively. Plant and weather  output can be printed at daily, monthly, yearly, and average annual time steps. The names of the plant and weather  output files are as follows:&#x20;
+Plant and weather output can be printed at basin, LSU, HRU, and HRU-lte level by entering "y" in the _basin\_wb_, _lsunit\_wb_, _hru\_wb_, and _hru-lte\_wb_ lines in [**print.prt**](../../introduction-1/simulation-settings/print.prt), respectively. Plant and weather  output can be printed at daily, monthly, yearly, and average annual time steps. The names of the plant and weather  output files are as follows:&#x20;
 
 * basin\_pw\_day.txt
 * basin\_pw\_mon.txt

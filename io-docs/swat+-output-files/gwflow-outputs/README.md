@@ -2,7 +2,7 @@
 
 GWFlow writes basin, cell, observation, pumping, heat, feature, and configured-group reports. These files are produced only when GWFlow and the corresponding output flag are active. GWFlow files are TXT reports; several configured-observation files have dynamic columns.
 
-The basin water-balance schema is documented separately on [GWFlow Basin Water Balance](gwflow-basin-water-balance.md).
+The basin water-balance schema is documented separately on [GWFlow Basin Water Balance](../gwflow-basin-water-balance/README.md).
 
 ## Cell water balance
 
@@ -10,26 +10,26 @@ The files are `gwflow_cell_wb_day.txt`, `gwflow_cell_wb_mon.txt`, `gwflow_cell_w
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [jday](gwflow-outputs/jday.md), [mon](gwflow-outputs/mon.md), [day](gwflow-outputs/day.md), [yr](gwflow-outputs/yr.md) | Reporting date | n/a |
-| [unit](gwflow-outputs/unit.md), [gis_id](gwflow-outputs/gis_id.md), [name](gwflow-outputs/name.md) | Cell identifiers and name | n/a |
-| [head](gwflow-outputs/head.md) | Groundwater head | m |
-| [wt_depth](gwflow-outputs/wt_depth.md) | Depth to the water table | m |
-| [recharge](gwflow-outputs/recharge.md) | Recharge entering the cell | m3/day |
-| [gw_et](gwflow-outputs/gw_et.md) | Groundwater evapotranspiration | m3/day |
-| [gw_sw](gwflow-outputs/gw_sw.md) | Groundwater discharge to surface water | m3/day |
-| [sw_gw](gwflow-outputs/sw_gw.md) | Surface-water seepage to groundwater | m3/day |
-| [sat_excess](gwflow-outputs/sat_excess.md) | Saturation-excess discharge | m3/day |
-| [soil](gwflow-outputs/soil.md) | Groundwater transferred to soil | m3/day |
-| [lateral](gwflow-outputs/lateral.md) | Net lateral groundwater flow | m3/day |
-| [pump_allo](gwflow-outputs/pump_allo.md) | Pumping for allocation demand | m3/day |
-| [pump_ext](gwflow-outputs/pump_ext.md) | Specified external pumping | m3/day |
-| [tile](gwflow-outputs/tile.md) | Tile-drain discharge | m3/day |
-| [reservoir](gwflow-outputs/reservoir.md) | Reservoir-groundwater exchange | m3/day |
-| [wetland](gwflow-outputs/wetland.md) | Wetland-groundwater exchange | m3/day |
-| [floodplain](gwflow-outputs/floodplain.md) | Floodplain-groundwater exchange | m3/day |
-| [canal](gwflow-outputs/canal.md) | Canal-groundwater exchange | m3/day |
-| [pond](gwflow-outputs/pond.md) | Recharge-pond seepage | m3/day |
-| [phytorem](gwflow-outputs/phytorem.md) | Phreatophyte uptake | m3/day |
+| [jday](jday.md), [mon](mon.md), [day](day.md), [yr](yr.md) | Reporting date | n/a |
+| [unit](unit.md), [gis_id](gis_id.md), [name](name.md) | Cell identifiers and name | n/a |
+| [head](head.md) | Groundwater head | m |
+| [wt_depth](wt_depth.md) | Depth to the water table | m |
+| [recharge](recharge.md) | Recharge entering the cell | m3/day |
+| [gw_et](gw_et.md) | Groundwater evapotranspiration | m3/day |
+| [gw_sw](gw_sw.md) | Groundwater discharge to surface water | m3/day |
+| [sw_gw](sw_gw.md) | Surface-water seepage to groundwater | m3/day |
+| [sat_excess](sat_excess.md) | Saturation-excess discharge | m3/day |
+| [soil](soil.md) | Groundwater transferred to soil | m3/day |
+| [lateral](lateral.md) | Net lateral groundwater flow | m3/day |
+| [pump_allo](pump_allo.md) | Pumping for allocation demand | m3/day |
+| [pump_ext](pump_ext.md) | Specified external pumping | m3/day |
+| [tile](tile.md) | Tile-drain discharge | m3/day |
+| [reservoir](reservoir.md) | Reservoir-groundwater exchange | m3/day |
+| [wetland](wetland.md) | Wetland-groundwater exchange | m3/day |
+| [floodplain](floodplain.md) | Floodplain-groundwater exchange | m3/day |
+| [canal](canal.md) | Canal-groundwater exchange | m3/day |
+| [pond](pond.md) | Recharge-pond seepage | m3/day |
+| [phytorem](phytorem.md) | Phreatophyte uptake | m3/day |
 
 Daily rows are daily rates. Monthly, yearly, and average-annual files explicitly report average daily rates for their interval, not interval totals.
 

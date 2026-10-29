@@ -1,6 +1,6 @@
 # Channel
 
-SWAT+ prints two channel output files per time step, one for general channel output and one for channel morphology output. The printing of channel output is controlled by entering "y" or "n" in the _channel\_sd_ line in [print.prt](../introduction-1/simulation-settings/print.prt/). In addition, a basin average of all channels can be printed by entering "y" in the _basin\_sd\_cha_ line in [print.prt](../introduction-1/simulation-settings/print.prt/). Channel output can be printed at daily, monthly, yearly, and average annual time steps. The names of the channel output files are as follows:&#x20;
+SWAT+ prints two channel output files per time step, one for general channel output and one for channel morphology output. The printing of channel output is controlled by entering "y" or "n" in the _channel\_sd_ line in [print.prt](../../introduction-1/simulation-settings/print.prt). In addition, a basin average of all channels can be printed by entering "y" in the _basin\_sd\_cha_ line in [print.prt](../../introduction-1/simulation-settings/print.prt). Channel output can be printed at daily, monthly, yearly, and average annual time steps. The names of the channel output files are as follows:&#x20;
 
 * channel\_sd\_day.txt
 * channel\_sd\_mon.txt
@@ -26,7 +26,7 @@ The current main version appends one additional field after the final `null` sep
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [water_temp](channel/water_temp.md) | Channel water temperature | deg C |
+| [water_temp](water_temp.md) | Channel water temperature | deg C |
 
 {% endtab %}
 
@@ -43,18 +43,18 @@ The `channel_*` and `basin_cha_*` families are a separate 66-column routing and 
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [jday](channel/jday-alternate-channel-routing-output.md), [mon](channel/mon-alternate-channel-routing-output.md), [day](channel/day-alternate-channel-routing-output.md), [yr](channel/yr-alternate-channel-routing-output.md), [unit](channel/unit-alternate-channel-routing-output.md), [gis_id](channel/gis_id-alternate-channel-routing-output.md), [name](channel/name-alternate-channel-routing-output.md) | Reporting date and object identity | n/a |
-| [flo_in](channel/flo_in-alternate-channel-routing-output.md), [flo_out](channel/flo_out-alternate-channel-routing-output.md), [evap](channel/evap-alternate-channel-routing-output.md), [tloss](channel/tloss.md) | Incoming flow, outgoing flow, evaporation, and transmission loss | ha-m |
-| [sed_in](channel/sed_in-alternate-channel-routing-output.md), [sed_out](channel/sed_out-alternate-channel-routing-output.md) | Incoming and outgoing sediment | tons |
-| [sed_conc](channel/sed_conc.md) | Sediment concentration | mg/L |
-| [orgn_in](channel/orgn_in-alternate-channel-routing-output.md), [orgn_out](channel/orgn_out-alternate-channel-routing-output.md), [no3_in](channel/no3_in-alternate-channel-routing-output.md), [no3_out](channel/no3_out-alternate-channel-routing-output.md) | Organic and nitrate nitrogen | kg N |
-| [orgp_in](channel/orgp_in.md), [orgp_out](channel/orgp_out.md), [solp_in](channel/solp_in-alternate-channel-routing-output.md), [solp_out](channel/solp_out-alternate-channel-routing-output.md) | Organic and soluble phosphorus | kg P |
-| [nh4_in](channel/nh4_in.md), [nh4_out](channel/nh4_out.md), [no2_in](channel/no2_in-alternate-channel-routing-output.md), [no2_out](channel/no2_out-alternate-channel-routing-output.md), [chla_in](channel/chla_in-alternate-channel-routing-output.md), [chla_out](channel/chla_out-alternate-channel-routing-output.md), [cbod_in](channel/cbod_in-alternate-channel-routing-output.md), [cbod_out](channel/cbod_out-alternate-channel-routing-output.md), [dis_in](channel/dis_in.md), [dis_out](channel/dis_out.md) | Water-quality inputs and outputs | kg |
-| [solpst_in](channel/solpst_in.md), [solpst_out](channel/solpst_out.md), [sorbpst_in](channel/sorbpst_in.md), [sorbpst_out](channel/sorbpst_out.md) | Dissolved and sorbed pesticide inputs and outputs | mg |
-| [react](channel/react.md), [volat](channel/volat.md), [setlpst](channel/setlpst.md), [resuspst](channel/resuspst.md), [difus](channel/difus.md), [reactb](channel/reactb.md), [bury](channel/bury.md), [sedpest](channel/sedpest.md) | Pesticide reaction and sediment-transfer terms | mg |
-| [bacp](channel/bacp.md), [baclp](channel/baclp.md) | Persistent and less-persistent bacteria outputs | model count |
-| [met1](channel/met1.md), [met2](channel/met2.md), [met3](channel/met3.md) | Metal outputs | constituent-dependent |
-| [sand_in](channel/sand_in.md), [sand_out](channel/sand_out.md), [silt_in](channel/silt_in.md), [silt_out](channel/silt_out.md), [clay_in](channel/clay_in.md), [clay_out](channel/clay_out.md), [smag_in](channel/smag_in.md), [smag_out](channel/smag_out.md), [lag_in](channel/lag_in-alternate-channel-routing-output.md), [lag_out](channel/lag_out-alternate-channel-routing-output.md), [grvl_in](channel/grvl_in.md), [grvl_out](channel/grvl_out.md) | Particle-size inputs and outputs | tons |
-| [bnk_ero](channel/bnk_ero.md), [ch_deg](channel/ch_deg.md), [ch_dep](channel/ch_dep.md), [fp_dep](channel/fp_dep.md), [tot_ssed](channel/tot_ssed.md) | Bank erosion, channel degradation and deposition, floodplain deposition, and suspended sediment | tons |
+| [jday](jday-alternate-channel-routing-output.md), [mon](mon-alternate-channel-routing-output.md), [day](day-alternate-channel-routing-output.md), [yr](yr-alternate-channel-routing-output.md), [unit](unit-alternate-channel-routing-output.md), [gis_id](gis_id-alternate-channel-routing-output.md), [name](name-alternate-channel-routing-output.md) | Reporting date and object identity | n/a |
+| [flo_in](flo_in-alternate-channel-routing-output.md), [flo_out](flo_out-alternate-channel-routing-output.md), [evap](evap-alternate-channel-routing-output.md), [tloss](tloss.md) | Incoming flow, outgoing flow, evaporation, and transmission loss | ha-m |
+| [sed_in](sed_in-alternate-channel-routing-output.md), [sed_out](sed_out-alternate-channel-routing-output.md) | Incoming and outgoing sediment | tons |
+| [sed_conc](sed_conc.md) | Sediment concentration | mg/L |
+| [orgn_in](orgn_in-alternate-channel-routing-output.md), [orgn_out](orgn_out-alternate-channel-routing-output.md), [no3_in](no3_in-alternate-channel-routing-output.md), [no3_out](no3_out-alternate-channel-routing-output.md) | Organic and nitrate nitrogen | kg N |
+| [orgp_in](orgp_in.md), [orgp_out](orgp_out.md), [solp_in](solp_in-alternate-channel-routing-output.md), [solp_out](solp_out-alternate-channel-routing-output.md) | Organic and soluble phosphorus | kg P |
+| [nh4_in](nh4_in.md), [nh4_out](nh4_out.md), [no2_in](no2_in-alternate-channel-routing-output.md), [no2_out](no2_out-alternate-channel-routing-output.md), [chla_in](chla_in-alternate-channel-routing-output.md), [chla_out](chla_out-alternate-channel-routing-output.md), [cbod_in](cbod_in-alternate-channel-routing-output.md), [cbod_out](cbod_out-alternate-channel-routing-output.md), [dis_in](dis_in.md), [dis_out](dis_out.md) | Water-quality inputs and outputs | kg |
+| [solpst_in](solpst_in.md), [solpst_out](solpst_out.md), [sorbpst_in](sorbpst_in.md), [sorbpst_out](sorbpst_out.md) | Dissolved and sorbed pesticide inputs and outputs | mg |
+| [react](react.md), [volat](volat.md), [setlpst](setlpst.md), [resuspst](resuspst.md), [difus](difus.md), [reactb](reactb.md), [bury](bury.md), [sedpest](sedpest.md) | Pesticide reaction and sediment-transfer terms | mg |
+| [bacp](bacp.md), [baclp](baclp.md) | Persistent and less-persistent bacteria outputs | model count |
+| [met1](met1.md), [met2](met2.md), [met3](met3.md) | Metal outputs | constituent-dependent |
+| [sand_in](sand_in.md), [sand_out](sand_out.md), [silt_in](silt_in.md), [silt_out](silt_out.md), [clay_in](clay_in.md), [clay_out](clay_out.md), [smag_in](smag_in.md), [smag_out](smag_out.md), [lag_in](lag_in-alternate-channel-routing-output.md), [lag_out](lag_out-alternate-channel-routing-output.md), [grvl_in](grvl_in.md), [grvl_out](grvl_out.md) | Particle-size inputs and outputs | tons |
+| [bnk_ero](bnk_ero.md), [ch_deg](ch_deg.md), [ch_dep](ch_dep.md), [fp_dep](fp_dep.md), [tot_ssed](tot_ssed.md) | Bank erosion, channel degradation and deposition, floodplain deposition, and suspended sediment | tons |
 
 `channel_sd_subday.txt` is a subdaily morphology report. It uses the morphology headings and adds the interval-specific rows selected by the subdaily channel option.

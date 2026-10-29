@@ -10,4 +10,4 @@ The basin-wide placeholder 1. This column does not identify a groundwater cell.
 
 This is an identifier, label, or date component; it has no physical unit.
 
-[Back to the output table](../gwflow-basin-water-balance.md).
+[Back to the output table](README.md).

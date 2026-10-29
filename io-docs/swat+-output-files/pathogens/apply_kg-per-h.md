@@ -1,0 +1,15 @@
+---
+description: "Pathogen applied"
+---
+
+# apply_kg/h
+
+**Code reference:** `hpath_bal(j)%path(ipath)%apply_sol` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_ls_pathogen_module.f90#L14)).
+
+Pathogen applied. Important: this source prints a header/value mismatch. At the position labeled `apply_kg/h`, the data writer supplies `hpath_bal(j)%path(ipath)%apply_sol`. This page records that positional relationship and does not reinterpret the value as the printed label.
+
+**Unit:** kg/h.
+
+The same printed heading can appear in daily, monthly, yearly, and average-annual variants of this family. The reporting interval changes the row period; this page does not infer a total-versus-average rule beyond what the family output and source establish.
+
+[Back to the output table](../pathogens.md).

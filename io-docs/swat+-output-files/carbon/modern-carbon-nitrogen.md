@@ -4,18 +4,22 @@ The modern landscape carbon and nitrogen reports use the standard `_day`, `_mon`
 
 ## Nutrient cycling
 
+{% hint style="warning" %}
+The inspected source opens the `hru_ncycle_*` files and prints their headers, but no data-row write to those file units is present. The fields below therefore describe printed header positions, not verified populated columns.
+{% endhint %}
+
 `hru_ncycle_*` begins with `jday`, `mon`, `day`, `yr`, `unit`, `gis_id`, and `name`, followed by:
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| lab_min_p | Labile-to-active mineral phosphorus transfer | kg P/ha |
-| act_sta_p | Active-to-stable mineral phosphorus transfer | kg P/ha |
-| act_nit_n | Active organic nitrogen mineralization | kg N/ha |
-| act_sta_n | Active-to-stable organic nitrogen transfer | kg N/ha |
-| org_lab_p | Organic-to-labile phosphorus transfer | kg P/ha |
-| rsd_hs_c | Residue carbon transferred to humus | kg C/ha |
-| rsd_nitrorg_n | Residue nitrogen transferred to nitrate and organic pools | kg N/ha |
-| rsd_laborg_p | Residue phosphorus transferred to labile and organic pools | kg P/ha |
+| [lab_min_p](modern-carbon-nitrogen/lab_min_p.md) | Labile-to-active mineral phosphorus transfer | kg P/ha |
+| [act_sta_p](modern-carbon-nitrogen/act_sta_p.md) | Active-to-stable mineral phosphorus transfer | kg P/ha |
+| [act_nit_n](modern-carbon-nitrogen/act_nit_n.md) | Active organic nitrogen mineralization | kg N/ha |
+| [act_sta_n](modern-carbon-nitrogen/act_sta_n.md) | Active-to-stable organic nitrogen transfer | kg N/ha |
+| [org_lab_p](modern-carbon-nitrogen/org_lab_p.md) | Organic-to-labile phosphorus transfer | kg P/ha |
+| [rsd_hs_c](modern-carbon-nitrogen/rsd_hs_c.md) | Residue carbon transferred to humus | kg C/ha |
+| [rsd_nitrorg_n](modern-carbon-nitrogen/rsd_nitrorg_n.md) | Residue nitrogen transferred to nitrate and organic pools | kg N/ha |
+| [rsd_laborg_p](modern-carbon-nitrogen/rsd_laborg_p.md) | Residue phosphorus transferred to labile and organic pools | kg P/ha |
 
 `rsd_nitrorg_n` is the literal printed heading.
 

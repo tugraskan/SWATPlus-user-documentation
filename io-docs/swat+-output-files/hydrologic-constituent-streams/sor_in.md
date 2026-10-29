@@ -1,0 +1,15 @@
+---
+description: "Sorbed constituent value; repeated for configured constituents"
+---
+
+# sor_in
+
+**Code reference:** `configured incoming constituent values` ([writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hcsin_output.f90#L55)).
+
+Sorbed constituent value; repeated for configured constituents. This printed slot has no single value declaration: the writer emits operation- or row-type-specific values with different row widths. The code link points to a representative writer, not a universal field mapping.
+
+**Unit:** constituent-dependent. The exact interpretation depends on the configured operation or constituent.
+
+The same printed heading can appear in daily, monthly, yearly, and average-annual variants of this family. The reporting interval changes the row period; this page does not infer a total-versus-average rule beyond what the family output and source establish.
+
+[Back to the output table](../hydrologic-constituent-streams.md).

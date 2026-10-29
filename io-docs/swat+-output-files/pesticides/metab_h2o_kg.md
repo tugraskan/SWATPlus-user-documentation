@@ -1,0 +1,15 @@
+---
+description: "Reaction loss and metabolite production in water"
+---
+
+# metab_h2o_kg
+
+**Code reference:** `chpst_d(j)%pest(ipest)%metab` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_pesticide_module.f90#L15)).
+
+In this output table, `metab_h2o_kg` is one of the fields described as: Reaction loss and metabolite production in water.
+
+**Unit:** kg.
+
+The same printed heading can appear in daily, monthly, yearly, and average-annual variants of this family. The reporting interval changes the row period; this page does not infer a total-versus-average rule beyond what the family output and source establish.
+
+[Back to the output table](../pesticides.md).

@@ -8,16 +8,16 @@ The `sd_chanbud_*` and `basin_sd_chanbud_*` files use this printed schema:
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| jday, mon, day, yr | Reporting date | n/a |
-| unit, gis_id, name | Channel or basin identifiers | n/a |
-| in_sed, out_sed | Incoming and outgoing sediment | tons |
-| fp_dep, ch_dep | Floodplain and channel deposition | tons |
-| bank_ero, bed_ero | Bank and bed erosion | tons |
-| in_no3, in_orgn, out_no3, out_orgn | Incoming and outgoing nitrogen | kg |
-| fp_no3, bank_no3, bed_no3, fp_orgn, ch_orgn, bank_orgn, bed_orgn | Nitrogen deposition or erosion terms | kg |
-| in_solp, in_orgp, out_solp, out_orgp | Incoming and outgoing phosphorus | kg |
-| fp_solp, bank_solp, bed_solp, fp_orgp, ch_orgp, bank_orgp, bed_orgp | Phosphorus deposition or erosion terms | kg |
-| no3_orgn, solp_orgp | Combined inorganic and organic nutrient terms | kg |
+| [jday](channel-sediment-budgets/jday.md), [mon](channel-sediment-budgets/mon.md), [day](channel-sediment-budgets/day.md), [yr](channel-sediment-budgets/yr.md) | Reporting date | n/a |
+| [unit](channel-sediment-budgets/unit.md), [gis_id](channel-sediment-budgets/gis_id.md), [name](channel-sediment-budgets/name.md) | Channel or basin identifiers | n/a |
+| [in_sed](channel-sediment-budgets/in_sed.md), [out_sed](channel-sediment-budgets/out_sed.md) | Incoming and outgoing sediment | tons |
+| [fp_dep](channel-sediment-budgets/fp_dep.md), [ch_dep](channel-sediment-budgets/ch_dep.md) | Floodplain and channel deposition | tons |
+| [bank_ero](channel-sediment-budgets/bank_ero.md), [bed_ero](channel-sediment-budgets/bed_ero.md) | Bank and bed erosion | tons |
+| [in_no3](channel-sediment-budgets/in_no3.md), [in_orgn](channel-sediment-budgets/in_orgn.md), [out_no3](channel-sediment-budgets/out_no3.md), [out_orgn](channel-sediment-budgets/out_orgn.md) | Incoming and outgoing nitrogen | kg |
+| [fp_no3](channel-sediment-budgets/fp_no3.md), [bank_no3](channel-sediment-budgets/bank_no3.md), [bed_no3](channel-sediment-budgets/bed_no3.md), [fp_orgn](channel-sediment-budgets/fp_orgn.md), [ch_orgn](channel-sediment-budgets/ch_orgn.md), [bank_orgn](channel-sediment-budgets/bank_orgn.md), [bed_orgn](channel-sediment-budgets/bed_orgn.md) | Nitrogen deposition or erosion terms | kg |
+| [in_solp](channel-sediment-budgets/in_solp.md), [in_orgp](channel-sediment-budgets/in_orgp.md), [out_solp](channel-sediment-budgets/out_solp.md), [out_orgp](channel-sediment-budgets/out_orgp.md) | Incoming and outgoing phosphorus | kg |
+| [fp_solp](channel-sediment-budgets/fp_solp.md), [bank_solp](channel-sediment-budgets/bank_solp.md), [bed_solp](channel-sediment-budgets/bed_solp.md), [fp_orgp](channel-sediment-budgets/fp_orgp.md), [ch_orgp](channel-sediment-budgets/ch_orgp.md), [bank_orgp](channel-sediment-budgets/bank_orgp.md), [bed_orgp](channel-sediment-budgets/bed_orgp.md) | Phosphorus deposition or erosion terms | kg |
+| [no3_orgn](channel-sediment-budgets/no3_orgn.md), [solp_orgp](channel-sediment-budgets/solp_orgp.md) | Combined inorganic and organic nutrient terms | kg |
 
 ## Channel erosion by channel
 

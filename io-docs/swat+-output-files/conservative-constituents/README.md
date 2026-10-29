@@ -14,27 +14,69 @@ The `hru_cs_*` files contain one three-constituent group for each process.
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [`sl_seo4`](sl_seo4.md), [`sl_seo3`](sl_seo3.md), [`sl_born`](sl_born.md) | Constituent stored in the soil profile | kg/ha |
-| [`surq_seo4`](surq_seo4.md), [`surq_seo3`](surq_seo3.md), [`surq_born`](surq_born.md) | Surface-runoff transport | kg/ha |
-| [`sedm_seo4`](sedm_seo4.md), [`sedm_seo3`](sedm_seo3.md), [`sedm_born`](sedm_born.md) | Sediment-associated transport | kg/ha |
-| [`latq_seo4`](latq_seo4.md), [`latq_seo3`](latq_seo3.md), [`latq_born`](latq_born.md) | Lateral-flow transport | kg/ha |
-| [`urbq_seo4`](urbq_seo4.md), [`urbq_seo3`](urbq_seo3.md), [`urbq_born`](urbq_born.md) | Urban-runoff transport | kg/ha |
-| [`wetq_seo4`](wetq_seo4.md), [`wetq_seo3`](wetq_seo3.md), [`wetq_born`](wetq_born.md) | Wetland-outflow transport | kg/ha |
-| [`tile_seo4`](tile_seo4.md), [`tile_seo3`](tile_seo3.md), [`tile_born`](tile_born.md) | Tile-flow transport | kg/ha |
-| [`perc_seo4`](perc_seo4.md), [`perc_seo3`](perc_seo3.md), [`perc_born`](perc_born.md) | Percolation | kg/ha |
-| [`gwup_seo4`](gwup_seo4.md), [`gwup_seo3`](gwup_seo3.md), [`gwup_born`](gwup_born.md) | Groundwater-to-soil transfer | kg/ha |
-| [`wtsp_seo4`](wtsp_seo4.md), [`wtsp_seo3`](wtsp_seo3.md), [`wtsp_born`](wtsp_born.md) | Wetland seepage | kg/ha |
-| [`irsw_seo4`](irsw_seo4.md), [`irsw_seo3`](irsw_seo3.md), [`irsw_born`](irsw_born.md) | Surface-water irrigation | kg/ha |
-| [`irgw_seo4`](irgw_seo4.md), [`irgw_seo3`](irgw_seo3.md), [`irgw_born`](irgw_born.md) | Groundwater irrigation | kg/ha |
-| [`irwo_seo4`](irwo_seo4.md), [`irwo_seo3`](irwo_seo3.md), [`irwo_born`](irwo_born.md) | Outside-watershed irrigation | kg/ha |
-| [`rain_seo4`](rain_seo4.md), [`rain_seo3`](rain_seo3.md), [`rain_born`](rain_born.md) | Wet deposition | kg/ha |
-| [`dryd_seo4`](dryd_seo4.md), [`dryd_seo3`](dryd_seo3.md), [`dryd_born`](dryd_born.md) | Dry deposition | kg/ha |
-| [`fert_seo4`](fert_seo4.md), [`fert_seo3`](fert_seo3.md), [`fert_born`](fert_born.md) | Fertilizer input | kg/ha |
-| [`uptk_seo4`](uptk_seo4.md), [`uptk_seo3`](uptk_seo3.md), [`uptk_born`](uptk_born.md) | Plant uptake | kg/ha |
-| [`rctn_seo4`](rctn_seo4.md), [`rctn_seo3`](rctn_seo3.md), [`rctn_born`](rctn_born.md) | Soil reaction | kg/ha |
-| [`sorb_seo4`](sorb_seo4.md), [`sorb_seo3`](sorb_seo3.md), [`sorb_born`](sorb_born.md) | Soil sorption | kg/ha |
-| [`conc_seo4`](conc_seo4.md), [`conc_seo3`](conc_seo3.md), [`conc_born`](conc_born.md) | Soil-water concentration | g/m3 |
-| [`seo4_srbd`](seo4_srbd.md), [`seo3_srbd`](seo3_srbd.md), [`born_srbd`](born_srbd.md) | Sorbed constituent mass | kg/ha |
+| [`sl_seo4`](sl_seo4.md) | Selenate stored in the soil profile | kg/ha |
+| [`sl_seo3`](sl_seo3.md) | Selenite stored in the soil profile | kg/ha |
+| [`sl_born`](sl_born.md) | Boron stored in the soil profile | kg/ha |
+| [`surq_seo4`](surq_seo4.md) | Selenate: surface-runoff transport | kg/ha |
+| [`surq_seo3`](surq_seo3.md) | Selenite: surface-runoff transport | kg/ha |
+| [`surq_born`](surq_born.md) | Boron: surface-runoff transport | kg/ha |
+| [`sedm_seo4`](sedm_seo4.md) | Selenate: sediment-associated transport | kg/ha |
+| [`sedm_seo3`](sedm_seo3.md) | Selenite: sediment-associated transport | kg/ha |
+| [`sedm_born`](sedm_born.md) | Boron: sediment-associated transport | kg/ha |
+| [`latq_seo4`](latq_seo4.md) | Selenate: lateral-flow transport | kg/ha |
+| [`latq_seo3`](latq_seo3.md) | Selenite: lateral-flow transport | kg/ha |
+| [`latq_born`](latq_born.md) | Boron: lateral-flow transport | kg/ha |
+| [`urbq_seo4`](urbq_seo4.md) | Selenate: urban-runoff transport | kg/ha |
+| [`urbq_seo3`](urbq_seo3.md) | Selenite: urban-runoff transport | kg/ha |
+| [`urbq_born`](urbq_born.md) | Boron: urban-runoff transport | kg/ha |
+| [`wetq_seo4`](wetq_seo4.md) | Selenate: wetland-outflow transport | kg/ha |
+| [`wetq_seo3`](wetq_seo3.md) | Selenite: wetland-outflow transport | kg/ha |
+| [`wetq_born`](wetq_born.md) | Boron: wetland-outflow transport | kg/ha |
+| [`tile_seo4`](tile_seo4.md) | Selenate: tile-flow transport | kg/ha |
+| [`tile_seo3`](tile_seo3.md) | Selenite: tile-flow transport | kg/ha |
+| [`tile_born`](tile_born.md) | Boron: tile-flow transport | kg/ha |
+| [`perc_seo4`](perc_seo4.md) | Selenate: percolation | kg/ha |
+| [`perc_seo3`](perc_seo3.md) | Selenite: percolation | kg/ha |
+| [`perc_born`](perc_born.md) | Boron: percolation | kg/ha |
+| [`gwup_seo4`](gwup_seo4.md) | Selenate: groundwater-to-soil transfer | kg/ha |
+| [`gwup_seo3`](gwup_seo3.md) | Selenite: groundwater-to-soil transfer | kg/ha |
+| [`gwup_born`](gwup_born.md) | Boron: groundwater-to-soil transfer | kg/ha |
+| [`wtsp_seo4`](wtsp_seo4.md) | Selenate: wetland seepage | kg/ha |
+| [`wtsp_seo3`](wtsp_seo3.md) | Selenite: wetland seepage | kg/ha |
+| [`wtsp_born`](wtsp_born.md) | Boron: wetland seepage | kg/ha |
+| [`irsw_seo4`](irsw_seo4.md) | Selenate: surface-water irrigation | kg/ha |
+| [`irsw_seo3`](irsw_seo3.md) | Selenite: surface-water irrigation | kg/ha |
+| [`irsw_born`](irsw_born.md) | Boron: surface-water irrigation | kg/ha |
+| [`irgw_seo4`](irgw_seo4.md) | Selenate: groundwater irrigation | kg/ha |
+| [`irgw_seo3`](irgw_seo3.md) | Selenite: groundwater irrigation | kg/ha |
+| [`irgw_born`](irgw_born.md) | Boron: groundwater irrigation | kg/ha |
+| [`irwo_seo4`](irwo_seo4.md) | Selenate: outside-watershed irrigation | kg/ha |
+| [`irwo_seo3`](irwo_seo3.md) | Selenite: outside-watershed irrigation | kg/ha |
+| [`irwo_born`](irwo_born.md) | Boron: outside-watershed irrigation | kg/ha |
+| [`rain_seo4`](rain_seo4.md) | Selenate: wet deposition | kg/ha |
+| [`rain_seo3`](rain_seo3.md) | Selenite: wet deposition | kg/ha |
+| [`rain_born`](rain_born.md) | Boron: wet deposition | kg/ha |
+| [`dryd_seo4`](dryd_seo4.md) | Selenate: dry deposition | kg/ha |
+| [`dryd_seo3`](dryd_seo3.md) | Selenite: dry deposition | kg/ha |
+| [`dryd_born`](dryd_born.md) | Boron: dry deposition | kg/ha |
+| [`fert_seo4`](fert_seo4.md) | Selenate: fertilizer input | kg/ha |
+| [`fert_seo3`](fert_seo3.md) | Selenite: fertilizer input | kg/ha |
+| [`fert_born`](fert_born.md) | Boron: fertilizer input | kg/ha |
+| [`uptk_seo4`](uptk_seo4.md) | Selenate: plant uptake | kg/ha |
+| [`uptk_seo3`](uptk_seo3.md) | Selenite: plant uptake | kg/ha |
+| [`uptk_born`](uptk_born.md) | Boron: plant uptake | kg/ha |
+| [`rctn_seo4`](rctn_seo4.md) | Selenate: soil reaction | kg/ha |
+| [`rctn_seo3`](rctn_seo3.md) | Selenite: soil reaction | kg/ha |
+| [`rctn_born`](rctn_born.md) | Boron: soil reaction | kg/ha |
+| [`sorb_seo4`](sorb_seo4.md) | Selenate: soil sorption | kg/ha |
+| [`sorb_seo3`](sorb_seo3.md) | Selenite: soil sorption | kg/ha |
+| [`sorb_born`](sorb_born.md) | Boron: soil sorption | kg/ha |
+| [`conc_seo4`](conc_seo4.md) | Selenate: soil-water concentration | g/m3 |
+| [`conc_seo3`](conc_seo3.md) | Selenite: soil-water concentration | g/m3 |
+| [`conc_born`](conc_born.md) | Boron: soil-water concentration | g/m3 |
+| [`seo4_srbd`](seo4_srbd.md) | Selenate: sorbed constituent mass | kg/ha |
+| [`seo3_srbd`](seo3_srbd.md) | Selenite: sorbed constituent mass | kg/ha |
+| [`born_srbd`](born_srbd.md) | Boron: sorbed constituent mass | kg/ha |
 
 ## Routing unit
 

@@ -10,8 +10,13 @@ The files are `gwflow_cell_wb_day.txt`, `gwflow_cell_wb_mon.txt`, `gwflow_cell_w
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [jday](jday.md), [mon](mon.md), [day](day.md), [yr](yr.md) | Reporting date | n/a |
-| [unit](unit.md), [gis_id](gis_id.md), [name](name.md) | Cell identifiers and name | n/a |
+| [jday](jday.md) | Day of year | n/a |
+| [mon](mon.md) | Month | n/a |
+| [day](day.md) | Day of month | n/a |
+| [yr](yr.md) | Calendar year | n/a |
+| [unit](unit.md) | Object identifier | n/a |
+| [gis_id](gis_id.md) | GIS identifier | n/a |
+| [name](name.md) | Object name | n/a |
 | [head](head.md) | Groundwater head | m |
 | [wt_depth](wt_depth.md) | Depth to the water table | m |
 | [recharge](recharge.md) | Recharge entering the cell | m3/day |

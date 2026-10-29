@@ -43,18 +43,71 @@ The `channel_*` and `basin_cha_*` families are a separate 66-column routing and 
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [jday](jday-alternate-channel-routing-output.md), [mon](mon-alternate-channel-routing-output.md), [day](day-alternate-channel-routing-output.md), [yr](yr-alternate-channel-routing-output.md), [unit](unit-alternate-channel-routing-output.md), [gis_id](gis_id-alternate-channel-routing-output.md), [name](name-alternate-channel-routing-output.md) | Reporting date and object identity | n/a |
-| [flo_in](flo_in-alternate-channel-routing-output.md), [flo_out](flo_out-alternate-channel-routing-output.md), [evap](evap-alternate-channel-routing-output.md), [tloss](tloss.md) | Incoming flow, outgoing flow, evaporation, and transmission loss | ha-m |
-| [sed_in](sed_in-alternate-channel-routing-output.md), [sed_out](sed_out-alternate-channel-routing-output.md) | Incoming and outgoing sediment | tons |
+| [jday](jday-alternate-channel-routing-output.md) | Day of year | n/a |
+| [mon](mon-alternate-channel-routing-output.md) | Month | n/a |
+| [day](day-alternate-channel-routing-output.md) | Day of month | n/a |
+| [yr](yr-alternate-channel-routing-output.md) | Calendar year | n/a |
+| [unit](unit-alternate-channel-routing-output.md) | Object identifier | n/a |
+| [gis_id](gis_id-alternate-channel-routing-output.md) | GIS identifier | n/a |
+| [name](name-alternate-channel-routing-output.md) | Object name | n/a |
+| [flo_in](flo_in-alternate-channel-routing-output.md) | Incoming water volume | ha-m |
+| [flo_out](flo_out-alternate-channel-routing-output.md) | Outgoing water volume | ha-m |
+| [evap](evap-alternate-channel-routing-output.md) | Evaporation loss | ha-m |
+| [tloss](tloss.md) | Transmission loss | ha-m |
+| [sed_in](sed_in-alternate-channel-routing-output.md) | Incoming sediment | tons |
+| [sed_out](sed_out-alternate-channel-routing-output.md) | Outgoing sediment | tons |
 | [sed_conc](sed_conc.md) | Sediment concentration | mg/L |
-| [orgn_in](orgn_in-alternate-channel-routing-output.md), [orgn_out](orgn_out-alternate-channel-routing-output.md), [no3_in](no3_in-alternate-channel-routing-output.md), [no3_out](no3_out-alternate-channel-routing-output.md) | Organic and nitrate nitrogen | kg N |
-| [orgp_in](orgp_in.md), [orgp_out](orgp_out.md), [solp_in](solp_in-alternate-channel-routing-output.md), [solp_out](solp_out-alternate-channel-routing-output.md) | Organic and soluble phosphorus | kg P |
-| [nh4_in](nh4_in.md), [nh4_out](nh4_out.md), [no2_in](no2_in-alternate-channel-routing-output.md), [no2_out](no2_out-alternate-channel-routing-output.md), [chla_in](chla_in-alternate-channel-routing-output.md), [chla_out](chla_out-alternate-channel-routing-output.md), [cbod_in](cbod_in-alternate-channel-routing-output.md), [cbod_out](cbod_out-alternate-channel-routing-output.md), [dis_in](dis_in.md), [dis_out](dis_out.md) | Water-quality inputs and outputs | kg |
-| [solpst_in](solpst_in.md), [solpst_out](solpst_out.md), [sorbpst_in](sorbpst_in.md), [sorbpst_out](sorbpst_out.md) | Dissolved and sorbed pesticide inputs and outputs | mg |
-| [react](react.md), [volat](volat.md), [setlpst](setlpst.md), [resuspst](resuspst.md), [difus](difus.md), [reactb](reactb.md), [bury](bury.md), [sedpest](sedpest.md) | Pesticide reaction and sediment-transfer terms | mg |
-| [bacp](bacp.md), [baclp](baclp.md) | Persistent and less-persistent bacteria outputs | model count |
-| [met1](met1.md), [met2](met2.md), [met3](met3.md) | Metal outputs | constituent-dependent |
-| [sand_in](sand_in.md), [sand_out](sand_out.md), [silt_in](silt_in.md), [silt_out](silt_out.md), [clay_in](clay_in.md), [clay_out](clay_out.md), [smag_in](smag_in.md), [smag_out](smag_out.md), [lag_in](lag_in-alternate-channel-routing-output.md), [lag_out](lag_out-alternate-channel-routing-output.md), [grvl_in](grvl_in.md), [grvl_out](grvl_out.md) | Particle-size inputs and outputs | tons |
-| [bnk_ero](bnk_ero.md), [ch_deg](ch_deg.md), [ch_dep](ch_dep.md), [fp_dep](fp_dep.md), [tot_ssed](tot_ssed.md) | Bank erosion, channel degradation and deposition, floodplain deposition, and suspended sediment | tons |
+| [orgn_in](orgn_in-alternate-channel-routing-output.md) | Incoming organic nitrogen | kg N |
+| [orgn_out](orgn_out-alternate-channel-routing-output.md) | Outgoing organic nitrogen | kg N |
+| [no3_in](no3_in-alternate-channel-routing-output.md) | Incoming nitrate nitrogen | kg N |
+| [no3_out](no3_out-alternate-channel-routing-output.md) | Outgoing nitrate nitrogen | kg N |
+| [orgp_in](orgp_in.md) | Incoming organic phosphorus | kg P |
+| [orgp_out](orgp_out.md) | Outgoing organic phosphorus | kg P |
+| [solp_in](solp_in-alternate-channel-routing-output.md) | Incoming soluble phosphorus | kg P |
+| [solp_out](solp_out-alternate-channel-routing-output.md) | Outgoing soluble phosphorus | kg P |
+| [nh4_in](nh4_in.md) | Incoming ammonium | kg |
+| [nh4_out](nh4_out.md) | Outgoing ammonium | kg |
+| [no2_in](no2_in-alternate-channel-routing-output.md) | Incoming nitrite | kg |
+| [no2_out](no2_out-alternate-channel-routing-output.md) | Outgoing nitrite | kg |
+| [chla_in](chla_in-alternate-channel-routing-output.md) | Incoming chlorophyll a | kg |
+| [chla_out](chla_out-alternate-channel-routing-output.md) | Outgoing chlorophyll a | kg |
+| [cbod_in](cbod_in-alternate-channel-routing-output.md) | Incoming carbonaceous biochemical oxygen demand | kg |
+| [cbod_out](cbod_out-alternate-channel-routing-output.md) | Outgoing carbonaceous biochemical oxygen demand | kg |
+| [dis_in](dis_in.md) | Incoming dissolved oxygen | kg |
+| [dis_out](dis_out.md) | Outgoing dissolved oxygen | kg |
+| [solpst_in](solpst_in.md) | Incoming dissolved pesticide | mg |
+| [solpst_out](solpst_out.md) | Outgoing dissolved pesticide | mg |
+| [sorbpst_in](sorbpst_in.md) | Incoming sorbed pesticide | mg |
+| [sorbpst_out](sorbpst_out.md) | Outgoing sorbed pesticide | mg |
+| [react](react.md) | Pesticide reaction loss in water | mg |
+| [volat](volat.md) | Pesticide volatilization | mg |
+| [setlpst](setlpst.md) | Pesticide settling | mg |
+| [resuspst](resuspst.md) | Pesticide resuspension | mg |
+| [difus](difus.md) | Pesticide diffusion | mg |
+| [reactb](reactb.md) | Pesticide reaction loss in benthic sediment | mg |
+| [bury](bury.md) | Pesticide burial | mg |
+| [sedpest](sedpest.md) | Pesticide in sediment | mg |
+| [bacp](bacp.md) | Persistent bacteria output | model count |
+| [baclp](baclp.md) | Less-persistent bacteria output | model count |
+| [met1](met1.md) | Metal 1 output | constituent-dependent |
+| [met2](met2.md) | Metal 2 output | constituent-dependent |
+| [met3](met3.md) | Metal 3 output | constituent-dependent |
+| [sand_in](sand_in.md) | Incoming sand | tons |
+| [sand_out](sand_out.md) | Outgoing sand | tons |
+| [silt_in](silt_in.md) | Incoming silt | tons |
+| [silt_out](silt_out.md) | Outgoing silt | tons |
+| [clay_in](clay_in.md) | Incoming clay | tons |
+| [clay_out](clay_out.md) | Outgoing clay | tons |
+| [smag_in](smag_in.md) | Incoming small aggregates | tons |
+| [smag_out](smag_out.md) | Outgoing small aggregates | tons |
+| [lag_in](lag_in-alternate-channel-routing-output.md) | Incoming large aggregates | tons |
+| [lag_out](lag_out-alternate-channel-routing-output.md) | Outgoing large aggregates | tons |
+| [grvl_in](grvl_in.md) | Incoming gravel | tons |
+| [grvl_out](grvl_out.md) | Outgoing gravel | tons |
+| [bnk_ero](bnk_ero.md) | Bank erosion | tons |
+| [ch_deg](ch_deg.md) | Channel degradation | tons |
+| [ch_dep](ch_dep.md) | Channel deposition | tons |
+| [fp_dep](fp_dep.md) | Floodplain deposition | tons |
+| [tot_ssed](tot_ssed.md) | Total suspended sediment | tons |
 
 `channel_sd_subday.txt` is a subdaily morphology report. It uses the morphology headings and adds the interval-specific rows selected by the subdaily channel option.

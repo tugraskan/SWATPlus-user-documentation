@@ -8,16 +8,43 @@ The `sd_chanbud_*` and `basin_sd_chanbud_*` files use this printed schema:
 
 | Field | Description | Unit |
 | --- | --- | --- |
-| [jday](jday.md), [mon](mon.md), [day](day.md), [yr](yr.md) | Reporting date | n/a |
-| [unit](unit.md), [gis_id](gis_id.md), [name](name.md) | Channel or basin identifiers | n/a |
-| [in_sed](in_sed.md), [out_sed](out_sed.md) | Incoming and outgoing sediment | tons |
-| [fp_dep](fp_dep.md), [ch_dep](ch_dep.md) | Floodplain and channel deposition | tons |
-| [bank_ero](bank_ero.md), [bed_ero](bed_ero.md) | Bank and bed erosion | tons |
-| [in_no3](in_no3.md), [in_orgn](in_orgn.md), [out_no3](out_no3.md), [out_orgn](out_orgn.md) | Incoming and outgoing nitrogen | kg |
-| [fp_no3](fp_no3.md), [bank_no3](bank_no3.md), [bed_no3](bed_no3.md), [fp_orgn](fp_orgn.md), [ch_orgn](ch_orgn.md), [bank_orgn](bank_orgn.md), [bed_orgn](bed_orgn.md) | Nitrogen deposition or erosion terms | kg |
-| [in_solp](in_solp.md), [in_orgp](in_orgp.md), [out_solp](out_solp.md), [out_orgp](out_orgp.md) | Incoming and outgoing phosphorus | kg |
-| [fp_solp](fp_solp.md), [bank_solp](bank_solp.md), [bed_solp](bed_solp.md), [fp_orgp](fp_orgp.md), [ch_orgp](ch_orgp.md), [bank_orgp](bank_orgp.md), [bed_orgp](bed_orgp.md) | Phosphorus deposition or erosion terms | kg |
-| [no3_orgn](no3_orgn.md), [solp_orgp](solp_orgp.md) | Combined inorganic and organic nutrient terms | kg |
+| [jday](jday.md) | Day of year | n/a |
+| [mon](mon.md) | Month | n/a |
+| [day](day.md) | Day of month | n/a |
+| [yr](yr.md) | Calendar year | n/a |
+| [unit](unit.md) | Object identifier | n/a |
+| [gis_id](gis_id.md) | GIS identifier | n/a |
+| [name](name.md) | Object name | n/a |
+| [in_sed](in_sed.md) | Incoming sediment | tons |
+| [out_sed](out_sed.md) | Outgoing sediment | tons |
+| [fp_dep](fp_dep.md) | Floodplain sediment deposition | tons |
+| [ch_dep](ch_dep.md) | Channel sediment deposition | tons |
+| [bank_ero](bank_ero.md) | Bank erosion | tons |
+| [bed_ero](bed_ero.md) | Bed erosion | tons |
+| [in_no3](in_no3.md) | Incoming nitrate nitrogen | kg |
+| [in_orgn](in_orgn.md) | Incoming organic nitrogen | kg |
+| [out_no3](out_no3.md) | Outgoing nitrate nitrogen | kg |
+| [out_orgn](out_orgn.md) | Outgoing organic nitrogen | kg |
+| [fp_no3](fp_no3.md) | Floodplain deposition of nitrate nitrogen | kg |
+| [bank_no3](bank_no3.md) | Bank erosion of nitrate nitrogen | kg |
+| [bed_no3](bed_no3.md) | Bed erosion of nitrate nitrogen | kg |
+| [fp_orgn](fp_orgn.md) | Floodplain deposition of organic nitrogen | kg |
+| [ch_orgn](ch_orgn.md) | Channel deposition of organic nitrogen | kg |
+| [bank_orgn](bank_orgn.md) | Bank erosion of organic nitrogen | kg |
+| [bed_orgn](bed_orgn.md) | Bed erosion of organic nitrogen | kg |
+| [in_solp](in_solp.md) | Incoming soluble phosphorus | kg |
+| [in_orgp](in_orgp.md) | Incoming organic phosphorus | kg |
+| [out_solp](out_solp.md) | Outgoing soluble phosphorus | kg |
+| [out_orgp](out_orgp.md) | Outgoing organic phosphorus | kg |
+| [fp_solp](fp_solp.md) | Floodplain deposition of soluble phosphorus | kg |
+| [bank_solp](bank_solp.md) | Bank erosion of soluble phosphorus | kg |
+| [bed_solp](bed_solp.md) | Bed erosion of soluble phosphorus | kg |
+| [fp_orgp](fp_orgp.md) | Floodplain deposition of organic phosphorus | kg |
+| [ch_orgp](ch_orgp.md) | Channel deposition of organic phosphorus | kg |
+| [bank_orgp](bank_orgp.md) | Bank erosion of organic phosphorus | kg |
+| [bed_orgp](bed_orgp.md) | Bed erosion of organic phosphorus | kg |
+| [no3_orgn](no3_orgn.md) | Combined nitrate and organic nitrogen term | kg |
+| [solp_orgp](solp_orgp.md) | Combined soluble and organic phosphorus term | kg |
 
 ## Channel erosion by channel
 

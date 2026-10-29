@@ -14,25 +14,158 @@ The printed headings use the ion order sulfate, calcium, magnesium, sodium, pota
 | [yr](yr.md) | Calendar year | n/a |
 | [unit](unit.md) | HRU identifier | n/a |
 | [gis_id](gis_id.md) | GIS identifier | n/a |
-| [`soil_so4`](soil_so4.md), [`soil_ca`](soil_ca.md), [`soil_mg`](soil_mg.md), [`soil_na`](soil_na.md), [`soil_k`](soil_k.md), [`soil_cl`](soil_cl.md), [`soil_co3`](soil_co3.md), [`soil_hco3`](soil_hco3.md) | Salt stored in the soil profile | kg/ha |
-| [`surq_so4`](surq_so4.md), [`surq_ca`](surq_ca.md), [`surq_mg`](surq_mg.md), [`surq_na`](surq_na.md), [`surq_k`](surq_k.md), [`surq_cl`](surq_cl.md), [`surq_co3`](surq_co3.md), [`surq_hco3`](surq_hco3.md) | Salt transported in surface runoff from soil to stream | kg/ha |
-| [`latq_so4`](latq_so4.md), [`latq_ca`](latq_ca.md), [`latq_mg`](latq_mg.md), [`latq_na`](latq_na.md), [`latq_k`](latq_k.md), [`latq_cl`](latq_cl.md), [`latq_co3`](latq_co3.md), [`latq_hco3`](latq_hco3.md) | Salt transported in lateral soil flow to stream | kg/ha |
-| [`urbq_so4`](urbq_so4.md), [`urbq_ca`](urbq_ca.md), [`urbq_mg`](urbq_mg.md), [`urbq_na`](urbq_na.md), [`urbq_k`](urbq_k.md), [`urbq_cl`](urbq_cl.md), [`urbq_co3`](urbq_co3.md), [`urbq_hco3`](urbq_hco3.md) | Salt transported in urban runoff to stream | kg/ha |
-| [`wetq_so4`](wetq_so4.md), [`wetq_ca`](wetq_ca.md), [`wetq_mg`](wetq_mg.md), [`wetq_na`](wetq_na.md), [`wetq_k`](wetq_k.md), [`wetq_cl`](wetq_cl.md), [`wetq_co3`](wetq_co3.md), [`wetq_hco3`](wetq_hco3.md) | Salt transported in wetland runoff to stream | kg/ha |
-| [`tile_so4`](tile_so4.md), [`tile_ca`](tile_ca.md), [`tile_mg`](tile_mg.md), [`tile_na`](tile_na.md), [`tile_k`](tile_k.md), [`tile_cl`](tile_cl.md), [`tile_co3`](tile_co3.md), [`tile_hco3`](tile_hco3.md) | Salt transported by tile drainage to stream | kg/ha |
-| [`perc_so4`](perc_so4.md), [`perc_ca`](perc_ca.md), [`perc_mg`](perc_mg.md), [`perc_na`](perc_na.md), [`perc_k`](perc_k.md), [`perc_cl`](perc_cl.md), [`perc_co3`](perc_co3.md), [`perc_hco3`](perc_hco3.md) | Salt transported by deep percolation from soil to aquifer | kg/ha |
-| [`gwup_so4`](gwup_so4.md), [`gwup_ca`](gwup_ca.md), [`gwup_mg`](gwup_mg.md), [`gwup_na`](gwup_na.md), [`gwup_k`](gwup_k.md), [`gwup_cl`](gwup_cl.md), [`gwup_co3`](gwup_co3.md), [`gwup_hco3`](gwup_hco3.md) | Groundwater salt transferred from aquifer to soil | kg/ha |
-| [`wtsp_so4`](wtsp_so4.md), [`wtsp_ca`](wtsp_ca.md), [`wtsp_mg`](wtsp_mg.md), [`wtsp_na`](wtsp_na.md), [`wtsp_k`](wtsp_k.md), [`wtsp_cl`](wtsp_cl.md), [`wtsp_co3`](wtsp_co3.md), [`wtsp_hco3`](wtsp_hco3.md) | Salt transported by wetland seepage to soil | kg/ha |
-| [`irsw_so4`](irsw_so4.md), [`irsw_ca`](irsw_ca.md), [`irsw_mg`](irsw_mg.md), [`irsw_na`](irsw_na.md), [`irsw_k`](irsw_k.md), [`irsw_cl`](irsw_cl.md), [`irsw_co3`](irsw_co3.md), [`irsw_hco3`](irsw_hco3.md) | Salt added by surface-water irrigation | kg/ha |
-| [`irgw_so4`](irgw_so4.md), [`irgw_ca`](irgw_ca.md), [`irgw_mg`](irgw_mg.md), [`irgw_na`](irgw_na.md), [`irgw_k`](irgw_k.md), [`irgw_cl`](irgw_cl.md), [`irgw_co3`](irgw_co3.md), [`irgw_hco3`](irgw_hco3.md) | Salt added by groundwater irrigation | kg/ha |
-| [`irwo_so4`](irwo_so4.md), [`irwo_ca`](irwo_ca.md), [`irwo_mg`](irwo_mg.md), [`irwo_na`](irwo_na.md), [`irwo_k`](irwo_k.md), [`irwo_cl`](irwo_cl.md), [`irwo_co3`](irwo_co3.md), [`irwo_hco3`](irwo_hco3.md) | Salt added by irrigation from an outside source | kg/ha |
-| [`rain_so4`](rain_so4.md), [`rain_ca`](rain_ca.md), [`rain_mg`](rain_mg.md), [`rain_na`](rain_na.md), [`rain_k`](rain_k.md), [`rain_cl`](rain_cl.md), [`rain_co3`](rain_co3.md), [`rain_hco3`](rain_hco3.md) | Salt added by rainfall | kg/ha |
-| [`dryd_so4`](dryd_so4.md), [`dryd_ca`](dryd_ca.md), [`dryd_mg`](dryd_mg.md), [`dryd_na`](dryd_na.md), [`dryd_k`](dryd_k.md), [`dryd_cl`](dryd_cl.md), [`dryd_co3`](dryd_co3.md), [`dryd_hco3`](dryd_hco3.md) | Salt added by dry deposition | kg/ha |
-| [`road_so4`](road_so4.md), [`road_ca`](road_ca.md), [`road_mg`](road_mg.md), [`road_na`](road_na.md), [`road_k`](road_k.md), [`road_cl`](road_cl.md), [`road_co3`](road_co3.md), [`road_hco3`](road_hco3.md) | Salt added by road-salt application | kg/ha |
-| [`fert_so4`](fert_so4.md), [`fert_ca`](fert_ca.md), [`fert_mg`](fert_mg.md), [`fert_na`](fert_na.md), [`fert_k`](fert_k.md), [`fert_cl`](fert_cl.md), [`fert_co3`](fert_co3.md), [`fert_hco3`](fert_hco3.md) | Salt added by fertilizer | kg/ha |
-| [`amnd_so4`](amnd_so4.md), [`amnd_ca`](amnd_ca.md), [`amnd_mg`](amnd_mg.md), [`amnd_na`](amnd_na.md), [`amnd_k`](amnd_k.md), [`amnd_cl`](amnd_cl.md), [`amnd_co3`](amnd_co3.md), [`amnd_hco3`](amnd_hco3.md) | Salt added by soil amendments | kg/ha |
-| [`uptk_so4`](uptk_so4.md), [`uptk_ca`](uptk_ca.md), [`uptk_mg`](uptk_mg.md), [`uptk_na`](uptk_na.md), [`uptk_k`](uptk_k.md), [`uptk_cl`](uptk_cl.md), [`uptk_co3`](uptk_co3.md), [`uptk_hco3`](uptk_hco3.md) | Salt removed by plant uptake | kg/ha |
-| [`conc_so4`](conc_so4.md), [`conc_ca`](conc_ca.md), [`conc_mg`](conc_mg.md), [`conc_na`](conc_na.md), [`conc_k`](conc_k.md), [`conc_cl`](conc_cl.md), [`conc_co3`](conc_co3.md), [`conc_hco3`](conc_hco3.md) | Salt concentration in soil water, averaged over soil layers | g/m3 |
+| [`soil_so4`](soil_so4.md) | Sulfate stored in the soil profile | kg/ha |
+| [`soil_ca`](soil_ca.md) | Calcium stored in the soil profile | kg/ha |
+| [`soil_mg`](soil_mg.md) | Magnesium stored in the soil profile | kg/ha |
+| [`soil_na`](soil_na.md) | Sodium stored in the soil profile | kg/ha |
+| [`soil_k`](soil_k.md) | Potassium stored in the soil profile | kg/ha |
+| [`soil_cl`](soil_cl.md) | Chloride stored in the soil profile | kg/ha |
+| [`soil_co3`](soil_co3.md) | Carbonate stored in the soil profile | kg/ha |
+| [`soil_hco3`](soil_hco3.md) | Bicarbonate stored in the soil profile | kg/ha |
+| [`surq_so4`](surq_so4.md) | Sulfate transported in surface runoff from soil to stream | kg/ha |
+| [`surq_ca`](surq_ca.md) | Calcium transported in surface runoff from soil to stream | kg/ha |
+| [`surq_mg`](surq_mg.md) | Magnesium transported in surface runoff from soil to stream | kg/ha |
+| [`surq_na`](surq_na.md) | Sodium transported in surface runoff from soil to stream | kg/ha |
+| [`surq_k`](surq_k.md) | Potassium transported in surface runoff from soil to stream | kg/ha |
+| [`surq_cl`](surq_cl.md) | Chloride transported in surface runoff from soil to stream | kg/ha |
+| [`surq_co3`](surq_co3.md) | Carbonate transported in surface runoff from soil to stream | kg/ha |
+| [`surq_hco3`](surq_hco3.md) | Bicarbonate transported in surface runoff from soil to stream | kg/ha |
+| [`latq_so4`](latq_so4.md) | Sulfate transported in lateral soil flow to stream | kg/ha |
+| [`latq_ca`](latq_ca.md) | Calcium transported in lateral soil flow to stream | kg/ha |
+| [`latq_mg`](latq_mg.md) | Magnesium transported in lateral soil flow to stream | kg/ha |
+| [`latq_na`](latq_na.md) | Sodium transported in lateral soil flow to stream | kg/ha |
+| [`latq_k`](latq_k.md) | Potassium transported in lateral soil flow to stream | kg/ha |
+| [`latq_cl`](latq_cl.md) | Chloride transported in lateral soil flow to stream | kg/ha |
+| [`latq_co3`](latq_co3.md) | Carbonate transported in lateral soil flow to stream | kg/ha |
+| [`latq_hco3`](latq_hco3.md) | Bicarbonate transported in lateral soil flow to stream | kg/ha |
+| [`urbq_so4`](urbq_so4.md) | Sulfate transported in urban runoff to stream | kg/ha |
+| [`urbq_ca`](urbq_ca.md) | Calcium transported in urban runoff to stream | kg/ha |
+| [`urbq_mg`](urbq_mg.md) | Magnesium transported in urban runoff to stream | kg/ha |
+| [`urbq_na`](urbq_na.md) | Sodium transported in urban runoff to stream | kg/ha |
+| [`urbq_k`](urbq_k.md) | Potassium transported in urban runoff to stream | kg/ha |
+| [`urbq_cl`](urbq_cl.md) | Chloride transported in urban runoff to stream | kg/ha |
+| [`urbq_co3`](urbq_co3.md) | Carbonate transported in urban runoff to stream | kg/ha |
+| [`urbq_hco3`](urbq_hco3.md) | Bicarbonate transported in urban runoff to stream | kg/ha |
+| [`wetq_so4`](wetq_so4.md) | Sulfate transported in wetland runoff to stream | kg/ha |
+| [`wetq_ca`](wetq_ca.md) | Calcium transported in wetland runoff to stream | kg/ha |
+| [`wetq_mg`](wetq_mg.md) | Magnesium transported in wetland runoff to stream | kg/ha |
+| [`wetq_na`](wetq_na.md) | Sodium transported in wetland runoff to stream | kg/ha |
+| [`wetq_k`](wetq_k.md) | Potassium transported in wetland runoff to stream | kg/ha |
+| [`wetq_cl`](wetq_cl.md) | Chloride transported in wetland runoff to stream | kg/ha |
+| [`wetq_co3`](wetq_co3.md) | Carbonate transported in wetland runoff to stream | kg/ha |
+| [`wetq_hco3`](wetq_hco3.md) | Bicarbonate transported in wetland runoff to stream | kg/ha |
+| [`tile_so4`](tile_so4.md) | Sulfate transported by tile drainage to stream | kg/ha |
+| [`tile_ca`](tile_ca.md) | Calcium transported by tile drainage to stream | kg/ha |
+| [`tile_mg`](tile_mg.md) | Magnesium transported by tile drainage to stream | kg/ha |
+| [`tile_na`](tile_na.md) | Sodium transported by tile drainage to stream | kg/ha |
+| [`tile_k`](tile_k.md) | Potassium transported by tile drainage to stream | kg/ha |
+| [`tile_cl`](tile_cl.md) | Chloride transported by tile drainage to stream | kg/ha |
+| [`tile_co3`](tile_co3.md) | Carbonate transported by tile drainage to stream | kg/ha |
+| [`tile_hco3`](tile_hco3.md) | Bicarbonate transported by tile drainage to stream | kg/ha |
+| [`perc_so4`](perc_so4.md) | Sulfate transported by deep percolation from soil to aquifer | kg/ha |
+| [`perc_ca`](perc_ca.md) | Calcium transported by deep percolation from soil to aquifer | kg/ha |
+| [`perc_mg`](perc_mg.md) | Magnesium transported by deep percolation from soil to aquifer | kg/ha |
+| [`perc_na`](perc_na.md) | Sodium transported by deep percolation from soil to aquifer | kg/ha |
+| [`perc_k`](perc_k.md) | Potassium transported by deep percolation from soil to aquifer | kg/ha |
+| [`perc_cl`](perc_cl.md) | Chloride transported by deep percolation from soil to aquifer | kg/ha |
+| [`perc_co3`](perc_co3.md) | Carbonate transported by deep percolation from soil to aquifer | kg/ha |
+| [`perc_hco3`](perc_hco3.md) | Bicarbonate transported by deep percolation from soil to aquifer | kg/ha |
+| [`gwup_so4`](gwup_so4.md) | Sulfate transferred from aquifer to soil | kg/ha |
+| [`gwup_ca`](gwup_ca.md) | Calcium transferred from aquifer to soil | kg/ha |
+| [`gwup_mg`](gwup_mg.md) | Magnesium transferred from aquifer to soil | kg/ha |
+| [`gwup_na`](gwup_na.md) | Sodium transferred from aquifer to soil | kg/ha |
+| [`gwup_k`](gwup_k.md) | Potassium transferred from aquifer to soil | kg/ha |
+| [`gwup_cl`](gwup_cl.md) | Chloride transferred from aquifer to soil | kg/ha |
+| [`gwup_co3`](gwup_co3.md) | Carbonate transferred from aquifer to soil | kg/ha |
+| [`gwup_hco3`](gwup_hco3.md) | Bicarbonate transferred from aquifer to soil | kg/ha |
+| [`wtsp_so4`](wtsp_so4.md) | Sulfate transported by wetland seepage to soil | kg/ha |
+| [`wtsp_ca`](wtsp_ca.md) | Calcium transported by wetland seepage to soil | kg/ha |
+| [`wtsp_mg`](wtsp_mg.md) | Magnesium transported by wetland seepage to soil | kg/ha |
+| [`wtsp_na`](wtsp_na.md) | Sodium transported by wetland seepage to soil | kg/ha |
+| [`wtsp_k`](wtsp_k.md) | Potassium transported by wetland seepage to soil | kg/ha |
+| [`wtsp_cl`](wtsp_cl.md) | Chloride transported by wetland seepage to soil | kg/ha |
+| [`wtsp_co3`](wtsp_co3.md) | Carbonate transported by wetland seepage to soil | kg/ha |
+| [`wtsp_hco3`](wtsp_hco3.md) | Bicarbonate transported by wetland seepage to soil | kg/ha |
+| [`irsw_so4`](irsw_so4.md) | Sulfate added by surface-water irrigation | kg/ha |
+| [`irsw_ca`](irsw_ca.md) | Calcium added by surface-water irrigation | kg/ha |
+| [`irsw_mg`](irsw_mg.md) | Magnesium added by surface-water irrigation | kg/ha |
+| [`irsw_na`](irsw_na.md) | Sodium added by surface-water irrigation | kg/ha |
+| [`irsw_k`](irsw_k.md) | Potassium added by surface-water irrigation | kg/ha |
+| [`irsw_cl`](irsw_cl.md) | Chloride added by surface-water irrigation | kg/ha |
+| [`irsw_co3`](irsw_co3.md) | Carbonate added by surface-water irrigation | kg/ha |
+| [`irsw_hco3`](irsw_hco3.md) | Bicarbonate added by surface-water irrigation | kg/ha |
+| [`irgw_so4`](irgw_so4.md) | Sulfate added by groundwater irrigation | kg/ha |
+| [`irgw_ca`](irgw_ca.md) | Calcium added by groundwater irrigation | kg/ha |
+| [`irgw_mg`](irgw_mg.md) | Magnesium added by groundwater irrigation | kg/ha |
+| [`irgw_na`](irgw_na.md) | Sodium added by groundwater irrigation | kg/ha |
+| [`irgw_k`](irgw_k.md) | Potassium added by groundwater irrigation | kg/ha |
+| [`irgw_cl`](irgw_cl.md) | Chloride added by groundwater irrigation | kg/ha |
+| [`irgw_co3`](irgw_co3.md) | Carbonate added by groundwater irrigation | kg/ha |
+| [`irgw_hco3`](irgw_hco3.md) | Bicarbonate added by groundwater irrigation | kg/ha |
+| [`irwo_so4`](irwo_so4.md) | Sulfate added by irrigation from an outside source | kg/ha |
+| [`irwo_ca`](irwo_ca.md) | Calcium added by irrigation from an outside source | kg/ha |
+| [`irwo_mg`](irwo_mg.md) | Magnesium added by irrigation from an outside source | kg/ha |
+| [`irwo_na`](irwo_na.md) | Sodium added by irrigation from an outside source | kg/ha |
+| [`irwo_k`](irwo_k.md) | Potassium added by irrigation from an outside source | kg/ha |
+| [`irwo_cl`](irwo_cl.md) | Chloride added by irrigation from an outside source | kg/ha |
+| [`irwo_co3`](irwo_co3.md) | Carbonate added by irrigation from an outside source | kg/ha |
+| [`irwo_hco3`](irwo_hco3.md) | Bicarbonate added by irrigation from an outside source | kg/ha |
+| [`rain_so4`](rain_so4.md) | Sulfate added by rainfall | kg/ha |
+| [`rain_ca`](rain_ca.md) | Calcium added by rainfall | kg/ha |
+| [`rain_mg`](rain_mg.md) | Magnesium added by rainfall | kg/ha |
+| [`rain_na`](rain_na.md) | Sodium added by rainfall | kg/ha |
+| [`rain_k`](rain_k.md) | Potassium added by rainfall | kg/ha |
+| [`rain_cl`](rain_cl.md) | Chloride added by rainfall | kg/ha |
+| [`rain_co3`](rain_co3.md) | Carbonate added by rainfall | kg/ha |
+| [`rain_hco3`](rain_hco3.md) | Bicarbonate added by rainfall | kg/ha |
+| [`dryd_so4`](dryd_so4.md) | Sulfate added by dry deposition | kg/ha |
+| [`dryd_ca`](dryd_ca.md) | Calcium added by dry deposition | kg/ha |
+| [`dryd_mg`](dryd_mg.md) | Magnesium added by dry deposition | kg/ha |
+| [`dryd_na`](dryd_na.md) | Sodium added by dry deposition | kg/ha |
+| [`dryd_k`](dryd_k.md) | Potassium added by dry deposition | kg/ha |
+| [`dryd_cl`](dryd_cl.md) | Chloride added by dry deposition | kg/ha |
+| [`dryd_co3`](dryd_co3.md) | Carbonate added by dry deposition | kg/ha |
+| [`dryd_hco3`](dryd_hco3.md) | Bicarbonate added by dry deposition | kg/ha |
+| [`road_so4`](road_so4.md) | Sulfate added by road-salt application | kg/ha |
+| [`road_ca`](road_ca.md) | Calcium added by road-salt application | kg/ha |
+| [`road_mg`](road_mg.md) | Magnesium added by road-salt application | kg/ha |
+| [`road_na`](road_na.md) | Sodium added by road-salt application | kg/ha |
+| [`road_k`](road_k.md) | Potassium added by road-salt application | kg/ha |
+| [`road_cl`](road_cl.md) | Chloride added by road-salt application | kg/ha |
+| [`road_co3`](road_co3.md) | Carbonate added by road-salt application | kg/ha |
+| [`road_hco3`](road_hco3.md) | Bicarbonate added by road-salt application | kg/ha |
+| [`fert_so4`](fert_so4.md) | Sulfate added by fertilizer | kg/ha |
+| [`fert_ca`](fert_ca.md) | Calcium added by fertilizer | kg/ha |
+| [`fert_mg`](fert_mg.md) | Magnesium added by fertilizer | kg/ha |
+| [`fert_na`](fert_na.md) | Sodium added by fertilizer | kg/ha |
+| [`fert_k`](fert_k.md) | Potassium added by fertilizer | kg/ha |
+| [`fert_cl`](fert_cl.md) | Chloride added by fertilizer | kg/ha |
+| [`fert_co3`](fert_co3.md) | Carbonate added by fertilizer | kg/ha |
+| [`fert_hco3`](fert_hco3.md) | Bicarbonate added by fertilizer | kg/ha |
+| [`amnd_so4`](amnd_so4.md) | Sulfate added by soil amendments | kg/ha |
+| [`amnd_ca`](amnd_ca.md) | Calcium added by soil amendments | kg/ha |
+| [`amnd_mg`](amnd_mg.md) | Magnesium added by soil amendments | kg/ha |
+| [`amnd_na`](amnd_na.md) | Sodium added by soil amendments | kg/ha |
+| [`amnd_k`](amnd_k.md) | Potassium added by soil amendments | kg/ha |
+| [`amnd_cl`](amnd_cl.md) | Chloride added by soil amendments | kg/ha |
+| [`amnd_co3`](amnd_co3.md) | Carbonate added by soil amendments | kg/ha |
+| [`amnd_hco3`](amnd_hco3.md) | Bicarbonate added by soil amendments | kg/ha |
+| [`uptk_so4`](uptk_so4.md) | Sulfate removed by plant uptake | kg/ha |
+| [`uptk_ca`](uptk_ca.md) | Calcium removed by plant uptake | kg/ha |
+| [`uptk_mg`](uptk_mg.md) | Magnesium removed by plant uptake | kg/ha |
+| [`uptk_na`](uptk_na.md) | Sodium removed by plant uptake | kg/ha |
+| [`uptk_k`](uptk_k.md) | Potassium removed by plant uptake | kg/ha |
+| [`uptk_cl`](uptk_cl.md) | Chloride removed by plant uptake | kg/ha |
+| [`uptk_co3`](uptk_co3.md) | Carbonate removed by plant uptake | kg/ha |
+| [`uptk_hco3`](uptk_hco3.md) | Bicarbonate removed by plant uptake | kg/ha |
+| [`conc_so4`](conc_so4.md) | Sulfate concentration in soil water, averaged over soil layers | g/m3 |
+| [`conc_ca`](conc_ca.md) | Calcium concentration in soil water, averaged over soil layers | g/m3 |
+| [`conc_mg`](conc_mg.md) | Magnesium concentration in soil water, averaged over soil layers | g/m3 |
+| [`conc_na`](conc_na.md) | Sodium concentration in soil water, averaged over soil layers | g/m3 |
+| [`conc_k`](conc_k.md) | Potassium concentration in soil water, averaged over soil layers | g/m3 |
+| [`conc_cl`](conc_cl.md) | Chloride concentration in soil water, averaged over soil layers | g/m3 |
+| [`conc_co3`](conc_co3.md) | Carbonate concentration in soil water, averaged over soil layers | g/m3 |
+| [`conc_hco3`](conc_hco3.md) | Bicarbonate concentration in soil water, averaged over soil layers | g/m3 |
 | [dssl_total](dssl_total.md) | Total salt-mineral dissolution, summed over soil layers | kg/ha |
 
 {% hint style="warning" %}

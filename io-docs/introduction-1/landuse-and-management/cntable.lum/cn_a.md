@@ -4,9 +4,9 @@ description: Curve number for hydrologic soil group A
 
 # cn\_a
 
-**Code reference:** `cn(icno)%cn(1)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_data_module.f90#L40), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cntbl_read.f90#L45)).
+**Code reference:** `cn(icno)%cn(1)` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/landuse_data_module.f90#L40), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cntbl_read.f90#L45)).
 
-Dimensionless SCS moisture-condition II runoff curve number (`30.0–100.0`, struct default `30.0`) assigned to HRUs with Hydrologic Soil Group A in [`cn2_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cn2_init.f90#L24). In [`curno.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/curno.f90#L58-L69), SWAT+ converts $\text{CN}_{2}$ to dry (condition I) and wet (condition III) curve numbers and the maximum retention parameter $S_{\max}$ (`mm`):
+Dimensionless SCS moisture-condition II runoff curve number (`30.0–100.0`, struct default `30.0`) assigned to HRUs with Hydrologic Soil Group A in [`cn2_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cn2_init.f90#L24). In [`curno.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/curno.f90#L58-L69), SWAT+ converts $\text{CN}_{2}$ to dry (condition I) and wet (condition III) curve numbers and the maximum retention parameter $S_{\max}$ (`mm`):
 
 $$\text{CN}_1 = \max\!\left(\text{CN}_2 - \frac{20\,(100 - \text{CN}_2)}{(100 - \text{CN}_2) + \exp\big(2.533 - 0.0636\,(100 - \text{CN}_2)\big)},\; 0.4\,\text{CN}_2\right)$$
 

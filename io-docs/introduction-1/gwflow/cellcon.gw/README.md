@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file lists, for each groundwater cell, the neighboring cells it exchanges water with.
 
-SWAT+ looks for `cellcon.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L505-L526) reader.
+SWAT+ looks for `cellcon.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L505-L526) reader.
 
 # cellcon.gw
 
-The first two lines are a title and column headings. Then give one line per cell, `ncell` lines in cell order: the cell number, the number of neighbors, and that many neighbor numbers, separated by spaces. A line has room for 40 values, so a cell can have at most 38 neighbors. A line with fewer than two values, or with a cell number that does not match its position, stops the run with a message in the GWFlow record file ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L508-L525)).
+The first two lines are a title and column headings. Then give one line per cell, `ncell` lines in cell order: the cell number, the number of neighbors, and that many neighbor numbers, separated by spaces. A line has room for 40 values, so a cell can have at most 38 neighbors. A line with fewer than two values, or with a cell number that does not match its position, stops the run with a message in the GWFlow record file ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L508-L525)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

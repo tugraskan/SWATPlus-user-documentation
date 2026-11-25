@@ -42,6 +42,6 @@ description: This file controls the channel nutrient properties.
 | [const\_n](const_n.md) | Michaelis-Menton half-saturation constant for N | real | mg N/L | 0.02 | 0.01-0.30 |
 | [const\_p](const_p.md) | Michaelis-Menton half saturation constant for P | real | mg P/L | 0.03 | 0.001-0.05 |
 | [lt\_nonalg](lt_nonalg.md) | Non-algal portion of the light extinction coefficient | real | 1/m | 1.0 | 0.0-10.0 |
-| [alg\_shd\_l](alg_shd_l.md) | Linear algal self-shading coefficient (capped back to `lt_nonalg` in [`ch_watqual4.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_watqual4.f90#L157-L164) at 6f515368) | real | 1/(m\*ug chla/L) | 0.03 | 0.006-0.065 |
-| [alg\_shd\_nl](alg_shd_nl.md) | Nonlinear algal self-shading coefficient (capped back to `lt_nonalg` in [`ch_watqual4.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_watqual4.f90#L157-L164) at 6f515368) | real | (1/m)(ug chla/L)^(-2/3) | 0.05 | 0.0-1.0 |
+| [alg\_shd\_l](alg_shd_l.md) | Linear algal self-shading coefficient (capped back to `lt_nonalg` in [`ch_watqual4.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_watqual4.f90#L162-L169) at 6f515368) | real | 1/(m\*ug chla/L) | 0.03 | 0.006-0.065 |
+| [alg\_shd\_nl](alg_shd_nl.md) | Nonlinear algal self-shading coefficient (capped back to `lt_nonalg` in [`ch_watqual4.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_watqual4.f90#L162-L169) at 6f515368) | real | (1/m)(ug chla/L)^(-2/3) | 0.05 | 0.0-1.0 |
 | [nh3\_pref](nh3_pref.md) | Algal preference factor for ammonia | real | none | 0.50 | 0.0-1.0 |

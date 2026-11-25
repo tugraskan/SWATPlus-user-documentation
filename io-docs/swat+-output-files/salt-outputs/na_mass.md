@@ -4,7 +4,7 @@ description: "Salt stored in channel water"
 
 # na_mass
 
-**Code reference:** `chsalt_d(iru)%salt(isalt)%water` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_salt_module.f90#L14)).
+**Code reference:** `chsalt_d(iru)%salt(isalt)%water` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_salt_module.f90#L14)).
 
 In this output table, `na_mass` is one of the fields described as: Salt stored in channel water.
 

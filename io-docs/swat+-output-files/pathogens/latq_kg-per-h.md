@@ -4,7 +4,7 @@ description: "Lateral-flow component with no identified producer"
 
 # latq_kg/h
 
-**Code reference:** `hpath_bal(j)%path(ipath)%latq` ([declaration/default](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_ls_pathogen_module.f90#L12); [write order](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_pathogen_output.f90#L35)).
+**Code reference:** `hpath_bal(j)%path(ipath)%latq` ([declaration/default](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_ls_pathogen_module.f90#L12); [write order](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_pathogen_output.f90#L35)).
 
 This position corresponds to the lateral-flow component. No active producer was identified for this component in the inspected source, so the declared zero default does not demonstrate a measured process amount.
 

@@ -4,7 +4,7 @@ description: "Water stored in the aquifer"
 
 # stor
 
-**Code reference:** `aqu_d(iaq)%stor` ([1-D calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L97)).
+**Code reference:** `aqu_d(iaq)%stor` ([1-D calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L97)).
 
 Water storage as an equivalent depth over aquifer area. The 1-D controller adds recharge and subtracts groundwater flow, seepage, and revap. Water-table depth is calculated earlier in that sequence. Canal seepage can also add hydrograph water volume directly without the usual conversion to mm; the source does not establish a consistent water-depth basis for every allocation configuration.
 

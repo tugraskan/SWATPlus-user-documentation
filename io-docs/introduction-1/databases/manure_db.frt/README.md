@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file links named manure types to their constituent composition records.
 
-SWAT+ looks for `manure_db.frt` in the simulation working directory; it is not selected through `file.cio`. See the [manure_db_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/manure_db_read.f90#L27) reader.
+SWAT+ looks for `manure_db.frt` in the simulation working directory; it is not selected through `file.cio`. See the [manure_db_read.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/manure_db_read.f90#L27) reader.
 
 # manure_db.frt
 
@@ -27,4 +27,4 @@ The first two lines contain a title and column headings. Each following row cont
 
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
-All eight values are read for every record ([`manure_db_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/manure_db_read.f90#L47-L49)). Only `name` and `org_min` are used afterwards. See the note on [org\_min](org_min.md) about how the composition record is chosen.
+All eight values are read for every record ([`manure_db_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/manure_db_read.f90#L47-L49)). Only `name` and `org_min` are used afterwards. See the note on [org\_min](org_min.md) about how the composition record is chosen.

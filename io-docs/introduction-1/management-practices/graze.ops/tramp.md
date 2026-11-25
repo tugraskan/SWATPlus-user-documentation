@@ -4,9 +4,9 @@ description: Intended daily dry biomass removal by trampling (fraction reset to 
 
 # bm\_tramp
 
-**Code reference:** `grazeop_db(igrazop)%tramp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L127), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_read_grazeops.f90#L49)).
+**Code reference:** `grazeop_db(igrazop)%tramp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_operations_module.f90#L127), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_read_grazeops.f90#L49)).
 
-Intended daily dry biomass removal by trampling (`(kg/ha)/day`; default `0.0`, valid range `0.0–500.0`). In SWAT+ main (`6f515368`), [`pl_graze.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_graze.f90#L59-L60) computes a trampled biomass fraction:
+Intended daily dry biomass removal by trampling (`(kg/ha)/day`; default `0.0`, valid range `0.0–500.0`). In SWAT+ main (`6f515368`), [`pl_graze.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_graze.f90#L59-L60) computes a trampled biomass fraction:
 
 $$f_{\text{tramp}} = \frac{B_{\text{tramp}}}{B_{\text{abg}}}$$
 

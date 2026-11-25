@@ -6,9 +6,9 @@ description: >-
 
 # stcon\_max
 
-**Code reference:** `pldb(ic)%gsi` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L70)).
+**Code reference:** `pldb(ic)%gsi` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L65)).
 
-**Current use:** conductance is reduced above 1 kPa vapor pressure deficit before the Penman-Monteith resistance is computed ([`et_pot.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/et_pot.f90#L239-L250)). Suspected defect: in a community with several plants, the last plant's value is used rather than the weighted average.
+**Current use:** conductance is reduced above 1 kPa vapor pressure deficit before the Penman-Monteith resistance is computed ([`et_pot.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/et_pot.f90#L239-L250)). Suspected defect: in a community with several plants, the last plant's value is used rather than the weighted average.
 
 Stomatal conductance of water vapor is used in the Penman-Monteith calculations of maximum plant evapotranspiration. The plant database contains three variables pertaining to stomatal conductance that are required only if the Penman-Monteith equation is used to model evapotranspiration: maximum stomatal conductance and two variables that define the impact of vapor pressure deficit on stomatal conductance ([frac\_stcon](frac_stcon.md), [vpd](vpd.md)).
 

@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file lists the intersections between HRUs and groundwater cells. They distribute HRU recharge, groundwater ET, soil transfer and wetland exchange to cells. It is used when `conn_type` is 1, or as the fallback when `conn_type` is 2 and `lsucell.gw` is missing.
 
-SWAT+ looks for `hrucell.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L2128-L2183) reader.
+SWAT+ looks for `hrucell.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L2128-L2183) reader.
 
 # hrucell.gw
 
-The first two lines are a title and column headings. Then give one line per HRU–cell intersection. Lines for the same HRU must be together, and HRUs must be in increasing order: the reader collects lines for HRU 1, then HRU 2, and so on, and moves to the next HRU when the HRU number changes ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L2159-L2183)). HRUs without lines are not connected to the aquifer.
+The first two lines are a title and column headings. Then give one line per HRU–cell intersection. Lines for the same HRU must be together, and HRUs must be in increasing order: the reader collects lines for HRU 1, then HRU 2, and so on, and moves to the next HRU when the HRU number changes ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L2159-L2183)). HRUs without lines are not connected to the aquifer.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

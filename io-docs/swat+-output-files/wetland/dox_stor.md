@@ -4,9 +4,9 @@ description: "Stored dissolved oxygen"
 
 # dox_stor
 
-**Code reference:** `wet(j)%dox` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L42)).
+**Code reference:** `wet(j)%dox` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L42)).
 
-Dissolved oxygen mass in the storage hydrograph comes from initialization and inflow. A low remaining water volume can clear it. [Initialization conversion](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L1282-L1303), [Low-volume reset](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_sediment.f90#L17-L24)
+Dissolved oxygen mass in the storage hydrograph comes from initialization and inflow. A low remaining water volume can clear it. [Initialization conversion](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L1285-L1306), [Low-volume reset](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_sediment.f90#L17-L24)
 
 **Unit:** kg.
 

@@ -4,7 +4,7 @@ description: "Bank erosion, channel degradation and deposition, floodplain depos
 
 # bnk_ero
 
-**Code reference:** `ch_d(jrch)%bnk_ero` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_module.f90#L177)).
+**Code reference:** `ch_d(jrch)%bnk_ero` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_module.f90#L177)).
 
 In this output table, `bnk_ero` is one of the fields described as: Bank erosion, channel degradation and deposition, floodplain deposition, and suspended sediment.
 

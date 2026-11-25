@@ -4,9 +4,9 @@ description: Fraction of aquifer recharge that seeps to a deeper aquifer
 
 # rchg\_dp
 
-**Code reference:** `aqudb(i)%seep` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L18)).
+**Code reference:** `aqudb(i)%seep` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aquifer_module.f90#L18)).
 
-Fraction of the day's aquifer recharge that seeps to a deeper aquifer. In [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L123-L127), seepage is calculated as follows:
+Fraction of the day's aquifer recharge that seeps to a deeper aquifer. In [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L123-L127), seepage is calculated as follows:
 
 $$
 W_{\text{seep}} = \min\left(R \times f_{\text{seep}},\; S\right)

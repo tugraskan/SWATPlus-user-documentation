@@ -4,11 +4,11 @@ description: Name of tillage record
 
 # name (tillage.til)
 
-**Code reference:** `tilldb(itl)%tillnm` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/tillage_data_module.f90#L20)).
+**Code reference:** `tilldb(itl)%tillnm` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/tillage_data_module.f90#L20)).
 
-The name holds up to 16 characters. Management operations and decision tables find the record by exact name ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/read_mgtops.f90#L88), [`dtbl_lum_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_lum_read.f90#L132)).
+The name holds up to 16 characters. Management operations and decision tables find the record by exact name ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L88), [`dtbl_lum_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/dtbl_lum_read.f90#L132)).
 
-The name `biomix` is special: its `mix_eff` and `mix_dp` set biological mixing, which falls back to 0.2 and 50 mm when no such record exists ([`till_parm_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/till_parm_read.f90#L48-L60)). This biological mixing runs when carbon = 2 in codes.bsn ([`hru_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_control.f90#L393-L394)).
+The name `biomix` is special: its `mix_eff` and `mix_dp` set biological mixing, which falls back to 0.2 and 50 mm when no such record exists ([`till_parm_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/till_parm_read.f90#L48-L60)). This biological mixing runs when carbon = 2 in codes.bsn ([`hru_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_control.f90#L396-L397)).
 
 The name of the tillage record is a primary key referenced when tillage operations are scheduled  in [**management.sch**](../../landuse-and-management/management.sch/) or [**lum.dtl**](../../decision-tables/lum.dtl/). All names in the **tillage.til** database must be unique.
 

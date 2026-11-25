@@ -4,9 +4,9 @@ description: Nitrate N in soil surface
 
 # nitrate
 
-**Code reference:** `solt_db(isolt)%nitrate` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_data_module.f90#L17)).
+**Code reference:** `solt_db(isolt)%nitrate` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_data_module.f90#L17)).
 
-Initial nitrate-nitrogen concentration at the soil surface (`ppm`; Fortran struct default: `7.0`). During initialization in [`soil_nutcarb_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_nutcarb_init.f90#L50) and [`soil_nutcarb_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_nutcarb_init.f90#L56-L60), values $\le 10^{-9}$ are replaced with `7.0` ppm ([fallback](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_nutcarb_init.f90#L55-L58)), and SWAT+ initializes each layer's nitrate-N mass (kg/ha) as:
+Initial nitrate-nitrogen concentration at the soil surface (`ppm`; Fortran struct default: `7.0`). During initialization in [`soil_nutcarb_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_nutcarb_init.f90#L54) and [`soil_nutcarb_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_nutcarb_init.f90#L60-L64), values $\le 10^{-9}$ are replaced with `7.0` ppm ([fallback](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_nutcarb_init.f90#L59-L62)), and SWAT+ initializes each layer's nitrate-N mass (kg/ha) as:
 
 $$N_{\text{NO3},l} = C_{N,0} \cdot f_{\text{dep},l} \cdot \frac{\rho_{b,l} \cdot \Delta z_l}{100}$$
 

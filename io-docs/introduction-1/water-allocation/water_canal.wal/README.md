@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In [`water_canal_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_canal_read.f90#L29-L66), the outer `do ... end do` loop lacks an `exit` statement after reading `imax` records. Note also that [`water_canal_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_canal_read.f90#L61-L63) leaves weather-station, initial-concentration, and decision-table crosswalks unimplemented (`!!` comments only).
+In [`water_canal_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_canal_read.f90#L29-L66), the outer `do ... end do` loop lacks an `exit` statement after reading `imax` records. Note also that [`water_canal_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_canal_read.f90#L61-L63) leaves weather-station, initial-concentration, and decision-table crosswalks unimplemented (`!!` comments only).
 {% endhint %}
 
 This file defines canals used for water allocation, including their dimensions, outflow settings, and seepage to aquifers.
 
-SWAT+ looks for `water_canal.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_canal_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_canal_read.f90#L30) reader.
+SWAT+ looks for `water_canal.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_canal_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_canal_read.f90#L30) reader.
 
 # water_canal.wal
 

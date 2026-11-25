@@ -6,9 +6,9 @@ description: >-
 
 # co2\_hi
 
-**Code reference:** `pldb(ic)%co2hi` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L75)).
+**Code reference:** `pldb(ic)%co2hi` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L70)).
 
-**Current use:** the response curve uses 330 ppm and this concentration as its two points; an entry of exactly 330 is replaced by 660 ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L56-L62)).
+**Current use:** the response curve uses 330 ppm and this concentration as its two points; an entry of exactly 330 is replaced by 660 ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L56-L62)).
 
 The 1st point on the radiation use efficiency curve is comprised of the ambient CO2 concentration, 330 μL CO2/L air, and the biomass-energy ratio reported for [bm\_e](untitled-17.md).
 

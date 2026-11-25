@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This optional file selects HRUs whose daily groundwater pumping for irrigation is written to `gwflow_cell_wb_ppag_obs_day.txt`. It does not change the simulation.
 
-SWAT+ looks for `hru_pump.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L930-L948) reader.
+SWAT+ looks for `hru_pump.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L930-L948) reader.
 
 # hru_pump.gw
 
-The file has one title line (no column-heading line), the number of HRUs, then one HRU number per line ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L934-L939)).
+The file has one title line (no column-heading line), the number of HRUs, then one HRU number per line ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L934-L939)).
 
 ## HRU count
 

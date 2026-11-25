@@ -4,7 +4,7 @@ description: C-factor method selector (overwritten with 1 in main 6f515368)
 
 # c\_fact
 
-**Code reference:** `bsn_cc%cfac` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L43), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_cc.f90#L24)).
+**Code reference:** `bsn_cc%cfac` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_module.f90#L43), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_cc.f90#L24)).
 
 Legacy integer selector between the original SWAT minimum C-factor equation (`0`) and the APEX residue/biomass cover C-factor equation (`1`; struct default `0`).
 

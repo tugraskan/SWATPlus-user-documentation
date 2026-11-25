@@ -3,14 +3,14 @@ description: "This file identifies the time-series files used for salt recall in
 ---
 
 {% hint style="warning" %}
-Although [`recall_read_salt.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read_salt.f90#L43-L242) implements this reader (looking for `salt_recall.rec` in the simulation working directory, not via `file.cio`) and [`command.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/command.f90#L355) invokes [`recall_salt.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_salt.f90#L3-L118) when `cs_db%num_salts > 0`, **`recall_read_salt` is not called in SWAT+ main (`6f515368`)**.
+Although [`recall_read_salt.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read_salt.f90#L43-L242) implements this reader (looking for `salt_recall.rec` in the simulation working directory, not via `file.cio`) and [`command.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/command.f90#L355) invokes [`recall_salt.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_salt.f90#L3-L118) when `cs_db%num_salts > 0`, **`recall_read_salt` is not called in SWAT+ main (`6f515368`)**.
 {% endhint %}
 
 This file identifies the time-series files used for salt recall inputs.
 
 # salt\_recall.rec
 
-The first two lines contain a title and column headings. Each following row contains the fields below, in this order ([`recall_read_salt.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read_salt.f90#L109)).
+The first two lines contain a title and column headings. Each following row contains the fields below, in this order ([`recall_read_salt.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read_salt.f90#L109)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

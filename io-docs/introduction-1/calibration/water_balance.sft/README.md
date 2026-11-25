@@ -4,7 +4,7 @@ description: Regional land-use water-balance and sediment targets for soft calib
 
 # water\_balance.sft
 
-Supplies regional average annual water-balance ratios and sediment yield targets for soft calibration, read by [`lcu_read_softcal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/lcu_read_softcal.f90#L35-L102) into `region` and `lscal` ([`calibration_data_module.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calibration_data_module.f90#L150)).
+Supplies regional average annual water-balance ratios and sediment yield targets for soft calibration, read by [`lcu_read_softcal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/lcu_read_softcal.f90#L35-L102) into `region` and `lscal` ([`calibration_data_module.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calibration_data_module.f90#L150)).
 
 ## Region count
 
@@ -35,7 +35,7 @@ Supplies regional average annual water-balance ratios and sediment yield targets
 | [bfr](bfr.md) | Baseflow ratio (fraction of water yield in `b`/`y` mode) | real | — | 0 | 0–1 |
 | [solp](solp.md) | Average annual soluble phosphorus yield target (parsed but unused) | real | kg/ha | 0 | — |
 
-When `hyd_hru` in `codes.sft` is not `"a"` (for example `"b"` or `"y"`), [`lcu_read_softcal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/lcu_read_softcal.f90#L92-L96) derives the precipitation-normalized targets from `wyr` ($f_{\text{wyr}}$) and `bfr` ($f_{\text{bfr}}$):
+When `hyd_hru` in `codes.sft` is not `"a"` (for example `"b"` or `"y"`), [`lcu_read_softcal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/lcu_read_softcal.f90#L92-L96) derives the precipitation-normalized targets from `wyr` ($f_{\text{wyr}}$) and `bfr` ($f_{\text{bfr}}$):
 
 $$f_{\text{srr}} = f_{\text{wyr}}(1 - f_{\text{bfr}}), \qquad f_{\text{bfr}}' = f_{\text{wyr}}\,f_{\text{bfr}}, \qquad f_{\text{lfr}} = 0.1\,f_{\text{bfr}}'$$
 
@@ -46,4 +46,4 @@ where:
 - $f_{\text{wyr}}$ is `wyr` (dimensionless), and
 - $f_{\text{bfr}}$ is `bfr` (dimensionless).
 
-After accumulating baseline averages, [`calsoft_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calsoft_control.f90#L48-L52) and [`calsoft_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calsoft_control.f90#L68-L72) multiply `srr`, `lfr`, `pcr`, `etr`, and `tfr` by saved average annual precipitation (`precip_aa_sav`) to convert ratios to depth targets in mm.
+After accumulating baseline averages, [`calsoft_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calsoft_control.f90#L48-L52) and [`calsoft_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calsoft_control.f90#L68-L72) multiply `srr`, `lfr`, `pcr`, `etr`, and `tfr` by saved average annual precipitation (`precip_aa_sav`) to convert ratios to depth targets in mm.

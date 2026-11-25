@@ -4,7 +4,7 @@ description: "Gravel entering the channel"
 
 # grv_in
 
-**Code reference:** `ch_in_d(ichan)%grv` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L48)).
+**Code reference:** `ch_in_d(ichan)%grv` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L48)).
 
 Gravel entering the channel.
 

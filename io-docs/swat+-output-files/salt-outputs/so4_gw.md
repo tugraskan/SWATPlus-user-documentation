@@ -4,7 +4,7 @@ description: "Sulfate entering the channel from groundwater"
 
 # so4_gw
 
-**Code reference:** `chsalt_d(iru)%salt(isalt)%gw_in` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_salt_module.f90#L9)).
+**Code reference:** `chsalt_d(iru)%salt(isalt)%gw_in` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_salt_module.f90#L9)).
 
 Sulfate from groundwater in the saved linked-aquifer discharge, multiplied by the channel's share. Direct GWFlow exchanges update channel salt storage outside this diagnostic. See [daily channel calculations](channel-salt.md#daily-channel-calculations).
 

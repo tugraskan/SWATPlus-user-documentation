@@ -4,7 +4,7 @@ Use the file family below to find its printed column order and print setting. Th
 
 ## How to produce these files
 
-Use named object rows in [print.prt](../../introduction-1/simulation-settings/print.prt/README.md) (`use_obj_lbls = y`). Set the daily, monthly, yearly, or average-annual column to `y` for the desired files. Set `csvout` to `y` for CSV copies. [LSU print rows](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_print_codes_read.f90#L360), [HRU print rows](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_print_codes_read.f90#L400)
+Use named object rows in [print.prt](../../introduction-1/simulation-settings/print.prt/README.md) (`use_obj_lbls = y`). Set the daily, monthly, yearly, or average-annual column to `y` for the desired files. Set `csvout` to `y` for CSV copies. [LSU print rows](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_print_codes_read.f90#L352), [HRU print rows](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_print_codes_read.f90#L392)
 
 | File family | Print row |
 | --- | --- |
@@ -28,7 +28,7 @@ Use named object rows in [print.prt](../../introduction-1/simulation-settings/pr
 
 The flux, pool, driver, and dynamics reports require `carbon = 2` in [codes.bsn](../../introduction-1/basin-1/codes.bsn/README.md).
 
-[HRU nutrient file creation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L118), [Layer and snapshot file creation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L367), [LSU file creation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L1292)
+[HRU nutrient file creation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L118), [Layer and snapshot file creation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L367), [LSU file creation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L1291)
 
 ## Legacy reports
 

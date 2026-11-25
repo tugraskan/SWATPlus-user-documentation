@@ -4,7 +4,7 @@ description: "Depth from the ground surface to the water table"
 
 # dep_wt
 
-**Code reference:** `aqu_d(iaq)%dep_wt` ([1-D calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L105)).
+**Code reference:** `aqu_d(iaq)%dep_wt` ([1-D calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L105)).
 
 The depth is calculated as `dep_bot - stor / (1000 * spyld)` and bounded below by zero. This calculation follows recharge and any point-of-diversion allocation but precedes subtraction of groundwater flow, seepage, and revap. It is not recalculated after those subtractions, so it need not match the subsequently reported storage at the same daily update point.
 

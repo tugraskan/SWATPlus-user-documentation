@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file holds the settings that control GWFlow processes and output.
 
-SWAT+ looks for `codes.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L225-L261) reader. GWFlow runs only when `gwflow` is 1 in [codes.bsn](../../basin-1/codes.bsn/gwflow.md) and `chancell.gw` is present ([`basin_read_objs.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_objs.f90#L46-L68)).
+SWAT+ looks for `codes.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L225-L261) reader. GWFlow runs only when `gwflow` is 1 in [codes.bsn](../../basin-1/codes.bsn/gwflow.md) and `chancell.gw` is present ([`basin_read_objs.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_objs.f90#L46-L68)).
 
 # codes.gw
 
-The file has a title line, a line of setting names and a line of values. Each value belongs to the name above it; names and values are split on spaces, so a value cannot contain a space. The names may be in any order. Unrecognized names are ignored, and a setting that is not listed keeps its starting value, which is 0 (off) for every number ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L226-L260)).
+The file has a title line, a line of setting names and a line of values. Each value belongs to the name above it; names and values are split on spaces, so a value cannot contain a space. The names may be in any order. Unrecognized names are ignored, and a setting that is not listed keeps its starting value, which is 0 (off) for every number ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L226-L260)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

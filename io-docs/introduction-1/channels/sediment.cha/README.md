@@ -9,7 +9,7 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 This file contains channel sediment transport and erosion parameters.
 
 {% hint style="info" %}
-[`proc_cha.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cha.f90#L20-L41) reads `sediment.cha` via [`ch_read_sed.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_sed.f90#L1) and initializes bed/bank fractions in [`ch_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_initial.f90#L1), but daily `case ("chan")` routing in [`command.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/command.f90#L305-L310) is commented out. Active channel sediment routing uses [`hyd-sed-lte.cha`](../hyd-sed-lte.cha/) and [`sed_nut.cha`](../sed_nut.cha/).
+[`proc_cha.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cha.f90#L20-L41) reads `sediment.cha` via [`ch_read_sed.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_read_sed.f90#L1) and initializes bed/bank fractions in [`ch_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_initial.f90#L1), but daily `case ("chan")` routing in [`command.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/command.f90#L305-L310) is commented out. Active channel sediment routing uses [`hyd-sed-lte.cha`](../hyd-sed-lte.cha/) and [`sed_nut.cha`](../sed_nut.cha/).
 {% endhint %}
 
 # sediment.cha

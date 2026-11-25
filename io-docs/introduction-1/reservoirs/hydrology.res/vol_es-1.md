@@ -4,15 +4,15 @@ description: Volume of water needed to fill the reservoir to emergency spillway
 
 # vol\_es
 
-**Code reference:** `res_hyddb(ires)%evol` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L72)).
+**Code reference:** `res_hyddb(ires)%evol` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reservoir_data_module.f90#L72)).
 
 Volume of water needed to fill the reservoir to the emergency spillway (`ha-m`; Fortran struct default: `0.`, historical table default: `55.0`, range `10.0–100.0`). QSWAT+ assumes an average depth of 10 m, so its interface default is $10 \cdot A_{\text{esa}}$.
 
-If `vol_es` $\le 0$ when SWAT+ reads `hydrology.res` ([`res_read_hyd.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_hyd.f90#L57)), SWAT+ estimates it from principal spillway volume:
+If `vol_es` $\le 0$ when SWAT+ reads `hydrology.res` ([`res_read_hyd.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_hyd.f90#L57)), SWAT+ estimates it from principal spillway volume:
 
 $$V_{\text{evol}} = 1.11 \, V_{\text{pvol}}$$
 
-where $V_{\text{evol}}$ is `vol_es` (ha-m) and $V_{\text{pvol}}$ is [vol\_ps](vol_ps.md) (ha-m). During initialization ([`res_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_initial.f90#L30)), SWAT+ converts from ha-m to $\text{m}^3$:
+where $V_{\text{evol}}$ is `vol_es` (ha-m) and $V_{\text{pvol}}$ is [vol\_ps](vol_ps.md) (ha-m). During initialization ([`res_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_initial.f90#L30)), SWAT+ converts from ha-m to $\text{m}^3$:
 
 $$V_{\text{evol,m3}} = 10000 \cdot V_{\text{evol}}$$
 

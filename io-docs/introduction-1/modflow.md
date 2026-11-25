@@ -4,7 +4,7 @@ description: Groundwater flow module input documentation
 
 # GWFlow
 
-GWFlow replaces the SWAT+ aquifer objects with a grid of groundwater cells. It runs when `gwflow` is 1 in [codes.bsn](basin-1/codes.bsn/gwflow.md) and [chancell.gw](gwflow/chancell.gw/README.md) is present; the aquifer objects are then turned off ([`basin_read_objs.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_objs.f90#L45-L68)). None of these files is named in `file.cio`: SWAT+ looks for them by fixed name in the simulation folder ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L222-L526)).
+GWFlow replaces the SWAT+ aquifer objects with a grid of groundwater cells. It runs when `gwflow` is 1 in [codes.bsn](basin-1/codes.bsn/gwflow.md) and [chancell.gw](gwflow/chancell.gw/README.md) is present; the aquifer objects are then turned off ([`basin_read_objs.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_objs.f90#L45-L68)). None of these files is named in `file.cio`: SWAT+ looks for them by fixed name in the simulation folder ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L222-L526)).
 
 Required files:
 
@@ -40,4 +40,4 @@ Output-only files, which do not change the simulation:
 - [gwflow.wbgroups](gwflow/gwflow.wbgroups/README.md): water balance by cell group
 - [transit.gw](gwflow/transit.gw/README.md): groundwater travel paths (structured grids only)
 
-Messages about missing or inconsistent files go to the [GWFlow record file](../swat+-output-files/gwflow-outputs/gwflow-record.md), `gwflow_record` ([`basin_read_objs.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_objs.f90#L85)).
+Messages about missing or inconsistent files go to the [GWFlow record file](../swat+-output-files/gwflow-outputs/gwflow-record.md), `gwflow_record` ([`basin_read_objs.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_objs.f90#L85)).

@@ -4,9 +4,9 @@ description: Weir discharge linear coefficient
 
 # linear\_c
 
-**Code reference:** `res_weir(ires)%c` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L139)).
+**Code reference:** `res_weir(ires)%c` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reservoir_data_module.f90#L139)).
 
-Dimensionless linear coefficient in the weir-release equation (Fortran struct default: `1.84`). SWAT+ calculates weir discharge in [`res_hydro.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_hydro.f90#L199-L208) and [`res_weir_release.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_weir_release.f90#L84-L104) as:
+Dimensionless linear coefficient in the weir-release equation (Fortran struct default: `1.84`). SWAT+ calculates weir discharge in [`res_hydro.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_hydro.f90#L199-L208) and [`res_weir_release.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_weir_release.f90#L84-L104) as:
 
 $$Q = 0.45 \, A \cdot c \cdot w \cdot h_{\text{above}}^{k}$$
 

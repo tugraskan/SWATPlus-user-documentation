@@ -8,16 +8,20 @@ Field names in the tables follow the SWAT+ Fortran source. The reader takes valu
 
 # carbon.bsn
 
-Basin-wide parameters for the dynamic soil carbon model. SWAT+ reads this file only when [carbon](../../basin-1/codes.bsn/carbon.md) in `codes.bsn` is `2` ([`carbon_bsn_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_bsn_read.f90#L46-L62)). The file is then required: the run stops if it is missing or if its data line does not hold all 28 values ([`carbon_bsn_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_bsn_read.f90#L66-L88)). It has a title line, a heading line and one data line.
+Basin-wide parameters for the dynamic soil carbon model. SWAT+ reads this file only when [carbon](../../basin-1/codes.bsn/carbon.md) in `codes.bsn` is `2` ([`carbon_bsn_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_bsn_read.f90#L47-L63)). The file is then required: the run stops if it is missing or if its data line does not hold all 28 values ([`carbon_bsn_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_bsn_read.f90#L67-L89)). It has a title line, a heading line and one data line.
 
-The per-layer coefficients belong in a companion file whose name is built from this one: `carbon.bsn` uses `carbon_lyr.bsn`, and a file listed in `file.cio` as `foo.bsn` uses `foo_lyr.bsn` ([`carbon_bsn_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_bsn_read.f90#L97-L113)). The companion is also required and is not listed in `file.cio`. It has a title line, a heading line and one row for each layer group.
+{% hint style="warning" %}
+The data line differs from SWAT+ main: the first value is now [frac\_litter](frac_litter.md), the complement of main's `frac_seq`; `n_act_frac` is no longer read; and [cbn\_diag\_int](cbn_diag_int.md) is added at the end. The count is still 28, so a main-format file is read without an error but with wrong values: the first value is inverted, and from `cnr_cap` on each value receives the number that main placed one column earlier (so `cnr_cap` gets the old `n_act_frac`, and `cbn_diag_int` gets the old `mathers_int`). Convert main files before running dev.
+{% endhint %}
+
+The per-layer coefficients belong in a companion file whose name is built from this one: `carbon.bsn` uses `carbon_lyr.bsn`, and a file listed in `file.cio` as `foo.bsn` uses `foo_lyr.bsn` ([`carbon_bsn_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_bsn_read.f90#L101-L109)). The companion is also required and is not listed in `file.cio`. It has a title line, a heading line and one row for each layer group.
 
 ## Basin parameters
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |
-| [frac_seq](frac_seq.md) | Fraction of initial soil organic carbon placed in the humus and microbial pools; the rest becomes litter | real | fraction | — | — |
-| [frac_hum_microb](frac_hum_microb.md) | Share of that carbon placed in the microbial pool | real | fraction | — | — |
+| [frac_litter](frac_litter.md) | Fraction of initial soil organic carbon placed in the litter pools; the rest goes to the humus and microbial pools | real | fraction | — | — |
+| [frac_hum_microb](frac_hum_microb.md) | Share of the non-litter carbon placed in the microbial pool | real | fraction | — | — |
 | [frac_hum_slow](frac_hum_slow.md) | Share placed in the slow humus pool (when `mathers_int` is not 1) | real | fraction | — | — |
 | [frac_hum_passive](frac_hum_passive.md) | Share placed in the passive humus pool | real | fraction | — | — |
 | [prmt_21](prmt_21.md) | Partition coefficient (Koc) for microbial carbon loss from soil layer 1 with water | real | — | — | — |
@@ -38,12 +42,12 @@ The per-layer coefficients belong in a companion file whose name is built from t
 | [tillmix_b](tillmix_b.md) | Multiplier of the clay term in the maximum tillage mixing factor equation | real | — | — | — |
 | [tillmix_c](tillmix_c.md) | Clay exponent coefficient in the maximum tillage mixing factor equation | real | — | — | — |
 | [photo_degrade_factor](photo_degrade_factor.md) | Daily fraction of surface residue lost to photodegradation | real | fraction/day | — | — |
-| [n_act_frac](n_act_frac.md) | Fraction of humus organic N in the active pool (read but not used when carbon = 2) | real | fraction | — | — |
 | [cnr_cap](cnr_cap.md) | Upper limit on residue C:N ratio in the decomposition factor | real | ratio | — | — |
 | [cnr_ref](cnr_ref.md) | Residue C:N ratio at which the nitrogen decomposition factor equals 1 | real | ratio | — | — |
 | [cpr_cap](cpr_cap.md) | Upper limit on residue C:P ratio in the decomposition factor | real | ratio | — | — |
 | [cpr_ref](cpr_ref.md) | Residue C:P ratio at which the phosphorus decomposition factor equals 1 | real | ratio | — | — |
-| [mathers_int](mathers_int.md) | `1` sets the initial slow humus pool from clay and silt (Mathers method) | integer | n/a | — | — |
+| [mathers_int](mathers_int.md) | `1` sets the initial passive humus pool from clay and silt (Mathers method) | integer | n/a | — | — |
+| [cbn_diag_int](cbn_diag_int.md) | `1` writes the detailed soil carbon diagnostic files | integer | n/a | — | — |
 
 ## carbon_lyr.bsn
 

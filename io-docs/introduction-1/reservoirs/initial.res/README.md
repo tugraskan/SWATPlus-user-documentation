@@ -16,5 +16,5 @@ description: >-
 | [salt](res_salt.md) | Intended salt-initialization pointer (read but not used here in main 6f515368; active initialization uses reservoir.res\_cs) | string |  |  |  |
 
 {% hint style="warning" %}
-In SWAT+ main (6f515368), the `path` field initializes pathogens for reservoirs. In [`wet_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wet_initial.f90#L68-L69), the code resolves a `path` value for wetlands but does not apply the resulting wetland initialization index. The `hmet` field is not used.
+In SWAT+ main (6f515368), the `path` field initializes pathogens for reservoirs. In [`wet_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wet_initial.f90#L68-L69), the code resolves a `path` value for wetlands but does not apply the resulting wetland initialization index. The `hmet` field is not used.
 {% endhint %}

@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file supplies named sets of initial salt concentrations and mineral percentages for aquifers.
 
-SWAT+ looks for `salt_aqu.ini` in the simulation working directory; it is not selected through `file.cio`. See the [`salt_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_aqu_read.f90#L23-L66) reader.
+SWAT+ looks for `salt_aqu.ini` in the simulation working directory; it is not selected through `file.cio`. See the [`salt_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_aqu_read.f90#L23-L66) reader.
 
 # salt\_aqu.ini
 
-The first **4 lines** contain a title and three header lines ([`salt_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_aqu_read.f90#L24-L30)). Each following row contains the fields below, in this order: `name`, `cs_db%num_salts` dissolved ion concentrations (`conc`), and `5` salt mineral percentages (`frac`).
+The first **4 lines** contain a title and three header lines ([`salt_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_aqu_read.f90#L24-L30)). Each following row contains the fields below, in this order: `name`, `cs_db%num_salts` dissolved ion concentrations (`conc`), and `5` salt mineral percentages (`frac`).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

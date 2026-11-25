@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_treatment_read.f90#L33-L118), the outer `do ... end do` loop lacks an `exit` statement, [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_treatment_read.f90#L91-L99) runs a secondary `dtbl_flo` lookup whenever `org_min_name /= "null"`, and [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_treatment_read.f90#L102-L113) reads `pest` and `path` headers/values inside the `itrt = 1, num_treats` loop.
+In [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_treatment_read.f90#L33-L118), the outer `do ... end do` loop lacks an `exit` statement, [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_treatment_read.f90#L91-L99) runs a secondary `dtbl_flo` lookup whenever `org_min_name /= "null"`, and [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_treatment_read.f90#L102-L113) reads `pest` and `path` headers/values inside the `itrt = 1, num_treats` loop.
 {% endhint %}
 
 This file defines water treatment plants and their treatment levels.
 
-SWAT+ looks for `water_treat.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_treatment_read.f90#L34) reader.
+SWAT+ looks for `water_treat.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_treatment_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_treatment_read.f90#L34) reader.
 
 # water_treat.wal
 

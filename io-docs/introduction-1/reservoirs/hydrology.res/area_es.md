@@ -4,9 +4,9 @@ description: Reservoir surface area when reservoir is filled to emergency spillw
 
 # area\_es
 
-**Code reference:** `res_hyddb(ires)%esa` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L71)).
+**Code reference:** `res_hyddb(ires)%esa` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reservoir_data_module.f90#L71)).
 
-Reservoir surface area when filled to the emergency spillway (`ha`; Fortran struct default: `0.`, historical table default: `500.0`, range `1.0–1000.0`). By default, QSWAT+ sets `area_es` to `1.15 * area_ps`. If `area_es` $\le 0$ when SWAT+ reads `hydrology.res` ([`res_read_hyd.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_hyd.f90#L59)), the model estimates it from principal spillway area:
+Reservoir surface area when filled to the emergency spillway (`ha`; Fortran struct default: `0.`, historical table default: `500.0`, range `1.0–1000.0`). By default, QSWAT+ sets `area_es` to `1.15 * area_ps`. If `area_es` $\le 0$ when SWAT+ reads `hydrology.res` ([`res_read_hyd.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_hyd.f90#L59)), the model estimates it from principal spillway area:
 
 $$A_{\text{esa}} = 1.5 \, A_{\text{psa}}$$
 

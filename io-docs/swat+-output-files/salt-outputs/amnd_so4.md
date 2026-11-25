@@ -4,7 +4,7 @@ description: "Amendment input"
 
 # amnd_so4
 
-**Code reference:** `ru_hru_saltb_d(iru)%salt(isalt)%amnd` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_module.f90#L26)).
+**Code reference:** `ru_hru_saltb_d(iru)%salt(isalt)%amnd` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_module.f90#L26)).
 
 In this output table, `amnd_so4` is one of the fields described as: Amendment input.
 

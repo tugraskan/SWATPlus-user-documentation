@@ -4,9 +4,9 @@ description: "Storage retention multiplier after evaporation"
 
 # evap_co
 
-**Code reference:** `canal(ic)%evap_co` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L203), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_canal_read.f90#L46,L55)).
+**Code reference:** `canal(ic)%evap_co` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L204), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_canal_read.f90#L46,L55)).
 
-Evaporation retention multiplier applied directly to canal water storage (`fraction`). In [`wallo_canal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_canal.f90#L31), SWAT+ updates stored volume as:
+Evaporation retention multiplier applied directly to canal water storage (`fraction`). In [`wallo_canal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_canal.f90#L31), SWAT+ updates stored volume as:
 
 $$V_{\text{stor}} \leftarrow e_{\text{co}} \cdot V_{\text{stor}}$$
 

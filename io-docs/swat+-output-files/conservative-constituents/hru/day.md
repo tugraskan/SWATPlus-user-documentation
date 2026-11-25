@@ -4,11 +4,11 @@ description: "Day of the month"
 
 # day
 
-**Code reference:** `time%day_mo` ([writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_cs_output.f90#L49)).
+**Code reference:** `time%day_mo` ([writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_cs_output.f90#L49)).
 
-**Printed header value:** `day` ([header](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cs_module.f90#L183)).
+**Printed header value:** `day` ([header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cs_module.f90#L183)).
 
-The header record stores the name right-aligned in a 6-character field. The day of the month is derived from `time%day` by the time routine. [Day-of-month derivation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/time_control.f90#L162-L164)
+The header record stores the name right-aligned in a 6-character field. The day of the month is derived from `time%day` by the time routine. [Day-of-month derivation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/time_control.f90#L163-L165)
 
 **Type:** integer (format `4i6`). **Unit:** n/a.
 

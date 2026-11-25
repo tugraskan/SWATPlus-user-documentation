@@ -8,6 +8,6 @@ The printed daily unit is m3/day, monthly/yearly rows are totals in m3, and aver
 The simulator adds `hru_pump` to monthly/yearly arrays and resets it before calling the daily long-format output routine. That routine then tests `hru_pump(i) > 0`; it therefore does not preserve the day's earlier pumping values in this call sequence. An empty daily long-format file is not evidence of no pumping.
 {% endhint %}
 
-The allocation routine itself assigns the HRU diagnostic, so repeated requests can also replace it ([accumulate and reset](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_simulate.f90#L108); [daily output call](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_simulate.f90#L460); [daily guard](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L1247)).
+The allocation routine itself assigns the HRU diagnostic, so repeated requests can also replace it ([accumulate and reset](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_simulate.f90#L108); [daily output call](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_simulate.f90#L460); [daily guard](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L1247)).
 
 [Back to the GWFlow Outputs index](README.md).

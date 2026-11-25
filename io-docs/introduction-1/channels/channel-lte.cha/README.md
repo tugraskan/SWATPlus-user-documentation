@@ -7,7 +7,7 @@ description: >-
 # channel-lte.cha
 
 {% hint style="info" %}
-[`sd_channel_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_read.f90#L218-L296) stores each row at `sd_dat(i)` using the integer `id` column (`i`), then resolves `init`, `hyd`, `sednut`, and `nut` indices using the loop counter `sd_dat(ichi)`. Keep row `id` values sequential (`1, 2, ...`) matching file row order.
+[`sd_channel_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_read.f90#L218-L296) stores each row at `sd_dat(i)` using the integer `id` column (`i`), then resolves `init`, `hyd`, `sednut`, and `nut` indices using the loop counter `sd_dat(ichi)`. Keep row `id` values sequential (`1, 2, ...`) matching file row order.
 {% endhint %}
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |

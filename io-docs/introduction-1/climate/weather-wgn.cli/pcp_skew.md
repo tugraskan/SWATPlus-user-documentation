@@ -4,7 +4,7 @@ description: Skew coefficient for daily precipitation in month
 
 # pcp\_skew
 
-**Code reference:** `wgn(iwgn)%pcpskw(mo)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_module.f90#L35)).
+**Code reference:** `wgn(iwgn)%pcpskw(mo)` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/climate_module.f90#L35)).
 
 This parameter quantifies the symmetry of the precipitation distribution around the monthly mean. The skew coefficient is calculated as
 
@@ -34,4 +34,4 @@ where:
 - $Z$ is a standard normal deviate (dimensionless), and
 - $X$ is the transformed skew-adjusted deviate (dimensionless).
 
-See [cli_pgen.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_pgen.f90#L58-L63) and [cli_initwgn.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_initwgn.f90#L193-L196).
+See [cli_pgen.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_pgen.f90#L58-L63) and [cli_initwgn.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_initwgn.f90#L193-L196).

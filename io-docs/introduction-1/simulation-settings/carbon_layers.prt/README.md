@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file specifies the number of soil layers included in carbon-layer output.
 
-SWAT+ looks for `carbon_layers.prt` in the simulation working directory; it is not selected through `file.cio`. See [`carbon_layers_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_layers_read.f90#L29-L46) for reading and validation, and [`output_landscape_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L26-L32) for the automatic default when the file is absent.
+SWAT+ looks for `carbon_layers.prt` in the simulation working directory; it is not selected through `file.cio`. See [`carbon_layers_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_layers_read.f90#L29-L46) for reading and validation, and [`output_landscape_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L26-L32) for the automatic default when the file is absent.
 
 # carbon_layers.prt
 

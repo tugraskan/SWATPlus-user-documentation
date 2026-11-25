@@ -4,9 +4,9 @@ description: Optimal temperature for plant growth
 
 # tmp\_opt
 
-**Code reference:** `pldb(ic)%t_opt` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L58)).
+**Code reference:** `pldb(ic)%t_opt` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L53)).
 
-**Current use:** the temperature stress factor (1 = no stress) is the sine form below, limited to 0–1 ([`pl_tstr.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_tstr.f90#L68-L77)). It replaces the older SWAT exponential form computed just before it.
+**Current use:** the temperature stress factor (1 = no stress) is the sine form below, limited to 0–1 ([`pl_tstr.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_tstr.f90#L68-L77)). It replaces the older SWAT exponential form computed just before it.
 
 $$f = \sin\left(1.5707\,\frac{T - T_{b}}{T_{o} - T_{b}}\right)$$
 

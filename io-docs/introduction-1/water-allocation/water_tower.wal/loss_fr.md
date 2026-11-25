@@ -4,7 +4,7 @@ description: "Water-loss fraction for the water tower"
 
 # loss_fr
 
-**Code reference:** `wtow(iwtow)%loss_fr` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L182), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_tower_read.f90#L43)).
+**Code reference:** `wtow(iwtow)%loss_fr` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L183), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_tower_read.f90#L43)).
 
 Water-loss fraction for the water tower (`fraction`; uninitialized in the derived-type definition).
 

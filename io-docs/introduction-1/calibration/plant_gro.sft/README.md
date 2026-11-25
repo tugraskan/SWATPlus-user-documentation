@@ -6,7 +6,7 @@ description: Regional plant-growth soft-calibration targets by crop or plant nam
 The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
 {% endhint %}
 
-Supplies regional average annual plant-growth soft-calibration targets, read into `plcal` ([`calibration_data_module.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calibration_data_module.f90#L279)) by [`pl_read_regions_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_read_regions_cal.f90#L38-L99).
+Supplies regional average annual plant-growth soft-calibration targets, read into `plcal` ([`calibration_data_module.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calibration_data_module.f90#L279)) by [`pl_read_regions_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_read_regions_cal.f90#L38-L99).
 
 # plant\_gro.sft
 
@@ -39,4 +39,4 @@ After the title, region count, and headings, enter each region definition and it
 | [astress](astress.md) | Target water aeration stress sum (parsed but unused) | real | — | 0 | — |
 | [tstress](tstress.md) | Target temperature stress sum (parsed but unused) | real | — | 0 | — |
 
-In SWAT+ main (`6f515368`), [`calsoft_plant.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calsoft_plant.f90#L49-L516) calibrates `epco`, `pest_stress`, `lai_pot`, and `harv_idx` strictly against `yield`; `npp`, `lai_mx`, `wstress`, `astress`, and `tstress` are not used.
+In SWAT+ main (`6f515368`), [`calsoft_plant.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calsoft_plant.f90#L49-L516) calibrates `epco`, `pest_stress`, `lai_pot`, and `harv_idx` strictly against `yield`; `npp`, `lai_mx`, `wstress`, `astress`, and `tstress` are not used.

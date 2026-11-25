@@ -4,7 +4,7 @@ description: "Sediment-associated pathogen diagnostic, conditionally updated"
 
 # sed_kg/h
 
-**Code reference:** `hpath_bal(j)%path(ipath)%sed` ([calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_ls_runoff.f90#L32)).
+**Code reference:** `hpath_bal(j)%path(ipath)%sed` ([calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_ls_runoff.f90#L32)).
 
 The sediment-associated diagnostic is calculated and removed from the surface-soil pathogen pool only when `enratio > 0`. The routine does not reset this field when that condition fails. In the preceding runoff calculation, the runoff diagnostic is overwritten with the nonnegative soil pool and then subtracted, so this sediment term must not be interpreted without that source-order caveat.
 

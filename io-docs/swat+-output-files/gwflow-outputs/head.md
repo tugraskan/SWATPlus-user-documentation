@@ -4,7 +4,7 @@ description: "Groundwater head with explicit period averaging"
 
 # head
 
-**Code reference:** daily `gw_state(i)%head`, monthly `gw_state(i)%hdmo`, yearly `gw_state(i)%hdyr`, and average annual `gw_head_sum_aa(i) / nbyr_r` ([daily](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L1228); [monthly](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L1364); [yearly](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L1621); [average annual](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L2025)).
+**Code reference:** daily `gw_state(i)%head`, monthly `gw_state(i)%hdmo`, yearly `gw_state(i)%hdyr`, and average annual `gw_head_sum_aa(i) / nbyr_r` ([daily](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L1228); [monthly](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L1364); [yearly](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L1621); [average annual](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L2025)).
 
 Groundwater head for the reported active cell. Monthly head sums are divided by `time%day_mo`; yearly sums by `time%day_end_yr`. Average annual is the sum of yearly mean heads divided by the configured `time%nbyr`, rather than a single mean weighted by every simulated day.
 

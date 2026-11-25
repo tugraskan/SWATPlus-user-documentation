@@ -4,7 +4,7 @@ description: This file specifies the initial soil nutrient contents.
 
 # nutrients.sol
 
-This file specifies initial soil nutrient concentrations and humus C:N and C:P ratios read by [`solt_db_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/solt_db_read.f90#L47).
+This file specifies initial soil nutrient concentrations and humus C:N and C:P ratios read by [`solt_db_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/solt_db_read.f90#L47).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

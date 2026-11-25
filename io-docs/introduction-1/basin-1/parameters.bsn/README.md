@@ -4,7 +4,7 @@ description: This file contains basin-level parameters.
 
 # parameters.bsn
 
-Basin-wide physical and calibration parameters, read sequentially into `bsn_prm` by [`basin_read_prm.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L15-L28) with runtime defaults and overrides applied in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_prm_default.f90#L9-L61).
+Basin-wide physical and calibration parameters, read sequentially into `bsn_prm` by [`basin_read_prm.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_prm.f90#L15-L28) with runtime defaults and overrides applied in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_prm_default.f90#L9-L61).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

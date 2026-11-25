@@ -4,7 +4,7 @@ description: "Description of the outside-source object"
 
 # descrip
 
-**Code reference:** `osrc(isrc)%descrip` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L162), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_osrc_read.f90#L53)).
+**Code reference:** `osrc(isrc)%descrip` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L163), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_osrc_read.f90#L53)).
 
 80-character free-text description of the outside-source object (default: `""`).
 

@@ -4,7 +4,7 @@ description: "Salt leaving the bottom of HRU soil profiles through percolation"
 
 # perc_kg
 
-**Code reference:** `salt_basin(7)` ([calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_balance.f90#L117-L124)).
+**Code reference:** `salt_basin(7)` ([calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_balance.f90#L117-L124)).
 
 Salt leaving the bottom of HRU soil profiles through percolation.
 

@@ -4,9 +4,9 @@ description: "Mass in rainfall (outside --> soil)"
 
 # rain_seo4, rain_seo3, rain_born
 
-**Code reference:** `ru_hru_csb_d(iru)%cs(ics)%rain` ([writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ru_cs_output.f90#L59)).
+**Code reference:** `ru_hru_csb_d(iru)%cs(ics)%rain` ([writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ru_cs_output.f90#L59)).
 
-**Printed header value:** `rain_seo4`, `rain_seo3`, `rain_born` ([header names](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constituent_mass_module.f90#L553-L555)). The legend line reads `rain:         kg      mass in rainfall                  (outside --> soil)` ([legend](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/header_const.f90#L749)).
+**Printed header value:** `rain_seo4`, `rain_seo3`, `rain_born` ([header names](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/constituent_mass_module.f90#L553-L555)). The legend line reads `rain:         kg      mass in rainfall                  (outside --> soil)` ([legend](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/header_const.f90#L749)).
 
 This group holds one value for each constituent slot, `ics = 1` to `cs_db%num_cs`.
 

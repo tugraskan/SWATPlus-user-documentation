@@ -8,7 +8,7 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file supplies salt-ion inputs from rainfall and dry atmospheric deposition.
 
-SWAT+ looks for `salt_atmo.cli` in the simulation working directory; it is not selected through `file.cio`. See the [cli_read_atmodep_salt.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_read_atmodep_salt.f90#L33) reader.
+SWAT+ looks for `salt_atmo.cli` in the simulation working directory; it is not selected through `file.cio`. See the [cli_read_atmodep_salt.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_read_atmodep_salt.f90#L33) reader.
 
 # salt_atmo.cli
 
@@ -64,4 +64,4 @@ Use the annual, monthly, or yearly values appropriate to each climate station. E
 
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
-The reader skips 6 leading records and gets station count, timestep and period count from [atmo.cli](../atmo.cli/README.md). Supply stations in the same order as in that file. Each station block contains the station token, all wet records and then all dry records, in configured species order. Monthly and yearly rows each supply one value per period. See [cli_read_atmodep_salt.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_read_atmodep_salt.f90#L24-L93).
+The reader skips 6 leading records and gets station count, timestep and period count from [atmo.cli](../atmo.cli/README.md). Supply stations in the same order as in that file. Each station block contains the station token, all wet records and then all dry records, in configured species order. Monthly and yearly rows each supply one value per period. See [cli_read_atmodep_salt.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_read_atmodep_salt.f90#L24-L93).

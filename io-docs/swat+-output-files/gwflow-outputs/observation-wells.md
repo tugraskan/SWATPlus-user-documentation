@@ -6,7 +6,7 @@
 The monthly and yearly temperature and solute averages are reset before these values are read for observation output. The yearly zeros are also added to the observation AA accumulators. Enabled temperature, NO3, and P columns can therefore contain zero/default-derived values rather than valid period averages; the -99 marker alone does not establish validity.
 {% endhint %}
 
-Head is reset after writing and is not affected by this particular ordering defect. AA head uses yearly mean heads divided by configured `time%nbyr` ([monthly reset and write](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L1300); [yearly reset](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L1569); [yearly observations](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L1659)).
+Head is reset after writing and is not affected by this particular ordering defect. AA head uses yearly mean heads divided by configured `time%nbyr` ([monthly reset and write](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L1300); [yearly reset](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L1569); [yearly observations](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L1659)).
 
 The observation reports use the same head and depth calculations as the cell water balance, including its [partial reporting periods and warm-up behavior](cell-water-balance.md#partial-reporting-periods).
 

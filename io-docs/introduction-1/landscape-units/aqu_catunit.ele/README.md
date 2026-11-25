@@ -7,7 +7,7 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`aqu_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read_elements.f90#L146-L192) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cal.f90#L28)) reads `aqu_catunit.ele` and saves the row count in `db_mx%aqu_elem` (`#L169`), which actively gates `basin_aquifer_output` in [`command.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/command.f90#L621). However, the element attributes themselves are either unused or copied only into unread `acu_cal` arrays.
+In SWAT+ main (`6f515368`), [`aqu_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_read_elements.f90#L146-L192) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cal.f90#L28)) reads `aqu_catunit.ele` and saves the row count in `db_mx%aqu_elem` (`#L169`), which actively gates `basin_aquifer_output` in [`command.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/command.f90#L635). However, the element attributes themselves are either unused or copied only into unread `acu_cal` arrays.
 {% endhint %}
 
 This file identifies the objects included in aquifer cataloging units and their area fractions.

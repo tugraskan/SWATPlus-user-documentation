@@ -4,9 +4,9 @@ description: "Reaction loss and metabolite production"
 
 # react_kg
 
-**Code reference:** `aqupst_d(j)%pest(ipest)%react` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_pesticide_module.f90#L10)).
+**Code reference:** `aqupst_d(j)%pest(ipest)%react` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_pesticide_module.f90#L10)).
 
-Reaction loss from the mass stored at the pesticide's turn plus the incoming recharge load. When temperature-adjusted decay is on, the aquifer passes 0 °C because the local temperature variable is initialized to zero and never updated. [Local temperature](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L55-L59), [Decay and diagnostic](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L306-L323).
+Reaction loss from the mass stored at the pesticide's turn plus the incoming recharge load. When temperature-adjusted decay is on, the aquifer passes 0 °C because the local temperature variable is initialized to zero and never updated. [Local temperature](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L55-L59), [Decay and diagnostic](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L309-L326).
 
 **Unit:** kg.
 

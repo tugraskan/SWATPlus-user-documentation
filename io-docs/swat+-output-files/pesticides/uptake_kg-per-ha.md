@@ -4,9 +4,9 @@ description: "Plant uptake"
 
 # uptake_kg/ha
 
-**Code reference:** `hpestb_d(j)%pest(ipest)%pl_uptake` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_ls_pesticide_module.f90#L22)).
+**Code reference:** `hpestb_d(j)%pest(ipest)%pl_uptake` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_ls_pesticide_module.f90#L22)).
 
-The daily root-uptake diagnostic sums pesticide removed from the soil by the plants and layers processed. It includes uptake for a pesticide configured as a terminal plant sink. That fraction is removed from soil without increasing the internal plant pool or the `harvest_sink` diagnostic. [Plant and layer loop](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_pl_up.f90#L45-L63), [Uptake and sink assignment](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_pl_up.f90#L101-L115).
+The daily root-uptake diagnostic sums pesticide removed from the soil by the plants and layers processed. It includes uptake for a pesticide configured as a terminal plant sink. That fraction is removed from soil without increasing the internal plant pool or the `harvest_sink` diagnostic. [Plant and layer loop](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_pl_up.f90#L45-L63), [Uptake and sink assignment](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_pl_up.f90#L101-L115).
 
 **Unit:** kg/ha.
 

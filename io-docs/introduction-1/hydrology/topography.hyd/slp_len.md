@@ -4,7 +4,7 @@ description: Average slope length
 
 # slp\_len
 
-**Code reference:** `topo_db(ith)%slope_len` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/topography_data_module.f90#L8)).
+**Code reference:** `topo_db(ith)%slope_len` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/topography_data_module.f90#L8)).
 
 Average overland slope length $L$ in meters, from the start of sheet flow to where runoff concentrates. The built-in record uses 50 m. It enters the overland travel time equation described under [slope steepness](slp.md) and the MUSLE slope-length factor:
 
@@ -20,6 +20,6 @@ where:
 - $\theta$ is the slope angle (radians), and
 - $S$ is [slope steepness](slp.md) (m/m).
 
-[`plant_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_init.f90#L379-L385)
+[`plant_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_init.f90#L366-L372)
 
-The initialization calculates a practice-based maximum slope length in a temporary variable, but the LS equation still uses the full HRU slope length. [`plant_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_init.f90#L379-L385)
+The initialization calculates a practice-based maximum slope length in a temporary variable, but the LS equation still uses the full HRU slope length. [`plant_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_init.f90#L366-L372)

@@ -6,9 +6,9 @@ description: >-
 
 # bf\_max
 
-**Code reference:** `aqudb(i)%bf_max` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L15)).
+**Code reference:** `aqudb(i)%bf_max` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aquifer_module.f90#L15)).
 
-Daily groundwater flow (mm) needed for every channel linked to an aquifer to receive groundwater flow. [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L279-L285) calculates the contributing channel length as follows:
+Daily groundwater flow (mm) needed for every channel linked to an aquifer to receive groundwater flow. [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L282-L288) calculates the contributing channel length as follows:
 
 $$
 L_{\text{contrib}} = L_{\text{tot}} \times \frac{Q_{gw}}{\text{bf}_{\max}}

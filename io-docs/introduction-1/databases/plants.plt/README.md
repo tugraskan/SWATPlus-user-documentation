@@ -6,6 +6,16 @@ description: >-
 
 # plants.plt
 
+{% hint style="warning" %}
+**Layout on SWAT+ dev** ([`plant_parm_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_parm_read.f90#L1-L120)):
+
+- `carbon` in codes.bsn not 2: **55 columns**, ending `rt_depco`, `aeration`, `ero_rsdfac`, `ero_biofac`, `vclass`, `description`. Leave the lignin columns out; a number in column 54 stops the run.
+- `carbon = 2`: **58 columns**; the three lignin columns go in 54–56, between `ero_biofac` and `vclass`. A line without them stops the run.
+- An older 54-column file without `vclass` is still accepted with carbon off: `vclass` becomes `none`, and columns 28, 50, 52 and 53 are replaced by defaults, with one warning in `diagnostics.out`.
+
+Columns 28, 50, 52 and 53 changed meaning from SWAT+ main (`usle_c_min`, `frac_sw_gro`, `rsd_pctcov`, `rsd_covfac`). A 55-column file in the old order is **not** detected and is read with the old values in the new columns. A main-format file with lignin columns (57 columns) stops the run.
+{% endhint %}
+
 {% hint style="info" %}
 The plant growth database distributed with SWAT+ includes parameters for most of the common plant species. If you need to model a land use or plant not included in the database, please feel free to contact the SWAT+ development team for assistance in determining plant parameters.
 {% endhint %}
@@ -39,7 +49,7 @@ The plant growth database distributed with SWAT+ includes parameters for most of
 | [frac_p_50](frac_p_50.md) | Normal fraction of P in plant at 50% maturity | real | kg P/kg biomass | 0.0004 | 0.0002-0.007 |
 | [frac_p_mat](frac_p_mat.md) | Normal fraction of P in plant at maturity | real | kg P/kg biomass | 0.0003 | 0.0003-0.0004 |
 | [harv_idx_ws](harv_idx_ws.md) | Harvest index that represents the lowest harvest index expected due to water stress | real | (kg/ha)/(kg/ha) | 0.01 | -0.2-1.1 |
-| [usle_c_min](usle_c_min.md) | Minimum value of the USLE C factor for water erosion | real | none | 0.001 | 0.001-0.50 |
+| [lmf_mat](lmf_mat.md) | Leaf mass fraction of above-ground biomass at maturity | real | fraction | 0.03 |  |
 | [stcon_max](stcon_max.md) | Maximum stomatal conductance | real | m/s | 0.002 | 0.0-0.50 |
 | [vpd](vpd.md) | Vapor pressure deficit corresponding to the 2nd point on the stomatal conductance curve | real | kPa | 4.0 | 1.5-6.0 |
 | [frac_stcon](frac_stcon.md) | Fraction of maximum stomatal conductance corresponding to the 2nd point on the stomatal conductance curve | real | fraction | 0.75 | 0.0-1.0 |
@@ -61,14 +71,15 @@ The plant growth database distributed with SWAT+ includes parameters for most of
 | [frac_lai1](frac_la1.md) | Fraction of the maximum leaf area index corresponding to the 1st point on the leaf area development curve | real | fraction | 0. | 0.0-1.0 |
 | [plnt_pop2](plnt_pop2.md) | Plant population corresponding to the 2nd point on the population LAI curve | real | plants/m^2 | 0.0 |  |
 | [frac_lai2](frac_lai2.md) | Fraction of the maximum leaf area index corresponding to the 2nd point on the leaf area development curve | real | fraction | 0.0 | 0.0-1.0 |
-| [frac_sw_gro](untitled-5.md) | Intended tropical-growth trigger (read but not used in main 6f515368; intended unit unresolved) | real | fraction | 0.5 | 0.0-1.0 |
+| [rt_depco](rt_depco.md) | Root depth rate coefficient for non-annual plants | real | 1/year | 0.2 |  |
 | [aeration](untitled-4.md) | Aeration stress factor | real | none | 0.2 |  |
-| [rsd_pctcov](untitled-3.md) | Residue factor for percent cover equation; read but has no simulation effect in SWAT+ main (6f515368) | real | none | 0.4 | 0.15-0.6 |
-| [rsd_covfac](untitled-2.md) | Residue factor for surface cover (C factor); read but has no simulation effect in SWAT+ main (6f515368) | real | none | 0.04 | 0.02-0.09 |
-| [avg_lig_frac](avg_lig_frac.md) | Average lignin fraction of residue (entered value not used; overwritten with 0.85 outside carbon mode 2 in main 6f515368) | real | fraction | 0.85 |  |
-| [ab_lig_frac](ab_lig_frac.md) | Lignin fraction of above-ground residue; used only when carbon = 2 in codes.bsn (otherwise a fixed 0.15 is used) | real | fraction | 0.15 |  |
-| [bg_lig_frac](bg_lig_frac.md) | Lignin fraction of below-ground residue; used only when carbon = 2 in codes.bsn (otherwise a fixed 0.12 is used) | real | fraction | 0.12 |  |
-| [description](description.md) | Description of the plant. When event in codes.bsn is not 0, this column is read as the plant class (e.g. row crop, tree, grass) | string | n/a | n/a |  |
+| [ero_rsdfac](ero_rsdfac.md) | Residue cover factor in the USLE C factor equation | real | none | 0.75 |  |
+| [ero_biofac](ero_biofac.md) | Biomass cover factor in the USLE C factor equation | real | none | 0.2 |  |
+| [avg_lig_frac](avg_lig_frac.md) | Average lignin fraction of residue; `carbon = 2` only (read but not used) | real | fraction | — |  |
+| [ab_lig_frac](ab_lig_frac.md) | Lignin fraction of above-ground residue; `carbon = 2` only | real | fraction | 0.12 |  |
+| [bg_lig_frac](bg_lig_frac.md) | Lignin fraction of below-ground residue; `carbon = 2` only | real | fraction | 0.12 |  |
+| [vclass](vclass.md) | Vegetation class (read but not used) | string | n/a | n/a |  |
+| [description](description.md) | Description of the plant; when `event` in codes.bsn is not 0, one more column follows with the plant class | string | n/a | n/a |  |
 
 For `frac_sw_gro`, the Unit column reproduces the source declaration as a fraction. The adjacent source comment instead describes a 30-day precipitation-minus-PET sum; the intended input unit remains unresolved in SWAT+ main (6f515368).
 

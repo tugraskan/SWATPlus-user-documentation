@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies atmospheric carbon dioxide concentrations for individual years.
 
-SWAT+ looks for `co2_yr.dat` in the simulation working directory; it is not selected through `file.cio`. See the [co2_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/co2_read.f90#L45) reader.
+SWAT+ looks for `co2_yr.dat` in the simulation working directory; it is not selected through `file.cio`. See the [co2_read.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/co2_read.f90#L45) reader.
 
 # co2_yr.dat
 
@@ -29,4 +29,4 @@ The file contains a title, the number of annual entries, column headings, and on
 
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
-The reader opens the literal filename co2_yr.dat. Supply a title, a record count, a header and then consecutive annual rows in ascending order. With no entries SWAT+ uses the basin CO₂ parameter. Before the first year it uses the first concentration, and after the last it uses the last concentration. See [co2_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/co2_read.f90#L40-L109).
+The reader opens the literal filename co2_yr.dat. Supply a title, a record count, a header and then consecutive annual rows in ascending order. With no entries SWAT+ uses the basin CO₂ parameter. Before the first year it uses the first concentration, and after the last it uses the last concentration. See [co2_read.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/co2_read.f90#L40-L109).

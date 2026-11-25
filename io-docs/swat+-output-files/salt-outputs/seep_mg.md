@@ -4,7 +4,7 @@ description: "Salt leaving through aquifer seepage"
 
 # seep_mg
 
-**Code reference:** `asaltb_d(iaq)%salt(isalt)%seep` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_aquifer.f90#L10)).
+**Code reference:** `asaltb_d(iaq)%salt(isalt)%seep` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_aquifer.f90#L10)).
 
 In this output table, `seep_mg` is one of the fields described as: Salt leaving through aquifer seepage.
 

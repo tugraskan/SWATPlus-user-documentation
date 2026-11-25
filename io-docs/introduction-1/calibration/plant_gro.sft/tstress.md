@@ -4,7 +4,7 @@ description: Temperature stress target in plant_gro.sft.
 
 # tstress
 
-**Code reference:** `plcal(i)%lum(ilum)%meas%tstress` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calibration_data_module.f90#L249), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_read_regions_cal.f90#L86)).
+**Code reference:** `plcal(i)%lum(ilum)%meas%tstress` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calibration_data_module.f90#L249), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_read_regions_cal.f90#L86)).
 
 Target annual sum of temperature stress days (dimensionless, struct default `0.`).
 

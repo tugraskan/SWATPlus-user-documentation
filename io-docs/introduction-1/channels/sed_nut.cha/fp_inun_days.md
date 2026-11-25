@@ -4,7 +4,7 @@ description: "Number of days the flood plain remains inundated after a flood eve
 
 # fp_inun_days
 
-**Code reference:** `sd_chd1(idb)%fp_inun_days` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_module.f90#L49)).
+**Code reference:** `sd_chd1(idb)%fp_inun_days` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_module.f90#L49)).
 
 Number of days the flood plain remains inundated after a flood event (`days`, struct default `5.0`). It multiplies the floodplain trap-efficiency calculation in [`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L122-L128).
 

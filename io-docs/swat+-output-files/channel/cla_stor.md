@@ -4,7 +4,7 @@ description: "Clay storage in the channel"
 
 # cla_stor
 
-**Code reference:** `ch_stor(ichan)%cla` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L45)).
+**Code reference:** `ch_stor(ichan)%cla` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L45)).
 
 Clay storage in the channel.
 

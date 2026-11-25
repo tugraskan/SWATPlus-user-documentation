@@ -4,9 +4,9 @@ description: "Nitrate added to the soil from atmospheric deposition"
 
 # no3atmo
 
-**Code reference:** `hnb_d(j)%no3atmo` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_module.f90#L97), [writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L75)).
+**Code reference:** `hnb_d(j)%no3atmo` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_module.f90#L97), [writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L73)).
 
-**Printed header value:** `no3atmo` ([header](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_module.f90#L381)).
+**Printed header value:** `no3atmo` ([header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_module.f90#L381)).
 
 This is the 14th of the 19 values of the nutrient-balance record. The declaration comment reads "nitrate added to the soil from atmospheric deposition" with the unit kg N/ha.
 

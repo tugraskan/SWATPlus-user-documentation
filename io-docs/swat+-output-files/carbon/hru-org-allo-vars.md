@@ -1,8 +1,8 @@
 # HRU decomposition allocation fractions
 
-Files `hru_org_allo_vars.txt` and `hru_org_allo_vars.csv` contain 16 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_legacy_module.f90#L313), [Writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_carbvar_write_legacy.f90#L68)
+Files `hru_org_allo_vars.txt` and `hru_org_allo_vars.csv` contain 16 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_legacy_module.f90#L312), [Writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_carbvar_write_historical.f90#L67)
 
-All six allocation values appear under different headings. Read the values by position using the table below. The allocation values are dimensionless fractions. [Data type order](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_module.f90#L86), [Respiration fractions in use](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cbn_zhang2.f90#L719)
+All six allocation values appear under different headings. Read the values by position using the table below. The allocation values are dimensionless fractions. [Data type order](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_module.f90#L86), [Respiration fractions in use](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cbn_zhang2.f90#L762)
 
 | Printed heading | Value written | Description |
 | --- | --- | --- |

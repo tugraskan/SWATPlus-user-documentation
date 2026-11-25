@@ -4,7 +4,7 @@ description: "Use/treatment name with variant-specific positions"
 
 # name
 
-**Code references:** `om_use_name(iuse)` and `om_treat_name(itrt)` ([name arrays](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L216)). These are the names selected by the use/treatment output indices; the field has no physical unit.
+**Code references:** `om_use_name(iuse)` and `om_treat_name(itrt)` ([name arrays](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L217)). These are the names selected by the use/treatment output indices; the field has no physical unit.
 
 | File/row | Actual name position |
 | --- | ---: |

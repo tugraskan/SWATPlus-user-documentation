@@ -4,7 +4,7 @@ description: "Pesticide transported with sediment"
 
 # sed_kg/ha
 
-**Code reference:** `hpestb_d(j)%pest(ipest)%sed` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_ls_pesticide_module.f90#L10)).
+**Code reference:** `hpestb_d(j)%pest(ipest)%sed` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_ls_pesticide_module.f90#L10)).
 
 Pesticide transported with sediment.
 

@@ -4,7 +4,7 @@ description: "Outgoing nitrate nitrogen"
 
 # no3_out
 
-**Code reference:** `wet_out_d(j)%no3` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L36)).
+**Code reference:** `wet_out_d(j)%no3` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L36)).
 
 Nitrate exported with wetland water release after nutrient settling. The routine skips the nitrate export calculation when the remaining wetland volume falls below `1.e-6` m³, even if the release has a positive water volume. [Nutrient block details](README.md#what-the-nutrient-blocks-include).
 

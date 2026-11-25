@@ -3,14 +3,14 @@ description: "This file identifies the recall data used for pesticide inputs."
 ---
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), the `pest.com` reader in [`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L205-L276) is provisional/defective: line [`#L265`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L265) reads into `recall(i)%hd` (an organic/mineral record) rather than `rec_pest(i)%hd_pest`, and `rec_pest%hd_pest` has no downstream uses. For constant pesticide inputs, use [`exco_pest.exc`](../exco_pest.exc/README.md).
+In SWAT+ main (`6f515368`), the `pest.com` reader in [`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L205-L276) is provisional/defective: line [`#L265`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L265) reads into `recall(i)%hd` (an organic/mineral record) rather than `rec_pest(i)%hd_pest`, and `rec_pest%hd_pest` has no downstream uses. For constant pesticide inputs, use [`exco_pest.exc`](../exco_pest.exc/README.md).
 {% endhint %}
 
-This file identifies the recall data used for pesticide inputs. SWAT+ looks for `pest.com` in the simulation working directory; it is not selected through `file.cio` ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L205)).
+This file identifies the recall data used for pesticide inputs. SWAT+ looks for `pest.com` in the simulation working directory; it is not selected through `file.cio` ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L205)).
 
 # pest.com
 
-The file starts with a title and column headings ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L206-L208)). For each `db_mx%pestcom` entry (`#L224`), the reader reads `ipestcom_db` on its own row (`#L225`) followed by `imax` recall rows (`#L228-L232`).
+The file starts with a title and column headings ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L206-L208)). For each `db_mx%pestcom` entry (`#L224`), the reader reads `ipestcom_db` on its own row (`#L225`) followed by `imax` recall rows (`#L228-L232`).
 
 ## Pesticide database entry
 

@@ -8,11 +8,11 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file lists the intersections between landscape units (LSUs) and groundwater cells. It is used when `conn_type` is 2, or as the fallback when `conn_type` is 1 and `hrucell.gw` is missing. With LSU links, groundwater-to-soil transfer and wetland exchange are turned off, and every HRU uses the mean recharge delay of all cells.
 
-SWAT+ looks for `lsucell.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L2055-L2122) reader.
+SWAT+ looks for `lsucell.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L2055-L2122) reader.
 
 # lsucell.gw
 
-The file has, in order: a title line; the number of LSUs; the number of connected LSUs; the numbers of the connected LSUs, one per line; two heading lines; then one line per LSU–cell intersection. Intersection lines for the same LSU must be together, and LSUs must be in increasing order ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L2056-L2122)).
+The file has, in order: a title line; the number of LSUs; the number of connected LSUs; the numbers of the connected LSUs, one per line; two heading lines; then one line per LSU–cell intersection. Intersection lines for the same LSU must be together, and LSUs must be in increasing order ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L2056-L2122)).
 
 ## LSU count
 

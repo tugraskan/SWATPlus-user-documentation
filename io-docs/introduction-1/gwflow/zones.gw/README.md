@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file supplies aquifer, streambed and thermal properties by zone. Cells point to zones through `K_zone` and `Sy_zone` in [cells.gw](../cells.gw/README.md); channel connections point to zones through `chan_zone` in [chancell.gw](../chancell.gw/README.md).
 
-SWAT+ looks for `zones.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L372-L405) reader.
+SWAT+ looks for `zones.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L372-L405) reader.
 
 # zones.gw
 
-The first two lines are a title and column headings. Each following line is one zone; fields are separated by spaces. The zone number is the line's position: the first data line is zone 1. Do not leave blank lines between zones: the count skips them, but the values are read line by line ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L376-L404)).
+The first two lines are a title and column headings. Each following line is one zone; fields are separated by spaces. The zone number is the line's position: the first data line is zone 1. Do not leave blank lines between zones: the count skips them, but the values are read line by line ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L376-L404)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file defines reservoir release conditions and the actions associated with them.
 
-SWAT+ looks for `res_conds.dat` in the simulation working directory; it is not selected through `file.cio`. It is read by [`res_read_conds.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_conds.f90#L21), matched when [rel](../reservoir.res/rel.md) in [**reservoir.res**](../reservoir.res/) starts with `ctbl_` ([`res_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read.f90#L121-L125)), and evaluated daily by [`res_rel_conds.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_rel_conds.f90#L23-L68).
+SWAT+ looks for `res_conds.dat` in the simulation working directory; it is not selected through `file.cio`. It is read by [`res_read_conds.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_conds.f90#L21), matched when [rel](../reservoir.res/rel.md) in [**reservoir.res**](../reservoir.res/) starts with `ctbl_` ([`res_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read.f90#L121-L125)), and evaluated daily by [`res_rel_conds.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_rel_conds.f90#L23-L68).
 
 # res_conds.dat
 

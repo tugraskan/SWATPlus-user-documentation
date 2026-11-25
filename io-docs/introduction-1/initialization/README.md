@@ -4,7 +4,7 @@ The initialization input files define starting conditions for soil, plant, aquif
 
 ## Files listed in `file.cio` (`init` row)
 
-In [`readcio_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/readcio_read.f90#L67), the `init` row of [**file.cio**](../master-file-file.cio.md) populates `in_init` (`type (input_init)`, [`input_file_module.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/input_file_module.f90)):
+In [`readcio_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/readcio_read.f90#L80), the `init` row of [**file.cio**](../master-file-file.cio.md) populates `in_init` (`type (input_init)`, [`input_file_module.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/input_file_module.f90)):
 
 * [**soil\_plant.ini**](soil_plant.ini/) — links HRUs to soil nutrient, pesticide, pathogen, salt, heavy-metal, and general-constituent initialization records.
 * [**om\_water.ini**](om_water.ini/) — initial water volume fraction, sediment, organic/mineral nutrients, and water temperature for channels, reservoirs, and wetlands.

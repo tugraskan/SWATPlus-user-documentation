@@ -4,7 +4,7 @@ description: This file contains pre-defined harvest operations.
 
 # harv.ops
 
-This file defines pre-defined harvest operations read by [`mgt_read_harvops.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_read_harvops.f90#L25-L51). Each operation is referenced for both harvest (`harv`/`harvest`) and harvest-and-kill (`hvkl`/`harvest_kill`) actions to harvest plant yield or residue while leaving or terminating the stand according to the scheduled operation.
+This file defines pre-defined harvest operations read by [`mgt_read_harvops.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_read_harvops.f90#L25-L51). Each operation is referenced for both harvest (`harv`/`harvest`) and harvest-and-kill (`hvkl`/`harvest_kill`) actions to harvest plant yield or residue while leaving or terminating the stand according to the scheduled operation.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

@@ -3,14 +3,14 @@ description: "This file defines places of use (POUs), their points of diversion 
 ---
 
 {% hint style="info" %}
-An Editor export of this format has not been verified. Field names and values in the tables are based on the SWAT+ Fortran source (`6f515368`). A dash means that a unit, recommended default, or range has not been established.
+An Editor export of this format has not been verified. Field names and values in the tables are based on the SWAT+ Fortran source (dev `aa4179fe`). A dash means that a unit, recommended default, or range has not been established.
 {% endhint %}
 
 {% hint style="warning" %}
-In [`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L38), the file-open guard is `if (.not. i_exist .or. in_wallo%pou /= "null")`, which enters the open block whenever `in_wallo%pou` is not `"null"` even if the file is missing. In addition, the reader writes positions 2 and 5 of both POD ([`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L93-L94)) and POR ([`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L102-L103)) records into the same `num` field (`typ_num` is not read at position 5).
+In [`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_read.f90#L40), the file-open guard is `if (.not. i_exist .or. in_wallo%pou /= "null")`, which enters the open block whenever `in_wallo%pou` is not `"null"` even if the file is missing. In addition, the reader writes positions 2 and 5 of each POR record into the same `num` field, so position 5 is the receiving object number actually used ([`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_read.f90#L104-L105)). On dev, POD records read position 5 into `typ_num` instead.
 {% endhint %}
 
-This file defines places of use (POUs), their points of diversion (PODs), and their points of return (PORs). The default filename is `place_of_use.wro`, selected through `in_wallo%pou` in `file.cio` ([`input_file_module.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/input_file_module.f90#L145)). See the [`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L40-L184) reader.
+This file defines places of use (POUs), their points of diversion (PODs), and their points of return (PORs). The default filename is `place_of_use.wro`, selected through `in_wallo%pou` in `file.cio` ([`input_file_module.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/input_file_module.f90#L145)). See the [`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_read.f90#L39-L186) reader.
 
 # place_of_use.wro
 
@@ -42,10 +42,10 @@ The file starts with a title line, the POU count, and a header line. Each POU co
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |
 | [pp](pod_pp.md) | Record tag (local variable, not checked) | string | n/a | — | — |
-| [num (pos 2)](pod_num.md) | POD number (overwritten by position 5) | integer | n/a | — | — |
+| [num](pod_num.md) | POD number; must match a POD number in `point_of_diver.wro` | integer | n/a | — | — |
 | [name](pod_name.md) | Name of the POD | string | n/a | — | — |
 | [typ](pod_typ.md) | Type of POD (`cha`, `res`, `aqu`, `can`, etc.) | string | n/a | — | — |
-| [num (pos 5)](pod_num.md) | POD number (overwrites position 2) | integer | n/a | — | — |
+| [typ_num](pod_typ_num.md) | Source object number (read but not used) | integer | n/a | — | — |
 | [conv_typ](pod_conv_typ.md) | Conveyance type (`pipe` or `pump`) | string | n/a | — | — |
 | [conv_num](pod_conv_num.md) | Conveyance object number | integer | n/a | — | — |
 | [dtbl_min](pod_dtbl_min.md) | Decision table name for minimum POD level | string | n/a | — | — |

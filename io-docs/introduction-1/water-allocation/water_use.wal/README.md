@@ -12,7 +12,7 @@ In [`water_use_read.f90`](https://github.com/swat-model/swatplus/blob/6f51536852
 
 This file defines water-use objects and their storage, water-loss, and constituent settings.
 
-SWAT+ looks for `water_use.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_use_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_use_read.f90#L35) reader.
+SWAT+ looks for `water_use.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_use_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_use_read.f90#L35) reader.
 
 # water_use.wal
 

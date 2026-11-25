@@ -4,9 +4,9 @@ description: "Metabolite production in soil and on foliage"
 
 # metab_s_kg/ha
 
-**Code reference:** `hpestb_d(j)%pest(ipest)%metab_s` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_ls_pesticide_module.f90#L20)).
+**Code reference:** `hpestb_d(j)%pest(ipest)%metab_s` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_ls_pesticide_module.f90#L20)).
 
-Daily mass formed in soil from the decay of parent pesticides, reported in the daughter pesticide's row. The routine multiplies each contribution by the configured soil formation fraction and the daughter-to-parent molecular-weight ratio, then adds it to the daughter diagnostic and the corresponding soil layer. [Soil transformation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_decay.f90#L53-L69).
+Daily mass formed in soil from the decay of parent pesticides, reported in the daughter pesticide's row. The routine multiplies each contribution by the configured soil formation fraction and the daughter-to-parent molecular-weight ratio, then adds it to the daughter diagnostic and the corresponding soil layer. [Soil transformation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_decay.f90#L53-L69).
 
 **Unit:** kg/ha.
 

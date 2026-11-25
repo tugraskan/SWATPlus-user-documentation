@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In [`wallo_wtps_wuses.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_wtps_wuses.f90#L25), the condition `if (i_exist .or. 'wtps_wuses.wal' /= "null")` always evaluates true, so the reader attempts to open `wtps_wuses.wal` even when missing. Furthermore, [`main.f90.in`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/main.f90.in#L104-L109) calls `wallo_wtps_wuses` before `water_treatment_read` and `water_use_read`, so `db_mx%treat` and `db_mx%uses` are still `0` during the name crosswalk in [`wallo_wtps_wuses.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_wtps_wuses.f90#L64-L81).
+In [`wallo_wtps_wuses.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_wtps_wuses.f90#L25), the condition `if (i_exist .or. 'wtps_wuses.wal' /= "null")` always evaluates true, so the reader attempts to open `wtps_wuses.wal` even when missing. Furthermore, [`main.f90.in`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/main.f90.in#L104-L109) calls `wallo_wtps_wuses` before `water_treatment_read` and `water_use_read`, so `db_mx%treat` and `db_mx%uses` are still `0` during the name crosswalk in [`wallo_wtps_wuses.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_wtps_wuses.f90#L64-L81).
 {% endhint %}
 
 This file lists the water treatment plants and water-use objects included in the simulation.
 
-SWAT+ looks for `wtps_wuses.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`wallo_wtps_wuses.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_wtps_wuses.f90#L27) reader.
+SWAT+ looks for `wtps_wuses.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`wallo_wtps_wuses.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_wtps_wuses.f90#L27) reader.
 
 # wtps_wuses.wal
 

@@ -4,9 +4,9 @@ description: Alpha factor for groundwater recession curve
 
 # alpha\_bf
 
-**Code reference:** `aqudb(i)%alpha` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L16)).
+**Code reference:** `aqudb(i)%alpha` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aquifer_module.f90#L16)).
 
-The baseflow recession constant (1/days) directly indexes how quickly groundwater flow responds to changes in recharge (Smedema and Rycroft, 1983). Values range from 0.1–0.3 for land that responds slowly to recharge to 0.9–1.0 for land that responds rapidly. [`aqu_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_initial.f90#L167) precomputes $e^{-\alpha}$, and [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L110-L116) updates groundwater flow daily:
+The baseflow recession constant (1/days) directly indexes how quickly groundwater flow responds to changes in recharge (Smedema and Rycroft, 1983). Values range from 0.1–0.3 for land that responds slowly to recharge to 0.9–1.0 for land that responds rapidly. [`aqu_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_initial.f90#L169) precomputes $e^{-\alpha}$, and [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L110-L116) updates groundwater flow daily:
 
 $$
 Q_{gw,t} = Q_{gw,t-1} \, e^{-\alpha} + R_{t} \left(1 - e^{-\alpha}\right)

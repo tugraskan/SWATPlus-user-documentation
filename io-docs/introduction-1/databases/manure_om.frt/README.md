@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies the water, carbon, and nutrient composition of named manure types.
 
-SWAT+ looks for `manure_om.frt` in the simulation working directory; it is not selected through `file.cio`. See the [manure_orgmin_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/manure_orgmin_read.f90#L27) reader.
+SWAT+ looks for `manure_om.frt` in the simulation working directory; it is not selected through `file.cio`. See the [manure_orgmin_read.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/manure_orgmin_read.f90#L27) reader.
 
 # manure_om.frt
 
@@ -29,5 +29,5 @@ The first two lines contain a title and column headings. Each following row cont
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
 {% hint style="warning" %}
-Suspected defect: a `manu` operation looks up the name in [manure\_db.frt](../manure_db.frt/) and then takes the composition from the `manure_om.frt` record with the **same row number**, not the record named by `org_min` ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/read_mgtops.f90#L121-L126), [`pl_manure.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_manure.f90#L83-L84)). Keep both files in the same order. This comes from source reading, not a model run.
+Suspected defect: a `manu` operation looks up the name in [manure\_db.frt](../manure_db.frt/) and then takes the composition from the `manure_om.frt` record with the **same row number**, not the record named by `org_min` ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L129-L134), [`pl_manure.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_manure.f90#L84-L85)). Keep both files in the same order. This comes from source reading, not a model run.
 {% endhint %}

@@ -4,7 +4,7 @@ description: This file controls which output files will be printed during the si
 
 # print.prt
 
-The **print.prt** file is formatted differently than most other SWAT+ input files (see figure below). In line three, there are several variables for controlling the time period to be printed. In line five, the user can specify the number of print intervals for average annual output. In line seven, the user can select to have output files printed in a specific file format (in addition to the default \*.txt output files). In line nine, the user can control the printing of outputs for soils and management as well as flow duration curves. In lines 11 to 90, there is a list of outputs for different spatial levels and objects that can be printed at daily, monthly, yearly, and average annual time steps. This file is read by [`basin_print_codes_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_print_codes_read.f90#L28-L50). A description of the output files is provided in the [SWAT+ Output Files](https://app.gitbook.com/s/-MTFpIHUB1K63DLhLJaf/swat+-output-files) section.
+The **print.prt** file is formatted differently than most other SWAT+ input files (see figure below). In line three, there are several variables for controlling the time period to be printed. Line five is read but ignored on SWAT+ dev: average-annual output always covers the whole printed period (see [aa\_int\_cnt](aa_int_cnt.md)). In line seven, the user can select to have output files printed in a specific file format (in addition to the default \*.txt output files). In line nine, the user can control the printing of outputs for soils and management as well as flow duration curves. In lines 11 to 90, there is a list of outputs for different spatial levels and objects that can be printed at daily, monthly, yearly, and average annual time steps. This file is read by [`basin_print_codes_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_print_codes_read.f90#L24-L40). A description of the output files is provided in the [SWAT+ Output Files](https://app.gitbook.com/s/-MTFpIHUB1K63DLhLJaf/swat+-output-files) section.
 
 <figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Format of the print.prt file</p></figcaption></figure>
 
@@ -16,8 +16,8 @@ The **print.prt** file is formatted differently than most other SWAT+ input file
 | [day\_end](day_end.md) | Julian day to stop printing output (for daily printing only) | integer |  |  |  |
 | [yrc\_end](yrc_end.md) | Calendar year to stop printing output (for daily printing only) | integer |  |  |  |
 | [interval](interval.md) | Print interval within the period | integer |  |  |  |
-| [aa\_int\_cnt](aa_int_cnt.md) | Number of print intervals for average annual output | integer |  |  |  |
-| [aa\_yrs](aa_yrs.md) | End years for the average annual print intervals; list exactly aa_int_cnt years on the same line | integer list |  |  |  |
+| [aa\_int\_cnt](aa_int_cnt.md) | Number of average-annual print intervals; read but ignored on dev | integer |  |  |  |
+| [aa\_yrs](aa_yrs.md) | End years of the average-annual print intervals; not read on dev | integer list |  |  |  |
 | [csvout](csvout.md) | Code for printing output in CSV format (y=yes, n=no) | string |  |  |  |
 | [use\_obj\_lbls](use_obj_lbls.md) | Code controlling how object rows are read: n = fixed order; any other value = use the object label in the first column | string |  |  |  |
 | [cdfout](cdfout.md) | Code for printing output in Net-CDF format (y=yes, n=no) | string |  |  |  |

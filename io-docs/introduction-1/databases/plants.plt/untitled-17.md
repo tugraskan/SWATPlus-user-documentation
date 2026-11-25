@@ -4,9 +4,9 @@ description: Biomass-energy ratio
 
 # bm\_e
 
-**Code reference:** `pldb(ic)%bio_e` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L43)).
+**Code reference:** `pldb(ic)%bio_e` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L38)).
 
-**Current use:** when the basin CO2 value is above 350 ppm, this value and [bm\_e\_hi](bm_e_hi.md) define a CO2 response curve; otherwise `bm_e` is used directly ([`pl_biomass_gro.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_biomass_gro.f90#L43-L48)). A value of `0` skips the setup of the plant's growth curves ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L40)).
+**Current use:** when the basin CO2 value is above 350 ppm, this value and [bm\_e\_hi](bm_e_hi.md) define a CO2 response curve; otherwise `bm_e` is used directly ([`pl_biomass_gro.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_biomass_gro.f90#L43-L48)). A value of `0` skips the setup of the plant's growth curves ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L40)).
 
 The biomass-energy ration or radiation-use efficiency (RUE) is the amount of dry biomass produced per unit intercepted solar radiation. It is assumed to be independent of the plant’s growth stage. The variable _bm\_e_ represents the potential or unstressed growth rate (including roots) per unit of intercepted photosynthetically active radiation.
 

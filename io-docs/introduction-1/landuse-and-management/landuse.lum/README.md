@@ -6,7 +6,7 @@ description: >-
 
 # landuse.lum
 
-This file defines land use and management records read by [`landuse_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_read.f90#L35-L58). Enter `"null"` to disable an optional foreign-key pointer; any non-`"null"` pointer that does not match its target file is logged to `diagnostics.out` ([`landuse_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_read.f90#L143-L169)).
+This file defines land use and management records read by [`landuse_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/landuse_read.f90#L35-L58). Enter `"null"` to disable an optional foreign-key pointer; any non-`"null"` pointer that does not match its target file is logged to `diagnostics.out` ([`landuse_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/landuse_read.f90#L143-L169)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

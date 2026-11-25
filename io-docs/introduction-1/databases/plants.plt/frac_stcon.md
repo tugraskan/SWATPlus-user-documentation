@@ -6,9 +6,9 @@ description: >-
 
 # frac\_stcon
 
-**Code reference:** `pldb(ic)%gmaxfr` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L72)).
+**Code reference:** `pldb(ic)%gmaxfr` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L67)).
 
-**Current use:** above 1 kPa, conductance is multiplied by `max(0.1, 1 − s × (deficit − 1))`, with slope `s` derived from this value and [vpd](vpd.md) ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L91), [`et_pot.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/et_pot.f90#L239-L245)).
+**Current use:** above 1 kPa, conductance is multiplied by `max(0.1, 1 − s × (deficit − 1))`, with slope `s` derived from this value and [vpd](vpd.md) ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L89), [`et_pot.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/et_pot.f90#L239-L245)).
 
 The first point on the stomatal conductance curve is comprised of a vapor pressure deficit of 1 kPa and a fraction of maximum stomatal conductance equal to 1.00.
 

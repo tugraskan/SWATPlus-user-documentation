@@ -4,9 +4,9 @@ description: Maximum potential leaf area index
 
 # lai\_pot
 
-**Code reference:** `pldb(ic)%blai` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L45)).
+**Code reference:** `pldb(ic)%blai` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L40)).
 
-**Current use:** values are limited to 0–10 ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L25-L26)). The two points ([frac\_hu1](untitled-14.md), [lai\_max1](untitled-13.md)) and ([frac\_hu2](untitled-12.md), [lai\_max2](untitled-11.md)) are fitted to an S-curve ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L50-L51)):
+**Current use:** values are limited to 0–10 ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L24-L25)). The two points ([frac\_hu1](untitled-14.md), [lai\_max1](untitled-13.md)) and ([frac\_hu2](untitled-12.md), [lai\_max2](untitled-11.md)) are fitted to an S-curve ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L50-L51)):
 
 $$f = \frac{h}{h + \exp(a - b h)}$$
 

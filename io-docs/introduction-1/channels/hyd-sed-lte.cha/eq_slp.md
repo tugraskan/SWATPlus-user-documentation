@@ -4,7 +4,7 @@ description: Critical velocity multiplier
 
 # eq\_slp
 
-**Code reference:** `sd_chd(idb)%vcr_coef` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_module.f90#L30)).
+**Code reference:** `sd_chd(idb)%vcr_coef` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_module.f90#L30)).
 
 This dimensionless coefficient (`sd_ch%vcr_coef`, default `0`) multiplies the critical velocity calculated in [`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L175-L177):
 

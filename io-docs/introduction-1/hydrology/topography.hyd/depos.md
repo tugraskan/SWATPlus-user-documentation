@@ -4,9 +4,9 @@ description: Sediment transport capacity multiplier
 
 # depos
 
-**Code reference:** `topo_db(ith)%dep_co` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/topography_data_module.f90#L11)).
+**Code reference:** `topo_db(ith)%dep_co` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/topography_data_module.f90#L11)).
 
-Dimensionless multiplier $D$ for sediment transport capacity during surface runon across an HRU. The built-in topography record uses 1. In [`rls_routesurf.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/rls_routesurf.f90#L56-L66), the capacity is
+Dimensionless multiplier $D$ for sediment transport capacity during surface runon across an HRU. The built-in topography record uses 1. In [`rls_routesurf.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/rls_routesurf.f90#L56-L66), the capacity is
 
 $$T = D\,C\,Q\,S^{1.4}W^{1.4}$$
 

@@ -4,7 +4,7 @@ description: Control switches that enable or disable soft-calibration procedures
 
 # codes.sft
 
-Control flags for soft calibration, read sequentially into `cal_codes` ([`calibration_data_module.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calibration_data_module.f90#L66)) by [`calsoft_read_codes.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calsoft_read_codes.f90#L29-L45).
+Control flags for soft calibration, read sequentially into `cal_codes` ([`calibration_data_module.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calibration_data_module.f90#L66)) by [`calsoft_read_codes.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calsoft_read_codes.f90#L29-L45).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |
@@ -17,4 +17,4 @@ Control flags for soft calibration, read sequentially into `cal_codes` ([`calibr
 | [chnut](chnut.md) | Channel nutrient soft-calibration flag (calibration routine not implemented) | string | — | `n` | `y`, `n` |
 | [res](res.md) | Reservoir soft-calibration flag (calibration routine not implemented) | string | — | `n` | `y`, `n` |
 
-In SWAT+ main (`6f515368`), setting `hyd_hru /= "n"` or setting any of the remaining seven flags (`hyd_hrulte`, `plt`, `sed`, `nut`, `chsed`, `chnut`, `res`) to `"y"` sets the global gate `cal_soft = "y"` in [`calsoft_read_codes.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/calsoft_read_codes.f90#L39), even when a specific flag's calibration routine is unimplemented.
+In SWAT+ main (`6f515368`), setting `hyd_hru /= "n"` or setting any of the remaining seven flags (`hyd_hrulte`, `plt`, `sed`, `nut`, `chsed`, `chnut`, `res`) to `"y"` sets the global gate `cal_soft = "y"` in [`calsoft_read_codes.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/calsoft_read_codes.f90#L39), even when a specific flag's calibration routine is unimplemented.

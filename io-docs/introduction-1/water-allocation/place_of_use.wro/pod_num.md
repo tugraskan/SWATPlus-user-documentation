@@ -1,11 +1,15 @@
 ---
-description: "POD number within the POU record"
+description: "POD number that links this POD entry to point_of_diver.wro"
 ---
 
 # num (POD)
 
-**Code reference:** `pou(ipou)%pod(ipod)%num` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L16), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L93-L94)).
+**Code reference:** `pou(ipou)%pod(ipod)%num` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L16), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_read.f90#L95-L98)).
 
-Integer POD number (default: `0`). In [`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L93-L94), the reader reads both position 2 and position 5 of the POD row into `pou(ipou)%pod(ipod)%num`, so position 5 overwrites position 2 (`typ_num` is not read).
+The POD number, as given in the first column of [point_of_diver.wro](../point_of_diver.wro/README.md) (default: `0`). After both files are read, SWAT+ matches each POD listed in `point_of_diver.wro` against this column of every POU that POD serves, to find the POD's position in the POU's list ([`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_read.f90#L257-L268)). That position decides which POD duty, fraction and limits a withdrawal uses, and which POD row it is reported on.
 
-In SWAT+ main (`6f515368`), this field is only referenced as a loop upper bound in [`wallo_transfer.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_transfer.f90#L22), whose call in [`wallo_return.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_return.f90#L21) is commented out; active withdrawal indexing uses `pod_num` from [point_of_diver.wro](../point_of_diver.wro/README.md).
+{% hint style="warning" %}
+If a POU named in `point_of_diver.wro` has no POD entry with this number, the position stays 0 and the withdrawal indexes an entry that does not exist. Make every POU–POD pair appear in both files with the same POD number.
+{% endhint %}
+
+In SWAT+ main this column was overwritten by position 5 and the position came from a `pod_num` column in `point_of_diver.wro`; dev removed that column.

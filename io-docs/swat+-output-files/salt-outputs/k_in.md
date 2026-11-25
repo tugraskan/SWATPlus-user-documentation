@@ -4,7 +4,7 @@ description: "Total potassium entering the channel, including groundwater"
 
 # k_in
 
-**Code reference:** `chsalt_d(iru)%salt(isalt)%tot_in` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_salt_module.f90#L8)).
+**Code reference:** `chsalt_d(iru)%salt(isalt)%tot_in` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_salt_module.f90#L8)).
 
 Reported potassium inlet, including groundwater from the linked-aquifer diagnostic. The controller replaces the working inlet after adding that linked load, so the printed total can differ from the input used for routing. See [daily channel calculations](channel-salt.md#daily-channel-calculations).
 

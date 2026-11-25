@@ -4,7 +4,7 @@ description: This file controls the simulation of snowfall and snowmelt processe
 
 # snow.sno
 
-Each record supplies snow accumulation and melt parameters for an HRU. After the title and header, [`snowdb_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/snowdb_read.f90#L28-L49) reads each record in the order below.
+Each record supplies snow accumulation and melt parameters for an HRU. After the title and header, [`snowdb_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/snowdb_read.f90#L28-L49) reads each record in the order below.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

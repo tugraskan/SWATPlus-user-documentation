@@ -4,7 +4,7 @@ description: "Sediment concentration"
 
 # sed_conc
 
-**Code reference:** `ch_d(jrch)%sed_conc` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_module.f90#L129)).
+**Code reference:** `ch_d(jrch)%sed_conc` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_module.f90#L129)).
 
 Sediment concentration.
 

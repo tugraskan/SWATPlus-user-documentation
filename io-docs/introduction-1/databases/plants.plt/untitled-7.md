@@ -4,7 +4,7 @@ description: Maximum rooting depth
 
 # rt\_dp\_max
 
-**Code reference:** `pldb(ic)%rdmx` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L57)).
+**Code reference:** `pldb(ic)%rdmx` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L52)).
 
 **Current use:** entered in metres. Rooting depth in mm is `2.5 × heat-unit fraction × rt_dp_max × 1000`, kept between 25.4 mm and the soil profile depth ([`pl_root_gro.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_root_gro.f90#L21-L28)).
 

@@ -8,13 +8,13 @@ An Editor export of this format has not been verified. Field names and values in
 
 This optional file gives the initial fraction of each salt mineral in each cell. It is read only when solute transport is on and `constituents.cs` lists salt ions.
 
-SWAT+ looks for `minerals.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1676-L1711) reader.
+SWAT+ looks for `minerals.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1676-L1711) reader.
 
-The fractions are not used: the mineral precipitation–dissolution routine returns without doing anything in this source ([`gwflow_chem.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_chem.f90#L181-L199)). This is listed in `MODEL_ISSUES.md`.
+The fractions are not used: the mineral precipitation–dissolution routine returns without doing anything in this source ([`gwflow_chem.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_chem.f90#L181-L199)). This is listed in `MODEL_ISSUES.md`.
 
 # minerals.gw
 
-The file has a title line, the number of minerals and a heading line. Then, for an unstructured grid, `ncell` lines in cell order, each with one fraction per mineral. For a structured grid, each mineral has a label line, a `read_type` line, and either one value (`single`) or `n_rows` lines of `n_cols` values (`array`) ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1682-L1710)). Structured values are never copied to the cells, and the array they are read into is never allocated.
+The file has a title line, the number of minerals and a heading line. Then, for an unstructured grid, `ncell` lines in cell order, each with one fraction per mineral. For a structured grid, each mineral has a label line, a `read_type` line, and either one value (`single`) or `n_rows` lines of `n_cols` values (`array`) ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1682-L1710)). Structured values are never copied to the cells, and the array they are read into is never allocated.
 
 ## Mineral count
 

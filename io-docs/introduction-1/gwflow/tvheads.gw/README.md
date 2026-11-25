@@ -8,13 +8,13 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This optional file gives one head per simulation year for selected cells, intended as time-varying boundary heads.
 
-SWAT+ looks for `tvheads.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1459-L1486) reader.
+SWAT+ looks for `tvheads.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1459-L1486) reader.
 
-The values are read but never used: boundary cells keep their initial head for the whole run ([`gwflow_lateral.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_lateral.f90#L155-L157)). This is listed in `MODEL_ISSUES.md`.
+The values are read but never used: boundary cells keep their initial head for the whole run ([`gwflow_lateral.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_lateral.f90#L155-L157)). This is listed in `MODEL_ISSUES.md`.
 
 # tvheads.gw
 
-The first two lines are a title and column headings. Then give one line per cell: the cell number and one head per simulation year ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1478-L1485)).
+The first two lines are a title and column headings. Then give one line per cell: the cell number and one head per simulation year ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1478-L1485)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

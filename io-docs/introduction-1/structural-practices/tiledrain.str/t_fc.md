@@ -4,9 +4,9 @@ description: Time to drain soil to field capacity
 
 # t\_fc
 
-**Code reference:** `sdr(isdr)%time` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_module.f90#L88)).
+**Code reference:** `sdr(isdr)%time` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_module.f90#L88)).
 
-Time required to drain the soil profile from saturation to field capacity in hours (default `48.00`, range `0.0–100.0`). Used with the original drawdown tile drainage routine (`tiledrain = 0` in `codes.bsn`) in [`swr_origtile.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/swr_origtile.f90#L23-L28):
+Time required to drain the soil profile from saturation to field capacity in hours (default `48.00`, range `0.0–100.0`). Used with the original drawdown tile drainage routine (`tiledrain = 0` in `codes.bsn`) in [`swr_origtile.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/swr_origtile.f90#L23-L28):
 
 $$q_{\text{tile}} = \min\!\left(SW_{\text{ex}}\left(1 - e^{-24 / t}\right),\; D_c\right)$$
 

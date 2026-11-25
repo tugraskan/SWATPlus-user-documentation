@@ -7,7 +7,7 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`ch_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_elements.f90#L33-L78) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cal.f90#L29)) reads `ch_catunit.def` into `ccu_out` (`reads=none`), stores `mreg` into `db_mx%cha_reg` (`#L77`, overwritten if `ch_reg.def` is present), and on the `nspu <= 0` fallback (`#L68-L70`) sets `num_tot = sp_ob%res` while looping `sp_ob%chan`.
+In SWAT+ main (`6f515368`), [`ch_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_read_elements.f90#L33-L78) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cal.f90#L29)) reads `ch_catunit.def` into `ccu_out` (`reads=none`), stores `mreg` into `db_mx%cha_reg` (`#L77`, overwritten if `ch_reg.def` is present), and on the `nspu <= 0` fallback (`#L68-L70`) sets `num_tot = sp_ob%res` while looping `sp_ob%chan`.
 {% endhint %}
 
 This file groups channels into cataloging units for reporting.

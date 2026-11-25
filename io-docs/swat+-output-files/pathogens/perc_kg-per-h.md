@@ -4,11 +4,11 @@ description: "Pathogen removed from soil layer 1 by the percolation calculation"
 
 # perc_kg/h
 
-**Code reference:** `hpath_bal(j)%path(ipath)%perc1` ([calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_ls_swrouting.f90#L23)).
+**Code reference:** `hpath_bal(j)%path(ipath)%perc1` ([calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_ls_swrouting.f90#L23)).
 
 The calculation scales the surface-soil pathogen pool using layer-1 percolation, caps the result to the available pool, bounds it below by zero, and subtracts it from layer 1. This is not a measured concentration or necessarily export beyond the entire soil profile. The inspected routine does not add the removed amount to a deeper layer.
 
-The separate HRU recharge hydrograph writes zero into its pathogen slot. [recharge hydrograph](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_hyds.f90#L105-L114).
+The separate HRU recharge hydrograph writes zero into its pathogen slot. [recharge hydrograph](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_hyds.f90#L105-L114).
 
 **Unit:** unresolved. The printed heading says `kg/h`, the balance declaration says `kg/ha`, and the underlying constituent state is annotated `cfu`. The inspected code does not establish a consistent conversion between these bases; do not read the printed suffix as a verified per-hour rate.
 

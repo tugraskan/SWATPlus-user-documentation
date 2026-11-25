@@ -4,7 +4,7 @@ description: "Groundwater flow assigned to receiving aquifer objects"
 
 # flo_ls
 
-**Code reference:** `aqu_d(iaq)%flo_ls` ([routing calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L377)).
+**Code reference:** `aqu_d(iaq)%flo_ls` ([routing calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L380)).
 
 Groundwater flow assigned to receiving aquifer objects. The controller sums `aqu_d(iaq)%flo * frac_out` only for outgoing connections whose hydrograph type is `tot` and whose receiver type is `aqu`. Despite the printed name and the declaration's landscape wording, this branch selects aquifers, not HRUs or routing units.
 

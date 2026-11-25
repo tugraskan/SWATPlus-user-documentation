@@ -4,9 +4,9 @@ description: Lateral flow coefficient
 
 # latq\_co
 
-**Code reference:** `hyd_db(ithyd)%latq_co` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrology_data_module.f90#L25)).
+**Code reference:** `hyd_db(ithyd)%latq_co` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrology_data_module.f90#L51)).
 
-Dimensionless multiplier $c_{\ell}$ for lateral soil flow. The built-in hydrology record uses 0.3. Below the top soil layer, [`swr_percmicro.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/swr_percmicro.f90#L60-L73) calculates:
+Dimensionless multiplier $c_{\ell}$ for lateral soil flow. The built-in hydrology record uses 0.3. Below the top soil layer, [`swr_percmicro.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/swr_percmicro.f90#L60-L73) calculates:
 
 $$q_{\ell} = \frac{0.024 \, c_{\ell} H K S}{L}$$
 

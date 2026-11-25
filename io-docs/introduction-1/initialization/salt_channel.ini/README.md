@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file supplies named sets of initial salt-ion concentrations in channel water.
 
-SWAT+ looks for `salt_channel.ini` in the simulation working directory; it is not selected through `file.cio`. See the [`salt_cha_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_cha_read.f90#L27-L57) reader.
+SWAT+ looks for `salt_channel.ini` in the simulation working directory; it is not selected through `file.cio`. See the [`salt_cha_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_cha_read.f90#L27-L57) reader.
 
 # salt\_channel.ini
 
-The first two lines contain a title and column headings ([`salt_cha_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_cha_read.f90#L28-L30)). Each following row contains the fields below, in this order.
+The first two lines contain a title and column headings ([`salt_cha_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_cha_read.f90#L28-L30)). Each following row contains the fields below, in this order.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

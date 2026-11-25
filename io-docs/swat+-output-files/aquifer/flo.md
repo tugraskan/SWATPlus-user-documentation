@@ -4,7 +4,7 @@ description: "Groundwater flow leaving the aquifer"
 
 # flo
 
-**Code reference:** `aqu_d(iaq)%flo` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L38)).
+**Code reference:** `aqu_d(iaq)%flo` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aquifer_module.f90#L38)).
 
 Water leaving the aquifer as groundwater flow. Read this as an equivalent water depth, not as a discharge rate in cubic metres per second.
 

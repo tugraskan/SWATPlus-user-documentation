@@ -4,7 +4,7 @@ description: "Salt in HRU tile drainage, plus GWFlow cell tile drainage when GWF
 
 # tile_kg
 
-**Code reference:** `salt_basin(6)` ([calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_balance.f90#L99-L115)).
+**Code reference:** `salt_basin(6)` ([calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_balance.f90#L99-L115)).
 
 Salt in HRU tile drainage, plus GWFlow cell tile drainage when GWFlow and its solute transport are enabled.
 

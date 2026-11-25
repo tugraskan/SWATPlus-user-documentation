@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file specifies the daughter metabolites formed when a parent pesticide degrades.
 
-SWAT+ looks for `pest_metabolite.pes` in the simulation working directory; it is not selected through `file.cio`. See the [pest_metabolite_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_metabolite_read.f90#L29) reader.
+SWAT+ looks for `pest_metabolite.pes` in the simulation working directory; it is not selected through `file.cio`. See the [pest_metabolite_read.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_metabolite_read.f90#L29) reader.
 
 # pest_metabolite.pes
 
@@ -34,5 +34,5 @@ After the title and column headings, enter the parent pesticide name and daughte
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
 {% hint style="warning" %}
-Every parent name should be in `pesticide.pes`. Suspected defect: for an unknown parent the reader does not skip its daughter rows, so later records are misread ([`pest_metabolite_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_metabolite_read.f90#L49-L76)). A daughter that is not simulated leaves position 0, which the decay routines then use. This comes from source reading, not a model run.
+Every parent name should be in `pesticide.pes`. Suspected defect: for an unknown parent the reader does not skip its daughter rows, so later records are misread ([`pest_metabolite_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_metabolite_read.f90#L49-L76)). A daughter that is not simulated leaves position 0, which the decay routines then use. This comes from source reading, not a model run.
 {% endhint %}

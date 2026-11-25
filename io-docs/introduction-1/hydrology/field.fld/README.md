@@ -4,7 +4,7 @@ description: This file specifies the properties of representative fields.
 
 # field.fld
 
-Each record supplies representative field dimensions and an orientation angle. After the title and header, [`field_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/field_read.f90#L25-L50) reads each record in the order below.
+Each record supplies representative field dimensions and an orientation angle. After the title and header, [`field_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/field_read.f90#L25-L50) reads each record in the order below.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

@@ -4,7 +4,7 @@ description: "Incoming flow, outgoing flow, evaporation, and transmission loss"
 
 # evap
 
-**Code reference:** `ch_d(jrch)%evap` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_module.f90#L125)).
+**Code reference:** `ch_d(jrch)%evap` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_module.f90#L125)).
 
 In this output table, `evap` is one of the fields described as: Incoming flow, outgoing flow, evaporation, and transmission loss.
 

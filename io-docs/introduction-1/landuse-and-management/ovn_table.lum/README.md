@@ -6,7 +6,7 @@ description: >-
 
 # ovn\_table.lum
 
-This file defines overland flow Manning's roughness classes read by [`overland_n_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/overland_n_read.f90#L24-L46). Only [ovn\_mean](ovn_mean.md) is used in simulation calculations; [ovn\_min](ovn_min.md) and [ovn\_max](ovn_max.md) are read into memory but unused in SWAT+ main (`6f515368`).
+This file defines overland flow Manning's roughness classes read by [`overland_n_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/overland_n_read.f90#L24-L46). Only [ovn\_mean](ovn_mean.md) is used in simulation calculations; [ovn\_min](ovn_min.md) and [ovn\_max](ovn_max.md) are read into memory but unused in SWAT+ main (`6f515368`).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

@@ -7,7 +7,7 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`aqu_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read_elements.f90#L33-L126) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cal.f90#L28)) opens `aqu_catunit.def` twice: first into `acu_out` (`#L36`), and again at line 89 into `acu_reg` after inquiring `in_regs%def_aqu_reg` (`aqu_reg.def`) at lines 86–87. Neither `acu_out` nor `acu_cal` (populated from `acu_reg` at `#L184-L188`) is read in simulation calculations.
+In SWAT+ main (`6f515368`), [`aqu_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_read_elements.f90#L33-L126) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cal.f90#L28)) opens `aqu_catunit.def` twice: first into `acu_out` (`#L36`), and again at line 89 into `acu_reg` after inquiring `in_regs%def_aqu_reg` (`aqu_reg.def`) at lines 86–87. Neither `acu_out` nor `acu_cal` (populated from `acu_reg` at `#L184-L188`) is read in simulation calculations.
 {% endhint %}
 
 This file groups aquifers into cataloging units for reporting and regional calculations.

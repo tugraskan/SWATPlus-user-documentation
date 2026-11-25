@@ -4,7 +4,7 @@ description: "Names of the simulated heavy metals"
 
 # metals
 
-**Code reference:** `cs_db%metals` ([`declaration`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constituent_mass_module.f90#L22), [`read`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constit_db_read.f90#L50-L52)).
+**Code reference:** `cs_db%metals` ([`declaration`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/constituent_mass_module.f90#L22), [`read`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/constit_db_read.f90#L50-L52)).
 
 One name per heavy metal. There is no heavy-metal database to match against.
 

@@ -6,7 +6,7 @@ description: >-
 
 # rout\_unit.rtu
 
-This file defines Routing Unit records and links each Routing Unit to its topography and field properties, read by [`ru_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ru_read.f90#L230).
+This file defines Routing Unit records and links each Routing Unit to its topography and field properties, read by [`ru_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ru_read.f90#L230).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

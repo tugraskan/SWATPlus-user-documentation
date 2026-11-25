@@ -4,9 +4,9 @@ description: Conversion factor for plaque from Total Dissolved Solids
 
 # tds\_conv
 
-**Code reference:** `sep(isep)%plq` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_data_module.f90#L39)).
+**Code reference:** `sep(isep)%plq` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/septic_data_module.f90#L39)).
 
-Dimensionless conversion factor for biozone plaque accumulation from effluent solids ([`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sep_biozone.f90#L219)):
+Dimensionless conversion factor for biozone plaque accumulation from effluent solids ([`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sep_biozone.f90#L219)):
 
 $$\Delta M_{\text{plq}} = (R_{\text{mort}} - R_{\text{slg}}) + c_{\text{plq}} \, \frac{Q_{\text{in}} \, C_{\text{tss}}}{1000 \, A_{\text{hru}}}$$
 

@@ -4,7 +4,7 @@ description: "Use or treatment index with variant-specific positions"
 
 # use
 
-**Code references:** `iuse` in [the use loop](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_use_output.f90#L13) and `itrt` in [the treatment loop](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_treat_output.f90#L13). The printed label `use` identifies a water-use index in use files and a treatment-object index in treatment files. It has no physical unit.
+**Code references:** `iuse` in [the use loop](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_use_output.f90#L13) and `itrt` in [the treatment loop](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_treat_output.f90#L13). The printed label `use` identifies a water-use index in use files and a treatment-object index in treatment files. It has no physical unit.
 
 | File/row | Actual identifier position |
 | --- | ---: |

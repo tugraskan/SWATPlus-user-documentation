@@ -4,9 +4,9 @@ description: "Fraction used in buffer inflow and nitrate partitioning"
 
 # frac_src
 
-**Code reference:** `satbuff_db(ibuff)%frac_src` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_module.f90#L101)).
+**Code reference:** `satbuff_db(ibuff)%frac_src` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_module.f90#L101)).
 
-Used to scale buffer inflow and partition tile nitrate ([`hru_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_control.f90#L652-L656)). Enter a fraction rather than a percentage; the decision table specified by [`flocon_dtbl`](flocon_dtbl.md) first determines the diverted tile inflow depth $Q_{\text{div}}$:
+Used to scale buffer inflow and partition tile nitrate ([`hru_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_control.f90#L648-L652)). Enter a fraction rather than a percentage; the decision table specified by [`flocon_dtbl`](flocon_dtbl.md) first determines the diverted tile inflow depth $Q_{\text{div}}$:
 
 $$Q_{\text{buf}} = \frac{A_{\text{rcv}}}{A_{\text{src}}} \, f_{\text{src}} \, Q_{\text{div}}, \qquad q_{\text{tile,rem}} = (1 - f_{\text{src}}) \, Q_{\text{div}}$$
 

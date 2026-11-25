@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_pipe_read.f90#L31-L56), the outer `do ... end do` loop lacks an `exit` statement, [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_pipe_read.f90#L43) reads an extra `header` line before every pipe, and [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_pipe_read.f90#L45) reads `num_aqu` without calling `backspace(107)`, so [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_pipe_read.f90#L52) reads a second data row per pipe rather than rereading the first row.
+In [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_pipe_read.f90#L31-L56), the outer `do ... end do` loop lacks an `exit` statement, [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_pipe_read.f90#L43) reads an extra `header` line before every pipe, and [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_pipe_read.f90#L45) reads `num_aqu` without calling `backspace(107)`, so [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_pipe_read.f90#L52) reads a second data row per pipe rather than rereading the first row.
 {% endhint %}
 
 This file defines water pipes, including their storage, drawdown, and water-loss settings.
 
-SWAT+ looks for `water_pipe.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_pipe_read.f90#L32) reader.
+SWAT+ looks for `water_pipe.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_pipe_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_pipe_read.f90#L32) reader.
 
 # water_pipe.wal
 

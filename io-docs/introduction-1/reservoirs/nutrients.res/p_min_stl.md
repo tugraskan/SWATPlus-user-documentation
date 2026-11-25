@@ -4,9 +4,9 @@ description: Minimum phosphorus concentration for settling
 
 # p\_min\_stl
 
-**Code reference:** `res_nut(ires)%conc_pmin` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L122)).
+**Code reference:** `res_nut(ires)%conc_pmin` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reservoir_data_module.f90#L122)).
 
-Minimum phosphorus concentration (`ppm`, i.e., `mg/L`; default: `0.01`) below which particulate phosphorus and soluble phosphorus settling ceases. In [`res_nutrient.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_nutrient.f90#L51-L69), SWAT+ first computes water-body concentrations:
+Minimum phosphorus concentration (`ppm`, i.e., `mg/L`; default: `0.01`) below which particulate phosphorus and soluble phosphorus settling ceases. In [`res_nutrient.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_nutrient.f90#L71-L89), SWAT+ first computes water-body concentrations:
 
 $$C = \frac{1000 \, M}{V}$$
 

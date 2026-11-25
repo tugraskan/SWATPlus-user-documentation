@@ -4,9 +4,9 @@ description: Minimum LAI during dormant period
 
 # lai\_min
 
-**Code reference:** `pldb(ic)%alai_min` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L80)).
+**Code reference:** `pldb(ic)%alai_min` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L75)).
 
-**Current use:** the floor that leaf area falls to during perennial leaf drop ([`pl_leaf_senes.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_leaf_senes.f90#L55-L64)).
+**Current use:** the floor that leaf area falls to during perennial leaf drop ([`pl_leaf_senes.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_leaf_senes.f90#L44-L53)).
 
 This variable pertains to perennials and trees only. It is not used for other types of plants.
 

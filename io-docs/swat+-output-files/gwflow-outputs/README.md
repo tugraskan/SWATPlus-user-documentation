@@ -4,7 +4,7 @@ GWFlow writes basin, cell, observation, pumping, heat, canal, pond, and selected
 
 ## How to produce these files
 
-Set `gwflow` to `1` in [codes.bsn](../../introduction-1/basin-1/codes.bsn/README.md) and supply the GWFlow inputs, including `chancell.gw`. To override report defaults in [print.prt](../../introduction-1/simulation-settings/print.prt/README.md), use named rows (`use_obj_lbls = y`). The period columns are daily, monthly, yearly, and average annual. GWFlow writes plain-text files. The diagnostic log, transit files, and selected-cell group files have no `.txt` suffix. [GWFlow activation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_objs.f90#L45-L88), [Named rows](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_print_codes_read.f90#L722-L769)
+Set `gwflow` to `1` in [codes.bsn](../../introduction-1/basin-1/codes.bsn/README.md) and supply the GWFlow inputs, including `chancell.gw`. To override report defaults in [print.prt](../../introduction-1/simulation-settings/print.prt/README.md), use named rows (`use_obj_lbls = y`). The period columns are daily, monthly, yearly, and average annual. GWFlow writes plain-text files. The diagnostic log, transit files, and selected-cell group files have no `.txt` suffix. [GWFlow activation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_objs.f90#L45-L88), [Named rows](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_print_codes_read.f90#L714-L761)
 
 ### Defaults when a print row is absent
 
@@ -17,7 +17,7 @@ Set `gwflow` to `1` in [codes.bsn](../../introduction-1/basin-1/codes.bsn/README
 | `gwflow_pump` | The common switch for all four HRU pumping files is on. |
 | `gwflow_flux` | The common switch for daily canal, pond, tile, exchange-group, and channel-observation diagnostics is on. A named row enables it with `y` in the daily or yearly column. |
 
-The input and feature requirements in the index still apply. [Default flags](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_module.f90#L9-L26), [Print overrides and inheritance](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L254-L311)
+The input and feature requirements in the index still apply. [Default flags](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_module.f90#L9-L26), [Print overrides and inheritance](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L254-L311)
 
 ## File index
 
@@ -48,4 +48,4 @@ The [GWFlow Basin Water Balance](../gwflow-basin-water-balance/README.md) page l
 
 ## Legacy output selectors
 
-`outputs.gw` still accepts `head_output_time` and `detail_debug_cell`. Matching a head-output date advances an index with no grid dump, and the debug cell ID is stored with no writer using it. For head values, use the [cell water balance](cell-water-balance.md) or select individual cells with `observation_cell` for the [observation files](observation-wells.md). [Input reader](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L570-L622), [Date handling](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_simulate.f90#L388-L393), [Cell file openers](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L498-L545)
+`outputs.gw` still accepts `head_output_time` and `detail_debug_cell`. Matching a head-output date advances an index with no grid dump, and the debug cell ID is stored with no writer using it. For head values, use the [cell water balance](cell-water-balance.md) or select individual cells with `observation_cell` for the [observation files](observation-wells.md). [Input reader](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L570-L622), [Date handling](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_simulate.f90#L388-L393), [Cell file openers](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L498-L545)

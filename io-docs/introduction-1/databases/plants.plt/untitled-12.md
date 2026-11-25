@@ -6,8 +6,8 @@ description: >-
 
 # frac\_hu2
 
-**Code reference:** `pldb(ic)%frgrw2` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L50)).
+**Code reference:** `pldb(ic)%frgrw2` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L45)).
 
-Heat-unit coordinate of the second point of the leaf area curve described under [lai\_pot](untitled-15.md) ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L50-L51)).
+Heat-unit coordinate of the second point of the leaf area curve described under [lai\_pot](untitled-15.md) ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L50-L51)).
 
 Please see the explanation given for parameter [lai\_pot](untitled-15.md) to obtain additional information about this parameter and methods used to measure it.

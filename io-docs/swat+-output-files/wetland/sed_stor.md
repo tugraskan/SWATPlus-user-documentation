@@ -4,9 +4,9 @@ description: "Stored sediment"
 
 # sed_stor
 
-**Code reference:** `wet(j)%sed` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L33)).
+**Code reference:** `wet(j)%sed` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L33)).
 
-Bulk sediment in the storage hydrograph after settling or flushing. The low-volume branch clears the stored mass before the controller checks for a flush. [Settling](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_sediment.f90#L17-L51), [Flushing](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wetland_control.f90#L227-L236)
+Bulk sediment in the storage hydrograph after settling or flushing. The low-volume branch clears the stored mass before the controller checks for a flush. [Settling](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_sediment.f90#L17-L51), [Flushing](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wetland_control.f90#L227-L236)
 
 **Unit:** tons.
 

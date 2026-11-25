@@ -4,7 +4,7 @@ description: "Action option"
 
 # option
 
-**Code reference:** `dtbl_flo(i)%act(iac)%option` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/conditional_module.f90#L21)).
+**Code reference:** `dtbl_flo(i)%act(iac)%option` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/conditional_module.f90#L21)).
 
 Variant of the [action type](typ.md). $c_1$ is [const](const.md) and $c_2$ is [const2](const2.md).
 
@@ -53,4 +53,4 @@ $$q_{\text{out}} = c_1\,q$$
 
 where $q_{\text{out}}$ is controlled tile flow (`mm`), $c_1$ is `const` (dimensionless), and $q$ is simulated tile flow (`mm`).
 
-Sources: [`actions.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L190-L238) · [`actions.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L811-L867)
+Sources: [`actions.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L190-L238) · [`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L833-L889)

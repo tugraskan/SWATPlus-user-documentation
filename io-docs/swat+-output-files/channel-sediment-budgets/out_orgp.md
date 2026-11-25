@@ -4,7 +4,7 @@ description: "Incoming and outgoing phosphorus"
 
 # out_orgp
 
-**Code reference:** `ch_sed_bud(ichan)%out_orgp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_module.f90#L84)).
+**Code reference:** `ch_sed_bud(ichan)%out_orgp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_module.f90#L84)).
 
 In this output table, `out_orgp` is one of the fields described as: Incoming and outgoing phosphorus.
 

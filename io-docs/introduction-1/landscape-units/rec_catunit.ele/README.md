@@ -7,7 +7,7 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`rec_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/rec_read_elements.f90#L133-L180) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cal.f90#L31)) reads `rec_catunit.ele` into `pcu_elem`. Only `obtypno` and `ru_frac` are copied into `pcu_cal` (`#L175-L176`), which is never read in simulation calculations; all other attributes have `reads=none`.
+In SWAT+ main (`6f515368`), [`rec_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/rec_read_elements.f90#L133-L180) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cal.f90#L31)) reads `rec_catunit.ele` into `pcu_elem`. Only `obtypno` and `ru_frac` are copied into `pcu_cal` (`#L175-L176`), which is never read in simulation calculations; all other attributes have `reads=none`.
 {% endhint %}
 
 This file identifies the objects included in point-source cataloging units and their area fractions.

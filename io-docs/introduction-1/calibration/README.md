@@ -4,7 +4,7 @@ description: Input files for hard calibration, soft calibration, and conditional
 
 # Calibration
 
-SWAT+ supports **hard calibration** (direct parameter adjustments applied before simulation), **soft calibration** (heuristic annual water-balance, sediment, and plant-growth matching), and **conditional scenario updates** (daily decision-table triggers). Hard and soft calibration files are referenced in the `chg` group of `file.cio` ([`readcio_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/readcio_read.f90#L65)) and read by [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cal.f90#L14-L35).
+SWAT+ supports **hard calibration** (direct parameter adjustments applied before simulation), **soft calibration** (heuristic annual water-balance, sediment, and plant-growth matching), and **conditional scenario updates** (daily decision-table triggers). Hard and soft calibration files are referenced in the `chg` group of `file.cio` ([`readcio_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/readcio_read.f90#L78)) and read by [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cal.f90#L14-L35).
 
 ## Hard Calibration
 
@@ -48,7 +48,7 @@ SWAT+ supports **hard calibration** (direct parameter adjustments applied before
 
 ## Conditional Scenario Updates
 
-`scen_dtl.upd` is read directly from the simulation working directory by [`cal_cond_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cal_cond_read.f90#L43-L62) rather than through `file.cio`.
+`scen_dtl.upd` is read directly from the simulation working directory by [`cal_cond_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cal_cond_read.f90#L43-L62) rather than through `file.cio`.
 
 {% content-ref url="scen_dtl.upd/README.md" %}
 [scen_dtl.upd](scen_dtl.upd/README.md)

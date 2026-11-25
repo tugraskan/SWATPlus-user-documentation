@@ -8,11 +8,11 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file sets tile-drain properties and marks the cells that have tile drains. It is read only when `tile` is 1 in [codes.gw](../codes.gw/tile.md).
 
-SWAT+ looks for `tile.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1020-L1079) reader.
+SWAT+ looks for `tile.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1020-L1079) reader.
 
 # tile.gw
 
-Each value is on its own line, in this order ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1024-L1078)):
+Each value is on its own line, in this order ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1024-L1078)):
 
 1. a title line;
 2. `tile_depth_val`, `tile_drain_area_val`, `tile_K_val`;
@@ -21,7 +21,7 @@ Each value is on its own line, in this order ([`gwflow_read.f90`](https://github
 5. one heading line;
 6. the tile flags: one `tile` value per line for all `ncell` cells (unstructured grid), or `n_rows` lines of `n_cols` values (structured grid).
 
-The structured layout cannot be read in this source: the arrays it uses are never allocated ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1063-L1073)). This is listed in `MODEL_ISSUES.md`.
+The structured layout cannot be read in this source: the arrays it uses are never allocated ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1063-L1073)). This is listed in `MODEL_ISSUES.md`.
 
 ## Tile properties
 

@@ -7,7 +7,7 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`res_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_elements.f90#L79-L119) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cal.f90#L30)) reads `res_reg.def` into `rcu_cal` and `db_mx%res_reg` (`#L118`), except when `nspu <= 0`, where lines 109–111 instead populate `rcu_reg`. Neither `rcu_cal` nor `db_mx%res_reg` is read during simulation calculations.
+In SWAT+ main (`6f515368`), [`res_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_elements.f90#L79-L119) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cal.f90#L30)) reads `res_reg.def` into `rcu_cal` and `db_mx%res_reg` (`#L118`), except when `nspu <= 0`, where lines 109–111 instead populate `rcu_reg`. Neither `rcu_cal` nor `db_mx%res_reg` is read during simulation calculations.
 {% endhint %}
 
 This file defines reservoir regions and their element lists.

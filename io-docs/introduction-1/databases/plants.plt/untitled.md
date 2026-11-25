@@ -4,9 +4,9 @@ description: Name of the plant/landcover
 
 # name (plants.plt)
 
-**Code reference:** `pldb(ic)%plantnm` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L31)).
+**Code reference:** `pldb(ic)%plantnm` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L26)).
 
-The name field holds up to 40 characters ([`plant_data_module.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L31)).
+The name field holds up to 40 characters ([`plant_data_module.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L26)).
 
 The name of the plant/landcover is a primary key referenced by [plt\_name](../../landuse-and-management/plant.ini/plnt_name.md) in [**plant.ini**](../../landuse-and-management/plant.ini/). All names in the **plants.plt** database must be unique.
 

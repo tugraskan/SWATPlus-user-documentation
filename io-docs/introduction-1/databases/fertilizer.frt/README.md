@@ -15,4 +15,4 @@ description: >-
 | [org\_p](org_p.md) | Fraction of fertilizer that is organic P | real | fraction | 0.0 | 0.0-1.0 |
 | [nh3\_n](nh3_n.md) | Fraction of mineral N content of fertilizer that is NH3 | real | fraction | 0.0 | 0.0-1.0 |
 
-The file has a title line and a column-header line. Only the six columns above are read; anything after them on a line, such as a pathogen or description column, is not read ([`fert_parm_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/fert_parm_read.f90#L47)). The row order also matters when [salt\_fertilizer.frt](../salt_fertilizer.frt/) or [fertilizer.frt\_cs](../fertilizer.frt_cs/) is used.
+The file has a title line and a column-header line. Only the six columns above are read; anything after them on a line, such as a pathogen or description column, is not read ([`fert_parm_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/fert_parm_read.f90#L47)). The row order also matters when [salt\_fertilizer.frt](../salt_fertilizer.frt/) or [fertilizer.frt\_cs](../fertilizer.frt_cs/) is used.

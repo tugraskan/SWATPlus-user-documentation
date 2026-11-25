@@ -4,11 +4,11 @@ description: Fraction of solar radiation that is photosynthetically active
 
 # slr\_act
 
-**Code reference:** `ch_nut(ich)%tfact` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_data_module.f90#L147)).
+**Code reference:** `ch_nut(ich)%tfact` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_data_module.f90#L147)).
 
-Fraction of incoming daily solar radiation that is photosynthetically active (dimensionless, default `0.30`, range `0.0–1.0`). In [`ch_read_nut.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_nut.f90#L73), values `<= 0.` are replaced with `0.3`.
+Fraction of incoming daily solar radiation that is photosynthetically active (dimensionless, default `0.30`, range `0.0–1.0`). In [`ch_read_nut.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_read_nut.f90#L73), values `<= 0.` are replaced with `0.3`.
 
-In [`ch_watqual4.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_watqual4.f90#L173-L177), `tfact` scales weather-station solar radiation $H_{\text{solrad}}$ divided by daylength $T_{\text{day}}$ to compute daylight-average photosynthetically active light intensity $I_a$ used in the algal light-attenuation factor:
+In [`ch_watqual4.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_watqual4.f90#L178-L182), `tfact` scales weather-station solar radiation $H_{\text{solrad}}$ divided by daylength $T_{\text{day}}$ to compute daylight-average photosynthetically active light intensity $I_a$ used in the algal light-attenuation factor:
 
 $$I_a = \frac{H_{\text{solrad}} \cdot \text{tfact}}{T_{\text{day}}}$$
 

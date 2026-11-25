@@ -6,9 +6,9 @@ description: >-
 
 # harv\_idx\_ws
 
-**Code reference:** `pldb(ic)%wsyf` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L68)).
+**Code reference:** `pldb(ic)%wsyf` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L63)).
 
-**Current use:** at grain harvest the plant's harvest index is not allowed below this value ([`mgt_harvgrain.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_harvgrain.f90#L43)). HRU-LTE yield interpolates between it and [harv\_idx](untitled-16.md) by water use ([`actions.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L792-L794)).
+**Current use:** at grain harvest the plant's harvest index is not allowed below this value ([`mgt_harvgrain.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_harvgrain.f90#L43)). HRU-LTE yield interpolates between it and [harv\_idx](untitled-16.md) by water use ([`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L814-L816)).
 
 The value between 0.0 and [harv\_idx](untitled-16.md) that represents the lowest harvest index expected due to water stress.
 

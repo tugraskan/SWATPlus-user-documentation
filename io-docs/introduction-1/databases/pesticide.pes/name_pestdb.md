@@ -4,9 +4,9 @@ description: Name of the pesticide record
 
 # name (pesticide.pes)
 
-**Code reference:** `pestdb(ip)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pesticide_data_module.f90#L6)).
+**Code reference:** `pestdb(ip)%name` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pesticide_data_module.f90#L6)).
 
-The name holds up to 16 characters and is matched by [constituents.cs](../../constituents/constituents.cs/) ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constit_db_read.f90#L72)), management operations ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/read_mgtops.f90#L138)) and [pest\_metabolite.pes](../pest_metabolite.pes/).
+The name holds up to 16 characters and is matched by [constituents.cs](../../constituents/constituents.cs/) ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/constit_db_read.f90#L72)), management operations ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L146)) and [pest\_metabolite.pes](../pest_metabolite.pes/).
 
 The pesticide record name is a primary key referenced when pesticide applications are scheduled in [**management.sch**](../../landuse-and-management/management.sch/) or [**lum.dtl**](../../decision-tables/lum.dtl/). All names in the **pesticide.pes** database must be unique.
 

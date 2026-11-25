@@ -7,7 +7,7 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`reg_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reg_read_elements.f90#L1-L205) is never called, so `ls_reg.ele` is not opened during standard runs.
+In SWAT+ main (`6f515368`), [`reg_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reg_read_elements.f90#L1-L205) is never called, so `ls_reg.ele` is not opened during standard runs.
 {% endhint %}
 
 This file identifies the model objects included in landscape regions.

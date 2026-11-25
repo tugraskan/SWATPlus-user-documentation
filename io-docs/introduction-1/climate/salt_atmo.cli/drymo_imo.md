@@ -4,6 +4,6 @@ description: "Monthly dry deposition amount in kg/ha"
 
 # drymo(imo)
 
-**Code reference:** `atmodep_salt(iadep)%salt(isalt)%drymo(imo)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_module.f90#L227)).
+**Code reference:** `atmodep_salt(iadep)%salt(isalt)%drymo(imo)` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/climate_module.f90#L227)).
 
-Dry deposition over the month in kg/ha. The daily input is $M/D$, where $M$ is the supplied amount and $D$ is the number of days in the month. See [salt_rain.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_rain.f90#L42-L82).
+Dry deposition over the month in kg/ha. The daily input is $M/D$, where $M$ is the supplied amount and $D$ is the number of days in the month. See [salt_rain.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_rain.f90#L42-L82).

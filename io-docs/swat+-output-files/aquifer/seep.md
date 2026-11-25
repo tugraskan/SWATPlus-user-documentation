@@ -4,7 +4,7 @@ description: "Seepage leaving the bottom of the aquifer"
 
 # seep
 
-**Code reference:** `aqu_d(iaq)%seep` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L42)).
+**Code reference:** `aqu_d(iaq)%seep` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aquifer_module.f90#L42)).
 
 Water leaving through the bottom of the aquifer and passed to the next receiving object.
 

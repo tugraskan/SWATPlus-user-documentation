@@ -4,7 +4,7 @@ description: "Salt entering standard aquifers with recharge, or the GWFlow cell 
 
 # rchg_kg
 
-**Code reference:** `salt_basin(21)` ([calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_balance.f90#L247-L266)).
+**Code reference:** `salt_basin(21)` ([calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_balance.f90#L247-L266)).
 
 Salt entering standard aquifers with recharge, or the GWFlow cell recharge diagnostic when GWFlow is enabled. With GWFlow enabled and solute transport disabled, the value is zero.
 

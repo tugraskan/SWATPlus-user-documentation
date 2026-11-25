@@ -7,7 +7,7 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-SWAT+ looks for the hardcoded filename `element.ccu` in the working directory ([`ch_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_elements.f90#L145)), ignoring the `ch_catunit.ele` (`in_regs%ele_cha`) slot in `file.cio`. In SWAT+ main (`6f515368`), its attributes are either unused or copied only into unread `ccu_cal` arrays ([`ch_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_elements.f90#L182-L183), [`ch_read_orders_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_orders_cal.f90#L130-L131)).
+SWAT+ looks for the hardcoded filename `element.ccu` in the working directory ([`ch_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_read_elements.f90#L145)), ignoring the `ch_catunit.ele` (`in_regs%ele_cha`) slot in `file.cio`. In SWAT+ main (`6f515368`), its attributes are either unused or copied only into unread `ccu_cal` arrays ([`ch_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_read_elements.f90#L182-L183), [`ch_read_orders_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_read_orders_cal.f90#L130-L131)).
 {% endhint %}
 
 This file identifies cataloging-unit elements and their basin, routing-unit, and regional area fractions.

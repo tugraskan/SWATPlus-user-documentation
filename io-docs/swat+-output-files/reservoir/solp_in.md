@@ -4,7 +4,7 @@ description: "Soluble phosphorus entering the reservoir"
 
 # solp_in
 
-**Code reference:** `res_in_d(j)%solp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L37)).
+**Code reference:** `res_in_d(j)%solp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L37)).
 
 Soluble phosphorus in the routed incoming hydrograph. GWFlow additions go directly to storage. [Nutrient block details](README.md#what-the-nutrient-blocks-include).
 

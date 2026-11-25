@@ -4,9 +4,9 @@ description: "Carbonaceous biochemical oxygen demand slot, left at zero by the w
 
 # cbod_out
 
-**Code reference:** `wet_out_d(j)%cbod` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L41)).
+**Code reference:** `wet_out_d(j)%cbod` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L41)).
 
-The wetland starts its carbonaceous biochemical oxygen demand outflow slot at zero and leaves it at zero. [Outflow initialization](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wetland_control.f90#L59-L64), [Export assignments](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_nutrient.f90#L99-L115)
+The wetland starts its carbonaceous biochemical oxygen demand outflow slot at zero and leaves it at zero. [Outflow initialization](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wetland_control.f90#L59-L64), [Export assignments](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_nutrient.f90#L99-L115)
 
 **Unit:** kg.
 

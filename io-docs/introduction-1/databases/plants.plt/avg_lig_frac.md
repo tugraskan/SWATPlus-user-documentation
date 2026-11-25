@@ -1,11 +1,11 @@
 ---
-description: Average lignin fraction of residue (entered value currently not used)
+description: Average lignin fraction of residue (read but not used)
 ---
 
 # avg\_lig\_frac
 
-**Code reference:** `pldb(ic)%res_part_fracs%meta_frac` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L14)).
+**Code reference:** `lig_in%lig_frac_avg` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L10), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_parm_read.f90#L208-L218)).
 
-Average residue lignin-fraction input. SWAT+ main (6f515368) does not consume the entered value in a simulation calculation. For carbon modes other than 2, the internal component is overwritten with 0.85.
+Column 54, present only when [carbon](../../basin-1/codes.bsn/carbon.md) in codes.bsn is `2`. SWAT+ dev reads this value but does not use it.
 
-**Current use:** [carbon-mode handling](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_parm_read.f90#L61).
+With `carbon = 2` the three lignin columns are required: a line without them stops the run with an error naming the plant. Without carbon they must be left out: a number in column 54 stops the run ([`plant_parm_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_parm_read.f90#L244-L306)).

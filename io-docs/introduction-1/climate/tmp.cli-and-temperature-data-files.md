@@ -26,7 +26,7 @@ Starting in the fourth line, the year, Julian day, and the maximum and minimum t
 | [tmpmin](tmp/tmpmin.md) | Observed minimum temperature | real | °C |  |  |
 
 {% hint style="info" %}
-Enter −99 for missing observations. SWAT+ uses the weather generator for values at or below −97 and dates outside the station coverage. See [climate_control.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_control.f90#L64-L160).
+Enter −99 for missing observations. SWAT+ uses the weather generator for values at or below −97 and dates outside the station coverage. See [climate_control.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/climate_control.f90#L64-L160).
 {% endhint %}
 
 The **tmp.cli** file lists the names of the temperature data files used in the simulation. The first line is reserved for user comments. The second line is reserved for the column header "filename". The user can list as many temperature data file names as needed for the simulation. Only one file name should be listed per line. List each measured filename referenced for this variable in [weather-sta.cli](weather-sta.cli/README.md). For every file name listed in **tmp.cli**, a file with that name must be provided by the user that contains the temperature data measured at the station.

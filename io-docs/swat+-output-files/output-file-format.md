@@ -26,9 +26,9 @@ SWAT+ can close the final simulation year on a day other than the last calendar 
 
 ## Headers and data rows
 
-SWAT+ writes both list-directed and explicitly formatted text. A title, field headings, and a units line are common. The number of preamble lines varies by family and can differ between TXT and CSV. For example, the HRU-salt CSV files write basin and program identification and a units line before their headings. [HRU-salt CSV opener](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/header_salt.f90#L215)
+SWAT+ writes both list-directed and explicitly formatted text. A title, field headings, and a units line are common. The number of preamble lines varies by family and can differ between TXT and CSV. For example, the HRU-salt CSV files write basin and program identification and a units line before their headings. [HRU-salt CSV opener](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/header_salt.f90#L215)
 
-Read the headings together with the family page's data layout. Some writers omit values, change the order of identifiers, or repeat groups for layers, plants, or connections. The heading `null` can label a numeric temperature value. [Hydrograph headings](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L543)
+Read the headings together with the family page's data layout. Some writers omit values, change the order of identifiers, or repeat groups for layers, plants, or connections. The heading `null` can label a numeric temperature value. [Hydrograph headings](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L546)
 
 | Case | Layout to use |
 | --- | --- |
@@ -38,4 +38,4 @@ Read the headings together with the family page's data layout. Some writers omit
 | Object requests | The selected code determines the header and data list. Soil-layer and plant counts can change row width. [Object Outputs](object-outputs.md) |
 | Opened reports with headings only | The `hru_ncycle_*` source trace found title, heading, and unit writes. Check the actual presence of data rows before using a report. [HRU Nutrient Cycling](carbon/hru-nutrient-cycling.md) |
 
-The `.csv` extension identifies the requested variant. Check its actual writer before choosing a delimiter. For instance, `yield.csv` uses the same list-directed write as `yield.out`. [Debugging Outputs](debugging-outputs.md) · [LTE yield writes](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_lte_control.f90#L206)
+The `.csv` extension identifies the requested variant. Check its actual writer before choosing a delimiter. For instance, `yield.csv` uses the same list-directed write as `yield.out`. [Debugging Outputs](debugging-outputs.md) · [LTE yield writes](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_lte_control.f90#L206)

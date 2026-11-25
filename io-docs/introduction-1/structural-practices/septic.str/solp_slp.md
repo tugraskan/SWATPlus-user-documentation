@@ -4,9 +4,9 @@ description: Slope of the linear effluent soluble P equation
 
 # solp\_slp
 
-**Code reference:** `sep(isep)%solpslp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_data_module.f90#L48)).
+**Code reference:** `sep(isep)%solpslp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/septic_data_module.f90#L48)).
 
-Slope of the linear effluent soluble P equation used with [`solp_int`](solp_init.md) in [`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sep_biozone.f90#L282) when biozone labile P is below the total sub-biozone sorption capacity:
+Slope of the linear effluent soluble P equation used with [`solp_int`](solp_init.md) in [`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sep_biozone.f90#L282) when biozone labile P is below the total sub-biozone sorption capacity:
 
 $$P_{\text{end}} = m_p \cdot P_{\text{tot}} + b_p$$
 

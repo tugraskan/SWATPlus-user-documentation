@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file defines each groundwater cell: its status, geometry, property zones and initial head, plus optional per-cell overrides.
 
-SWAT+ looks for `cells.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L429-L500) reader.
+SWAT+ looks for `cells.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L429-L500) reader.
 
 # cells.gw
 
-The first two lines are a title and column headings. Then give one line per cell, `ncell` lines in cell order, with fields separated by spaces. The first 14 columns are required; a line with fewer stops the run with a message in the GWFlow record file. Columns 15–23 are optional and positional: to give a later column, fill the ones before it, using `null` where there is no value ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L432-L498)).
+The first two lines are a title and column headings. Then give one line per cell, `ncell` lines in cell order, with fields separated by spaces. The first 14 columns are required; a line with fewer stops the run with a message in the GWFlow record file. Columns 15–23 are optional and positional: to give a later column, fill the ones before it, using `null` where there is no value ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L432-L498)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies channel sediment, nutrient settling, and erosion parameters.
 
-SWAT+ looks for `sed_nut.cha` in the simulation working directory; it is not selected through `file.cio`. See the [`sd_hydsed_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_hydsed_read.f90#L74) reader. Records are matched by comparing `sd_chd1%name` against the channel's `cha_hyd` name in [`sd_channel_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_read.f90#L284-L289).
+SWAT+ looks for `sed_nut.cha` in the simulation working directory; it is not selected through `file.cio`. See the [`sd_hydsed_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_hydsed_read.f90#L75) reader. Records are matched by comparing `sd_chd1%name` against the channel's `cha_hyd` name in [`sd_channel_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_read.f90#L284-L289).
 
 # sed_nut.cha
 

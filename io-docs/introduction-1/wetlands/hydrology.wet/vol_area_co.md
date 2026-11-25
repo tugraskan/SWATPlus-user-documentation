@@ -4,9 +4,9 @@ description: Volume surface area coefficient for HRU impoundment
 
 # vol\_area\_co
 
-**Code reference:** `wet_hyddb(ires)%acoef` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L90)).
+**Code reference:** `wet_hyddb(ires)%acoef` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reservoir_data_module.f90#L90)).
 
-A linear coefficient (default `1.0`) controlling how surface area fraction responds to changes in water depth $h$ ([`wetland_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wetland_control.f90#L92), [`wet_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wet_initial.f90#L213)):
+A linear coefficient (default `1.0`) controlling how surface area fraction responds to changes in water depth $h$ ([`wetland_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wetland_control.f90#L92), [`wet_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wet_initial.f90#L214)):
 
 $$\text{fr} = 1 + a \cdot h \quad (\text{clipped to } [0.01, 1.0])$$
 

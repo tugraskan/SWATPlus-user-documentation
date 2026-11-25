@@ -4,9 +4,9 @@ description: Minimum temperature for plant growth
 
 # tmp\_base
 
-**Code reference:** `pldb(ic)%t_base` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L59)).
+**Code reference:** `pldb(ic)%t_base` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L54)).
 
-**Current use:** heat units to maturity ([`plant_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_init.f90#L253-L257)) and temperature stress ([`pl_tstr.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_tstr.f90#L68-L77); see [tmp\_opt](untitled-6.md)).
+**Current use:** heat units to maturity ([`plant_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_init.f90#L251-L255)) and temperature stress ([`pl_tstr.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_tstr.f90#L68-L77); see [tmp\_opt](untitled-6.md)).
 
 SWAT+ uses the base temperature to calculate the number of heat units accrued every day. The minimum or base temperature for plant growth varies with growth stage of the plant. However, this variation is ignored by the model - SWAT+ uses the same base temperature throughout the growing season.
 

@@ -20,8 +20,8 @@ description: >-
 | [conc\_no3n](conc_no3.md) | Concentration of NO3-N in suspended solid load from impervious areas | real | mg/kg | 0.0 | 0.0-50.0 |
 | [urb\_cn](urb_cn.md) | Moisture-condition-II curve-number input for impervious areas (not used; daily curve-number runoff uses a fixed value of 98) | real | none | 0.0 | 30.0-100.0 |
 
-The `urb_ro` setting in landuse.lum selects the daily loading method: `usgs_reg` uses regression equations and only `frac_imp` from this file for loads; `buildup_washoff` uses the build-up and wash-off columns ([`hru_urban.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_urban.f90#L91-L122)). Sub-daily simulation always uses build-up/wash-off ([`hru_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_control.f90#L594-L598)).
+The `urb_ro` setting in landuse.lum selects the daily loading method: `usgs_reg` uses regression equations and only `frac_imp` from this file for loads; `buildup_washoff` uses the build-up and wash-off columns ([`hru_urban.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_urban.f90#L91-L122)). Sub-daily simulation always uses build-up/wash-off ([`hru_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_control.f90#L590-L594)).
 
 {% hint style="warning" %}
-Suspected defect (source reading): the daily build-up/wash-off method multiplies the silt load by the HRU area but not the total sediment load ([`hru_urban.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_urban.f90#L153-L159)).
+Suspected defect (source reading): the daily build-up/wash-off method multiplies the silt load by the HRU area but not the total sediment load ([`hru_urban.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_urban.f90#L153-L159)).
 {% endhint %}

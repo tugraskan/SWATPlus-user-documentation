@@ -4,9 +4,9 @@ description: Type of object to print output for
 
 # obj\_typ
 
-**Code reference:** `ob_out(ii)%obtyp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L258)).
+**Code reference:** `ob_out(ii)%obtyp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L261)).
 
-In [`object_read_output.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/object_read_output.f90#L56-L76), SWAT+ maps `obj_typ` and `obj_typ_no` to the global object index:
+In [`object_read_output.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/object_read_output.f90#L56-L76), SWAT+ maps `obj_typ` and `obj_typ_no` to the global object index:
 
 $$i_{\text{ob}} = i_{\text{ob1}} + n_{\text{typ}} - 1$$
 

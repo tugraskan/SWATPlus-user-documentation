@@ -4,7 +4,7 @@ description: This legacy file is read by SWAT+ main (6f515368), but its fields a
 
 # initial.aqu
 
-[`aqu_read_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read_init.f90#L32-L58) reads this file during aquifer setup, but no simulation routine reads any of its fields afterward. The [init](../aquifer.aqu/aqu_ini.md) pointer in **aquifer.aqu** is matched against [initial.aqu\_cs](../../initialization/initial.aqu_cs/), not this file.
+[`aqu_read_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_read_init.f90#L32-L58) reads this file during aquifer setup, but no simulation routine reads any of its fields afterward. The [init](../aquifer.aqu/aqu_ini.md) pointer in **aquifer.aqu** is matched against [initial.aqu\_cs](../../initialization/initial.aqu_cs/), not this file.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In [`water_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_osrc_read.f90#L33-L101), the outer `do ... end do` loop lacks an `exit` statement after reading `imax` records. Only `org_min_typ` and `org_min_name` are evaluated during simulation in SWAT+ main (`6f515368`).
+In [`water_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_osrc_read.f90#L33-L101), the outer `do ... end do` loop lacks an `exit` statement after reading `imax` records. Only `org_min_typ` and `org_min_name` are evaluated during simulation in SWAT+ main (`6f515368`).
 {% endhint %}
 
 This file defines outside water sources and their constituent inputs.
 
-SWAT+ looks for `outside_src.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_osrc_read.f90#L34) reader.
+SWAT+ looks for `outside_src.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_osrc_read.f90#L34) reader.
 
 # outside_src.wal
 

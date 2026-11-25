@@ -4,7 +4,7 @@ description: "Allocation rule type for the manure allocation object (read but no
 
 # rule\_typ
 
-**Code reference:** `mallo(imro)%rule_typ` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/manure_allocation_module.f90#L59), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/manure_allocation_read.f90#L51)).
+**Code reference:** `mallo(imro)%rule_typ` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/manure_allocation_module.f90#L59), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/manure_allocation_read.f90#L51)).
 
 Character string (`len=25`, default `""`) intended to identify the allocation rule type.
 

@@ -18,7 +18,7 @@ The first two lines contain a title and column headings. Each following row cont
 
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
-The list file starts with a title and header. Each referenced file starts with a title, header and station metadata row, followed by daily observations. See [cli_petmeas.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_petmeas.f90#L78-L83) and [cli_petmeas.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_petmeas.f90#L112-L124).
+The list file starts with a title and header. Each referenced file starts with a title, header and station metadata row, followed by daily observations. See [cli_petmeas.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_petmeas.f90#L78-L83) and [cli_petmeas.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_petmeas.f90#L112-L124).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --- | --- | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ The list file starts with a title and header. Each referenced file starts with a
 | [jday](jday.md) | Day of year | integer |  |  |  |
 | [pet](pet.md) | Daily potential evapotranspiration | real | mm/day |  |  |
 
-SWAT+ reads measured PET for matched stations, then recomputes station PET with Hargreaves for every weather station and applies a minimum of 0.01 mm/day. HRU PET method 3 uses this recomputed value before applying the HRU PET coefficient. See [climate_control.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_control.f90#L165-L210) and [et_pot.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/et_pot.f90#L273-L280).
+SWAT+ reads measured PET for matched stations, then recomputes station PET with Hargreaves for every weather station and applies a minimum of 0.01 mm/day. HRU PET method 3 uses this recomputed value before applying the HRU PET coefficient. See [climate_control.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/climate_control.f90#L165-L210) and [et_pot.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/et_pot.f90#L273-L280).
 
 For $T_{\max}>T_{\min}$, the station calculation uses:
 
@@ -50,4 +50,4 @@ where:
 - $T_{\max}$ is daily maximum air temperature (°C), and
 - $T_{\min}$ is daily minimum air temperature (°C).
 
-If $T_{\max}\leq T_{\min}$, station PET is 0.01 mm/day. See [climate_control.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_control.f90#L199-L210).
+If $T_{\max}\leq T_{\min}$, station PET is 0.01 mm/day. See [climate_control.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/climate_control.f90#L199-L210).

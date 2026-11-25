@@ -4,9 +4,9 @@ description: Light extinction coefficient
 
 # ext\_co
 
-**Code reference:** `pldb(ic)%ext_coef` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L84)).
+**Code reference:** `pldb(ic)%ext_coef` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L79)).
 
-**Current use:** values below `1e-6` are replaced by 0.65 ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L21)). Intercepted photosynthetically active radiation is calculated in [`pl_community.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_community.f90#L136) as:
+**Current use:** values below `1e-6` are replaced by 0.65 ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L21)). Intercepted photosynthetically active radiation is calculated in [`pl_community.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_community.f90#L134) as:
 
 $$\text{PAR}_{\text{int}} = 0.5\,H_{\text{day}}\left(1 - \exp\!\big(-k_{l}\,(\text{LAI} + 0.05)\big)\right)$$
 

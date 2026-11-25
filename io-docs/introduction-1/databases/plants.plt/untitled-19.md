@@ -4,9 +4,9 @@ description: Nitrogen fixation coefficient
 
 # nfix\_co
 
-**Code reference:** `pldb(ic)%nfix_co` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L41)).
+**Code reference:** `pldb(ic)%nfix_co` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L36)).
 
-Any value above `1e-6` turns fixation on and also removes nitrogen stress for the plant ([`pl_nup.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_nup.f90#L91-L107)). The coefficient $c$ blends fixation with the unmet nitrogen demand $D$ ([`pl_nfix.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_nfix.f90#L84-L87)):
+Any value above `1e-6` turns fixation on and also removes nitrogen stress for the plant ([`pl_nup.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_nup.f90#L91-L107)). The coefficient $c$ blends fixation with the unmet nitrogen demand $D$ ([`pl_nfix.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_nfix.f90#L84-L87)):
 
 $$N = c\,\min(6, f D) + (1 - c)\,D$$
 

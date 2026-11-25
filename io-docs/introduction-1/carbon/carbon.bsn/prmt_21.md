@@ -4,9 +4,9 @@ description: "Partition coefficient (Koc) for microbial carbon loss from the top
 
 # prmt\_21
 
-**Code reference:** `cb_wtr_coef%prmt_21` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_module.f90#L147), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_bsn_read.f90#L72), [calibration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cal_parm_select.f90#L480-L481)).
+**Code reference:** `cb_wtr_coef%prmt_21` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_module.f90#L146), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_bsn_read.f90#L73), [calibration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cal_parm_select.f90#L481-L482)).
 
-Organic carbon partition coefficient $K_{oc}$ that controls how much microbial carbon leaves soil layer 1 with surface runoff, lateral flow and percolation each day ([`nut_orgnc2.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/nut_orgnc2.f90#L113-L131)):
+Organic carbon partition coefficient $K_{oc}$ that controls how much microbial carbon leaves soil layer 1 with surface runoff, lateral flow and percolation each day ([`nut_orgnc2.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/nut_orgnc2.f90#L118-L136)):
 
 $$
 C_{loss} = C_{mic} \left(1 - \exp\left(\frac{-Q}{SAT + 10^{-4} \, K_{oc} \, C_{tot}}\right)\right)

@@ -4,7 +4,7 @@ description: "Plant uptake"
 
 # uptk_born
 
-**Code reference:** `hcsb_d(j)%cs(ics)%rctn` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cs_module.f90#L25)).
+**Code reference:** `hcsb_d(j)%cs(ics)%rctn` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cs_module.f90#L25)).
 
 In this output table, `uptk_born` is one of the fields described as: Plant uptake. Important: this source prints a header/value mismatch. At the position labeled `uptk_born`, the data writer supplies `hcsb_d(j)%cs(ics)%rctn`. This page records that positional relationship and does not reinterpret the value as the printed label.
 

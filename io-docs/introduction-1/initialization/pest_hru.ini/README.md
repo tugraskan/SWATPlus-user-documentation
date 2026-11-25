@@ -6,7 +6,7 @@ description: >-
 
 # pest\_hru.ini
 
-[`pest_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_hru_aqu_read.f90#L20-L63) reads `pest_hru.ini` (listed as `pest_soil` on the `init` row of [**file.cio**](../../master-file-file.cio.md)). The file begins with a title line and a column-header line. Each initialization set consists of a record name row followed by `cs_db%num_pests` pesticide rows matching the pesticide order in [**constituents.cs**](../../constituents/constituents.cs.md).
+[`pest_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_hru_aqu_read.f90#L20-L67) reads `pest_hru.ini` (listed as `pest_soil` on the `init` row of [**file.cio**](../../master-file-file.cio.md)). The file begins with a title line and a column-header line. Each initialization set consists of a record name row followed by `cs_db%num_pests` pesticide rows matching the pesticide order in [**constituents.cs**](../../constituents/constituents.cs.md). The number of sets is counted by reading one name row plus `cs_db%num_pests` rows per set after the header ([`pest_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_hru_aqu_read.f90#L24-L40)), so every set must have exactly that many pesticide rows and no extra lines between sets. (SWAT+ main expected a header line before each set when counting, so it counted files with several sets wrongly.)
 
 ## Parameter-set name
 

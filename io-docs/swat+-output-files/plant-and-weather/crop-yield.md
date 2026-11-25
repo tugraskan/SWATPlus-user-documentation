@@ -21,7 +21,7 @@ The yearly values accumulate harvest area and yield across HRUs for each basin p
 At this revision, the basin opener creates both yearly and average-annual files only when `crop_yld` is `y` or `b`, and the average-annual writer uses the same `y`/`b` condition. The documented `a` control therefore does not by itself create or write the basin average-annual file. No basin crop-yield CSV opener is present in `header_yield.f90`.
 {% endhint %}
 
-[Basin file creation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/header_yield.f90#L20), [yearly and average-annual writes](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/time_control.f90#L285)
+[Basin file creation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/header_yield.f90#L20), [yearly and average-annual writes](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/time_control.f90#L279)
 
 ## HRU crop yield
 
@@ -48,6 +48,6 @@ The source opens and prints the yearly HRU TXT/CSV headers for `crop_yld = y` or
 
 The average-annual CSV header is shorter: `jday`, `mon`, `day`, `year`, `unit`, `plantnm`, and `yield`. Its data write passes the same four-component `yield_tot` record as the TXT writer. The TXT and CSV headings are therefore not interchangeable, and the CSV header does not name the carbon, nitrogen, and phosphorus components.
 
-[HRU file creation and headings](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L1253), [average-annual write](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L321), [yield record fields](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/organic_mineral_mass_module.f90#L11)
+[HRU file creation and headings](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L1252), [average-annual write](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L306), [yield record fields](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/organic_mineral_mass_module.f90#L7)
 
 [Back to the Plant and Weather index](README.md).

@@ -4,7 +4,7 @@ description: "Soluble phosphorus concentration (read but not used in main 6f5153
 
 # solp
 
-**Code reference:** `pudl_db(ic)%solp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_operations_module.f90#L24), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_read_puddle.f90#L42)).
+**Code reference:** `pudl_db(ic)%solp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_operations_module.f90#L24), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_read_puddle.f90#L42)).
 
 Soluble mineral phosphorus concentration (`ppm`, struct default `0.0`) intended for standing paddy water after puddling. Keep the column in each row so subsequent fields remain aligned.
 

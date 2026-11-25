@@ -8,13 +8,13 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file marks the cells covered by each reservoir and sets the reservoir-bed properties. It is read only when `res` is 1 in [codes.gw](../codes.gw/res.md).
 
-SWAT+ looks for `rescell.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1109-L1157) reader.
+SWAT+ looks for `rescell.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1109-L1157) reader.
 
 # rescell.gw
 
-Each item is on its own line, in this order: a title line, a heading line, `res_thick`, `res_K`, `num_res_cells`, a heading line, then `num_res_cells` lines of `res_cell res_id res_stage` ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1113-L1157)). Lines with `res_id` 0 are skipped.
+Each item is on its own line, in this order: a title line, a heading line, `res_thick`, `res_K`, `num_res_cells`, a heading line, then `num_res_cells` lines of `res_cell res_id res_stage` ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1113-L1157)). Lines with `res_id` 0 are skipped.
 
-Each day, every active neighbor (from `cellcon.gw`) of a reservoir cell exchanges water with the reservoir ([`gwflow_reservoir.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_reservoir.f90#L44-L81)):
+Each day, every active neighbor (from `cellcon.gw`) of a reservoir cell exchanges water with the reservoir ([`gwflow_reservoir.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_reservoir.f90#L44-L81)):
 
 $$Q = K \, \frac{z_{r} - h}{b} \, b \, L = K \, (z_{r} - h) \, L$$
 

@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies cumulative depths used to construct custom soil layers.
 
-SWAT+ looks for `soil_lyr_depths.sol` in the simulation working directory; it is not selected through `file.cio`. See the [`soils_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soils_init.f90#L166-L277) reader.
+SWAT+ looks for `soil_lyr_depths.sol` in the simulation working directory; it is not selected through `file.cio`. See the [`soils_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soils_init.f90#L166-L277) reader.
 
 # soil_lyr_depths.sol
 

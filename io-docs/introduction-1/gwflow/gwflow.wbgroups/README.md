@@ -8,11 +8,11 @@ An Editor export of this format has not been verified. Field names and values in
 
 This optional file defines groups of cells; each group's daily groundwater balance is written to its own file, `gwflow_group_wb_day_` followed by the group number. It does not change the simulation.
 
-SWAT+ looks for `gwflow.wbgroups` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_output.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L135-L179) reader.
+SWAT+ looks for `gwflow.wbgroups` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_output.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L135-L179) reader.
 
 # gwflow.wbgroups
 
-Each item is on its own line: a title line, the number of groups, the largest group size, then for each group a label line, its cell count and one cell number per line ([`gwflow_output.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_output.f90#L139-L166)). The group number in the file name is written in two characters, so groups 1–9 get a leading space (`gwflow_group_wb_day_ 1`) and groups above 99 get `**`.
+Each item is on its own line: a title line, the number of groups, the largest group size, then for each group a label line, its cell count and one cell number per line ([`gwflow_output.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_output.f90#L139-L166)). The group number in the file name is written in two characters, so groups 1–9 get a leading space (`gwflow_group_wb_day_ 1`) and groups above 99 get `**`.
 
 ## Group count
 

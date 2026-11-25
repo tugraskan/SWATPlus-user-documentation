@@ -4,7 +4,7 @@ description: "Bank erosion, channel degradation and deposition, floodplain depos
 
 # tot_ssed
 
-**Code reference:** `ch_d(jrch)%tot_ssed` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_module.f90#L181)).
+**Code reference:** `ch_d(jrch)%tot_ssed` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_module.f90#L181)).
 
 The alternate channel record declares this as a suspended sediment concentration. The printed units row uses `----`.
 

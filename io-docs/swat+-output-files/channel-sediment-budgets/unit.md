@@ -4,7 +4,7 @@ description: "Channel or basin identifiers"
 
 # unit
 
-**Code reference:** `ichan` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_chanbud_output.f90#L9)).
+**Code reference:** `ichan` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_chanbud_output.f90#L9)).
 
 In this output table, `unit` is one of the fields described as: Channel or basin identifiers.
 

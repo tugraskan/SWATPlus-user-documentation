@@ -4,9 +4,9 @@ description: "Object or property identifier"
 
 # props
 
-**Code reference:** `ob(icmd)%props` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L343)).
+**Code reference:** `ob(icmd)%props` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L346)).
 
-Channel property reference read from the connectivity record. The report writes `props` directly. [Connectivity read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hyd_read_connect.f90#L220-L221).
+Channel property reference read from the connectivity record. The report writes `props` directly. [Connectivity read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hyd_read_connect.f90#L220-L221).
 
 This field has no physical unit in the output table.
 

@@ -4,9 +4,9 @@ description: Unit Hydrograph method
 
 # uhyd
 
-**Code reference:** `bsn_cc%uhyd` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L53), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_cc.f90#L24)).
+**Code reference:** `bsn_cc%uhyd` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_module.f90#L53), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_cc.f90#L24)).
 
-Selects the sub-daily unit hydrograph ordinate shape in [`unit_hyd.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/unit_hyd.f90#L94-L107) (struct default `1`).
+Selects the sub-daily unit hydrograph ordinate shape in [`unit_hyd.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/unit_hyd.f90#L94-L107) (struct default `1`).
 
 | Code | Option |
 | ---- | ------ |

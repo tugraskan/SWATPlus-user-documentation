@@ -4,7 +4,7 @@ description: "Aquifer diversion salt diagnostic with no active producer"
 
 # div_mg
 
-**Code reference:** `asaltb_d(iaq)%salt(isalt)%div` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_aquifer.f90#L13)).
+**Code reference:** `asaltb_d(iaq)%salt(isalt)%div` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_aquifer.f90#L13)).
 
 Aquifer diversion slot for magnesium. The header describes signed exchange, with removal negative and addition positive. The inspected 1-D path leaves the field at zero because no active producer assigns it. See [daily aquifer values](aquifer-salt.md#daily-1-d-aquifer-values).
 

@@ -6,9 +6,9 @@ description: >-
 
 # sw\_init
 
-**Code reference:** `bsn_prm%ffcb` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L81), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L24)).
+**Code reference:** `bsn_prm%ffcb` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_module.f90#L81), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_prm.f90#L24)).
 
-All soils in the watershed are initialized to the same fraction of field capacity water content (default `0`, range `0–1`; values `< 1.e-6` are reset to `0.` in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_prm_default.f90#L10)). When `sw_init <= 0.`, [`hydro_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydro_init.f90#L88-L92) estimates the initial fraction ($f_{\text{fc}}$) from average annual precipitation ($P_{\text{ann}}$, `mm`):
+All soils in the watershed are initialized to the same fraction of field capacity water content (default `0`, range `0–1`; values `< 1.e-6` are reset to `0.` in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_prm_default.f90#L10)). When `sw_init <= 0.`, [`hydro_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydro_init.f90#L88-L92) estimates the initial fraction ($f_{\text{fc}}$) from average annual precipitation ($P_{\text{ann}}$, `mm`):
 
 $$f_{\text{fc}} = \frac{P_{\text{ann}}}{P_{\text{ann}} + \exp(9.043 - 0.002135\,P_{\text{ann}})}$$
 

@@ -1,8 +1,8 @@
 # HRU decomposition controls
 
-Files `hru_carbvars.txt` and `hru_carbvars.csv` contain 24 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_legacy_module.f90#L285), [Writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_carbvar_write_legacy.f90#L51)
+Files `hru_carbvars.txt` and `hru_carbvars.csv` contain 24 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_legacy_module.f90#L284), [Writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_carbvar_write_historical.f90#L50)
 
-The decomposition routine copies nitrate and ammonium from the layer's mineral nitrogen pool when it calculates the respiration diagnostic. The writer also emits the layer's mixing fraction. [Nitrogen and respiration assignments](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cbn_zhang2.f90#L952), [Mixing fraction](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/organic_mineral_mass_module.f90#L94)
+The decomposition routine copies nitrate and ammonium from the layer's mineral nitrogen pool when it calculates the respiration diagnostic. The writer also emits the layer's mixing fraction. [Nitrogen and respiration assignments](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cbn_zhang2.f90#L996), [Mixing fraction](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/organic_mineral_mass_module.f90#L100)
 
 | Field | Description | Unit |
 | --- | --- | --- |

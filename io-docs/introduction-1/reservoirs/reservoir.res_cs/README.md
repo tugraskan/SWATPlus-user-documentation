@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file links reservoirs to their salt and general-constituent records (and also contains columns for pesticide and weir record names).
 
-SWAT+ looks for `reservoir.res_cs` in the simulation working directory; it is not selected through `file.cio`. It skips two header lines and reads one 5-column row per reservoir via [`res_read_salt_cs.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_salt_cs.f90#L31-L64).
+SWAT+ looks for `reservoir.res_cs` in the simulation working directory; it is not selected through `file.cio`. It skips two header lines and reads one 5-column row per reservoir via [`res_read_salt_cs.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_salt_cs.f90#L31-L64).
 
 # reservoir.res\_cs
 

@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies settling velocities, first-order degradation rates, temperature adjustments, and initial concentrations for selenate (`seo4`), selenite (`seo3`), and boron (`born`) in reservoirs and wetlands.
 
-SWAT+ looks for `cs_res` in the simulation working directory; it is not selected through `file.cio`. It reads this file via [`res_read_csdb.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_csdb.f90#L24-L68) only when `cs_res` exists and `nut_res` in `file.cio` is not `null`. Before data rows, SWAT+ skips **15 header lines** (2 title lines, 12 descriptive lines, and 1 column-header line).
+SWAT+ looks for `cs_res` in the simulation working directory; it is not selected through `file.cio`. It reads this file via [`res_read_csdb.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_csdb.f90#L24-L68) only when `cs_res` exists and `nut_res` in `file.cio` is not `null`. Before data rows, SWAT+ skips **15 header lines** (2 title lines, 12 descriptive lines, and 1 column-header line).
 
 # cs\_res
 

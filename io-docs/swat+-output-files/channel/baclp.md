@@ -4,7 +4,7 @@ description: "Persistent and less-persistent bacteria outputs"
 
 # baclp
 
-**Code reference:** `ch_d(jrch)%baclp` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_module.f90#L161)).
+**Code reference:** `ch_d(jrch)%baclp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_module.f90#L161)).
 
 In this output table, `baclp` is one of the fields described as: Persistent and less-persistent bacteria outputs.
 

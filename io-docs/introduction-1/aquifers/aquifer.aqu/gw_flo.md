@@ -4,11 +4,11 @@ description: Initial groundwater flow
 
 # gw\_flo
 
-**Code reference:** `aqudb(i)%flo` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L8)).
+**Code reference:** `aqudb(i)%flo` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aquifer_module.f90#L8)).
 
-Groundwater flow (mm) from the aquifer at the start of the simulation. [`aqu_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_initial.f90#L170) copies it into the daily state `aqu_d%flo`, which is the starting value of the baseflow recession (see [alpha\_bf](alpha_bf.md)).
+Groundwater flow (mm) from the aquifer at the start of the simulation. [`aqu_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_initial.f90#L172) copies it into the daily state `aqu_d%flo`, which is the starting value of the baseflow recession (see [alpha\_bf](alpha_bf.md)).
 
-SWAT+ also uses this value to set the initial aquifer nutrient masses, [`aqu_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_initial.f90#L174-L175):
+SWAT+ also uses this value to set the initial aquifer nutrient masses, [`aqu_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_initial.f90#L176-L177):
 
 $$
 M_{0} = \frac{10 \times Q_{0} \times A \times c}{1000}

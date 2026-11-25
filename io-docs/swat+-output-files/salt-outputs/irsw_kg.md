@@ -4,7 +4,7 @@ description: "Salt assigned to surface-water irrigation in the HRU diagnostics"
 
 # irsw_kg
 
-**Code reference:** `salt_basin(10)` ([calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_balance.f90#L144-L151)).
+**Code reference:** `salt_basin(10)` ([calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_balance.f90#L144-L151)).
 
 Salt assigned to surface-water irrigation in the HRU diagnostics. The field is zero on the inspected revision because it has no active producer. [HRU salt diagnostics](../hru-salt/README.md)
 

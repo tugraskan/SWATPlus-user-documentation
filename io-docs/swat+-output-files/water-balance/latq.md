@@ -4,9 +4,9 @@ description: "Lateral soil flow including shallow groundwater discharge for HRU-
 
 # latq
 
-**Code reference:** `bwb_d%latq` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_module.f90#L10)).
+**Code reference:** `bwb_d%latq` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_module.f90#L10)).
 
-The full-HRU record uses `latq(j)` after the subsurface lag calculation. HRU-LTE reports `flowlat + hlt(isd)%gwflow`, so its value includes shallow groundwater discharge. [subsurface lag](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/swr_substor.f90#L51-L73), [full HRU](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_control.f90#L735-L741), [HRU-LTE](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_lte_control.f90#L368-L375).
+The full-HRU record uses `latq(j)` after the subsurface lag calculation. HRU-LTE reports `flowlat + hlt(isd)%gwflow`, so its value includes shallow groundwater discharge. [subsurface lag](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/swr_substor.f90#L51-L73), [full HRU](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_control.f90#L731-L737), [HRU-LTE](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_lte_control.f90#L368-L375).
 
 **Unit:** mm.
 

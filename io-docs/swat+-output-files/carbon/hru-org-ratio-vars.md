@@ -1,8 +1,8 @@
 # HRU organic pool nitrogen-to-carbon ratios
 
-Files `hru_org_ratio_vars.txt` and `hru_org_ratio_vars.csv` contain 13 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_legacy_module.f90#L333), [Writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_carbvar_write_legacy.f90#L79)
+Files `hru_org_ratio_vars.txt` and `hru_org_ratio_vars.csv` contain 13 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_legacy_module.f90#L332), [Writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_carbvar_write_historical.f90#L78)
 
-The three ratios follow the ten identifying columns. [Data type order](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_module.f90#L137)
+The three ratios follow the ten identifying columns. [Data type order](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_module.f90#L136)
 
 | Field | Description | Unit |
 | --- | --- | --- |

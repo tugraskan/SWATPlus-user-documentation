@@ -4,6 +4,8 @@ description: Lignin fraction of below-ground residue
 
 # bg\_lig\_frac
 
-**Code reference:** `pldb(ic)%res_part_fracs%lig_frac` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L16)).
+**Code reference:** `res_part_fracs(ic)%lig_frac_blg` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L12), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_parm_read.f90#L208-L218)).
 
-Used only when carbon in codes.bsn is set to 2. The model then derives the structural fraction (this value / 0.8) and the metabolic fraction (1 − structural) of below-ground residue from it. For other carbon settings this column is ignored.
+Column 56, present only when [carbon](../../basin-1/codes.bsn/carbon.md) in codes.bsn is `2`. It sets the structural fraction of below-ground residue to this value / 0.8 and the metabolic fraction to the rest ([`plant_parm_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_parm_read.f90#L262-L278)). Residue transfers then split root residue with it ([`cbn_rsd_transfer.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cbn_rsd_transfer.f90#L81)).
+
+With `carbon = 2` the three lignin columns are required: a line without them stops the run with an error naming the plant. Without carbon they must be left out: a number in column 54 stops the run ([`plant_parm_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_parm_read.f90#L244-L306)).

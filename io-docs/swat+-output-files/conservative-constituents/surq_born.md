@@ -4,7 +4,7 @@ description: "Surface-runoff transport"
 
 # surq_born
 
-**Code reference:** `hcsb_d(j)%cs(ics)%surq` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cs_module.f90#L9)).
+**Code reference:** `hcsb_d(j)%cs(ics)%surq` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cs_module.f90#L9)).
 
 In this output table, `surq_born` is one of the fields described as: Surface-runoff transport.
 

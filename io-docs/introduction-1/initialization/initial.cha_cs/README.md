@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file links a channel initial-condition set to its constituent initialization records.
 
-SWAT+ looks for `initial.cha_cs` in the simulation working directory; it is not selected through `file.cio`. [`ch_read_init_cs.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_read_init_cs.f90#L27-L51) loads `ch_init_cs`, and [`sd_channel_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_read.f90#L227-L270) matches channels by `name` in [**initial.cha**](../../channels/initial.cha/) and reuses that row index `isp_ini` into `ch_init_cs(isp_ini)` for `path`, `salt`, and `cs`—rows must align with `initial.cha`. In SWAT+ main (`6f515368`), `name`, `pest`, and `hmet` in `initial.cha_cs` are unused.
+SWAT+ looks for `initial.cha_cs` in the simulation working directory; it is not selected through `file.cio`. [`ch_read_init_cs.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_read_init_cs.f90#L27-L51) loads `ch_init_cs`, and [`sd_channel_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_read.f90#L227-L270) matches channels by `name` in [**initial.cha**](../../channels/initial.cha/) and reuses that row index `isp_ini` into `ch_init_cs(isp_ini)` for `path`, `salt`, and `cs`—rows must align with `initial.cha`. In SWAT+ main (`6f515368`), `name`, `pest`, and `hmet` in `initial.cha_cs` are unused.
 
 # initial.cha\_cs
 

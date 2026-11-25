@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this filename. Field names and va
 
 This file specifies groundwater pumping from cells for given periods. It is read only when `pumpex` is 1 in [codes.gw](../codes.gw/pumpex.md).
 
-SWAT+ looks for `pumpex.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L952-L1016) reader.
+SWAT+ looks for `pumpex.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L952-L1016) reader.
 
 # pumpex.gw
 
-The first two lines are a title and column headings. Each following line is one pumping period. To change the rate over time, add lines for the same cell with other periods. Lines for the same cell must be together: each run of lines with the same cell becomes one pump, and a pump can have at most 1,000 periods ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L961-L1009)).
+The first two lines are a title and column headings. Each following line is one pumping period. To change the rate over time, add lines for the same cell with other periods. Lines for the same cell must be together: each run of lines with the same cell becomes one pump, and a pump can have at most 1,000 periods ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L961-L1009)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |
@@ -26,7 +26,7 @@ The first two lines are a title and column headings. Each following line is one 
 
 ## Dates
 
-SWAT+ converts each date to a simulation day number with 365-day years ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L998-L1008)):
+SWAT+ converts each date to a simulation day number with 365-day years ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L998-L1008)):
 
 $$n = (y - y_{0}) \times 365 + d$$
 

@@ -4,7 +4,7 @@ description: "HRU plant-community identifier; header-only at other written level
 
 # plant_cov
 
-**Code reference:** `lum(ilu)%plant_cov` ([HRU writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L75)).
+**Code reference:** `lum(ilu)%plant_cov` ([HRU writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L73)).
 
 HRU rows append this identifier after their numeric balance record. Basin and LSU records omit this value; standalone HRU-LTE nutrient output is disabled. The shared printed header still includes the label. The missing-value warning applies to those other spatial levels, not to HRU records.
 

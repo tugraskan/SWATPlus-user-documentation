@@ -4,9 +4,9 @@ description: BOD decay rate coefficient
 
 # bod\_decay
 
-**Code reference:** `sep(isep)%bod_dc` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_data_module.f90#L33)).
+**Code reference:** `sep(isep)%bod_dc` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/septic_data_module.f90#L33)).
 
-Biozone BOD decay rate coefficient ($\text{m}^3/\text{day}$), normalized by live biomass concentration in the biozone pore volume (daily rate capped at `4.0` $\text{day}^{-1}$ in [`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sep_biozone.f90#L242-L244)):
+Biozone BOD decay rate coefficient ($\text{m}^3/\text{day}$), normalized by live biomass concentration in the biozone pore volume (daily rate capped at `4.0` $\text{day}^{-1}$ in [`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sep_biozone.f90#L242-L244)):
 
 $$k_{\text{bod}} = \min\!\left(\max\!\left(0,\; K_{\text{bod}} \cdot \frac{B \, A_{\text{hru}}}{V_{\text{bz}} \, \phi}\right),\; 4\right), \qquad \Delta \text{BOD} = \text{BOD}_i \left(1 - e^{-k_{\text{bod}}}\right)$$
 

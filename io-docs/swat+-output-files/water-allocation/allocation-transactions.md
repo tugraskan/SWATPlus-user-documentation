@@ -1,118 +1,180 @@
 # Allocation Transactions
 
-The `water_allo_day`, `water_allo_mon`, `water_allo_yr`, and `water_allo_aa` TXT and CSV files interleave POU, POD, and POR records. See the [Water Allocation index](README.md#how-to-produce-these-files) for the shared `water_allo` print setting.
+On SWAT+ dev the allocation report is split into three file groups, each with daily, monthly, yearly and average-annual TXT files and optional CSV files. See the [Water Allocation index](README.md#how-to-produce-these-files) for the shared `water_allo` print setting.
+
+| Group | Files | One row per |
+| --- | --- | --- |
+| [POU totals (MET)](#pou-totals) | `wallo_met_day`, `_mon`, `_yr`, `_aa` | place of use (POU) |
+| [POU–POD](#pou-pod-rows) | `wallo_pou_pods_day`, `_mon`, `_yr`, `_aa` | point of diversion (POD) of each POU |
+| [POU–POR](#pou-por-rows) | `wallo_pou_pors_day`, `_mon`, `_yr`, `_aa` | receiving point (POR) of each POU |
+
+The [header routine](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/header_water_allocation.f90#L10-L194) opens these files and writes a title line, a heading line and a units line to each. The [writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_output.f90#L27-L221) handles one POU at a time: its MET row, then one row per POD, then one row per POR.
 
 {% hint style="warning" %}
-The printed 25-entry header is stale relative to the active POU/POD/POR writer. It cannot be used as a rectangular data schema. POU, POD, and POR records have different widths; TXT and CSV POU prefixes also differ. The writer has no three-source limit and prints no separate unmet-demand scalar.
+POD and POR rows carry only a POD or POR index local to the POU (`1`, `2`, …), not the POU number. Match them to their POU by order: for each POU in turn, the POD file receives `pods` rows and the POR file `pors` rows, where `pods` and `pors` are the counts in [place_of_use.wro](../../introduction-1/water-allocation/place_of_use.wro/README.md).
 {% endhint %}
 
-The following table preserves the literal **legacy header order**, including the three `demand` labels. Its units describe the printed header, not a validated positional mapping to every row. Each linked page lists the actual values at that position.
+{% hint style="warning" %}
+**CSV exceptions.** Every MET CSV row has an extra `ipou` before the year (9 values under 8 headings). Daily POD and POR CSV rows omit the four date values. The average-annual POR CSV file is opened as `wallo_pou_pod_aa.csv` (singular `pod`), although `files_out.out` lists it as `wallo_pou_pors_aa.csv` ([opener](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/header_water_allocation.f90#L186-L191)).
+{% endhint %}
 
-| Field | Description | Unit |
-| --- | --- | --- |
-| [jday](jday-allocation-transactions.md) | POU day of year; children have no date prefix | blank |
-| [mon](mon-allocation-transactions.md) | POU month; children have no date prefix | blank |
-| [day](day-allocation-transactions.md) | POU day of month; children have no date prefix | blank |
-| [yr](yr-allocation-transactions.md) | POU year is position 4 in TXT, 6 in CSV | blank |
-| [unit](unit.md) | Legacy identifier heading; row-dependent value | blank |
-| [trn_typ](trn_typ.md) | Legacy transfer-type heading; row-dependent value | blank |
-| [trn_num](trn_num.md) | Legacy transfer-number heading; POU TXT contains name | blank |
-| [drcv_typ](drcv_typ.md) | Legacy receiver-type heading; POU TXT contains duty | blank |
-| [rcv_num](rcv_num.md) | Legacy receiver-number heading; POU TXT contains delivered amount | blank |
-| [src1_obj](src1_obj.md) | Legacy src1 obj heading; use actual row layout | blank |
-| [src1_typ](src1_typ.md) | Legacy src1 typ heading; use actual row layout | blank |
-| [src1_num](src1_num.md) | Legacy src1 num heading; use actual row layout | blank |
-| [demand](demand-allocation-transactions.md) | Legacy demand heading; use actual row layout | m3 |
-| [src1_withdraw](src1_withdraw.md) | Legacy src1 withdraw heading; use actual row layout | m3 |
-| [src1_unmet](src1_unmet.md) | Legacy src1 unmet heading; use actual row layout | m3 |
-| [src2_typ](src2_typ.md) | Legacy src2 typ heading; use actual row layout | blank |
-| [src2_num](src2_num.md) | Legacy src2 num heading; use actual row layout | blank |
-| [demand](demand-allocation-transactions-2.md) | Legacy demand heading; use actual row layout | m3 |
-| [src2_withdraw](src2_withdraw.md) | Legacy src2 withdraw heading; use actual row layout | m3 |
-| [src2_unmet](src2_unmet.md) | Legacy src2 unmet heading; use actual row layout | m3 |
-| [src3_typ](src3_typ.md) | Legacy src3 typ heading; use actual row layout | blank |
-| [src3_num](src3_num.md) | Legacy src3 num heading; use actual row layout | blank |
-| [demand](demand-allocation-transactions-3.md) | Legacy demand heading; use actual row layout | m3 |
-| [src3_withdraw](src3_withdraw.md) | Legacy src3 withdraw heading; use actual row layout | m3 |
-| [src3_unmet](src3_unmet.md) | Legacy src3 unmet heading; use actual row layout | m3 |
+## POU totals
 
-## Actual allocation rows
+Files `wallo_met_day`, `_mon`, `_yr` and `_aa` (`.txt`, `.csv`).
 
-POU means place of use, POD point of diversion, and POR the receiving/return point. The configured counts `pou(ipou)%pods` and `%pors` determine child-row counts. Child indices are local to that POU. The [writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_output.f90#L29) emits these ordered scalar values; indentation is not a column:
+| Field | Description | Printed unit | Value unit |
+| --- | --- | --- | --- |
+| [jday](jday-allocation-transactions.md) | Day of year at the reporting boundary | — | — |
+| [mon](mon-allocation-transactions.md) | Month | — | — |
+| [day](day-allocation-transactions.md) | Day of month | — | — |
+| [yr](yr-allocation-transactions.md) | Calendar year | — | — |
+| [ipou](ipou.md) | POU number | — | — |
+| [name](name-allocation-transactions.md) | POU name | — | — |
+| [duty](duty.md) | Water the POU asked for in the period | ha-m | m³ |
+| [deliv](deliv.md) | Water recorded as delivered to the POU in the period | ha-m | m³ |
 
-| Record | Actual values in WRITE order | Count |
+| Variant | Values in write order | Count |
 | --- | --- | ---: |
-| Daily POU TXT | jday, mon, day, yr, ipou, "POU", name, duty, delivered | 9 |
-| Monthly/yearly/AA POU TXT | jday, mon, day, yr, "POU", ipou, name, duty, delivered | 9 |
-| Daily POU CSV | jday, mon, day, ipou, "POU", yr, ipou, name, duty, delivered | 10 |
-| Monthly/yearly/AA POU CSV | jday, mon, day, "POU", ipou, yr, ipou, name, duty, delivered | 10 |
-| POD child, all intervals/formats | "POD", ipod, duty, delivered, 18-component hydrograph | 22 |
-| POR child, all intervals/formats | "POR", ipor, 18-component hydrograph | 20 |
+| TXT, all periods | jday, mon, day, yr, ipou, name, duty, deliv | 8 |
+| CSV, all periods | jday, mon, day, **ipou**, yr, ipou, name, duty, deliv | 9 |
 
-Children inherit the parent POU reporting date; they do not repeat dates, receiver/source types, or global object numbers. The hydrograph tail is `flo, sed, orgn, sedp, no3, solp, chla, nh3, no2, cbod, dox, san, sil, cla, sag, lag, grv, temp`. Water is m3, sediment/size classes tons, N/P masses kg N/kg P, other masses kg, and temperature deg C. Temperature is numeric even though the legacy transaction headings do not describe it.
+[Daily writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_output.f90#L29-L42), [header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L338-L361)
 
-POU and POD duty use m³ of allocation demand. The parent `delivered` scalar uses m³ withdrawn. Each POD delivery assignment adds the current withdrawal to a separate `pou%pod%deliv` field. That field defaults to zero and has no input assignment or active producer on this revision. The daily POD scalar therefore stores the most recent withdrawal assigned to that POD, while the POD hydrograph adds withdrawals across calls. The declaration's m³/s comment for `pou%pod%deliv` does not describe the printed delivery scalar. [POD declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L14-L34), [POD inputs](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L91-L97), [Duty setup](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L149-L184), [Delivery assignments](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L130-L143)
+## POU-POD rows
+
+Files `wallo_pou_pods_day`, `_mon`, `_yr` and `_aa` (`.txt`, `.csv`).
+
+| Field | Description | Printed unit | Value unit |
+| --- | --- | --- | --- |
+| jday, mon, day, yr | Reporting date, as in the MET file | — | — |
+| [ipod](ipod.md) | POD position within the POU's POD list | — | — |
+| [duty](duty.md) | Share of the POU duty assigned to this POD | ha-m | m³ |
+| [deliv](deliv.md) | Withdrawal recorded for this POD | ha-m | m³ |
+| flo … temp | 18-value [hydrograph](#hydrograph-values) of the water and constituents withdrawn | see below | see below |
+
+| Variant | Values in write order | Count |
+| --- | --- | ---: |
+| TXT, all periods; CSV monthly, yearly, average annual | jday, mon, day, yr, ipod, duty, deliv, 18 hydrograph values | 25 |
+| CSV daily | ipod, duty, deliv, 18 hydrograph values | 21 |
+
+[Daily writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_output.f90#L31-L46), [header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L364-L421)
+
+## POU-POR rows
+
+Files `wallo_pou_pors_day`, `_mon`, `_yr` and `_aa` (`.txt`, `.csv`; see the CSV exception above for the average-annual CSV name).
+
+| Field | Description | Printed unit | Value unit |
+| --- | --- | --- | --- |
+| jday, mon, day, yr | Reporting date, as in the MET file | — | — |
+| [ipor](ipor.md) | POR position within the POU's POR list | — | — |
+| flo … temp | 18-value [hydrograph](#hydrograph-values) sent to this POR | see below | see below |
+
+| Variant | Values in write order | Count |
+| --- | --- | ---: |
+| TXT, all periods; CSV monthly, yearly, average annual | jday, mon, day, yr, ipor, 18 hydrograph values | 23 |
+| CSV daily | ipor, 18 hydrograph values | 19 |
+
+[Daily writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_output.f90#L35-L49), [header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L424-L477)
+
+## Hydrograph values
+
+The POD and POR rows end with the 18 components of a SWAT+ hydrograph, in this order ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L31-L49)):
+
+| Heading | Component | Value unit |
+| --- | --- | --- |
+| flo | water volume | m³ |
+| sed | sediment | tons |
+| orgn | organic nitrogen | kg N |
+| sedp | organic phosphorus | kg P |
+| no3 | nitrate nitrogen | kg N |
+| solp | soluble phosphorus | kg P |
+| chla | chlorophyll-a | kg |
+| nh3 | ammonium nitrogen | kg N |
+| no2 | nitrite nitrogen | kg N |
+| cbod | carbonaceous biological oxygen demand | kg |
+| dox | dissolved oxygen | kg |
+| san, sil, cla, sag, lag, grv | sand, silt, clay, small aggregates, large aggregates, gravel | tons |
+| null | temperature | °C |
+
+{% hint style="info" %}
+**Printed units.** The units line labels `duty` and `deliv` as ha-m and `flo` as m³/s. The writer prints the stored values without conversion, and these are volumes in m³: duty is set from `rate_max × 86400` or a decision table in m³, withdrawals and irrigation demands are summed in m³, and the hydrograph `flo` component holds m³. The last heading is printed as `null` but holds temperature.
+{% endhint %}
 
 ## Daily duty and reported delivery
 
-The start-of-day routine computes an irrigation demand subtotal, then unconditionally replaces it with `rate_max × 86400`. If a maximum-demand decision table is configured, the routine takes the result from `dmd_m3` and caps it at that same maximum. A constant action can set the result directly, while fill actions can calculate a storage deficit. The irrigation-demand action reads the POU demand currently in memory. When it targets the POU being initialized, it reads the replaced value. The printed `duty` is the resulting allocation target. [Demand assignments in order](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L128-L164), [Decision-table actions](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L189-L238)
+At the start of each day the allocator clears the daily POU, POD and POR records ([`wallo_start_day.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_start_day.f90#L33-L48)). It then runs outside sources, water towers and unlimited sources, and only after that sets each POU's duty ([source calls](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_start_day.f90#L50-L123), [duty setup](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_start_day.f90#L128-L186)):
 
-Each POD duty is the POU duty multiplied by its configured or decision-table fraction. The routine multiplies by those fractions directly, so their sum controls how the POD duties add up. The decision-table path reads a shared array of six fractions. Its actions update one entry at a time, and the start-of-day routine does not clear that array between tables. A table that leaves a fraction unset can therefore reuse a value from an earlier table call. This six-entry limit applies to the decision-table fractions. The report writer still iterates the configured child count. [POD and POR fraction assignments](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L166-L202), [Shared fraction array](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L7-L10), [Fraction actions](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L811-L836)
+- The duty starts as `rate_max × 86400`. If a maximum-demand decision table is named, the duty becomes the table's `dmd_m3` result. Either way it is capped at `rate_max × 86400`.
+- The `wallo_dmd` actions can set the result to a constant (`set_dmd`), add the POU demand currently in memory (`irr_dmd`), or fill a reservoir, water tower or canal to a target (`fill_res`, `fill_wtow`, `fill_can`) ([`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L189-L240)). When `irr_dmd` targets the POU being set up, it reads the `rate_max × 86400` value assigned just before.
+- Each POD duty is the POU duty times the POD fraction from `place_of_use.wro`, or from the six-entry decision-table array `trn_fr` when a POD-fraction table is named. The routine does not clear `trn_fr` between tables, so a table that leaves an entry unset reuses an earlier value ([`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L839-L857)).
 
-The POU `delivered` value sums the withdrawal volumes recorded by the allocator. The receiving routines run separately, so this value does not measure water actually applied at an irrigation HRU or received by a particular POR. At the start of the day, outside sources, water towers, and unlimited sources run before the routine sets new duties. The later duty setup resets the parent and POD delivery scalars but retains daily withdrawal hydrographs. A child hydrograph can therefore contain a startup withdrawal that no longer appears in the parent's delivery scalar. [Startup processing](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L33-L48), [Source calls before duty setup](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L87-L164), [POD scalar reset](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L166-L186), [Withdrawal records](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L130-L143), [Receiving calls](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_control.f90#L56-L64)
+The duty setup also sets the POU and POD delivery values back to 0. It does not clear the POD hydrographs, so a POD row can contain water withdrawn by a source call that ran earlier on the same day, while its `deliv` value no longer includes it.
+
+**Irrigation POUs.** For a POU of type `irr`, the duty and delivery printed in the MET file are replaced during delivery ([`wallo_pou_deliv.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_deliv.f90#L36-L101)). For each HRU of the irrigation user, the routine evaluates the HRU's land-use decision table. Its `irr_wallo` action sets the HRU demand as depth × area (m³) ([`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L242-L260)). The routine then:
+
+- adds every HRU demand to the POU `duty`, including HRUs that receive nothing;
+- supplies an HRU only while the summed demand is still below `rate_max × 86400` and the HRU demand is below the water still available from this POU's POD withdrawals;
+- adds each supplied HRU demand to `deliv` and reduces the available water and constituents proportionally;
+- sets the HRU's applied irrigation, runoff and demand to 0 when the HRU is not supplied.
+
+The POD rows of an irrigation POU keep their own duty (the POU's `rate_max`-based duty times the POD fraction) and their withdrawals. For irrigation POUs the POD values therefore need not add up to the MET values.
 
 ## Withdrawal limits and compensation
 
-The controller checks the accumulated withdrawal against `wdraw_max × 86400` before making a call. The withdrawal routine starts from the duty or the compensation request and does not reduce that request to the remaining allowance. For PODs without a withdrawal decision table, the accumulated counter resets at year end. A withdrawal-limit action can replace the maximum and reset the counter. [Withdrawal gate](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_control.f90#L18-L26), [Withdrawal request and counter](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L25-L40), [Counter update](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L130-L138), [Decision-table reset](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L182-L187), [Year-end reset](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/time_control.f90#L380-L388)
+Before calling the withdrawal routine for a POU, the controller checks the POD's accumulated withdrawal against `wdraw_max × 86400` ([`wallo_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_control.f90#L19-L28)). The withdrawal routine starts from the POD duty and does not reduce the request to the remaining allowance ([`wallo_withdraw.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_withdraw.f90#L26-L37)). For PODs without a withdrawal decision table, the accumulated withdrawal resets at year end ([`time_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/time_control.f90#L378-L379)). A `duty_reset` action can replace the maximum and reset the counter ([`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L182-L187)).
 
-Compensation is considered when a POU is marked finished and its total delivery is below its duty. The withdrawal routine requests the selected POD's duty minus its delivery diagnostic. The controller and withdrawal routine mix global object numbers with positions inside the POD and POU lists. For example, the completion loop uses the linked-POU count to index the global POU array directly. The compensation call passes the local POD position where the callee expects a global POD index. If those indices differ, the routine can inspect or withdraw against a different record than the one associated with the reported POU. A printed duty–delivery difference is therefore a difference between two diagnostics. The writer has no separate unmet-demand value. [Completion check and compensation call](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_control.f90#L18-L54), [Local and global index lookups](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L13-L43), [Printed values](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_output.f90#L27-L49)
+On dev the controller looks up, for each POU served by the POD, the POU's global number and the POD's position in that POU's list ([`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_read.f90#L258-L268)). Ordinary withdrawals are therefore recorded on the matching POU and POD.
+
+Compensation is tried for every POU in the model that is finished and whose delivery is below its duty ([`wallo_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_control.f90#L42-L57)). The compensation call always withdraws from the POD whose controller is running. It also reuses the POU position left over from the ordinary-withdrawal loop. As a result:
+
+- a POU not served by this POD can receive water from it;
+- the withdrawal is recorded on the POD position of the last POU in this POD's list, which may belong to a different POD of the compensated POU;
+- a POU with several compensating PODs triggers one withdrawal per such POD, all from this same source.
+
+The printed difference between duty and delivery is a difference between these two diagnostics. The files have no separate unmet-demand value.
 
 ## What each POD source contributes
 
-The allocation reader loads the place-of-use records and their local POD and POR lists from `place_of_use.wro`. The global POD source type and source object number come from `point_of_diver.wro`. In each local record, positions 2 and 5 are both read into `num`, so position 5 replaces position 2. The POR dispatcher uses that resulting `num` for the receiver. [Local list reads](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L91-L105), [Global POD reads](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L209-L245), [Receiver lookup](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_return.f90#L16-L19)
-
-The POD hydrograph adds the withdrawal records from all calls for that source. The adjacent POD `delivered` scalar is a separate assignment that can differ from the hydrograph's accumulated `flo`. The source branches populate the hydrograph as follows. [POD hydrograph and diagnostic assignments](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L130-L143)
+The POD hydrograph adds the withdrawals from all calls for that POD on the day. The adjacent `deliv` value is set from the latest withdrawal and can differ from the hydrograph's accumulated `flo` ([`wallo_withdraw.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_withdraw.f90#L131-L145)). The source branches fill the hydrograph as follows ([`wallo_withdraw.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_withdraw.f90#L43-L129)):
 
 | Source | Water and constituents in the POD hydrograph |
 | --- | --- |
-| Unlimited (`unl`) | Water only. For an ordinary withdrawal, the source fraction is applied once to set POD duty and again to calculate the withdrawal from that duty. |
-| Outside source (`osrc`) | Water only. The withdrawal resets the scratch hydrograph, then uses the source fraction times `osrc_om(j)%flo`, indexed by the source object number. It runs the mass conversion on the otherwise empty record. The concentration or Recall record prepared at startup is overwritten on entry to the withdrawal routine. |
-| Water tower (`wtow`), canal (`can`), reservoir (`res`) | Withdraws a proportional share of the stored water and constituent masses and reduces the stored hydrograph. The minimum is checked before withdrawal. The withdrawal fraction is capped at one, so a successful withdrawal can take storage below that minimum. Tower and canal thresholds use current storage, while the reservoir uses principal volume. |
-| Channel (`cha`) | Copies a proportional share of water and masses from the channel outflow. The downstream hydrograph loses only water in this branch, so the mass copied to the POD also remains in the channel outflow. The minimum is compared directly to daily volume without converting the threshold. The channel skips compensation withdrawals. |
-| Standard aquifer (`aqu`) | Only water, nitrate, and soluble phosphorus are assigned. The routine reduces storage first, then calculates the withdrawal from the reduced state, so the POD receives less than the amount removed for a positive withdrawal fraction and receives zero at a fraction of one. |
-| GWFlow source (`gwf`) | The branch has no withdrawal assignment. This branch of the POU allocator leaves the POD hydrograph at its zero defaults. |
-
-[Unlimited, outside, and tower sources](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L35-L69), [Outside source preparation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L50-L91), [Channel, canal, and reservoir sources](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L71-L108), [Aquifer and GWFlow branches](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L110-L128), [Aquifer initialization and allocation](../aquifer/README.md#initialization-and-water-allocation)
+| Unlimited (`unl`) | Water only. The POD fraction is applied once to set the POD duty and again to compute the withdrawal from it. |
+| Outside source (`osrc`) | Copies the outside-source record `osrc_om(j)` indexed by the source object number, sets the volume to the POD fraction × its flow × 86,400 (the flow is treated as m³/s), and converts its concentrations to masses. The record used here is indexed differently from the concentration record prepared at the start of the day ([`wallo_start_day.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_start_day.f90#L55-L85)). |
+| Water tower (`wtow`), canal (`can`), reservoir (`res`) | Withdraws a proportional share of the stored water and constituent masses and reduces storage. The minimum is checked before the withdrawal, and the withdrawal fraction is capped at one, so a withdrawal can take storage below the minimum. |
+| Channel (`cha`) | Copies a proportional share of water and masses from the channel outflow; the channel loses only water. The minimum is compared directly to the daily volume. Channels are skipped for compensation. |
+| Aquifer (`aqu`) | Only water, nitrate and soluble phosphorus are assigned. Storage is reduced first and the withdrawal is calculated from the reduced state, so the POD receives less than was removed. |
+| GWFlow (`gwf`) | No withdrawal is assigned; the POD hydrograph stays at zero. |
 
 ## Configuration values used by the allocator
 
 | Input | How the source uses it |
 | --- | --- |
-| POU `rate_max` | Rate in m³/s multiplied by 86,400 to set the daily maximum volume. It also caps the result of the POU demand table. |
+| POU `rate_max` | Rate in m³/s multiplied by 86,400 to set the daily maximum volume. It also caps the demand-table result and, for irrigation POUs, the summed HRU demand that can be supplied. |
 | POD and POR `frac` | Dimensionless multiplier on a volume or hydrograph. |
-| POD `const_min` for a channel | Compared directly to daily outflow volume in m³. The routine applies no rate conversion. |
-| POD `const_min` for an aquifer | Compared directly to water-table depth in metres. |
-| POD `const_min` for a reservoir, canal, or water tower | Fraction of principal reservoir volume or of current canal or tower volume. |
-| POD `ann_max` | Initializes `wdraw_max`. The controller multiplies it by 86,400 before comparing it to the accumulated withdrawal volume. |
+| POD `const_min` | Channel: compared directly to daily outflow volume (m³). Aquifer: compared to water-table depth (m). Reservoir, canal, tower: fraction of principal volume or current storage. |
+| POD `ann_max` | Initializes `wdraw_max`; the controller multiplies it by 86,400. |
 
-The reader stores the POD minimum-table name, and the withdrawal routine uses the constant minimum directly. The reader resolves the withdrawal-table name to an index, but the allocation controller never evaluates that index. A decision table evaluated elsewhere can change the maximum through `duty_reset`. The POR maximum table, constant, and annual limit are read but never applied in the return routine. The conveyance call is commented out, so conveyance settings have no effect on these return hydrographs through that path. [Input reads](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L91-L105), [Withdrawal-table lookup](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_read.f90#L160-L176), [Duty and fractions](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L149-L202), [Withdrawal gate](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_control.f90#L18-L26), [Minimum comparisons](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L60-L123), [Water-table depth units](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aquifer_module.f90#L37-L40), [Decision-table reset action](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L182-L187), [Return dispatcher](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_return.f90#L16-L30)
+The POR maximum table, constant and annual limit are read but not used by the return routine, and its conveyance call is commented out ([`wallo_return.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_return.f90#L16-L28)). In each POR record of `place_of_use.wro`, positions 2 and 5 are both read into `num`, so position 5 is the receiving object number actually used ([`water_allocation_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_read.f90#L102-L108)). POD records no longer have this problem on dev.
 
 ## What the POR rows report
 
-For ordinary POUs the return routine multiplies the current return hydrograph by each POR's fraction. Water-use POUs first replace that hydrograph with calculated effluent. Treatment POUs write treated hydrographs directly to the POR records, which the return routine passes through unchanged. The treatment loop reuses its working hydrograph after converting and capping it for the previous POR, so POR order can affect the computed flows and masses. The return routine can add water to a receiver's storage or queue it for a channel. Its HRU branch applies no water. Irrigation runs separately, with an availability check before the current HRU is selected. A reported POR volume therefore cannot establish how much irrigation reached an HRU. [Return and receiver dispatch](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_return.f90#L16-L66), [Water-use effluent](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_use.f90#L55-L68), [Treatment outflow](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_treatment.f90#L60-L85), [Irrigation delivery](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_deliv.f90#L30-L47)
+For POUs other than treatment plants, each POR receives its fraction of the POU's accumulated withdrawal hydrograph. Water-use POUs first replace that hydrograph with calculated effluent, and treatment POUs write treated hydrographs to their PORs directly ([`wallo_return.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_return.f90#L16-L69)). The return routine adds the water to a receiving channel, reservoir, aquifer, plant or storage; its `hru` branch adds nothing. Irrigation reaches HRUs through the irrigation POU path described above, not through PORs.
 
-Each allocation-controller call revisits POUs already marked finished. For a receiver whose branch adds the current POR hydrograph, later calls can apply it again before the next daily reset. The POR writer records the current hydrograph for that receiver, regardless of how many times it was applied. [Repeated delivery calls](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_control.f90#L56-L65), [Assignment and dispatch](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_return.f90#L16-L66), [Daily POR write](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_output.f90#L31-L49)
+Every controller call delivers to and returns from all POUs already marked finished ([`wallo_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_control.f90#L59-L68)). Several controller calls on one day can therefore apply a POR hydrograph to its receiver more than once, and can repeat an irrigation POU's HRU loop. The POR row records the hydrograph once.
 
-## Temperature in POD and POR rows
+## Temperature
 
-Scaling a hydrograph changes volume and masses and preserves its temperature. Combining hydrographs weights temperature by volume and returns zero when total volume is at most `1.e-6` m³. The ordinary return split therefore preserves the mixed temperature. Treatment and use take their temperature from the selected treatment or effluent record. The treatment cap applies to flow and masses. The average-annual writer divides volume and masses by the reporting-year count and leaves temperature as the weighted value already accumulated. [Hydrograph addition](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L1334-L1360), [Scaling and division](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L1437-L1484), [Treatment cap](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L1258-L1279), [Average-annual writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_output.f90#L182-L195)
+Scaling a hydrograph keeps its temperature; adding hydrographs weights temperature by volume and gives zero when the total volume is at most 1e-6 m³. Treatment and use POUs take temperature from the selected treatment or effluent record. The average-annual writer divides volume and masses by the number of printed years and leaves temperature unchanged.
 
 ## Reporting periods
 
-Monthly arrays accumulate daily records. The yearly writer adds the running monthly arrays on every writer call before checking for month end. This includes a final partial month and counts earlier daily values repeatedly. For example, if daily POU demand is 10 m3 on each of the last three days and those are the first three days of the month, the yearly demand increases by `10 + 20 + 30 = 60 m3`. Those daily demands total 30 m3. A monthly row requires calendar month end. [Daily and yearly accumulation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_output.f90#L13-L83)
+The writer runs after the skipped years for every POU ([`command.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/command.f90#L441-L455)). Monthly values add the daily values. The yearly values add the **running** monthly totals on every call, before the month-end check, so daily values are counted repeatedly: if a POU's daily duty is 10 m³ on the first three days of a month, the yearly duty grows by 10 + 20 + 30 = 60 m³ for 30 m³ of daily duty ([`wallo_pou_output.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_output.f90#L68-L81)).
 
-In a Baltschieder test on this revision, the 2006 daily demand for `niwaerch_tunnel` summed to 5,676,480 m³. The monthly rows matched their respective daily sums. The yearly row reported 89,237,384 m³, within 8 m³ of the 89,237,376 m³ obtained by adding the running monthly totals. The test used an Intel ifx build without bounds checking. The bounds-checked build stopped before reporting on a separate channel-temperature array error. The fixture exercised channel-source POD rows and had no POR rows.
+At year end the yearly values are added to the average-annual totals before the yearly print flag is checked, but they are cleared only when yearly output is on. The per-POD reset there also clears the monthly delivery instead of the yearly one ([`wallo_pou_output.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_output.f90#L125-L180)). Turning yearly output off can therefore change multi-year average-annual values. The average-annual values are the accumulated totals divided by `time%yrs_prt` ([`wallo_pou_output.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_output.f90#L182-L195)).
 
-The year-end writer adds the yearly diagnostics to the average-annual accumulators before checking the yearly print flag. It clears the yearly records only when yearly output is enabled, and the per-POD delivery reset clears the monthly array instead of the yearly one. Turning off yearly output can therefore change the average-annual values in a multi-year run by retaining more prior-year values. The average-annual result divides those accumulated values by `time%yrs_prt` when positive. [Year-end transfer and reset](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_output.f90#L125-L180) · [Average-annual scaling](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_output.f90#L182-L195)
+{% hint style="info" %}
+These reporting-period findings come from reading the dev source. The runtime test cited on the main-branch version of this page (Baltschieder) was run on SWAT+ main and has not been repeated on dev.
+{% endhint %}
 
 [Back to the Water Allocation index](README.md).

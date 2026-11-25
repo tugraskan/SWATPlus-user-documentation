@@ -6,9 +6,9 @@ description: >-
 
 # msk\_x
 
-**Code reference:** `bsn_prm%msk_x` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L106), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L24)).
+**Code reference:** `bsn_prm%msk_x` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_module.f90#L106), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_prm.f90#L24)).
 
-Muskingum wedge-storage weighting factor ($X$, default `0.2`, range `0–0.3`; values `< 1.e-6` are reset to `0.20` in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_prm_default.f90#L28)). In [`sd_hydsed_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_hydsed_init.f90#L174-L204), `msk_x` determines the numerical stability step limit $\Delta t_{\max}$ and normalized Muskingum routing weights $C_1, C_2, C_3$:
+Muskingum wedge-storage weighting factor ($X$, default `0.2`, range `0–0.3`; values `< 1.e-6` are reset to `0.20` in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_prm_default.f90#L28)). In [`sd_hydsed_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_hydsed_init.f90#L174-L204), `msk_x` determines the numerical stability step limit $\Delta t_{\max}$ and normalized Muskingum routing weights $C_1, C_2, C_3$:
 
 $$\Delta t_{\max} = 2\,K_m\,(1 - X), \qquad D = 2\,K_m\,(1 - X) + \Delta t$$
 

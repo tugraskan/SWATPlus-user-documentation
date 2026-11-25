@@ -4,7 +4,7 @@ description: "Reporting date and object identity"
 
 # unit
 
-**Code reference:** `jrch` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_output.f90#L11)).
+**Code reference:** `jrch` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_output.f90#L11)).
 
 In this output table, `unit` is one of the fields described as: Reporting date and object identity.
 

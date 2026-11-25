@@ -4,9 +4,9 @@ description: Organic and mineral time-series data for a point source or inlet
 
 # 'om\_filename'.rec
 
-This file supplies organic and mineral time-series data for a point source or inlet referenced by [`recall.rec`](../recall.rec/README.md) when `type` is `0` (subdaily), `1` (daily), `2` (monthly), or `3` (yearly). It is opened on unit `108` by [`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L89-L178).
+This file supplies organic and mineral time-series data for a point source or inlet referenced by [`recall.rec`](../recall.rec/README.md) when `type` is `0` (subdaily), `1` (daily), `2` (monthly), or `3` (yearly). It is opened on unit `108` by [`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L89-L178).
 
-Line 1 contains a file title ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L90)), line 2 contains `nbyr` ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L92)), and line 3 contains column headings ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L94)). Each following data row is read list-directed into the date/identifier fields and the 18 `hyd_output` components ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L164-L171)).
+Line 1 contains a file title ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L90)), line 2 contains `nbyr` ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L92)), and line 3 contains column headings ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L94)). Each following data row is read list-directed into the date/identifier fields and the 18 `hyd_output` components ([`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L164-L171)).
 
 ## Header line (line 2)
 

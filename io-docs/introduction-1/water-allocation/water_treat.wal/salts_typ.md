@@ -4,7 +4,7 @@ description: "Source type for salt ion concentrations (`const`, `dtbl`, or `reca
 
 # salts_typ
 
-**Code reference:** `wtp(iwtp)%conc(lev)%salts_typ` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_allocation_module.f90#L133), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_treatment_read.f90#L52-L55)).
+**Code reference:** `wtp(iwtp)%conc(lev)%salts_typ` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_allocation_module.f90#L134), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_treatment_read.f90#L52-L55)).
 
 6-character source type for salt ion concentrations (`const`, `dtbl`, or `recall`) for the water treatment plant (default: `""`). Only `org_min_typ` and `org_min_name` are crosswalked and evaluated in `6f515368`.
 

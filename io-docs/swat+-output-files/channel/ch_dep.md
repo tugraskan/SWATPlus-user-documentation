@@ -4,9 +4,9 @@ description: "Bank erosion, channel degradation and deposition, floodplain depos
 
 # ch_dep
 
-**Code reference:** `ch_d(jrch)%ch_dep` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_module.f90#L179)).
+**Code reference:** `ch_d(jrch)%ch_dep` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_module.f90#L179)).
 
-This is the channel deposition mass slot in the alternate record. The addition and division operators omit this field, so it remains at its default zero in aggregated records. [Aggregation operators](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/channel_module.f90#L356)
+This is the channel deposition mass slot in the alternate record. The addition and division operators omit this field, so it remains at its default zero in aggregated records. [Aggregation operators](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/channel_module.f90#L356)
 
 **Unit:** tons.
 

@@ -4,9 +4,9 @@ description: Fecal coliform bacteria decay rate coefficient
 
 # fecal\_decay
 
-**Code reference:** `sep(isep)%fecal` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_data_module.f90#L38)).
+**Code reference:** `sep(isep)%fecal` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/septic_data_module.f90#L38)).
 
-Biozone fecal coliform decay rate coefficient ($\text{m}^3/\text{day}$), normalized by live biomass concentration in the biozone pore volume ([`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sep_biozone.f90#L249-L250)):
+Biozone fecal coliform decay rate coefficient ($\text{m}^3/\text{day}$), normalized by live biomass concentration in the biozone pore volume ([`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sep_biozone.f90#L249-L250)):
 
 $$k_{\text{fc}} = \max\!\left(0,\; K_{\text{fc}} \cdot \frac{B \, A_{\text{hru}}}{V_{\text{bz}} \, \phi}\right), \qquad \Delta N_{\text{fc}} = N_{\text{fc}} \left(1 - e^{-k_{\text{fc}}}\right)$$
 

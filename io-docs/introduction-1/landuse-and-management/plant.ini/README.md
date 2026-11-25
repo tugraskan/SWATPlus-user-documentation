@@ -4,7 +4,7 @@ description: This file stores information about the plants growing in a plant co
 
 # plant.ini
 
-This file stores initial conditions for plants growing in a plant community, read by [`readpcom.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/readpcom.f90#L36-L71). A plant community can consist of plants growing simultaneously or in rotation.
+This file stores initial conditions for plants growing in a plant community, read by [`readpcom.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/readpcom.f90#L36-L71). A plant community can consist of plants growing simultaneously or in rotation.
 
 The structure of **plant.ini** differs from most other SWAT+ input files: each community begins with a header row specifying the community name, number of plants (`plnt_cnt`), and initial rotation year (`rot_yr_ini`), followed by one row per plant in the community.
 

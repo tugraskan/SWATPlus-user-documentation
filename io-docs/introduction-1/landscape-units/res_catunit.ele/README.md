@@ -7,7 +7,7 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`res_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_elements.f90#L138-L182) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_cal.f90#L30)) reads `res_catunit.ele` into `rcu_elem`. Only `obtypno` is copied into `rcu_cal%num` (`#L178`), which is never read in simulation calculations; all other attributes have `reads=none`.
+In SWAT+ main (`6f515368`), [`res_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_elements.f90#L138-L182) (called from [`proc_cal.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_cal.f90#L30)) reads `res_catunit.ele` into `rcu_elem`. Only `obtypno` is copied into `rcu_cal%num` (`#L178`), which is never read in simulation calculations; all other attributes have `reads=none`.
 {% endhint %}
 
 This file identifies the objects included in reservoir cataloging units and their area fractions.

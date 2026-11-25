@@ -4,7 +4,7 @@ description: "HRU identifiers and name"
 
 # unit
 
-**Code reference:** `j` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_nutcarb_write_legacy.f90#L40)).
+**Code reference:** `j` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_nutcarb_write_historical.f90#L39)).
 
 In this output table, `unit` is one of the fields described as: HRU identifiers and name.
 

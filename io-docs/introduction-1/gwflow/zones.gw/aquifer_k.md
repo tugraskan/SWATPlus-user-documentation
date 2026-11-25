@@ -4,9 +4,9 @@ description: "Aquifer hydraulic conductivity, m/day"
 
 # aquifer_K
 
-**Code reference:** `zones_aquK(i)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L94), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L397)).
+**Code reference:** `zones_aquK(i)` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L94), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L397)).
 
-Horizontal hydraulic conductivity of the aquifer, in m/day. Each cell takes the value of its `K_zone` ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L461)). Flow between neighboring cells follows Darcy's law ([`gwflow_lateral.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_lateral.f90#L64-L93)):
+Horizontal hydraulic conductivity of the aquifer, in m/day. Each cell takes the value of its `K_zone` ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L461)). Flow between neighboring cells follows Darcy's law ([`gwflow_lateral.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_lateral.f90#L64-L93)):
 
 $$Q = K_{f} \, \frac{h_{n} - h_{i}}{d} \, \bar b \, L, \qquad K_{f} = \frac{2 K_{i} K_{n}}{K_{i} + K_{n}}$$
 
@@ -19,4 +19,4 @@ where:
 - $\bar b$ is the mean saturated thickness of the two cells (m), and
 - $L$ is the connection width ($\sqrt{\min(A_{i}, A_{n})}$, m).
 
-The calibration parameter `aquifer_K` changes the value cell by cell ([`cal_parm_select.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cal_parm_select.f90#L1060-L1063)).
+The calibration parameter `aquifer_K` changes the value cell by cell ([`cal_parm_select.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cal_parm_select.f90#L1061-L1064)).

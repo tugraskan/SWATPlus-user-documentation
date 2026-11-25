@@ -8,7 +8,7 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file supplies named sets of initial pathogen values in HRU soil and plants.
 
-[`path_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_hru_aqu_read.f90#L23-L61) reads `path_hru.ini` (listed as `path_soil` on the `init` row of [**file.cio**](../../master-file-file.cio.md)).
+[`path_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_hru_aqu_read.f90#L23-L61) reads `path_hru.ini` (listed as `path_soil` on the `init` row of [**file.cio**](../../master-file-file.cio.md)).
 
 # path\_hru.ini
 
@@ -29,7 +29,7 @@ After the title and column headings, enter each initial-set name followed by a l
 | [plt](plt.md) | Initial plant-compartment value for each pathogen | real | `#cfu/m^2` | — | — |
 
 {% hint style="warning" %}
-The counting pass ([`path_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_hru_aqu_read.f90#L27-L37)) loops `ipath = 1, cs_db%num_paths` to skip one line per pathogen after each name, whereas the loading pass ([`path_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_hru_aqu_read.f90#L53-L60)) reads `header`, `name`, and a single list-directed read (`titldum`, `path_soil_ini(ipathi)%soil`, `path_soil_ini(ipathi)%plt`).
+The counting pass ([`path_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_hru_aqu_read.f90#L27-L37)) loops `ipath = 1, cs_db%num_paths` to skip one line per pathogen after each name, whereas the loading pass ([`path_hru_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_hru_aqu_read.f90#L53-L60)) reads `header`, `name`, and a single list-directed read (`titldum`, `path_soil_ini(ipathi)%soil`, `path_soil_ini(ipathi)%plt`).
 {% endhint %}
 
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.

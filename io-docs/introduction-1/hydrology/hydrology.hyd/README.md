@@ -4,7 +4,7 @@ description: This file defines the hydrological characteristics of the HRUs
 
 # hydrology.hyd
 
-Each record supplies hydrologic parameters for an HRU. After the title and header, [`hydrol_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrol_read.f90#L27-L48) reads the fields positionally. Older files may label the `pet_co` column `harg_pet`.
+Each record supplies hydrologic parameters for an HRU. After the title and header, [`hydrol_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrol_read.f90#L27-L48) reads the fields positionally. Older files may label the `pet_co` column `harg_pet`.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

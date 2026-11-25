@@ -4,7 +4,7 @@ description: This file contains the general physical and chemical aquifer proper
 
 # aquifer.aqu
 
-[`aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read.f90#L30-L59) reads this file in free format, one record per aquifer. Each aquifer object in **aquifer.con** points to a record by ID. Daily aquifer water balance and nutrient calculations are in [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L106-L172).
+[`aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_read.f90#L30-L59) reads this file in free format, one record per aquifer. Each aquifer object in **aquifer.con** points to a record by ID. Daily aquifer water balance and nutrient calculations are in [`aqu_1d_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L106-L172).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

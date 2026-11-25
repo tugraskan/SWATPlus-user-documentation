@@ -4,9 +4,9 @@ description: Wash-off coefficient for removal of constituents from impervious su
 
 # urb\_wash
 
-**Code reference:** `urbdb(iu)%urbcoef` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/urban_data_module.f90#L10)).
+**Code reference:** `urbdb(iu)%urbcoef` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/urban_data_module.f90#L10)).
 
-**Current use:** solids remaining after a wash-off period are $B\,e^{-k q t}$, where $B$ is the built-up load, $k$ is `urb_wash`, $q$ the runoff rate (mm/hr) and $t$ the duration (hr) ([`hru_urban.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_urban.f90#L128-L141); sub-daily [`hru_urbanhr.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_urbanhr.f90#L93-L99)).
+**Current use:** solids remaining after a wash-off period are $B\,e^{-k q t}$, where $B$ is the built-up load, $k$ is `urb_wash`, $q$ the runoff rate (mm/hr) and $t$ the duration (hr) ([`hru_urban.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_urban.f90#L128-L141); sub-daily [`hru_urbanhr.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_urbanhr.f90#L93-L99)).
 
 Wash off is the process of erosion or solution of constituents from an impervious surface during a runoff event. The original default value for urb\_wash was calculated as 0.18 mm-1 by assuming that 13 mm of total runoff in one hour would wash off 90% of the initial surface load (Huber and Heaney, 1982). Using sediment transport theory, Sonnen (1980) estimated values for the wash-off coefficient ranging from 0.002-0.26 mm-1. Huber and Dickinson (1988) noted that values between 0.039 and 0.390 mm-1 for the wash-off coefficient give sediment concentrations in the range of most observed values. This variable is used to calibrate the model to observed data.
 

@@ -4,7 +4,7 @@ This report summarizes groundwater storage and water exchanges across the basin'
 
 ## How to produce these files
 
-Set `gwflow = 1` in [codes.bsn](../../introduction-1/basin-1/codes.bsn/README.md). In [print.prt](../../introduction-1/simulation-settings/print.prt/README.md), set `use_obj_lbls = y` and enable the desired periods on `gwflow_wb`. For example, `gwflow_wb y n n n` selects daily output. If the row is omitted, the periods come from `write_day`, `write_mon`, `write_yr`, and `write_aa` in [codes.gw](../../introduction-1/gwflow/codes.gw/README.md). [GWFlow activation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_objs.f90#L46), [Print flag overrides](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L254)
+Set `gwflow = 1` in [codes.bsn](../../introduction-1/basin-1/codes.bsn/README.md). In [print.prt](../../introduction-1/simulation-settings/print.prt/README.md), set `use_obj_lbls = y` and enable the desired periods on `gwflow_wb`. For example, `gwflow_wb y n n n` selects daily output. If the row is omitted, the periods come from `write_day`, `write_mon`, `write_yr`, and `write_aa` in [codes.gw](../../introduction-1/gwflow/codes.gw/README.md). [GWFlow activation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_objs.f90#L46), [Print flag overrides](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L254)
 
 | File | Schema |
 | --- | --- |

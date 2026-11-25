@@ -6,17 +6,17 @@ description: "This file supplies named organic/mineral export-coefficient values
 The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
 {% endhint %}
 
-This file supplies named organic/mineral export-coefficient (`hyd_output`) records. SWAT+ selects it from `file.cio` (`in_exco%om`, default `"exco_om.exc"`) and reads it with [`exco_read_om.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/exco_read_om.f90#L28-L87).
+This file supplies named organic/mineral export-coefficient (`hyd_output`) records. SWAT+ selects it from `file.cio` (`in_exco%om`, default `"exco_om.exc"`) and reads it with [`exco_read_om.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/exco_read_om.f90#L28-L87).
 
 During initialization and simulation, `exco` records enter calculations along four pathways:
-1. **Standalone `exco` objects:** [`exco_read_om.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/exco_read_om.f90#L83) copies `exco(iexco_om)` directly to `ob(iob)%hd(1)`.
-2. **Routing-unit `exco` elements:** [`ru_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ru_control.f90#L100) multiplies `exco(ob(iob)%props)` component-wise by the element delivery ratio `delrto`.
-3. **Recall `type = 4` records:** [`recall_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/recall_read.f90#L188) copies `exco(iexco_om)` into `recall(i)%hd(1,1)` when `exco_db(iexco_om)%name == recall(i)%filename`.
-4. **Water-allocation outflow quality:** [`wallo_start_day.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L82), [`wallo_treatment.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_treatment.f90#L54), and [`wallo_use.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_use.f90#L50) assign `outflo_om = exco(iom)`.
+1. **Standalone `exco` objects:** [`exco_read_om.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/exco_read_om.f90#L83) copies `exco(iexco_om)` directly to `ob(iob)%hd(1)`.
+2. **Routing-unit `exco` elements:** [`ru_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ru_control.f90#L100) multiplies `exco(ob(iob)%props)` component-wise by the element delivery ratio `delrto`.
+3. **Recall `type = 4` records:** [`recall_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/recall_read.f90#L188) copies `exco(iexco_om)` into `recall(i)%hd(1,1)` when `exco_db(iexco_om)%name == recall(i)%filename`.
+4. **Water-allocation outflow quality:** [`wallo_start_day.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_start_day.f90#L82), [`wallo_treatment.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_treatment.f90#L54), and [`wallo_use.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_use.f90#L50) assign `outflo_om = exco(iom)`.
 
 # exco\_om.exc
 
-The first two lines contain a title and column headings. Each following row contains the fields below, in this order ([`exco_read_om.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/exco_read_om.f90#L59)).
+The first two lines contain a title and column headings. Each following row contains the fields below, in this order ([`exco_read_om.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/exco_read_om.f90#L59)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

@@ -4,9 +4,9 @@ description: Exponent that governs LAI decline rate
 
 # dlai\_rate
 
-**Code reference:** `pldb(ic)%dlai_rate` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L55)).
+**Code reference:** `pldb(ic)%dlai_rate` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L50)).
 
-Exponent $r$ of the leaf area decline of **annual** plants after [hu\_lai\_decl](untitled-10.md) ([`pl_leaf_senes.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_leaf_senes.f90#L33-L38)):
+Exponent $r$ of the leaf area decline of **annual** plants after [hu\_lai\_decl](untitled-10.md) ([`pl_leaf_senes.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_leaf_senes.f90#L34-L39)):
 
 $$A = A_{0} \left( \frac{1 - h}{1 - d} \right)^{r}$$
 

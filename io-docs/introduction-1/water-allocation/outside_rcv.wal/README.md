@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`), [`water_orcv_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_orcv_read.f90#L1-L54) is never called from [`main.f90.in`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/main.f90.in#L104-L115), `orcv` is never read during simulation, and the outer `do ... end do` loop ([`water_orcv_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_orcv_read.f90#L33-L49)) lacks an `exit` statement.
+In SWAT+ main (`6f515368`), [`water_orcv_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_orcv_read.f90#L1-L54) is never called from [`main.f90.in`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/main.f90.in#L104-L115), `orcv` is never read during simulation, and the outer `do ... end do` loop ([`water_orcv_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_orcv_read.f90#L33-L49)) lacks an `exit` statement.
 {% endhint %}
 
 This file defines outside-basin receiving objects for water allocation.
 
-SWAT+ looks for `outside_rcv.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_orcv_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_orcv_read.f90#L34) reader.
+SWAT+ looks for `outside_rcv.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_orcv_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_orcv_read.f90#L34) reader.
 
 # outside_rcv.wal
 

@@ -1,8 +1,8 @@
 # HRU potential organic transformations
 
-Files `hru_org_trans_vars.txt` and `hru_org_trans_vars.csv` contain 22 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_legacy_module.f90#L350), [Writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_carbvar_write_legacy.f90#L90)
+Files `hru_org_trans_vars.txt` and `hru_org_trans_vars.csv` contain 22 columns. See [how to enable the reports](output-files-generated-by-hru_cb_vars.md). [Header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_legacy_module.f90#L349), [Writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_carbvar_write_historical.f90#L89)
 
-The units row prints `kg/ha` for each of the twelve transformation columns. The source declares them as daily potentials in kg/ha/day. Monthly and yearly rows show the diagnostic on the reporting day. [Printed units](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_legacy_module.f90#L376), [Data type and daily units](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_module.f90#L152)
+The units row prints `kg/ha` for each of the twelve transformation columns. The source declares them as daily potentials in kg/ha/day. Monthly and yearly rows show the diagnostic on the reporting day. [Printed units](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_legacy_module.f90#L375), [Data type and daily units](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_module.f90#L151)
 
 | Field | Description | Unit |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ description: "Settling, resuspension, and diffusion"
 
 # diffuse_kg
 
-**Code reference:** `chpst_d(j)%pest(ipest)%difus` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_pesticide_module.f90#L19)).
+**Code reference:** `chpst_d(j)%pest(ipest)%difus` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_pesticide_module.f90#L19)).
 
-Signed daily pesticide transfer by diffusion. A positive value transfers mass from bed sediment into water. A negative value transfers mass into the bed. Each routine caps the transfer against the donor compartment's available mass. [Channel diffusion](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_rtpest.f90#L172-L190), [Reservoir diffusion](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_pest.f90#L123-L143).
+Signed daily pesticide transfer by diffusion. A positive value transfers mass from bed sediment into water. A negative value transfers mass into the bed. Each routine caps the transfer against the donor compartment's available mass. [Channel diffusion](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_rtpest.f90#L172-L190), [Reservoir diffusion](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_pest.f90#L123-L143).
 
 **Unit:** kg.
 

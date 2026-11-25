@@ -4,7 +4,7 @@ description: This file lists all elements that are part of a Routing Unit.
 
 # rout\_unit.ele
 
-This file defines individual Routing Unit elements, their object references, area fractions, and delivery-ratio settings, read by [`ru_read_elements.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ru_read_elements.f90#L39-L89) (and optionally updated during HRU fraction changes in [`hru_fr_change.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_fr_change.f90#L35-L64)).
+This file defines individual Routing Unit elements, their object references, area fractions, and delivery-ratio settings, read by [`ru_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ru_read_elements.f90#L39-L89) (and optionally updated during HRU fraction changes in [`hru_fr_change.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_fr_change.f90#L35-L64)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

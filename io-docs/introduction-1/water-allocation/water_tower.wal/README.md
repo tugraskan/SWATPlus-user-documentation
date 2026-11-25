@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In [`water_tower_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_tower_read.f90#L27-L46), the outer `do ... end do` loop lacks an `exit` statement after reading `imax` records, causing repeated reading until end-of-file.
+In [`water_tower_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_tower_read.f90#L27-L46), the outer `do ... end do` loop lacks an `exit` statement after reading `imax` records, causing repeated reading until end-of-file.
 {% endhint %}
 
 This file defines water towers and their storage, drawdown, and water-loss settings.
 
-SWAT+ looks for `water_tower.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_tower_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_tower_read.f90#L28) reader.
+SWAT+ looks for `water_tower.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`water_tower_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_tower_read.f90#L28) reader.
 
 # water_tower.wal
 

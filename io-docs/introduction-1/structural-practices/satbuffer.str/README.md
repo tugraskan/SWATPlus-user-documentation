@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file defines saturated-buffer connections between HRUs.
 
-SWAT+ looks for `satbuffer.str` in the simulation working directory; it is not selected through `file.cio`. See the [sat_buff_read.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sat_buff_read.f90#L34) reader.
+SWAT+ looks for `satbuffer.str` in the simulation working directory; it is not selected through `file.cio`. See the [sat_buff_read.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sat_buff_read.f90#L34) reader.
 
 # satbuffer.str
 

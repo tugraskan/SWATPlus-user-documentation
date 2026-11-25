@@ -7,12 +7,12 @@ An Editor export of this format has not been verified. Field names and values in
 {% endhint %}
 
 {% hint style="warning" %}
-In [`om_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/om_osrc_read.f90#L30-L45), the outer `do ... end do` read loop lacks an `exit` statement after reading `imax` records.
+In [`om_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/om_osrc_read.f90#L30-L45), the outer `do ... end do` read loop lacks an `exit` statement after reading `imax` records.
 {% endhint %}
 
 This file supplies named organic/mineral component values for outside water sources.
 
-SWAT+ looks for `om_osrc.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`om_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/om_osrc_read.f90#L31) reader.
+SWAT+ looks for `om_osrc.wal` in the simulation working directory; it is not selected through `file.cio`. See the [`om_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/om_osrc_read.f90#L31) reader.
 
 # om_osrc.wal
 

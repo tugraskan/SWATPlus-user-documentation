@@ -1,6 +1,6 @@
 # HRU nutrient balance
 
-HRU nutrient balance output is written for each HRU at daily, monthly, yearly, and average annual time steps. A period is active when its `print.prt` flag `pco%nb_hru%d`, `%m`, `%y`, or `%a` is `y`. [File setup](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L102-L106), [data writes](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L74-L76)
+HRU nutrient balance output is written for each HRU at daily, monthly, yearly, and average annual time steps. A period is active when its `print.prt` flag `pco%nb_hru%d`, `%m`, `%y`, or `%a` is `y`. [File setup](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L102-L106), [data writes](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L72-L74)
 
 * hru\_nb\_day.txt
 * hru\_nb\_day.csv
@@ -11,12 +11,12 @@ HRU nutrient balance output is written for each HRU at daily, monthly, yearly, a
 * hru\_nb\_aa.txt
 * hru\_nb\_aa.csv
 
-A `.csv` copy is written only when `pco%csvout == "y"`. [CSV setup](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L108-L111), [CSV data write](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L77-L79)
+A `.csv` copy is written only when `pco%csvout == "y"`. [CSV setup](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L108-L111), [CSV data write](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L75-L77)
 
-* Each file starts with the basin name and `prog`, then the column-name row `nb_hdr`, then a units row `nb_hdr_units`. [Header lines](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_init.f90#L104-L106)
-* A data row holds the time and object values, the nutrient-balance record `hnb_d(j)` (19 values), then `plant_cov` and `mgt_ops`. Each nutrient column takes the n-th value of the record in declaration order and the n-th name of the header record. [Data write](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L75-L76), [Record declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_module.f90#L81-L103), [Header record](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_module.f90#L360-L389)
-* The units row prints `kgha` under each of the 19 nutrient columns and blanks under the others. The declaration comments give the unit as kg N/ha or kg P/ha. [Units row](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/output_landscape_module.f90#L392-L419)
-* The data format is `4i6,2i8,2x,a8,4f12.3,15f17.3,7x,a16,a30`. [Format](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L342)
+* Each file starts with the basin name and `prog`, then the column-name row `nb_hdr`, then a units row `nb_hdr_units`. [Header lines](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_init.f90#L104-L106)
+* A data row holds the time and object values, the nutrient-balance record `hnb_d(j)` (19 values), then `plant_cov` and `mgt_ops`. Each nutrient column takes the n-th value of the record in declaration order and the n-th name of the header record. [Data write](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L73-L74), [Record declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_module.f90#L81-L103), [Header record](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_module.f90#L360-L389)
+* The units row prints `kgha` under each of the 19 nutrient columns and blanks under the others. The declaration comments give the unit as kg N/ha or kg P/ha. [Units row](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_module.f90#L392-L419)
+* The data format is `4i6,2i8,2x,a8,4f12.3,15f17.3,7x,a16,a30`. [Format](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L327)
 
 | Field | Description | Type | Unit |
 | --- | --- | --- | --- |
@@ -51,5 +51,5 @@ A `.csv` copy is written only when `pco%csvout == "y"`. [CSV setup](https://gith
 
 ## Reporting differences
 
-* The monthly record adds each daily record, and the yearly record adds each monthly record. [Monthly sum](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L43), [yearly sum](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L105)
-* The average annual file is written once, when `time%end_sim == 1`, after the accumulated record `hnb_a(j)` is divided by `time%yrs_prt`. [Average annual write](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_output.f90#L265-L267)
+* The monthly record adds each daily record, and the yearly record adds each monthly record. [Monthly sum](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L41), [yearly sum](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L103)
+* The average annual file is written once, when `time%end_sim == 1`, after the accumulated record `hnb_a(j)` is divided by `time%yrs_prt`. [Average annual write](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_output.f90#L263-L265)

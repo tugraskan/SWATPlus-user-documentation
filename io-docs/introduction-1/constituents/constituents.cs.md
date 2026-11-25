@@ -4,11 +4,11 @@ description: "Counts and names of the constituents to simulate in each of five g
 
 # constituents.cs
 
-This file sets the constituents SWAT+ simulates. Its name is the fifth file name on the `simulation` line of [file.cio](../master-file-file.cio.md); the default is `constituents.cs` ([`input_file_module.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/input_file_module.f90#L8-L14)). If the file is missing or the name is `null`, every count is 0 and no warning is given ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constit_db_read.f90#L25-L31)).
+This file sets the constituents SWAT+ simulates. Its name is the fifth file name on the `simulation` line of [file.cio](../master-file-file.cio.md); the default is `constituents.cs` ([`input_file_module.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/input_file_module.f90#L8-L14)). If the file is missing or the name is `null`, every count is 0 and no warning is given ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/constit_db_read.f90#L25-L31)).
 
 ## File layout
 
-The file has a title line, then a count line and a names line for each group, always in the order below ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constit_db_read.f90#L33-L65)). There are no column headings.
+The file has a title line, then a count line and a names line for each group, always in the order below ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/constit_db_read.f90#L33-L65)). There are no column headings.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |
@@ -43,4 +43,4 @@ seo4 seo3 boron
 
 * Keep a names line even when the count is 0. SWAT+ still reads one line there, so leave it blank or enter `null`.
 * List exactly as many names as the count, separated by spaces. With too few names, SWAT+ takes the rest from the following lines and the later counts are read from the wrong places. Extra names on the line are ignored.
-* If the file ends early, reading stops without a message and the remaining groups are not set up ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/constit_db_read.f90#L33-L65)).
+* If the file ends early, reading stops without a message and the remaining groups are not set up ([`constit_db_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/constit_db_read.f90#L33-L65)).

@@ -4,7 +4,7 @@ description: "Chloride exchanged by channel diversion (removal negative, additio
 
 # cl_div
 
-**Code reference:** `chsalt_d(iru)%salt(isalt)%div` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_salt_module.f90#L13)).
+**Code reference:** `chsalt_d(iru)%salt(isalt)%div` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_salt_module.f90#L13)).
 
 The header describes signed chloride exchange with removal negative and addition positive. The active producer records the last qualifying daily Recall removal as a negative mass. Positive inputs enter the routed inlet. See [daily channel calculations](channel-salt.md#daily-channel-calculations).
 

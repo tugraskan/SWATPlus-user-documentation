@@ -4,7 +4,7 @@ description: "Sand leaving the channel"
 
 # san_out
 
-**Code reference:** `ch_out_d(ichan)%san` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L43)).
+**Code reference:** `ch_out_d(ichan)%san` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L43)).
 
 The routed sand fraction comes from incoming and stored sand. The bulk sediment adjustments for erosion and deposition do not add or remove sand in this field. [Sediment and nutrient calculations](sd-channel-general.md#where-the-sediment-and-nutrient-values-come-from)
 

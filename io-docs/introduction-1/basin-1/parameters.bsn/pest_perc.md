@@ -4,11 +4,11 @@ description: Pesticide percolation coefficient
 
 # pest\_perc
 
-**Code reference:** `bsn_prm%percop` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_module.f90#L99), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_read_prm.f90#L24)).
+**Code reference:** `bsn_prm%percop` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_module.f90#L99), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_read_prm.f90#L24)).
 
-Controls the concentration of soluble pesticide removed from the top soil layer in surface runoff and layer-1 lateral flow relative to the concentration in percolate ($\beta_{\text{pest}}$, default `0.5`, range `0–1`; values `< 1.e-6` are reset to `0.5` in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/basin_prm_default.f90#L24)).
+Controls the concentration of soluble pesticide removed from the top soil layer in surface runoff and layer-1 lateral flow relative to the concentration in percolate ($\beta_{\text{pest}}$, default `0.5`, range `0–1`; values `< 1.e-6` are reset to `0.5` in [`basin_prm_default.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/basin_prm_default.f90#L24)).
 
-In [`pest_lch.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pest_lch.f90#L59-L82), layer-1 surface runoff and lateral flow concentration is computed as:
+In [`pest_lch.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pest_lch.f90#L59-L82), layer-1 surface runoff and lateral flow concentration is computed as:
 
 $$C_{\text{surf}} = \beta_{\text{pest}}\,C_0$$
 

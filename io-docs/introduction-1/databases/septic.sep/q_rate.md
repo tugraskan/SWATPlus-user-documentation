@@ -4,7 +4,7 @@ description: Per-capita septic tank effluent flow rate (read but not used by the
 
 # q\_rate
 
-**Code reference:** `sepdb(is)%qs` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/septic_data_module.f90#L7)).
+**Code reference:** `sepdb(is)%qs` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/septic_data_module.f90#L7)).
 
 McCray et al. (2005) proposed 0.227 m3/capita/day as the median value for the United States based on the data collected from various sources.
 

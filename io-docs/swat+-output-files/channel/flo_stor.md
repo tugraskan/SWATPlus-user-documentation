@@ -4,9 +4,9 @@ description: "Flow storage in the channel"
 
 # flo_stor
 
-**Code reference:** `ch_stor(ichan)%flo` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L32)).
+**Code reference:** `ch_stor(ichan)%flo` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L32)).
 
-Current in-channel water volume after routing, transmission loss, and evaporation. The router tracks overbank floodplain storage in a separate state, which is excluded from this column. [Storage partition](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_rtmusk.f90#L175-L186) · [Channel losses](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_rtmusk.f90#L192-L227)
+Current in-channel water volume after routing, transmission loss, and evaporation. The router tracks overbank floodplain storage in a separate state, which is excluded from this column. [Storage partition](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_rtmusk.f90#L175-L186) · [Channel losses](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_rtmusk.f90#L192-L227)
 
 **Unit:** m3.
 

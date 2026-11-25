@@ -4,9 +4,9 @@ description: "Last year of the pumping period"
 
 # pe_yr_e
 
-**Code reference:** `pe_yr_e` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L139), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L984)).
+**Code reference:** `pe_yr_e` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L139), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L984)).
 
-Calendar year in which the period ends. With [pe_dy_e](pe_dy_e.md), it gives the last pumping day ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1004-L1008)):
+Calendar year in which the period ends. With [pe_dy_e](pe_dy_e.md), it gives the last pumping day ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1004-L1008)):
 
 $$n_{e} = (y - y_{0}) \times 365 + d$$
 

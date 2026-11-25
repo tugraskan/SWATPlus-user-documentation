@@ -6,8 +6,8 @@ description: >-
 
 # lai\_max1
 
-**Code reference:** `pldb(ic)%laimx1` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L48)).
+**Code reference:** `pldb(ic)%laimx1` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L43)).
 
-Leaf-area coordinate (fraction of the maximum) of the first point of the curve described under [lai\_pot](untitled-15.md) ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L50-L51)).
+Leaf-area coordinate (fraction of the maximum) of the first point of the curve described under [lai\_pot](untitled-15.md) ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L50-L51)).
 
 Please see the explanation given for parameter [lai\_pot](untitled-15.md) to obtain additional information about this parameter and methods used to measure it.

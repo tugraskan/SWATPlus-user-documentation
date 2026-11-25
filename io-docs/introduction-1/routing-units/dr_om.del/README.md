@@ -6,7 +6,7 @@ description: "This file supplies named organic/mineral delivery values for water
 The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source. A dash means that a unit, recommended default, or range has not been established.
 {% endhint %}
 
-This file supplies named organic/mineral delivery ratios for water, sediment, and other hydrograph components, read by [`dr_read_om.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dr_read_om.f90#L60). Each numeric column is a dimensionless multiplier stored in a `hyd_output` structure (Fortran struct default: `0.`) and applied component-wise by [`hydout_mult`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L1388-L1410); `temp` is parsed into memory but ignored during multiplication.
+This file supplies named organic/mineral delivery ratios for water, sediment, and other hydrograph components, read by [`dr_read_om.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/dr_read_om.f90#L60). Each numeric column is a dimensionless multiplier stored in a `hyd_output` structure (Fortran struct default: `0.`) and applied component-wise by [`hydout_mult`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L1391-L1413); `temp` is parsed into memory but ignored during multiplication.
 
 # dr\_om.del
 

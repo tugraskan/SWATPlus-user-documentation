@@ -4,9 +4,9 @@ description: Name of the conservation practice
 
 # name (cons\_practice.lum)
 
-**Code reference:** `cons_prac(icp)%name` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_data_module.f90#L51), [read](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cons_prac_read.f90#L45)).
+**Code reference:** `cons_prac(icp)%name` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/landuse_data_module.f90#L51), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cons_prac_read.f90#L45)).
 
-Character string (`len=40`, default `""`) identifying the conservation practice. This primary key is referenced by [cons\_prac](../landuse.lum/cons_prac.md) in [**landuse.lum**](../landuse.lum/README.md) ([`landuse_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/landuse_read.f90#L90)). All names in `cons_practice.lum` must be unique.
+Character string (`len=40`, default `""`) identifying the conservation practice. This primary key is referenced by [cons\_prac](../landuse.lum/cons_prac.md) in [**landuse.lum**](../landuse.lum/README.md) ([`landuse_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/landuse_read.f90#L90)). All names in `cons_practice.lum` must be unique.
 
 | Name                 | Description                                     |
 | -------------------- | ----------------------------------------------- |

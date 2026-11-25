@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies channel nutrient and water-quality reduction parameters.
 
-SWAT+ looks for `nutrients.rte` in the simulation working directory; it is not selected through `file.cio`. [`proc_hru.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/proc_hru.f90#L72) calls [`rte_read_nut.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/rte_read_nut.f90#L24-L57) to parse rows into `rte_nut`.
+SWAT+ looks for `nutrients.rte` in the simulation working directory; it is not selected through `file.cio`. [`proc_hru.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/proc_hru.f90#L72) calls [`rte_read_nut.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/rte_read_nut.f90#L24-L57) to parse rows into `rte_nut`.
 
 {% hint style="warning" %}
 In SWAT+ main (`6f515368`), `rte_nut` has no downstream executable references (`reads=none`). Based on source reading, supplying `nutrients.rte` does not alter channel or overland nutrient routing.

@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This file selects cells for the [GWFlow observation reports](../../../swat+-output-files/gwflow-outputs/observation-wells.md). The reader also accepts two older record types that no longer produce output.
 
-SWAT+ looks for `outputs.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L575-L620) reader.
+SWAT+ looks for `outputs.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L575-L620) reader.
 
 # outputs.gw
 
-The first two lines are a title and column headings. Each following line has a record type and a value, in any order. Blank lines, lines with fewer than two values and unrecognized record types are skipped. Record types are case-sensitive ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L601-L619)).
+The first two lines are a title and column headings. Each following line has a record type and a value, in any order. Blank lines, lines with fewer than two values and unrecognized record types are skipped. Record types are case-sensitive ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L601-L619)).
 
 ## Observation cell
 
@@ -23,7 +23,7 @@ The first two lines are a title and column headings. Each following line has a r
 
 ## Head output date
 
-Older record type. The date is stored, but no output is written for it ([`gwflow_simulate.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_simulate.f90#L388-L393)).
+Older record type. The date is stored, but no output is written for it ([`gwflow_simulate.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_simulate.f90#L388-L393)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |
@@ -32,7 +32,7 @@ Older record type. The date is stored, but no output is written for it ([`gwflow
 
 ## Detailed-output cell
 
-Older record type. The cell number is stored, but no output uses it ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L616-L617)).
+Older record type. The cell number is stored, but no output uses it ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L616-L617)).
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

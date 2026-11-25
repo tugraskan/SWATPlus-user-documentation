@@ -4,9 +4,9 @@ description: Type of the receiving object
 
 # obj\_typ
 
-**Code reference:** `ob(i)%obtyp_out(isp)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hydrograph_module.f90#L366)).
+**Code reference:** `ob(i)%obtyp_out(isp)` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L369)).
 
-The table below lists the spatial objects that can be receiving objects and their respective character codes for specifying the type of receiving object. Recall objects cannot be receiving objects. The codes are matched in [`hyd_connect.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hyd_connect.f90#L218-L279).
+The table below lists the spatial objects that can be receiving objects and their respective character codes for specifying the type of receiving object. Recall objects cannot be receiving objects. The codes are matched in [`hyd_connect.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hyd_connect.f90#L218-L279).
 
 | Spatial object                 | Code |
 | ------------------------------ | ---- |

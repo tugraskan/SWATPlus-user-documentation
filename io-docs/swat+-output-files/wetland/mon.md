@@ -6,7 +6,7 @@ description: "Month"
 
 Month.
 
-**Code reference:** the [daily wetland record](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wetland_output.f90#L20) writes the date, HRU number, GIS identifier, and HRU name in this order.
+**Code reference:** the [daily wetland record](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wetland_output.f90#L20) writes the date, HRU number, GIS identifier, and HRU name in this order.
 
 This field has no physical unit.
 

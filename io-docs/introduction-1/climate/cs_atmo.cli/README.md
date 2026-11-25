@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies general-constituent inputs from rainfall and dry atmospheric deposition.
 
-SWAT+ looks for `cs_atmo.cli` in the simulation working directory; it is not selected through `file.cio`. See the [cli_read_atmodep_cs.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_read_atmodep_cs.f90#L32) reader.
+SWAT+ looks for `cs_atmo.cli` in the simulation working directory; it is not selected through `file.cio`. See the [cli_read_atmodep_cs.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_read_atmodep_cs.f90#L32) reader.
 
 # cs_atmo.cli
 
@@ -58,4 +58,4 @@ Use the average annual, monthly, or yearly values appropriate to each climate st
 
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
-The reader skips 3 leading records and gets station count, timestep and period count from [atmo.cli](../atmo.cli/README.md). Supply stations in the same order as in that file. Each station block contains the station token, all wet records and then all dry records, in configured species order. Monthly and yearly rows each supply one value per period. See [cli_read_atmodep_cs.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_read_atmodep_cs.f90#L24-L93).
+The reader skips 3 leading records and gets station count, timestep and period count from [atmo.cli](../atmo.cli/README.md). Supply stations in the same order as in that file. Each station block contains the station token, all wet records and then all dry records, in configured species order. Monthly and yearly rows each supply one value per period. See [cli_read_atmodep_cs.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_read_atmodep_cs.f90#L24-L93).

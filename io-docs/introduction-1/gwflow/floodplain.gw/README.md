@@ -8,13 +8,13 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file lists the cells under each channel's floodplain. It is read only when `fp` is 1 in [codes.gw](../codes.gw/fp.md).
 
-SWAT+ looks for `floodplain.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1180-L1225) reader.
+SWAT+ looks for `floodplain.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1180-L1225) reader.
 
 # floodplain.gw
 
-The file has a title line, the number of cells, a heading line, then one line per cell: `gw_fp_cellid gw_fp_chanid gw_fp_K gw_fp_area` ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L1181-L1192)).
+The file has a title line, the number of cells, a heading line, then one line per cell: `gw_fp_cellid gw_fp_chanid gw_fp_K gw_fp_area` ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1181-L1192)).
 
-Exchange happens only on days when the channel's peak flow exceeds bankfull flow ([`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L112-L117)). Each active cell then exchanges water with the channel under a unit hydraulic gradient ([`gwflow_floodplain.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_floodplain.f90#L53-L92)):
+Exchange happens only on days when the channel's peak flow exceeds bankfull flow ([`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L112-L117)). Each active cell then exchanges water with the channel under a unit hydraulic gradient ([`gwflow_floodplain.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_floodplain.f90#L53-L92)):
 
 $$Q = \pm K \, A$$
 

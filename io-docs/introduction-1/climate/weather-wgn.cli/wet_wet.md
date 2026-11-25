@@ -4,7 +4,7 @@ description: Probability of a wet day following a wet day in the month
 
 # wet\_wet
 
-**Code reference:** `wgn(iwgn)%pr_ww(mo)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_module.f90#L37)).
+**Code reference:** `wgn(iwgn)%pr_ww(mo)` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/climate_module.f90#L37)).
 
 The probability is calculated as
 
@@ -18,4 +18,4 @@ If $p_{ww}\leq p_{wd}$ or $p_{wd}\leq 0$, SWAT+ first replaces $p_{wd}$ and then
 
 $$p_{ww} = 0.25 + p_{wd}$$
 
-where $p_{ww}$ is `wet_wet` (fraction) and $p_{wd}$ is [wet\_dry](wet_dry.md) (fraction). See [cli_initwgn.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cli_initwgn.f90#L175-L188).
+where $p_{ww}$ is `wet_wet` (fraction) and $p_{wd}$ is [wet\_dry](wet_dry.md) (fraction). See [cli_initwgn.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cli_initwgn.f90#L175-L188).

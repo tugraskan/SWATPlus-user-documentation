@@ -23,7 +23,7 @@ Information of water quality or effluent characteristics required to simulate di
 | [fcoli](fcoli.md) | Fecal coliform concentration in the septic tank effluent | real | cfu/100 mL | 0.0 |  |
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`) none of the concentrations in this file changes simulation results, because the septic effluent inflow they are multiplied by is never set ([`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sep_biozone.f90#L121)). This comes from source reading, not a model run.
+In SWAT+ main (`6f515368`) none of the concentrations in this file changes simulation results, because the septic effluent inflow they are multiplied by is never set ([`sep_biozone.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sep_biozone.f90#L121)). This comes from source reading, not a model run.
 {% endhint %}
 
 #### References

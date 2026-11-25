@@ -4,9 +4,9 @@ description: Sediment settling rate input (read but not used by the model)
 
 # sed\_stl
 
-**Code reference:** `res_sed(ires)%sed_stlr` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L104)).
+**Code reference:** `res_sed(ires)%sed_stlr` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reservoir_data_module.f90#L104)).
 
-Sediment settling rate input (`none`; historical table default: `1.0`; Fortran struct default: `0.`), read from `sediment.res` by [`res_read_sed.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read_sed.f90#L55). Although [`cal_parm_select.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cal_parm_select.f90#L844) can adjust the stored field, active reservoir and wetland settling in [`res_sediment.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_sediment.f90#L37) instead uses the settling factor computed in [`res_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_read.f90#L143):
+Sediment settling rate input (`none`; historical table default: `1.0`; Fortran struct default: `0.`), read from `sediment.res` by [`res_read_sed.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read_sed.f90#L55). Although [`cal_parm_select.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cal_parm_select.f90#L845) can adjust the stored field, active reservoir and wetland settling in [`res_sediment.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_sediment.f90#L41) instead uses the settling factor computed in [`res_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_read.f90#L143):
 
 $$c_{\text{stl}} = \exp(-0.184 \, d_{50})$$
 

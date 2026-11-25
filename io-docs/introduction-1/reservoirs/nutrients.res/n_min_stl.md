@@ -4,9 +4,9 @@ description: Minimum nitrogen concentration for settling
 
 # n\_min\_stl
 
-**Code reference:** `res_nut(ires)%conc_nmin` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/reservoir_data_module.f90#L121)).
+**Code reference:** `res_nut(ires)%conc_nmin` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/reservoir_data_module.f90#L121)).
 
-Minimum nitrogen concentration (`ppm`, i.e., `mg/L`; default: `0.10`) below which particulate organic nitrogen and soluble inorganic nitrogen settling ceases. In [`res_nutrient.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_nutrient.f90#L50-L66), SWAT+ first computes water-body concentrations:
+Minimum nitrogen concentration (`ppm`, i.e., `mg/L`; default: `0.10`) below which particulate organic nitrogen and soluble inorganic nitrogen settling ceases. In [`res_nutrient.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_nutrient.f90#L70-L86), SWAT+ first computes water-body concentrations:
 
 $$C = \frac{1000 \, M}{V}$$
 

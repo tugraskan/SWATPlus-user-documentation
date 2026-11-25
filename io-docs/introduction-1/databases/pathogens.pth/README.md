@@ -10,6 +10,10 @@ This file contains parameters for pathogen growth, die-off, partitioning, and tr
 
 # pathogens.pth
 
+{% hint style="info" %}
+SWAT+ dev also contains a reader for a file named `pathogen_db.pth` that fills the same pathogen array, but nothing calls it, so that file has no effect ([`pathogen_db_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pathogen_db_read.f90#L1-L58)). Use `pathogens.pth`.
+{% endhint %}
+
 The first two lines contain a title and column headings. Each following row contains the fields below, in this order.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
@@ -36,5 +40,5 @@ The first two lines contain a title and column headings. Each following row cont
 **Type note:** `string` means Fortran `character`; `integer` and `real` use the same names in Fortran.
 
 {% hint style="warning" %}
-Suspected defects (this comes from source reading, not a model run): HRU routines choose the pathogen record by the initialization record number and channel routing by list position, not by the matched name ([`path_ls_process.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_ls_process.f90#L34-L35), [`ch_rtpath.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/ch_rtpath.f90#L90)). The surface runoff routine moves the whole surface-layer pathogen amount to runoff each day ([`path_ls_runoff.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_ls_runoff.f90#L26-L30)).
+Suspected defects (this comes from source reading, not a model run): HRU routines choose the pathogen record by the initialization record number and channel routing by list position, not by the matched name ([`path_ls_process.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_ls_process.f90#L34-L35), [`ch_rtpath.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ch_rtpath.f90#L90)). The surface runoff routine moves the whole surface-layer pathogen amount to runoff each day ([`path_ls_runoff.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_ls_runoff.f90#L26-L30)).
 {% endhint %}

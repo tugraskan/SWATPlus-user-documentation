@@ -21,8 +21,8 @@ The four interval files have 14 columns in the order shown.
 | `root_c` | Root carbon | kg C/ha |
 | `surf_rsd_c` | Surface-residue carbon | kg C/ha |
 
-These are current `pl_mass` stocks at the reporting date, including `_mon`, `_yr`, and `_aa`; the plant-status emitter does not time-average them. Modern rows have no `freq` field ([header](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/carbon_module.f90#L552); [writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_nutcarb_write.f90#L441)).
+These are current `pl_mass` stocks at the reporting date, including `_mon`, `_yr`, and `_aa`; the plant-status emitter does not time-average them. Modern rows have no `freq` field ([header](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_module.f90#L551); [writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_nutcarb_write.f90#L463)).
 
-In this source revision, the output controller calls the modern writer once per full HRU, and the writer loops over every full HRU on each call. With multiple full HRUs, the file repeats the full set of rows at each reporting event. [Output controller](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/command.f90#L470), [Writer](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/soil_nutcarb_write.f90#L92)
+In this source revision, the output controller calls the modern writer once per full HRU, and the writer loops over every full HRU on each call. With multiple full HRUs, the file repeats the full set of rows at each reporting event. [Output controller](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/command.f90#L470), [Writer](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/soil_nutcarb_write.f90#L92)
 
 The [legacy HRU plant carbon diagnostic](legacy-hru-plant-carbon-status.md) has its own layout.

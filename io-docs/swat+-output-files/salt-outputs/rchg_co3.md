@@ -4,7 +4,7 @@ description: "Salt entering with recharge"
 
 # rchg_co3
 
-**Code reference:** `asaltb_d(iaq)%salt(isalt)%rchrg` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_aquifer.f90#L9)).
+**Code reference:** `asaltb_d(iaq)%salt(isalt)%rchrg` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_aquifer.f90#L9)).
 
 In this output table, `rchg_co3` is one of the fields described as: Salt entering with recharge.
 

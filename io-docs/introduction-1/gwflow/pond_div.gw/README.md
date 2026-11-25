@@ -8,11 +8,11 @@ The inspected SWAT+ Editor has an exporter for this format. Field names and valu
 
 This optional file gives the volume diverted into each recharge pond each day. Without it, ponds receive no diversions.
 
-SWAT+ looks for `pond_div.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_read.f90#L2011-L2020) reader.
+SWAT+ looks for `pond_div.gw` in the simulation working directory; it is not selected through `file.cio`. See the [`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L2011-L2020) reader.
 
 # pond_div.gw
 
-The first two lines are a title and column headings. Then give one line per simulated day, from the first day: year, month, day, then one volume per pond in the order of `ponds.gw`. SWAT+ reads one line each day and does not check the dates ([`gwflow_pond.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/gwflow_pond.f90#L54-L61)). Reading past the end stops the run.
+The first two lines are a title and column headings. Then give one line per simulated day, from the first day: year, month, day, then one volume per pond in the order of `ponds.gw`. SWAT+ reads one line each day and does not check the dates ([`gwflow_pond.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_pond.f90#L54-L61)). Reading past the end stops the run.
 
 | **Field** | **Description** | **Type** | **Unit** | **Default** | **Range** |
 | --------- | --------------- | -------- | -------- | ----------- | --------- |

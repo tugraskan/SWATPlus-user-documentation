@@ -4,9 +4,9 @@ description: "Nitrate removed by the first-order aquifer loss calculation"
 
 # no3_loss
 
-**Code reference:** `aqu_d(iaq)%no3_loss = no3_init - aqu_d(iaq)%no3_st`, after multiplying stored nitrate by `aqu_prm(iaq)%nloss` ([loss calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_1d_control.f90#L158)).
+**Code reference:** `aqu_d(iaq)%no3_loss = no3_init - aqu_d(iaq)%no3_st`, after multiplying stored nitrate by `aqu_prm(iaq)%nloss` ([loss calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_1d_control.f90#L160)).
 
-The nitrate amount removed by this first-order loss step. It excludes the separately reported nitrate carried by groundwater discharge (`no3_lat`) and seepage (`no3_seep`). The retention coefficient is initialized as `Exp(-.693 / (hlife_n + .1))` ([coefficient](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_initial.f90#L168)).
+The nitrate amount removed by this first-order loss step. It excludes the separately reported nitrate carried by groundwater discharge (`no3_lat`) and seepage (`no3_seep`). The retention coefficient is initialized as `Exp(-.693 / (hlife_n + .1))` ([coefficient](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_initial.f90#L170)).
 
 **Unit:** kg N/ha in the daily calculation's convention. The stored-nitrate component has initialization/allocation mass-basis inconsistencies; see [no3_st](no3_st.md).
 

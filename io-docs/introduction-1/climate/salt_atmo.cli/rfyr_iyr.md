@@ -4,6 +4,6 @@ description: "Yearly precipitation concentration in mg/L"
 
 # rfyr(iyr)
 
-**Code reference:** `atmodep_salt(iadep)%salt(isalt)%rfyr(iyr)` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/climate_module.f90#L228)).
+**Code reference:** `atmodep_salt(iadep)%salt(isalt)%rfyr(iyr)` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/climate_module.f90#L228)).
 
-Concentration in rainfall in mg/L for the indicated period. The model applies $0.01CP$ in kg/ha each day, where $C$ is the current period concentration and $P$ is daily precipitation in mm. See [salt_rain.f90](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/salt_rain.f90#L42-L82).
+Concentration in rainfall in mg/L for the indicated period. The model applies $0.01CP$ in kg/ha each day, where $C$ is the current period concentration and $P$ is daily precipitation in mm. See [salt_rain.f90](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_rain.f90#L42-L82).

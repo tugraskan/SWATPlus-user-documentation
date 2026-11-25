@@ -4,7 +4,7 @@ description: "Unheaded net die-off; negative values indicate regrowth"
 
 # die_off (unheaded data position 17)
 
-**Code reference:** `hpath_bal(j)%path(ipath)%die_off` ([source](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/path_ls_process.f90#L60)).
+**Code reference:** `hpath_bal(j)%path(ipath)%die_off` ([source](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_ls_process.f90#L60)).
 
 There is no printed heading for data position 17. `die_off` is the source component name, not a label present in the output header.
 

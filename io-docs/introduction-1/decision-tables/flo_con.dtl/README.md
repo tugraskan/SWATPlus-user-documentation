@@ -10,9 +10,9 @@ This file defines decision tables used to control flow-related actions.
 
 # flo_con.dtl
 
-Line 1 is the title. Line 2 starts with the number of decision tables. Leave line 3 blank. For each table, enter a header and the definition row, then a condition header and exactly `conds` condition rows, then an action header and exactly `acts` action rows. Each condition row ends with `alts` comparison entries. Each action row ends with `alts` outcomes in the same order. Leave a blank line after each action block, including the last one. [`dtbl_flocon_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_flocon_read.f90#L34-L68)
+Line 1 is the title. Line 2 starts with the number of decision tables. Leave line 3 blank. For each table, enter a header and the definition row, then a condition header and exactly `conds` condition rows, then an action header and exactly `acts` action rows. Each condition row ends with `alts` comparison entries. Each action row ends with `alts` outcomes in the same order. Leave a blank line after each action block, including the last one. [`dtbl_flocon_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/dtbl_flocon_read.f90#L34-L68)
 
-Water allocation evaluates these tables for [dtbl_mx](../../water-allocation/place_of_use.wro/dtbl_mx.md), [dtbl_pod_fr](../../water-allocation/place_of_use.wro/dtbl_pod_fr.md), and [dtbl_por_fr](../../water-allocation/place_of_use.wro/dtbl_por_fr.md); saturated buffers evaluate the table named in [satbuffer.str](../../structural-practices/satbuffer.str/README.md). [`wallo_start_day.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L152-L202) · [`hru_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/hru_control.f90#L641-L656)
+Water allocation evaluates these tables for [dtbl_mx](../../water-allocation/place_of_use.wro/dtbl_mx.md), [dtbl_pod_fr](../../water-allocation/place_of_use.wro/dtbl_pod_fr.md), and [dtbl_por_fr](../../water-allocation/place_of_use.wro/dtbl_por_fr.md); saturated buffers evaluate the table named in [satbuffer.str](../../structural-practices/satbuffer.str/README.md). [`wallo_start_day.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_start_day.f90#L152-L202) · [`hru_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hru_control.f90#L637-L652)
 
 | Caller | Table is chosen by | Action types that do something |
 | ------ | ------------------ | ------------------------------ |
@@ -20,7 +20,7 @@ Water allocation evaluates these tables for [dtbl_mx](../../water-allocation/pla
 | Source and receiver fractions | `dtbl_pod_fr`, `dtbl_por_fr` | `duty_fr` |
 | Saturated buffer | `satbuffer.str` table name | `tileflo_control` |
 
-Connectivity [rule](../../connectivity/hru.con/rule.md) names are also matched to these tables, but that match is never read, so a `rule` does not change routed flow at this commit. [`dtbl_flocon_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/dtbl_flocon_read.f90#L77-L87)
+Connectivity [rule](../../connectivity/hru.con/rule.md) names are also matched to these tables, but that match is never read, so a `rule` does not change routed flow at this commit. [`dtbl_flocon_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/dtbl_flocon_read.f90#L77-L87)
 
 ## Number of decision tables
 

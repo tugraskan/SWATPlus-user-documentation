@@ -6,9 +6,9 @@ description: >-
 
 # vpd
 
-**Code reference:** `pldb(ic)%vpdfr` ([declaration](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_data_module.f90#L71)).
+**Code reference:** `pldb(ic)%vpdfr` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_data_module.f90#L66)).
 
-**Current use:** this value $v$ and [frac\_stcon](frac_stcon.md) $g$ give the slope of the conductance decline, $(1 - g) / (v - 1)$ ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plantparm_init.f90#L91)). Do not enter 1, which divides by zero.
+**Current use:** this value $v$ and [frac\_stcon](frac_stcon.md) $g$ give the slope of the conductance decline, $(1 - g) / (v - 1)$ ([`plantparm_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plantparm_init.f90#L89)). Do not enter 1, which divides by zero.
 
 The first point on the stomatal conductance curve is comprised of a vapor pressure deficit of 1 kPa and a fraction of maximum stomatal conductance equal to 1.00.
 

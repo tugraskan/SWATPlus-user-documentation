@@ -8,4 +8,4 @@ description: Salt constituent name in recall_db.rec
 
 Salt constituent-group name (`character(len=25)`) associated with this recall database record.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

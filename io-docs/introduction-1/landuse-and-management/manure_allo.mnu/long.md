@@ -8,4 +8,4 @@ description: "Longitude of the source object (read but not used in main 6f515368
 
 Real coordinate (default `0.0`) giving the longitude of the manure source object.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

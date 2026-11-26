@@ -1,6 +1,6 @@
 # Legacy HRU total soil carbon
 
-Files `hru_cbn_lyr.txt` and `hru_cbn_lyr.csv` contain one row per full HRU per selected reporting event. Enable the desired daily, monthly, or yearly periods on the named `hru_cb` row in [print.prt](../../introduction-1/simulation-settings/print.prt/README.md). Both `y` and lowercase `l` write these rows. For example, `hru_cb n n y n` writes yearly snapshots. Set `csvout` to `y` for the CSV copy. The same file holds all selected periods, and the rows are snapshots on the reporting date. [File opener](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_legacy_module.f90#L472), [Reporting calls](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/command.f90#L525)
+Files `hru_cbn_lyr.txt` and `hru_cbn_lyr.csv` contain one row per full HRU per selected reporting event. Enable the desired daily, monthly, or yearly periods on the named `hru_cb` row in [print.prt](../../introduction-1/simulation-settings/print.prt/README.md). Both `y` and lowercase `l` write these rows. For example, `hru_cb n n y n` writes yearly snapshots. Set `csvout` to `y` for the CSV copy. The same file holds all selected periods, and the rows are snapshots on the reporting date. [File opener](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_legacy_module.f90#L472), [Reporting calls](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/command.f90#L539-L548)
 
 ## Column order
 

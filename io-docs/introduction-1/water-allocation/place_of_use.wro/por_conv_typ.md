@@ -8,4 +8,4 @@ description: "POR conveyance type"
 
 10-character conveyance type (`pipe` or `pump`; default: `""`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

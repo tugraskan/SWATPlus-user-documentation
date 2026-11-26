@@ -8,4 +8,4 @@ description: Legacy channel water quality code (read but not used in main 6f5153
 
 Legacy integer control code for channel water quality (struct default `0`). Instream nutrient routing is instead controlled by [qual2e](qual2e.md).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

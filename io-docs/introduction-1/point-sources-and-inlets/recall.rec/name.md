@@ -8,4 +8,4 @@ description: User label for the recall input
 
 User-assigned label (`character(len=25)`) identifying the recall entry in `recall.rec`.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

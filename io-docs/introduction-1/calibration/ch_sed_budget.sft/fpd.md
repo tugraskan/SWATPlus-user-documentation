@@ -8,4 +8,4 @@ description: Target flood-plain accretion rate in ch_sed_budget.sft.
 
 Target annual flood-plain sediment accretion rate (`mm/yr`, struct default `0.`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

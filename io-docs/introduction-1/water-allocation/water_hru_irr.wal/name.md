@@ -8,4 +8,4 @@ description: "Irrigation-group name"
 
 25-character name of the irrigation HRU group (default: `""`). Irrigation POUs in [place_of_use.wro](../place_of_use.wro/README.md) link to `hruirr_db` by integer `typ_num`, not by name.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

@@ -8,4 +8,4 @@ description: Positive change limit in ch_sed_parms.sft.
 
 Intended upper limit constraining upward parameter adjustments during channel sediment soft calibration (struct default `0.`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

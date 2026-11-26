@@ -8,4 +8,4 @@ description: Net primary productivity target in plant_gro.sft.
 
 Average annual net primary productivity (dry-weight biomass) target (`t/ha`, struct default `0.`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

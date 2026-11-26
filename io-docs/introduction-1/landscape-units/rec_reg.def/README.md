@@ -3,7 +3,7 @@ description: "This file defines point-source regions and their element lists."
 ---
 
 {% hint style="info" %}
-An Editor export of this format has not been verified. Field names and values in the table are based on the SWAT+ Fortran source (`6f515368`). A dash means that a unit, recommended default, or range has not been established.
+An Editor export of this format has not been verified. Field names and values in the table are based on the SWAT+ Fortran source (main `6f515368`; the read layout is unchanged on dev `aa4179fe`). A dash means that a unit, recommended default, or range has not been established.
 {% endhint %}
 
 {% hint style="warning" %}

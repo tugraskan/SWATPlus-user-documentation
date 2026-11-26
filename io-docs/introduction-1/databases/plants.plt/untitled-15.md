@@ -10,7 +10,7 @@ description: Maximum potential leaf area index
 
 $$f = \frac{h}{h + \exp(a - b h)}$$
 
-where $f$ is the fraction of maximum leaf area (dimensionless), $h$ is the fraction of heat units to maturity (dimensionless), and $a$ and $b$ are the fitted shape parameters (dimensionless; [`pl_leaf_gro.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/pl_leaf_gro.f90#L86-L88)).
+where $f$ is the fraction of maximum leaf area (dimensionless), $h$ is the fraction of heat units to maturity (dimensionless), and $a$ and $b$ are the fitted shape parameters (dimensionless; [`pl_leaf_gro.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/pl_leaf_gro.f90#L86-L95)).
 
 The variable _lai\_pot_ is one of six parameters used to quantify leaf area development of a plant species during the growing season. The figure below illustrates the relationship of the database parameters to the leaf area development modeled by SWAT+.
 

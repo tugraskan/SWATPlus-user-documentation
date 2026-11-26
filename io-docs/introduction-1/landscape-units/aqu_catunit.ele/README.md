@@ -3,7 +3,7 @@ description: "This file identifies the objects included in aquifer cataloging un
 ---
 
 {% hint style="info" %}
-The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source (`6f515368`). A dash means that a unit, recommended default, or range has not been established.
+The inspected SWAT+ Editor has an exporter for this format. Field names and values in the table are based on the SWAT+ Fortran source (main `6f515368`; the read layout is unchanged on dev `aa4179fe`). A dash means that a unit, recommended default, or range has not been established.
 {% endhint %}
 
 {% hint style="warning" %}

@@ -6,7 +6,7 @@ description: "Fraction of the channel arc length over which bank erosion is perm
 
 **Code reference:** `sd_chd1(idb)%arc_len_fr` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_module.f90#L56)).
 
-Intended fraction of the channel arc length over which bank erosion occurs (struct default `1.2`). In [`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L211-L214), the routine computes the arc length and protected length:
+Intended fraction of the channel arc length over which bank erosion occurs (struct default `1.2`). On SWAT+ dev it is read but not used: eroded bank mass uses the whole channel length ([`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_sediment3.f90#L209-L238)). On SWAT+ main, [`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L211-L214) computed the arc length and protected length:
 
 $$L_{\text{arc}} = 0.25\,L_{\text{ch}}, \qquad L_{\text{prot}} = L_{\text{arc}} \cdot f_{\text{arc}}$$
 

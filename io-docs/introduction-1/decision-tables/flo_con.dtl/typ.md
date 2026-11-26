@@ -10,7 +10,7 @@ Action type. The type must suit the input that selects the table:
 
 | Type | Used by | Effect | Source |
 | ---- | ------- | ------ | ------ |
-| `wallo_dmd` | `dtbl_mx` | Sets the day's water demand (m³) according to [option](option.md) | [`actions.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/actions.f90#L190-L238) |
+| `wallo_dmd` | `dtbl_mx` | Sets the day's water demand (m³) according to [option](option.md) | [`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L190-L240) |
 | `duty_fr` | `dtbl_pod_fr`, `dtbl_por_fr` | Sets the fraction for one source or receiver | [`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L833-L858) |
 | `tileflo_control` | saturated buffer | Sets how much tile flow goes to the buffer HRU | [`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L861-L889) |
 | `duty_reset` | no automatic caller: the table named by [pod_dtbl_wdraw](../../water-allocation/place_of_use.wro/pod_dtbl_wdraw.md) is never evaluated | Sets a source's maximum withdrawal | [`actions.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/actions.f90#L183-L187) |

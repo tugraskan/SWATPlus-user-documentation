@@ -8,4 +8,4 @@ description: Update table type in scen_dtl.upd.
 
 Intended update table category (up to 25 characters, struct default `""`; source comments list `"lu_change"` and `"hru_fr_change"`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

@@ -6,7 +6,7 @@ description: Operation data 1 (op_char)
 
 **Code reference:** `sched(isched)%mgt_ops(iop)%op_char` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_operations_module.f90#L165), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L31)).
 
-Character string (`len=40`, default `""`) supplying the primary target name or parameter option for the operation in [`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/read_mgtops.f90#L41-L175) and [`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_sched.f90#L84-L624).
+Character string (`len=40`, default `""`) supplying the primary target name or parameter option for the operation in [`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L41-L183) and [`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L84-L625).
 
 | Operation | Use of `op_data1` |
 | --------- | ----------------- |

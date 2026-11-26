@@ -6,7 +6,7 @@ description: "Gravel storage in the reservoir"
 
 **Code reference:** `res(j)%grv` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/hydrograph_module.f90#L48)).
 
-Gravel in the storage hydrograph. The sediment routine clears all six stored size classes when bulk sediment concentration exceeds the equilibrium threshold. A low-volume reset also clears these fields. [Sediment calculation](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_sediment.f90#L17-L51), [Low-volume reset](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_nutrient.f90#L33-L38)
+Gravel in the storage hydrograph. The sediment routine clears all six stored size classes when bulk sediment concentration exceeds the equilibrium threshold. A low-volume reset also clears these fields. [Sediment calculation](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_sediment.f90#L17-L53), [Low-volume reset](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_nutrient.f90#L33-L38)
 
 **Unit:** tons.
 

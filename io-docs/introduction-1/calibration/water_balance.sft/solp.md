@@ -8,4 +8,4 @@ description: Average annual soluble phosphorus yield target in water_balance.sft
 
 Average annual soluble phosphorus yield target (`kg/ha`, struct default `0.`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

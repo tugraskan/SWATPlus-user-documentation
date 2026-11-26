@@ -8,4 +8,4 @@ description: "Annual maximum POR inflow"
 
 Annual maximum inflow limit at the POR (`m^3/s`; default: `0.`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

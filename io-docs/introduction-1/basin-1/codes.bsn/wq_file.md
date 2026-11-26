@@ -8,4 +8,4 @@ description: Watershed stream water quality filename placeholder (read but not u
 
 Placeholder string for a watershed stream water quality filename (struct default `""`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

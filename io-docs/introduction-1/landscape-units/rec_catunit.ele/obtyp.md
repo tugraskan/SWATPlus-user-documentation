@@ -8,4 +8,4 @@ description: "Object type"
 
 3-character object type string for the point-source element (`character(len=3)`, default `""`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

@@ -30,7 +30,7 @@ The reservoir can print a nonzero release load and subtract it from storage whil
 
 When the routine runs with 1 m³ or less, it clears the printed inflow, release, seepage, mass, and concentration. The printed volume can retain a previous value, and the routine leaves stored salt as it was. With GWFlow salt exchange enabled, GWFlow changes stored salt directly before the reservoir calculation. The reported seepage load comes from a separate calculation using signed net water seepage and the previously stored concentration. [Low-volume branch](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_salt.f90#L30-L83), [GWFlow salt exchange](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_reservoir.f90#L104-L215)
 
-Reservoir withdrawals through water allocation can reduce water storage without removing stored salt. [Reservoir withdrawal](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_withdraw.f90#L99-L108)
+Reservoir withdrawals through water allocation can reduce water storage without removing stored salt. [Reservoir withdrawal](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_withdraw.f90#L100-L109)
 
 ## Daily wetland values
 

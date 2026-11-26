@@ -8,4 +8,4 @@ description: "Source type for general constituent concentrations (`const`, `dtbl
 
 6-character source type for general constituent concentrations (`const`, `dtbl`, or `recall`) for the water-use object (default: `""`). Only `org_min_typ` and `org_min_name` are crosswalked and evaluated in `6f515368`.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

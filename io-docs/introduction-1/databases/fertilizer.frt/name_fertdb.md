@@ -6,7 +6,7 @@ description: Name of the fertilizer or manure record
 
 **Code reference:** `fertdb(it)%fertnm` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/fertilizer_data_module.f90#L6)).
 
-The name holds up to 16 characters ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L110), [`mgt_read_grazeops.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_read_grazeops.f90#L55)).
+The name holds up to 16 characters ([`read_mgtops.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L110)). On SWAT+ dev grazing operations match their manure name against manure_db.frt instead of this file..
 
 The name of the fertilizer or manure record is a primary key referenced when fertilizer or manure applications are scheduled with the `fert` operation in [**management.sch**](../../landuse-and-management/management.sch/) or the `fertilize` action in [**lum.dtl**](../../decision-tables/lum.dtl/), and by grazing operations. The management.sch `manu` operation looks up [manure\_db.frt](../manure_db.frt/) instead. All names in the **fertilizer.frt** database must be unique.
 

@@ -8,4 +8,4 @@ description: "Initial water-compartment value for each pathogen (not used in sim
 
 Initial water-compartment value for each pathogen, read in [`path_cha_res_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/path_cha_res_read.f90#L63) and copied directly into `res_water(ires)%path(ipath)` ([`res_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_initial.f90#L119)) and `ch_water(ich)%path(ipath)` ([`sd_hydsed_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_hydsed_init.f90#L279)). Neither `res_water%path` nor `ch_water%path` is subsequently read in simulation calculations.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

@@ -3,11 +3,11 @@ description: "This file defines water-use objects and their storage, water-loss,
 ---
 
 {% hint style="info" %}
-An Editor export of this format has not been verified. Field names and values in the tables are based on the SWAT+ Fortran source (`6f515368`). A dash means that a unit, recommended default, or range has not been established.
+An Editor export of this format has not been verified. Field names and values in the tables are based on the SWAT+ Fortran source (main `6f515368`; the read layout is unchanged on dev `aa4179fe`). A dash means that a unit, recommended default, or range has not been established.
 {% endhint %}
 
-{% hint style="warning" %}
-In [`water_use_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_use_read.f90#L34-L103), `exit` at [`water_use_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_use_read.f90#L101) exits the inner `iwuse = 1, imax` loop after reading the first record, while the outer `do ... end do` loop ([`water_use_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/water_use_read.f90#L34-L103)) lacks an `exit` statement.
+{% hint style="info" %}
+On SWAT+ main the reader left its inner record loop after the first record, so only one water-use record was read. SWAT+ dev removed that `exit` ([`water_use_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_use_read.f90#L34-L102)): all `imax` records are read, and the outer loop ends at the end of the file.
 {% endhint %}
 
 This file defines water-use objects and their storage, water-loss, and constituent settings.

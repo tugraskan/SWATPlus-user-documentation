@@ -8,4 +8,4 @@ description: "Lag time applied to treated outflow"
 
 Treatment lag time before outflow (`days`; uninitialized in the derived-type definition). In `6f515368`, [`wallo_treatment.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_treatment.f90#L66,L87-L88) explicitly applies no lagging and resets `wtp_om_stor(iwtp) = hz` each day.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

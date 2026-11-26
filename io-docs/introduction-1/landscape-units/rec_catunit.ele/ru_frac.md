@@ -12,4 +12,4 @@ $$A_{\text{cal}} = f_{\text{ru}} \cdot A_{\text{reg}}$$
 
 where $A_{\text{cal}}$ is `pcu_cal%hru_ha` (`ha`), $f_{\text{ru}}$ is `ru_frac` (`fraction`), and $A_{\text{reg}}$ is `pcu_cal(ireg)%area_ha` (`ha`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file supplies named sets of initial general-constituent values for aquifers.
 
-SWAT+ looks for `cs_aqu.ini` in the simulation working directory; it is not selected through `file.cio`. See the [`cs_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cs_aqu_read.f90#L23-L58) reader.
+SWAT+ looks for `cs_aqu.ini` in the simulation working directory; it is not selected through `file.cio`. See the [`cs_aqu_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cs_aqu_read.f90#L23-L57) reader.
 
 # cs\_aqu.ini
 

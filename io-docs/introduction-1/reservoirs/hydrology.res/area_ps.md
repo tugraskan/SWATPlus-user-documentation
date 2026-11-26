@@ -12,7 +12,7 @@ $$A_{\text{psa}} = 0.08 \, V_{\text{pvol}}$$
 
 where $A_{\text{psa}}$ is `area_ps` (ha) and $V_{\text{pvol}}$ is [vol\_ps](vol_ps.md) (ha-m).
 
-SWAT+ pairs (`area_ps`, [vol\_ps](vol_ps.md)) with ([area\_es](area_es.md), [vol\_es](vol_es-1.md)) in [`res_initial.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_initial.f90#L62-L84) to fit the power-law area–volume curve applied daily in [`res_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_control.f90#L203):
+SWAT+ pairs (`area_ps`, [vol\_ps](vol_ps.md)) with ([area\_es](area_es.md), [vol\_es](vol_es-1.md)) in [`res_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_initial.f90#L62-L84) to fit the power-law area–volume curve applied daily in [`res_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_control.f90#L203):
 
 $$A = b_1 V^{b_2}$$
 

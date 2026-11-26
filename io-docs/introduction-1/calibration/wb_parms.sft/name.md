@@ -8,4 +8,4 @@ description: Parameter name label in wb_parms.sft.
 
 Descriptive name of the soft-calibration parameter row. Because SWAT+ indexes `ls_prms(1..10)` strictly by row position rather than matching strings, rows must remain in their expected order (`cn2`, `esco`, `latq_co`, `pet_co`, `slope`, `tconc`, `etco`, `perco`, `revapc`, `cn3_swf`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

@@ -6,7 +6,7 @@ description: "Soluble (labile) phosphorus in tile flow"
 
 **Code reference:** `bls_d%tilelabp` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/output_landscape_module.f90#L162)).
 
-Daily labile P removed from the drain layer by tile flow. The routine calculates it after percolation has removed some labile P from that layer. The diagnostic stays zero when the drain layer is the layer indexed by `i_sep(j)`. [tile P assignment](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/nut_solp.f90#L50-L88).
+Daily labile P removed from the drain layer by tile flow. The routine calculates it after percolation has removed some labile P from that layer. The diagnostic stays zero when the drain layer is the layer indexed by `i_sep(j)`. [tile P assignment](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/nut_solp.f90#L59-L100).
 
 **Unit:** kg P/ha.
 

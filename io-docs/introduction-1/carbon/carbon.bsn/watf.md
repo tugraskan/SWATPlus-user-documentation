@@ -6,7 +6,7 @@ description: "Selects the soil water factor equation for decomposition"
 
 **Code reference:** `org_con%watf` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_module.f90#L118), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/carbon_bsn_read.f90#L76)).
 
-Selects the soil water factor $f_W$ used for decomposition in [`cbn_zhang2.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/cbn_zhang2.f90#L326-L353):
+Selects the soil water factor $f_W$ used for decomposition in [`cbn_zhang2.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/cbn_zhang2.f90#L341-L368):
 
 | Value | Factor |
 | ----- | ------ |

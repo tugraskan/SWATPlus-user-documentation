@@ -8,4 +8,4 @@ description: "Name of the pathogen source record"
 
 25-character name of the pathogen source record for the water-use object (default: `""`). Only `org_min_typ` and `org_min_name` are crosswalked and evaluated in `6f515368`.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

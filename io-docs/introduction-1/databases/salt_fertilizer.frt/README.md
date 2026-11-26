@@ -31,5 +31,5 @@ The first two lines contain a title and column headings. Each following row cont
 The reader expects one row for every [fertilizer.frt](../fertilizer.frt/) record, in the same order ([`salt_fert_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_fert_read.f90#L29-L37)).
 
 {% hint style="warning" %}
-In SWAT+ main (`6f515368`) these values are applied by `manu` operations, the `manure` decision-table action, and `fert` operations on ponded fields. The call for a dry-field `fert` operation is commented out ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_sched.f90#L390-L409)). For manure, the row number comes from [manure\_db.frt](../manure_db.frt/), not from `fertilizer.frt`. This comes from source reading, not a model run.
+In SWAT+ main (`6f515368`) these values are applied by `manu` operations, the `manure` decision-table action, and `fert` operations on ponded fields. The call for a dry-field `fert` operation is commented out ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L390-L409)). For manure, the row number comes from [manure\_db.frt](../manure_db.frt/), not from `fertilizer.frt`. This comes from source reading, not a model run.
 {% endhint %}

@@ -8,4 +8,4 @@ description: Change type label in wb_parms.sft.
 
 Documents the change mode (`absval`, `abschg`, or `pctchg`) for the parameter row. SWAT+ hardcodes additive or multiplicative updates in each soft-calibration subroutine rather than reading this field.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

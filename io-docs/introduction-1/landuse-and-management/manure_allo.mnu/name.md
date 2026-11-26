@@ -8,4 +8,4 @@ description: "Record name (read but not used in main 6f515368)"
 
 Character string (`len=25`, default `""`) naming the manure allocation object.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

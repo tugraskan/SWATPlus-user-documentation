@@ -8,4 +8,4 @@ description: "Nitrate nitrogen concentration (read but not used in main 6f515368
 
 Nitrate nitrogen concentration (`ppm`, struct default `0.0`) intended for standing paddy water after puddling. Keep the column in each row so subsequent fields remain aligned.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

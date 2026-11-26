@@ -14,7 +14,7 @@ SWAT+ looks for `floodplain.gw` in the simulation working directory; it is not s
 
 The file has a title line, the number of cells, a heading line, then one line per cell: `gw_fp_cellid gw_fp_chanid gw_fp_K gw_fp_area` ([`gwflow_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_read.f90#L1181-L1192)).
 
-Exchange happens only on days when the channel's peak flow exceeds bankfull flow ([`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L112-L117)). Each active cell then exchanges water with the channel under a unit hydraulic gradient ([`gwflow_floodplain.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_floodplain.f90#L53-L92)):
+On SWAT+ dev exchange happens on days when more than 5% of the channel's flow goes overbank ([`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_sediment3.f90#L132-L168)). Each active cell then exchanges water with the channel under a unit hydraulic gradient ([`gwflow_floodplain.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/gwflow_floodplain.f90#L53-L92)):
 
 $$Q = \pm K \, A$$
 

@@ -6,7 +6,7 @@ description: Operation data 3 (op3)
 
 **Code reference:** `sched(isched)%mgt_ops(iop)%op3` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_operations_module.f90#L169), [read](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/read_mgtops.f90#L33)).
 
-Real numeric parameter (default `0.0`) providing operation-specific rates, thresholds, or flags in [`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_sched.f90#L101-L560).
+Real numeric parameter (default `0.0`) providing operation-specific rates, thresholds, or flags in [`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L101-L561).
 
 | Operation | Use of `op_data3` |
 | --------- | ----------------- |
@@ -16,7 +16,7 @@ Real numeric parameter (default `0.0`) providing operation-specific rates, thres
 | `fert`, `manu`, `pest` | Application rate (`kg/ha`); for `pest`, multiplied by `chem_app.ops` `app_eff` ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L378), [`#L405`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L405), [`#L430`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L430)) |
 | `graz` | Grazing duration in days (`Int(op3)`) ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L443)) |
 | `cnup` | Curve number adjustment value passed to `chg_par` and clamped to `35.0–95.0` ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L457)) |
-| `dwm` | Tile drain depth (`mm`); `<= 0` disables drainage (`ldrain = 0`) ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_sched.f90#L491-L499)) |
+| `dwm` | Tile drain depth (`mm`); `<= 0` disables drainage (`ldrain = 0`) ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L491-L500)) |
 | `weir` | Weir height (`mm`), divided by `1000` to set `wet_ob(j)%weir_hgt` (`m`) and principal spillway volume ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L511-L515)) |
 | `irrp` | Target paddy ponding depth (`mm`): `> 0` enables paddy irrigation and sets maximum and minimum ponding targets (see below), `0` turns paddy irrigation off, and `< 0` uses `irr.ops` `amt_mm` (line `530` also copies `op3` to `irr_isc`) ([`mgt_sched.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_sched.f90#L531-L561)) |
 | All other operations | Not used (enter `0.0`) |

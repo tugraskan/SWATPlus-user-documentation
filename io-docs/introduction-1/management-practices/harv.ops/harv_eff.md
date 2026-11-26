@@ -12,9 +12,9 @@ Dimensionless harvest efficiency (`fraction`; default `0.0`, valid range `0.0–
 
 $$HI_{\text{tot}} = HI_{\text{ovr}} \cdot E_{\text{harv}}$$
 
-where $HI_{\text{tot}}$ is the effective harvest index (dimensionless), $HI_{\text{ovr}}$ is `harv_idx` (dimensionless), and $E_{\text{harv}}$ is `harv_eff` (dimensionless). The unharvested fraction $(1 - E_{\text{harv}}) \cdot Y$ is added to surface plant residue ([`mgt_harvbiomass.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_harvbiomass.f90#L112-L114)).
+where $HI_{\text{tot}}$ is the effective harvest index (dimensionless), $HI_{\text{ovr}}$ is `harv_idx` (dimensionless), and $E_{\text{harv}}$ is `harv_eff` (dimensionless). The unharvested fraction $(1 - E_{\text{harv}}) \cdot Y$ is added to surface plant residue ([`mgt_harvbiomass.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_harvbiomass.f90#L112-L114)).
 
-**Grain (`grain`, `picker`):** In [`mgt_harvgrain.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_harvgrain.f90#L40-L57), SWAT+ computes exported yield (before pest-stress scaling at line 51):
+**Grain (`grain`, `picker`):** In [`mgt_harvgrain.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_harvgrain.f90#L40-L57), SWAT+ computes exported yield (before pest-stress scaling at line 51):
 
 $$Y = E_{\text{harv}} \cdot M_{\text{seed}}$$
 

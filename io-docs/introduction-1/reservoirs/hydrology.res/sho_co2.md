@@ -8,7 +8,7 @@ description: Lag parameter for smoothing reservoir outflow when outflow is decre
 
 Dimensionless lag parameter for smoothing reservoir outflow when outflow decreases or remains unchanged (`0.0` default; disables smoothing). During initialization ([`res_initial.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_initial.f90#L59)), SWAT+ copies `shp_co2` to `res_ob%lag_down`. It is not used as an area–volume shape coefficient; SWAT+ derives those parameters from [area\_ps](area_ps.md), [vol\_ps](vol_ps.md), [area\_es](area_es.md), and [vol\_es](vol_es-1.md).
 
-When the newly calculated release is less than or equal to the previous day's outflow ($Q_{\text{prev}} \ge Q_{\text{new}}$), [`res_control.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/res_control.f90#L143-L148) smooths the outflow as:
+When the newly calculated release is less than or equal to the previous day's outflow ($Q_{\text{prev}} \ge Q_{\text{new}}$), [`res_control.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/res_control.f90#L148-L157) smooths the outflow as:
 
 $$\alpha_{\text{down}} = \exp(-\text{shp}_{2}), \qquad Q_{\text{out}} = \alpha_{\text{down}} Q_{\text{new}} + (1 - \alpha_{\text{down}}) Q_{\text{prev}}$$
 

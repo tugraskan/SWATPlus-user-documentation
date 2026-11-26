@@ -8,4 +8,4 @@ description: "Manure right designation, either sr for senior or jr for junior ri
 
 Character string (`len=2`, default `""`) intended to designate senior (`sr`) or junior (`jr`) manure priority rights.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

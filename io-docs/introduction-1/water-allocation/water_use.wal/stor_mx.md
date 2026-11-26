@@ -8,4 +8,4 @@ description: "Maximum storage capacity of the water-use object"
 
 Maximum storage capacity of the water-use object (`m^3`; uninitialized in the derived-type definition).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

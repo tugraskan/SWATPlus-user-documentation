@@ -8,7 +8,7 @@ description: Fraction of years to maturity completed (despite legacy yrs_init la
 
 Despite the legacy label `yrs_init` and `years` unit in older documentation, SWAT+ main (`6f515368`) reads this column into `fr_yrmat` (struct default `1.0`) as a dimensionless **fraction of years to maturity** ($f_{\text{mat}}$, typically `0.0–1.0`), not an age in years:
 
-**Initial canopy height and maturity fraction:** For perennials, sets initial canopy height ([`plant_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_init.f90#L290-L292)) and maturity fraction for leaf/nutrient initialization ([`#L302-L328`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/plant_init.f90#L302-L328)):
+**Initial canopy height and maturity fraction:** For perennials, sets initial canopy height ([`plant_init.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_init.f90#L290-L292)) and maturity fraction for leaf/nutrient initialization ([`#L302-L328`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/plant_init.f90#L300-L324)):
 
 $$h_c = f_{\text{mat}} \cdot h_{c,\max}$$
 

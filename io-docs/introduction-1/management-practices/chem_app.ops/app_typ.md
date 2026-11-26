@@ -8,4 +8,4 @@ description: Application operation type (read but not used in main 6f515368)
 
 Character string (`len=40`, default `" "`) intended to specify the application method (such as `spread`, `spray`, `inject`, or `direct`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

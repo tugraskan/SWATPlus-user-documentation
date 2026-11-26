@@ -8,4 +8,4 @@ description: "Pathogen concentration values for the outside source"
 
 Pathogen concentration array (length `cs_db%num_paths`) read after a header line whenever `cs_db%num_paths > 0` ([`water_osrc_read.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/water_osrc_read.f90#L94-L98)).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

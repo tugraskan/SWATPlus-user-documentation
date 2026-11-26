@@ -6,7 +6,7 @@ description: "Enrichment factor for nitrogen in the remaining water after deposi
 
 **Code reference:** `sd_chd1(idb)%n_dep_enr` ([declaration](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_module.f90#L54)).
 
-Enrichment factor for organic nitrogen in deposition (struct default `0.5`). In [`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L132), it multiplies floodplain sediment trap efficiency and incoming `orgn`:
+Enrichment factor for organic nitrogen in deposition (struct default `0.5`). On SWAT+ dev it multiplies the floodplain trap efficiency, the overbank fraction and the incoming `orgn` ([`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_sediment3.f90#L155)), and also the in-channel deposition of the eroded bank load ([`sd_channel_sediment3.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_sediment3.f90#L267-L271)). The SWAT+ main form was:
 
 $$N_{\text{org,fp}} = E_{\text{trap}} \cdot f_{\text{N,enr}} \cdot N_{\text{org,in}}$$
 

@@ -8,4 +8,4 @@ description: "Source type for pesticide concentrations (`const`, `dtbl`, or `rec
 
 6-character source type for pesticide concentrations (`const`, `dtbl`, or `recall`) for the outside water source (default: `""`). Only `org_min_typ` and `org_min_name` are crosswalked and evaluated in `6f515368`.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

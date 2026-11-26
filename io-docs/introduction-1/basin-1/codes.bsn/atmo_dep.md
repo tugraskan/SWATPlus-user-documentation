@@ -8,4 +8,4 @@ description: Legacy atmospheric deposition code (read but not used in main 6f515
 
 Legacy 1-character string placeholder for atmospheric deposition timestep (struct default `"a"`). Atmospheric deposition is instead configured through [**atmo.cli**](../../climate/atmo.cli/) and linked per weather station in [**weather-sta.cli**](../../climate/weather-sta.cli/).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

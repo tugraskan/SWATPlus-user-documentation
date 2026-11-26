@@ -8,4 +8,4 @@ description: "Initial manure storage at the source object (read but not used in 
 
 Initial manure storage at the source object (`tons`, default `0.0`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

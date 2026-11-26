@@ -8,4 +8,4 @@ description: Overland flow Manning's n minimum (read but not used in main 6f5153
 
 Suggested minimum overland Manning's n value (default `0.5`) included as reference guidance for calibration.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

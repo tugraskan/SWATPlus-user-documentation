@@ -8,4 +8,4 @@ description: "Region area"
 
 Channel cataloging-unit area in hectares (`real`, `ha`, struct default `0.0`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

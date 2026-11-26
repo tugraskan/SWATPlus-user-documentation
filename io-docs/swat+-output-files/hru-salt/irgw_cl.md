@@ -14,7 +14,7 @@ description: "Chloride outside-source irrigation salt diagnostic"
 
 **Calculation**
 
-The dormant `salt_irrig` routine calculates outside-source soil delivery as irrigation concentration times water volume divided by 1000 and by HRU area. This converts g/m3 (equivalent to mg/L) and m3 to kg/ha. The water allocation call is commented out in this revision, leaving this field at its initialized or reset value in the traced execution path. [Legacy unlimited-source branch](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_irrig.f90#L181) · [Commented call](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/wallo_pou_deliv.f90#L60)
+The dormant `salt_irrig` routine calculates outside-source soil delivery as irrigation concentration times water volume divided by 1000 and by HRU area. This converts g/m3 (equivalent to mg/L) and m3 to kg/ha. The water allocation call is commented out in this revision, leaving this field at its initialized or reset value in the traced execution path. [Legacy unlimited-source branch](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/salt_irrig.f90#L181) · [Commented call](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/wallo_pou_deliv.f90#L68)
 
 Monthly and yearly values sum the daily diagnostic. Average annual divides the accumulated yearly diagnostic by configured `time%nbyr`, giving the annual amount convention kg/ha/yr. The denominator is the configured simulation-year count, not a count of years contributing output; skipped or partial periods require care.
 

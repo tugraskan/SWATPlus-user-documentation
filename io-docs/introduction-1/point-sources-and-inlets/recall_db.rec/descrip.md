@@ -8,4 +8,4 @@ description: Free-text description of the recall database record
 
 Free-text description (`character(len=50)`) of the recall database record.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

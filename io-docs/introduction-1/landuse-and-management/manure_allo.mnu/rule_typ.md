@@ -8,4 +8,4 @@ description: "Allocation rule type for the manure allocation object (read but no
 
 Character string (`len=25`, default `""`) intended to identify the allocation rule type.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

@@ -8,4 +8,4 @@ description: Chemical form (read but not used in main 6f515368)
 
 Character string (`len=40`, default `" "`) intended to identify the physical form of the applied chemical (such as `solid` or `liquid`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

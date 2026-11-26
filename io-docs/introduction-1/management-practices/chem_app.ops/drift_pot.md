@@ -8,4 +8,4 @@ description: Spray drift potential (read but not used in main 6f515368)
 
 Dimensionless spray drift potential (`real`, default `0.0`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

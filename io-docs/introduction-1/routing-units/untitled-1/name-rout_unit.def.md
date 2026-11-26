@@ -8,4 +8,4 @@ description: Name of the Routing Unit
 
 Name of the Routing Unit definition, read into `ru_def(iru)%name` when `elem_tot > 0` (or into `namedum` when `elem_tot <= 0` at [`ru_read_elements.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/ru_read_elements.f90#L118)).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

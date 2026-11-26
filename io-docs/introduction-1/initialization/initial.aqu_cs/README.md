@@ -8,7 +8,7 @@ An Editor export of this format has not been verified. Field names and values in
 
 This file links an aquifer initial-condition set to its constituent initialization records.
 
-SWAT+ looks for `initial.aqu_cs` in the simulation working directory; it is not selected through `file.cio`. See the [`aqu_read_init_cs.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read_init_cs.f90#L42-L147) reader. In SWAT+ main (`6f515368`), `pest` and `path` match by `name` against `aqudb(iaq)%aqu_ini` ([init](../../aquifers/aquifer.aqu/aqu_ini.md) in [**aquifer.aqu**](../../aquifers/aquifer.aqu/)), whereas `salt` and `cs` index `aqu_init_dat_c_cs(iaq)` positionally by aquifer index `iaq` ([`aqu_read_init_cs.f90`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/aqu_read_init_cs.f90#L81-L144)), and `hmet` is unused.
+SWAT+ looks for `initial.aqu_cs` in the simulation working directory; it is not selected through `file.cio`. See the [`aqu_read_init_cs.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_read_init_cs.f90#L42-L148) reader. In SWAT+ main (`6f515368`) and dev (`aa4179fe`), `pest` and `path` match by `name` against `aqudb(iaq)%aqu_ini` ([init](../../aquifers/aquifer.aqu/aqu_ini.md) in [**aquifer.aqu**](../../aquifers/aquifer.aqu/)), whereas `salt` and `cs` index `aqu_init_dat_c_cs(iaq)` positionally by aquifer index `iaq` ([`aqu_read_init_cs.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/aqu_read_init_cs.f90#L81-L145)), and `hmet` is unused.
 
 # initial.aqu\_cs
 

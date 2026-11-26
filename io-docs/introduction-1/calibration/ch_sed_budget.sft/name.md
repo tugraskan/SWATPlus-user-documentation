@@ -8,4 +8,4 @@ description: Region name in ch_sed_budget.sft.
 
 Region identifier (up to 16 characters, struct default `"default"`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

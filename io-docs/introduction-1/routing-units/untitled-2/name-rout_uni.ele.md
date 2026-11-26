@@ -8,4 +8,4 @@ description: Name of the element
 
 Name of the Routing Unit element, read as a 16-character string.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

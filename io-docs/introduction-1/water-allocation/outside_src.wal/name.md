@@ -8,4 +8,4 @@ description: "Record name"
 
 25-character name of the outside water source object (default: `""`). Outside sources are referenced by integer index via `typ_num` in [point_of_diver.wro](../point_of_diver.wro/README.md).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

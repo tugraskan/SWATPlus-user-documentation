@@ -8,4 +8,4 @@ description: "Record name"
 
 Name of the reservoir cataloging unit (`character(len=16)`, struct default `"basin"`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

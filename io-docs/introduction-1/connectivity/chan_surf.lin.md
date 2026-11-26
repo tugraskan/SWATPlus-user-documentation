@@ -16,7 +16,7 @@ The first line is a title, the second the number of channel records, and the thi
 | type    | `hru` or `ru` |
 | number  | Number of the HRU or routing unit |
 
-When the peak flow rate of a channel exceeds its bankfull rate, overbank water [fills the wetlands](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/sd_channel_sediment3.f90#L140-L170) of the linked HRUs. HRUs without a wetland ([surf\_stor](../hydrologic-response-units/hru-data.hru/surf_stor.md)) receive no water this way.
+On SWAT+ dev, when the overbank fraction of a channel's flow exceeds 0.05, overbank water [fills the wetlands](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_sediment3.f90#L137-L207) of the linked HRUs. HRUs without a wetland ([surf\_stor](../hydrologic-response-units/hru-data.hru/surf_stor.md)) receive no water this way.
 
 {% hint style="warning" %}
 In SWAT+ main (6f515368), type `ru` [uses the element numbers of the routing unit as HRU numbers](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/sd_channel_surf_link.f90#L48-L58). The two must be the same; otherwise list the HRUs with type `hru`.

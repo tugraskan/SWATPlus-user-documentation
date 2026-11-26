@@ -8,4 +8,4 @@ description: Name of the aquifer
 
 SWAT+ Editor gives every object a name. In QSWAT+, this is usually the object-type abbreviation followed by the object number. SWAT+ does not use the aquifer name, so you can change it freely.
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*

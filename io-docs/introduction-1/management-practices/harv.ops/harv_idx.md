@@ -14,7 +14,7 @@ $$HI_{\text{tot}} = HI_{\text{ovr}} \cdot E_{\text{harv}}$$
 
 where $HI_{\text{tot}}$ is the effective harvest index (dimensionless), $HI_{\text{ovr}}$ is `harv_idx` (dimensionless), and $E_{\text{harv}}$ is `harv_eff` (dimensionless).
 
-In residue harvests (`residue`; [`mgt_harvresidue.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_harvresidue.f90#L51-L53), [`#L57`](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/mgt_harvresidue.f90#L57)), `harv_idx` scales the residue removal fraction:
+In residue harvests (`residue`; [`mgt_harvresidue.f90`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_harvresidue.f90#L51-L53), [`#L61-L64`](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/mgt_harvresidue.f90#L61-L64)), `harv_idx` scales the residue removal fraction:
 
 $$E_{\text{net}} = E_{\text{harv}} \cdot HI_{\text{ovr}}, \qquad M_{\text{rem}} = E_{\text{net}} \cdot M_{\text{rsd}}$$
 

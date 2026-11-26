@@ -4,7 +4,7 @@ Some output families use the daily, monthly, yearly, and average-annual settings
 
 ## When a run ends mid-month
 
-SWAT+ can close the final simulation year on a day other than the last calendar day of a month. At revision `6f515368`, some writers move accumulated values into the yearly record only at month end. Their yearly and average-annual totals omit a final partial month even if daily rows show those days. In a run with no warm-up, `time%yrs_prt` is calculated from simulated days, including that final span. [Simulation calendar and divisor](https://github.com/swat-model/swatplus/blob/6f515368525e7d84089ae0f9d33f4c9115de5679/src/time_control.f90#L134-L191).
+SWAT+ can close the final simulation year on a day other than the last calendar day of a month. At revisions `6f515368` and `aa4179fe`, some writers move accumulated values into the yearly record only at month end. Their yearly and average-annual totals omit a final partial month even if daily rows show those days. In a run with no warm-up, `time%yrs_prt` is calculated from simulated days, including that final span. On SWAT+ dev the day total is divided by 365 plus the leap days per printed year (not per simulated year). [Simulation calendar and divisor](https://github.com/swat-model/swatplus/blob/aa4179fea9c9fbb9b00efc38e3d4def3b6a3f715/src/time_control.f90#L138-L188).
 
 | Reports | Treatment of the final partial month |
 | --- | --- |

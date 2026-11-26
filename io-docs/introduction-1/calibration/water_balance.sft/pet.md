@@ -8,4 +8,4 @@ description: Average annual potential evapotranspiration target in water_balance
 
 Average annual potential evapotranspiration target (`mm/yr`, struct default `0.`).
 
-*(Note: In SWAT+ main (6f515368), this column is parsed into memory but is not used in simulation calculations).*
+*(Note: In SWAT+ main (6f515368) and dev (aa4179fe), this column is parsed into memory but is not used in simulation calculations).*
